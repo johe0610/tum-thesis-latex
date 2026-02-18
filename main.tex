@@ -1,23 +1,34 @@
 \RequirePackage[l2tabu,orthodox]{nag}
 
 % TODO: decide if one-sided/two-sided
-%\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
-\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
+%\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
 
 % TODO: change citation style in settings
 \input{settings}
+\input{macros}
+%\input{macros_atlas}
 
 % TODO: change thesis information
-\newcommand*{\getUniversity}{Technische Universität München}
-\newcommand*{\getFaculty}{Department of Informatics}
-\newcommand*{\getTitle}{Thesis title}
-\newcommand*{\getTitleGer}{Titel der Abschlussarbeit}
-\newcommand*{\getAuthor}{Author}
-\newcommand*{\getDoctype}{Thesis type (Bachelor's Thesis in Informatics, Master's Thesis in Robotics, \ldots)}
-\newcommand*{\getSupervisor}{Supervisor}
-\newcommand*{\getAdvisor}{Advisor}
-\newcommand*{\getSubmissionDate}{Submission date}
+%\newcommand*{\getUniversity}{Technische Universität München}
+%\newcommand*{\getFaculty}{School of Natural Sciences}
+\newcommand*{\getTitle}{Measurement of WbWb and more}
+%\newcommand*{\getTitleGer}{Messung des WbWb Prozesses und mehr}
+\newcommand*{\getAuthor}{Johannes Hessler}
+\newcommand*{\getDoctype}{Abschlussarbeit zum Erlangen des Doktorgrads}
+%\newcommand*{\getSupervisor}{Stefan Kluth}
+%\newcommand*{\getAdvisor}{Daniel Britzger}
+\newcommand*{\getSubmissionDate}{Hoffentlich bald}
 \newcommand*{\getSubmissionLocation}{Munich}
+
+\addbibresource{bib/ATLAS-useful.bib}
+\addbibresource{bib/ATLAS-SUSY.bib}
+\addbibresource{bib/ATLAS-errata.bib}
+\addbibresource{bib/ATLAS.bib}
+\addbibresource{bib/CMS.bib}
+\addbibresource{bib/ConfNotes.bib}
+\addbibresource{bib/PubNotes.bib}
+\addbibresource{bib/thesis.bib}
 
 \begin{document}
 
@@ -28,7 +39,7 @@
 
 \frontmatter{}
 
-\input{pages/title}
+%\input{pages/title}
 \input{pages/disclaimer}
 \input{pages/acknowledgments}
 \input{pages/abstract}
@@ -38,7 +49,12 @@
 
 \mainmatter{}
 
-\input{chapters/01_introduction}
+\input{chapters/Introduction}
+\input{chapters/SM}
+\input{chapters/ATLAS}
+\input{chapters/CjetCalib}
+%\input{chapters/WbWb}
+\input{chapters/Conclusion}
 % TODO: add more chapters here
 
 \appendix{}
@@ -47,6 +63,7 @@
 \listoffigures{}
 \listoftables{}
 \microtypesetup{protrusion=true}
+
 \printbibliography{}
 
 \end{document}

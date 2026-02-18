@@ -1,37 +1,49 @@
 \begin{titlepage}
-  % HACK for two-sided documents: ignore binding correction for cover page.
-  % Adapted from Markus Kohm's KOMA-Script titlepage=firstiscover handling.
-  % See http://mirrors.ctan.org/macros/latex/contrib/koma-script/scrkernel-title.dtx,
-  % \maketitle macro.
-  \oddsidemargin=\evensidemargin\relax
-  \textwidth=\dimexpr\paperwidth-2\evensidemargin-2in\relax
-  \hsize=\textwidth\relax
+    \noindent
+    
+    \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    Technische Universität München &
+    \multirow{2}{*}{\includegraphics[height=0.8cm]{figures/logos/TUM.png}}\\[-4pt]
+    TUM School of Natural Sciences
+    \end{tabularx}
+    
+    \centering
 
-  \centering
+    \bigskip
+    \vfill\vfill\vfill
 
-  \IfFileExists{logos/tum.pdf}{%
-    \includegraphics[height=20mm]{logos/tum.pdf}
-  }{%
-    \vspace*{20mm}
-  }
+    \rule{\linewidth}{.8pt}
+    {\scalefont{1.5}\bfseries \getTitle \par}
+    \rule{\linewidth}{.8pt}
 
-  \vspace{5mm}
-  {\huge\MakeUppercase{\getFaculty{}}}\\
+    \vfill
 
-  \vspace{5mm}
-  {\large\MakeUppercase{\getUniversity{}}}\\
+    {\scalefont{1.52} \getAuthor \par}
 
-  \vspace{20mm}
-  {\Large \getDoctype{}}
+    \vfill
+    \bigskip
 
-  \vspace{15mm}
-  {\huge\bfseries \getTitle{}}
+    \selectlanguage{ngerman}
+    %\justifying
+    Vollst\"andiger Abdruck der von der TUM School of Natural Sciences 
+der Technischen Universität München zur Erlangung eines 
+\textbf{Doktors der Naturwissenschaften (Dr.~rer.~nat.)} genehmigten 
+Dissertation.
+    \vfill
+    \begin{tabular}{lll}
+    Vorsitz: & & Prof.\ Dr.\ Max Mustermann \\[20pt]
+    \multicolumn{3}{l}{Prüfende der Dissertation:} \\
+    & 1. & PD.\ Stefan Kluth,\ PhD. \\
+    & 2. & Prof.\ Dr.\ Vorname Nachname
+    \end{tabular}
 
-  \vspace{15mm}
-  {\LARGE \getAuthor{}}
+    \vfill
 
-  \IfFileExists{logos/faculty.pdf}{%
-    \vfill{}
-    \includegraphics[height=20mm]{logos/faculty.pdf}
-  }{}
+    Die Dissertation wurde am .. . .. . .... bei der Technischen 
+Universität Müunchen ein\-gereicht und durch die TUM School of 
+Natural Sciences am .. . .. . .... angenommen.
+
+    \vfill\vfill \null
+
 \end{titlepage}
+
