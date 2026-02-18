@@ -1,0 +1,99 @@
+\chapter{Background Estimation}%
+\label{sec:bkg-estimation}
+
+The analysis consists of several backgrounds. The \Wjets, other vector boson
+(\Zjets and diboson events, named \emph{Other V/VV} in the following plots and in the tables) and other top (\(s\)-channel and \(t\)-channel
+single top, \ttV, \ttH, named \emph{Other top} in the following plots and in the tables) backgrounds are estimated using Monte Carlo
+simulation. Additionally the normalisation of the \Wjets background is
+constrained in the fit described in \cref{sec:WjetsCR}.
+
+Only prompt background leptons originating from decays of \Zboson, \Wboson, and
+\Hboson bosons, or from prompt leptonic \( \tau \) decays are of interest for the analysis.
+Fake lepton contributions come from processes such
+as in-flight decays of mesons, jets reconstructed as leptons, and electron
+photon conversions, this background is named \emph{Misidentified leptons} in the following plots and in the tables.
+
+Prompt leptons are estimated with Monte Carlo and identified with truth-reconstruction
+object matching to remove the overlap with the fake-factor method described
+in \cref{sec:bkg-fakefactor}. Events containing at least one fake lepton
+are estimated with the data-driven fake-factor method.
+
+\input{chapters/background_estimation/WjetsCR}
+
+\input{chapters/background_estimation/LikelihoodFit}
+
+\FloatBarrier
+
+%-------------------------------------------------------------------------------
+
+\section{Fake-factor Method}%
+\label{sec:bkg-fakefactor}
+
+Fakes for electrons and muons are estimated with the so-called
+\textit{fake-factor method}.
+The fake factor method is an extrapolation technique for electron or muon fakes
+which are taken from a control region rich in this kind of background and with
+high statistical power. A weight is calculated for each fake lepton called
+the fake factor which is related with the misidentification probability
+for a fake lepton to satisfy the selection requirement of a prompt one. Events
+containing fake leptons are multiplied with these weights.
+Fake factors are measured in a control sample in data orthogonal with respect
+to the selections of the main analysis.
+These control samples are defined for electrons in \cref{sec:bkg-fakes-electron}
+and for muons in \cref{sec:bkg-fakes-muon}.
+The misidentification probability, sometimes referred to as \textit{fake rate}
+is defined as
+\begin{equation}
+  f = \dfrac{N_\mathrm{pass}}{N_\mathrm{pass}+N_\mathrm{fail}}
+  \label{eq:fake-rate}
+\end{equation}
+where \( N_\mathrm{pass} \) and \( N_\mathrm{fail} \) are the numbers of fake
+leptons satisfying and failing the fake identification requirement. The fake factor
+is defined as
+\begin{equation}
+  F = \frac{f}{1-f} =  \dfrac{N_\mathrm{pass}}{N_\mathrm{fail}}
+  \label{eq:fake-factor}
+\end{equation}
+
+Once \(F\) is measured as a function of some kinematic variable, it is applied
+to fakes taken from data in other analysis regions.
+Leptons passing the signal identification
+criteria are called \textit{tight} (T) and those failing them \textit{loose} (L).
+All criteria are reported in \cref{tab:definitions-electrons,tab:definitions-muons}.
+The final amount of extrapolated fake background is defined as
+\begin{equation}
+  N_\mathrm{fakes} =
+  {\left[
+  \sum\limits_\mathrm{events}^{n\, \mathrm{loose}}
+  {(-1)}^{n-1} \prod\limits_{i}^{n} F_i
+  \right]}_\mathrm{data}
+  -
+  {\left[
+  \sum\limits_\mathrm{events}^{n\, \mathrm{loose}}
+  {(-1)}^{n-1} \prod\limits_{i}^{n} F_i
+  \right]}_\mathrm{prompt~simulation}
+\end{equation}
+where the inner product runs over the number of loose leptons in the event and
+the outer sum over all events with at least one loose lepton present.
+Tight leptons do not contribute to the final number of fake leptons.
+To avoid double counting, the prompt contribution estimated with MC events needs
+to be subtracted from data, as indicated with square brackets in the formula.
+The derivation of the formulae are presented in more detail
+in Ref.~\cite{EGAM-2019-01}.
+
+In case of single lepton events the formula simplifies into
+\begin{equation}
+  N^\mathrm{fakes} =
+  {\left[ \sum\limits_{L}F \right]}_\mathrm{data} -
+  {\left[ \sum\limits_{L}F \right]}_\mathrm{prompt~simulation}
+\end{equation}
+
+%-------------------------------------------------------------------------------
+
+% Fake Background Electrons
+\input{chapters/background_estimation/FakesElectron}
+
+\pagebreak
+
+% Fake Background Muons
+\input{chapters/background_estimation/FakesMuon}

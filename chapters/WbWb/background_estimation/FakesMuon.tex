@@ -1,0 +1,181 @@
+\section{Muon Fake Factor Measurement}%
+\label{sec:bkg-fakes-muon}
+
+Fake muons arise from in-flight decays of mesons inside jets with
+the semi-leptonic decay of B meson as one of the largest contributions.
+Combinations of prompt and fake muons can contribute to the measurement region
+if the fake muons satisfy tight isolation and impact parameter requirements.
+The muon fake contribution to the measurement region is estimated as described
+in \cref{sec:bkg-fakefactor}, which involves a data driven estimate
+of the fake factor.
+
+
+\subsection{Muon Fake Factor Measurement}
+
+Fake-factors are measured requiring a jet to be associated to a muon, thereby
+targeting a fake factor measurement in di-jet events. Basing on the selection defined
+for electrons in \cref{tab:FakeRegionDefinitions}, events are selected
+by requiring the highest \pt light jet in the event to have an azimuthal angular distance
+greater than \( \Delta \phi > 2.7 \) to the muon. This topology is qualitatively illustrated
+in \cref{fig:bkg-dijet}.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{fakes/dijet}
+    \caption{Qualitative sketch of a di-jet event selected for the measurement
+      of the muon fake-factors.}%
+    \label{fig:bkg-dijet}
+  \end{center}
+\end{figure}
+
+The selection of di-jet events allows one to achieve high statistics for
+measuring fake-factors, while also allowing to address systematic uncertainties
+using the properties of the recoiling tag jet.
+
+The muon and the leading=\pt jet in the event have to be back-to-back in the transverse
+plane, i.e. \( \Delta \phi(\mu, \mathrm{jet}) > 2.7 \) and have \pt threshold
+of \( \pt(\mu) > \qty{30}{\GeV} \) and \( \pt(\mathrm{jet}) > \qty{35}{\GeV} \).
+The selection criteria of the muon fake measurement region are summarised in \cref{tab:FakeRegionDefinitions}.
+
+The distributions of muon \pt and \eta after all selection requirements
+are applied, are reported in \cref{fig:Fakes_Muons-distributions}, where
+tight and loose muons are tight and loose, respectively, as defined in
+\cref{tab:definitions-muons}. The \pt dependence on fake factors is shown
+in \cref{fig:Fakes_Muons}.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\textwidth]{fakes/fake_factors_m_nominal}
+  \caption{Muon fake factors measured as a function of \pt.}%
+  \label{fig:Fakes_Muons}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=3, width=0.4\textwidth]{fakes/Fakes_Muons_m_nominal}%
+    \label{fig:Fakes_Muons-pt-loose}
+  }
+  \subfloat[]{
+    \includegraphics[page=1, width=0.4\textwidth]{fakes/Fakes_Muons_m_nominal}%
+    \label{fig:Fakes_Muons-pt-tight}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=6, width=0.4\textwidth]{fakes/Fakes_Muons_m_nominal}%
+    \label{fig:Fakes_Muons-eta-loose}
+  }
+  \subfloat[]{
+    \includegraphics[page=5, width=0.4\textwidth]{fakes/Fakes_Muons_m_nominal}%
+    \label{fig:Fakes_Muons-eta-tight}
+  }
+
+  \caption{Fakes-enriched regions in the nominal selection.
+    \protect\subref{fig:Fakes_Muons-pt-loose} \pt distribution of loose muons in the fakes-enriched region,
+    \protect\subref{fig:Fakes_Muons-pt-tight} \pt distribution of tight muons in the fakes-enriched region,
+    \protect\subref{fig:Fakes_Muons-eta-loose} \eta distribution of loose muons in the fakes-enriched region and
+    \protect\subref{fig:Fakes_Muons-eta-tight} \eta distribution of tight muons in the fakes-enriched region.
+    All the distributions show data events and the prompt MC component subtracted from data, to ensure a fake dominated region.
+  }%
+  \label{fig:Fakes_Muons-distributions}
+\end{figure}
+
+
+\subsection{Systematic Uncertainties on Muon Fake Factors}%
+\label{sec:bkg-fakes-muon-sys}
+
+Similar to electrons all Monte Carlo samples were varied by \qty{10}{\%}
+to account for cross-section and luminosity uncertainties as well as the
+modelling of the prompt MC used in the subtraction procedure.
+
+Additionally the effect of the \( \met + \mtW \) cut is tested by varying it
+to \qty{50}{\GeV} and \qty{70}{\GeV}. The effect of this variation on the fake
+factors is not negligible.
+
+The effect on the number of \bjets was tested by varying \( N_{\bjets}\) to
+include at least 2 \bjets. This effect is not negligible and can be quite large
+in some bins in the electron \pt distribution. 
+
+Additional variations were tested, including the variation of the transverse
+momentum of the leading jet, with thresholds of \( \pt(j1) > \qty{40}{\GeV} \)
+and \qty{30}{\GeV}, \( \Delta \phi(\mu, \mathrm{jet})\) > 2.6 and 2.8,
+and the effect of omitting the requirement on light jets.
+
+The effect of each systematic alteration on the nominal measurement can be
+seen on \crefrange{fig:Fakes_Muons-musys1}{fig:Fakes_Muons-musys3}.
+The total uncertainty is estimated by comparing the statistical uncertainty on
+the nominal measurement with the maximum deviation between the nominal
+fake-factor and each systematically altered measurement. The largest signed
+deviation is taken to be the total uncertainty for lower bounds and upper bounds
+in turn.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=1, width=0.4\textwidth]{fakes/fake_factors_m_final}%
+    \label{fig:Fakes_Muons-musys1}
+  }
+  \subfloat[]{
+    \includegraphics[page=2, width=0.4\textwidth]{fakes/fake_factors_m_final}%
+    \label{fig:Fakes_Muons-musys2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=3, width=0.4\textwidth]{fakes/fake_factors_m_final}%
+    \label{fig:Fakes_Muons-musys3}
+  }
+
+  \caption{The measured fake factor for each systematics variation.
+    \protect\subref{fig:Fakes_Muons-musys1} fake factor variations for the first \eta bin,
+    \protect\subref{fig:Fakes_Muons-musys2} fake factor variations for the second \eta bin and
+    \protect\subref{fig:Fakes_Muons-musys3} fake factor variations for the third \eta bin.
+  }% 
+  \label{fig:Fakes_Muons-musys}
+\end{figure}
+
+
+\subsection{Validation of Fake-factors for Muons}%
+\label{subsec:bkg-fakes-muon-validation}
+
+The measured fake factors were validated by performing the direct closure test
+in the fakes-enriched region. The same event selection was used as for the
+estimation, but no special binning has been applied. Fakes have been estimated
+from data using the measured fake factors. The reconstructed object selection
+was the same as the nominal event selection (\cref{ch:definitions}).
+
+Prompt Monte Carlo processes that were used are \Wjets, \Zjets, \ttbar and
+single top, diboson, and rare top decays. The remaining events
+are described well by the fake factor method as seen on
+\cref{fig:Fakes_ClosureMuons}.
+The only considered uncertainty in this region is the systematic uncertainty
+of the fake factor.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=3, width=0.4\textwidth]{fakes/Fakes_ClosureMuons_m_validation_sys}%
+    \label{fig:Fakes_ClosureMuons-pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=7, width=0.4\textwidth]{fakes/Fakes_ClosureMuons_m_validation_sys}%
+    \label{fig:Fakes_ClosureMuons-eta}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=9, width=0.4\textwidth]{fakes/Fakes_ClosureMuons_m_validation_sys}%
+    \label{fig:Fakes_ClosureMuons-met}
+  }
+  \subfloat[]{
+    \includegraphics[page=15, width=0.4\textwidth]{fakes/Fakes_ClosureMuons_m_validation_sys}%
+    \label{fig:Fakes_ClosureMuons-mt}
+  }
+
+  \caption{The muon fake-factors closure.
+    \protect\subref{fig:Fakes_ClosureMuons-pt} muon \pt distribution and
+    \protect\subref{fig:Fakes_ClosureMuons-eta} muon \eta distribution,
+    \protect\subref{fig:Fakes_ClosureMuons-met} \met distribution, and
+    \protect\subref{fig:Fakes_ClosureMuons-mt} \mtW distribution.
+    The dashed band shows the systematic uncertainty associated to the fake factor measurement.
+  }%
+  \label{fig:Fakes_ClosureMuons}
+\end{figure}

@@ -1,0 +1,758 @@
+\chapter{Measurement Regions}%
+\label{ch:regions}
+
+The analysis focuses on three kinematic regions: a large phase space
+to constrain the interference effects between \ttbar and \tW processes
+and improve the modelling over a large kinematic region,
+a dedicated phase space at high scales to improve the modelling for future searches,
+and a dedicated measurement of the \WbWb production cross section where
+the \Wboson boson is directly reconstructed.
+The bulk interference region, defined in \cref{sec:regions-bulk}, aims for
+the loosest possible selection in the \WbWb phase-space and focuses
+on observables sensitive to the interference. The search-like interference
+region, defined in \cref{sec:regions-search}, applies additional selection criteria
+inspired by BSM searches aiming for as large as possible sensitivity
+to the interference. Finally the \Wboson-hadronic measurement region, presented in \cref{sec:regions-wbwb}, focuses on the
+overall modelling of this final state and directly considers the \Wboson bosons and \bjets for the definition of the phase space,
+which requires the reconstruction of the \Wboson boson (without constraint on intermediate top quarks).
+All the region share the same baseline cuts and the summary of the event selection is in \cref{tab:RegionDefinitions}.
+The cutflow tables for these selections are available in \cref{app:cutflows}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{l c c c}
+      \toprule
+      Selection                             & Bulk Interference                      & \Wboson-hadronic     & Search-like Interference         \\
+      \midrule
+      \( N \)(central jet)                  & \( \geq 4\)                            & \( \geq 3 \)       & \( \geq 4 \)                     \\
+      \( N_{\bjets}\)                       & \( \geq 2 \) & \( \geq 2 \) & \( \geq 2 \)                                                               \\
+      \( \met + \mtW \)                     & \( (60, \infty) \)  & \( (60, \infty) \)  & \( (60, \infty) \)                                                       \\
+      \( \pt(\ell) \)                       & \( (30, \infty) \) & \( (30, \infty) \) & \( (30, \infty) \)                                 \\
+      \( \pt(j)\)                           & \( (25, \infty) \) & \( (25, \infty) \) & \( (25, \infty) \)                                       \\
+      \( m(\Whad) \)                        & ---                                    & \( (60, 100) \)    & ---                              \\
+      \( \pt(\Whad) \)                      & ---                                    & \( (80, \infty) \) & ---                              \\
+      \met                                  & ---                                    & ---                & \( \geq -0.625\pt(\ell) + 270 \) \\
+      \mblmin                               & ---                                    & ---                & \( (150, \infty) \)              \\
+      \( \pt(b_{1}) \)                      & ---                                    & ---                & \( (160, \infty) \)              \\
+      \( \pt(b_{2}) \)                      & ---                                    & ---                & \( (50, \infty) \)               \\
+      \( \Delta R (b_{1}, b_{2}) \)         & ---                                    & ---                & \( (1.4, \pi) \)                 \\
+      \( \pt(j_{1}) \)                      & ---                                    & ---                & \( (50, \infty) \)               \\
+      \( \pt(j_{2}) \)                      & ---                                    & ---                & \( (50, \infty) \)               \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{A summary of the event selection for bulk-like, \Wboson-hadronic, and search-like regions.}%
+  \label{tab:RegionDefinitions}
+\end{table}
+
+
+\section{Baseline Cuts}%
+\label{sec:BaselineCuts}
+The selection is optimised using simulated MC event samples.
+All events are required to contain exactly one signal lepton as defined
+in \cref{ch:definitions}. This includes  prompt leptonic \( \tau \) decays, which are considered signal in this analysis.
+ Events are selected with a single lepton trigger
+and a minimum \pt requirement of \qty{30}{\GeV} is placed on the lepton.
+Furthermore the expected number of jets in the
+signal is 4 (2 jets from top quark decays and 2 from \Wboson boson decays),
+so a preselection condition of at least 4 baseline jets and at least 2 \bjets
+in the event is applied. For the \Wboson-hadronic selection this is relaxed to 3 jets
+as also a single jet can be reconstructed as the hadronically decaying \Wboson boson.
+The neutrino from the second \Wboson boson decay introduces \met.
+This allows a cut on \( \met + \mtW > \qty{60}{\GeV} \)
+to be applied to remove the QCD background, which in this case enters
+the selection as a mis-identified or non-prompt lepton.
+The \mtW is defined as the transverse mass computed from
+the lepton and \met 4-vectors where the \(z\)-component is set to 0.
+
+
+
+\section{Interference sensitivity metrics}
+
+To evaluate if an observable is sensitive to the interference between
+\tW and \ttbar two metrics have been defined. 
+% First a large difference between DR and DS simulated \tW samples is required:
+The first metric measures the difference between DR and DS simulated \tW samples, such that:
+
+\begin{equation}
+  \dfrac{N_\mathrm{DS}}{N_\mathrm{DR}}
+  \label{eq:metric:DRDS}
+\end{equation}
+where \( N_\mathrm{DR} \)(\( N_\mathrm{DS} \)) is the number of events passing the selection from the single-top DR\,(DS) samples, respectively.  % chktex 36
+Additionally, a separation of up to \qty{20}{\%} between the DR and DS samples is observed in the bulk interference region in most of distributions.
+In the search-like interference region, a difference of up to \qty{50}{\%} is observed.
+As our modelling of the \tW sample differs, measuring the quantities sensitive to it will help tuning the generators.
+This metric only leads to phase spaces where the modelling of \tW is inaccurate. Overall any region where the fraction
+of \tW contribution is large, should be measured so a second metric is defined as the fraction of \tW in the signal:
+
+\begin{equation}
+  \dfrac{N(\tW)}{N(\tW) + N(\ttbar)}\,,
+  \label{eq:metric:ratio}
+\end{equation}
+In the bulk interference region, a separation of up to \qty{20}{\%} is required between DR and DS samples throughout each distribution.
+Additionally, in the search-like interference region, a separation of up to \qty{60}{\%} is necessary.
+In addition to the two metrics described in \cref{eq:metric:DRDS,eq:metric:ratio} an additional metric is used for optimising the event selection.
+This metric is defined as the difference between the purity of DR and DS,
+such that:
+
+\begin{equation}
+  FOM = \dfrac{N_\mathrm{DR}}{N_\mathrm{total-simulated(DR)}} - \dfrac{N_\mathrm{DS}}{N_\mathrm{total-simulated(DS)}}
+  \label{eq:PurityofDRDS}
+\end{equation}
+
+where \(N_\mathrm{total-simulated(DR)}\) and \(N_\mathrm{total-simulated(DS)}\) 
+are the total of all simulated events including single-top DR and DS, respectively.  % chktex 36
+This metric was used to quantitatively optimise search-like region while keeping sufficient statistics.
+
+
+\section{Discriminants}
+To suppress a large fraction of semi-leptonic \ttbar and SM background,
+dominated by \Wjets, a number of discriminating variables have been
+selected in addition to the preselection.
+
+\subsubsection{\texorpdfstring{\mblmin}{Minimum invariant mass of a lepton and a b-jet}}
+The observable that is most sensitive to the interference
+between double and single top production is the invariant mass of
+a \bjet and a lepton. An ambiguity is present when pairing the correct
+\bjet to the lepton. The solution which provides
+the highest sensitivity is:
+
+\begin{equation}
+  \mblmin \equiv \min \left\{ m_{b_i \ell} \right\}  % chktex 21
+  \label{eq:mblmin}
+\end{equation}
+
+where the \(b_i\) goes over all \bjets in the event.
+Due to suppression of the doubly resonant contribution at high values
+of \mblmin, the differential cross-section above this kinematic endpoint
+of \qty{150}{\GeV} has increased sensitivity to interference effects.
+
+\subsubsection{ \( \Delta R (b_{1}, b_{2}) \) }
+An additional cut can be introduced on \( \Delta R (b_{1}, b_{2}) \)
+to further reduce the \ttbar contribution. It can evade the \mblmin kinematic
+bound if the two \btagged jets used in the reconstruction do not originate
+from the two top decays, but instead from the \(b\)- and \(c\)-quarks from
+a hadronic top decay. In this scenario \( \Delta R (b_{1}, b_{2}) \)
+is expected to be small and can be suppressed by requiring
+a minimum separation between \btagged jets.
+
+A summary of the quantities used and defined in detail in the following sections is presented in \cref{tab:variables}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{List of observables used in the three regions of the measurement.}%
+    \label{tab:variables}
+    \begin{tabular}{|l|l|m{130mm}|}
+      \toprule
+      \multirow{7}{*}{\rotatebox{90}{\emph{all} }}          & \( \pt(\ell) \)     & Transverse momentum of the lepton                                                                          \\ \cline{2-3}
+                                                            & \( \eta(\ell) \)    & Pseudorapidity of the lepton                                                                               \\ \cline{2-3}
+                                                            & \( \pt(b_{1,2}) \)  & Transverse momentum of the leading and subleading \bjet                                                    \\ \cline{2-3}
+                                                            & \( \pt(j_{1,2}) \)  & Transverse momentum of the leading and subleading jet of any flavour                                       \\ \cline{2-3}
+                                                            & \met                & Missing transverse momentum                                                                                \\ \cline{2-3}
+                                                            & \mtW                 & Transverse mass between the lepton and the \met                                                            \\ \cline{2-3}
+      \midrule
+      \multirow{6}{*}{\rotatebox{90}{Bulk and Search-like }} & \amttwo             & Asymmetric stransverse mass~\cite{Lester:1999tx,Barr:2003rg}                                               \\ \cline{2-3}
+                                                            & \mblmin             & Minimum invariant mass between the lepton and the \bjet (see text for details)                             \\ \cline{2-3}
+                                                            & \mtblmin            & Minimum transverse invariant mass between the \met, the lepton and the \bjet (analogous to \mblmin)        \\ \cline{2-3}
+                                                            & \mbb                & Invariant mass of the two \bjets                                                                           \\ \cline{2-3}
+                                                            & \ptbb               & Transverse momentum of the 4-vector sum of the two \bjets                                                  \\ \cline{2-3}
+                                                            & \deltaRbb           & Spatial separation between 4-vector sum of the two \bjets                                                  \\ \cline{2-3}
+      \midrule
+      \multirow{12}{*}{\rotatebox{90}{Had W  }}         & \( \pt(\Whad) \)    & Transverse momentum of the hadronic \Wboson candidate (\Whad)                                              \\ \cline{2-3}
+                                                            & \( y(\Whad) \)      & Rapidity of the \Whad candidate                                                                            \\ \cline{2-3}
+                                                            & \( \pt(j_{OW,1}) \) & Transverse momentum of the leading jet which is not part of the \WbWb system \textit{(outside-of-W-jet)}   \\ \cline{2-3}
+                                                            & \( \pt(j_{OW,2}) \) & Transverse momentum of the subleading jet which is not part of the \WbWb system                            \\ \cline{2-3}
+                                                            & \mWbbl              & Invariant mass of the \( Wbb\ell \) system                                                                 \\ \cline{2-3}
+                                                            & \mbWminimax         & Variation of the min-max variable in Ref.~\cite{TOPQ-2017-05} which uses \Whad and the two leading \bjets:
+      \( \min\left( \max(m_{Wb_1},m_{\ell b_2}),\max(m_{\ell b_1},m_{Wb_2})\right)\).
+      This definition assigns each of the two \bjets to either \Whad or \( \ell \). This assignment is used for all of the following observables.\                                             \\ \cline{2-3}
+                                                            & \ptbl               & Transverse momentum of the 4-vector sum of the lepton and the assigned \bjet                               \\ \cline{2-3}
+                                                            & \ptbW               & Transverse momentum of the 4-vector sum of \Whad and the assigned \bjet                                    \\ \cline{2-3}
+                                                            & \mbl                & Invariant mass of the 4-vector sum of the lepton and the assigned \bjet                                    \\ \cline{2-3}
+                                                            & \mbW                & Invariant mass of the 4-vector sum of \Whad and the assigned \bjet                                         \\ \cline{2-3}
+                                                            & \deltaRbl           & Spatial separation between the lepton and the assigned \bjet                                               \\ \cline{2-3}
+                                                            & \deltaRbW           & Spatial separation between \Whad and the assigned \bjet                                                    \\ \cline{2-3}
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+\section{Bulk Interference Region}%
+\label{sec:regions-bulk}
+
+On top of the baseline selection only minimal additional cuts have
+been investigated. Those are jet multiplicities and baseline jet
+momentum selection. Optimisations of the selection are presented in more
+detail in \cref{app:optimisation-bulk}. The jet multiplicity selection
+stayed at the baseline condition at least 4 jets of which at least 2 should be tagged
+as \bjets (pending unfolding optimisations). Several values of baseline
+jet \pt have also been tested: \qty{20}{\GeV}, \qty{25}{\GeV}, \qty{30}{\GeV}
+and \qty{50}{\GeV}. While minor reduction of uncertainty is expected
+for low momenta the tails of distributions sensitive to the interference
+do not show a significant difference between individual cut values.
+The value of \qty{25}{\GeV} has been chosen as the baseline jet \pt requirement.
+
+Sensitive variables were defined by evaluating the sensitivity metrics
+described above on the baseline selection. They can be split into two categories:
+basic quantities describing individual particles and more complex compound quantities
+where the sensitivity to the \tW and \ttbar interference is targeted.
+Out of basic quantities, only lepton \pt and leading \bjet \pt show a high
+fraction of \tW events in the signal and a large DR-DS difference,
+while the other basic variables do not.
+They are shown on \cref{fig:SR_Bulk_Final_l_4j_incl_blinded:basic}.
+The yields in the bulk interference region are listed in
+\cref{tab:SR_Bulk_Final:yields}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \input{tables/yields_SR_Bulk_Final_l_4j_incl}
+  \end{center}
+  \caption{Yields of individual signal and background samples in the
+    bulk interference region.
+    The total expected yield is using the nominal \tW DR sample.
+    Uncertainties are statistical only.}%
+  \label{tab:SR_Bulk_Final:yields}
+\end{table}
+
+Several compound variables have been defined. Missing transverse momentum is used
+as defined in \cref{sec:definitions-met}. The fraction of \tW events is increasing
+towards higher values.
+
+The symmetric \(m_{\mathrm{T}2}\) variable is defined as
+\begin{equation}
+  m_{\mathrm{T}2}(\mathbf{p}_{\mathrm{T},1}, \mathbf{p}_{\mathrm{T},2},\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}}) = \min_{{ \mathbf{q}_{\mathrm{T},1}+\mathbf{q}_{\mathrm{T},2}=\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}}}}[\max(m_{\mathrm{T}}(\mathbf{p}_{\mathrm{T},1},\mathbf{q}_{\mathrm{T},1}),m_{\mathrm{T}}(\mathbf{p}_{\mathrm{T},2},\mathbf{q}_{\mathrm{T},2}))],
+\end{equation}
+where \(m_{\mathrm{T}}\) is the transverse mass, \(\mathbf{p}_{\mathrm{T},1}\) and  \(\mathbf{p}_{\mathrm{T},2}\) indicate the transverse momentum vectors of two particles of the same mass and \met is the missing transverse momentum vector.
+A minimisation is performed over all possible combination of the transverse momentum vectors \(\mathbf{q}_{\mathrm{T},1}\) and \(\mathbf{q}_{\mathrm{T},2}\) that sum up to the missing transverse momentum vector \(\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}}\).
+It is used to measure masses of particles pair produced at hadron colliders,
+where each particle decays to one particle that is directly observable and another
+particle whose existence can only be inferred from missing transverse momenta.
+This variable is closely related to the transverse mass variable.
+It can be generalised for the asymmetric case where one of the equal-massed particle decays fully visibly
+and the other decay involves an invisible particle, as is the case for \ttbar in this analysis~\cite{Lester:2014yga}.
+\begin{equation}
+  am_{\mathrm{T}2}(\mathbf{p}_{\mathrm{T},b1}, \mathbf{p}_{\mathrm{T},b2},\mathbf{p}_{\mathrm{T},\ell},\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}}) = \min[m_{\mathrm{T}2}(\mathbf{p}_{\mathrm{T},b1}+\mathbf{p}_{\mathrm{T},\ell}, \mathbf{p}_{\mathrm{T},b2},\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}}),m_{\mathrm{T}2}(\mathbf{p}_{\mathrm{T},b1}, \mathbf{p}_{\mathrm{T},b2}+\mathbf{p}_{\mathrm{T},\ell},\mathbf{E}_{\mathrm{T}}^{\mathrm{miss}})]
+\end{equation}
+
+A simplified case is just to look at the \mbl variable. As multiple \bjets
+are present in the event \mblmin and \mblmax can be defined, where \mblmin
+selects the leptonically decaying top quark from the \ttbar process well, while in the \tW case a much
+larger fraction is also expected for high mass values. A limitation is a large background contamination.
+Similarly \mtblmin and \mtblmax can be defined as combinations of a lepton, \bjet
+and \met that give the minimum and maximum values of transverse mass computed
+with these objects. While the behaviour of \mtblmin and \mtblmax is similar compared to 
+\mblmin and \mblmax, the signal contribution is
+smeared more and a better sensitivity due to lower background contamination
+is expected for the tail of the distributions.
+The \mblmax and \mtblmax variables have lower sensitivity to the interference
+and are not used as part of this analysis.
+
+
+\cref{fig:SR_Bulk_Final_l_4j_incl_blinded:compound} displays the expected distributions
+of \met,  \mtW, asymmetric \amttwo, \mtblmin and \mblmin.
+
+Additionally variables related to the \bjet pair are unfolded, namely
+\mbb, \ptbb, \deltaRbb and \deltaRbbl. These are shown
+in \cref{fig:SR_Bulk_Final_l_4j_incl_blinded:bb}.
+
+More variables, which are not to be unfolded, are shown for their agreement of data and MC are
+in \cref{fig:SR_Bulk_Final_l_4j_incl:additional1,fig:SR_Bulk_Final_l_4j_incl:additional2}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=28, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:ptl1}
+  }
+  \subfloat[]{
+    \includegraphics[page=1, width=0.37\textwidth]{BulkSelection/SR_Bulk_FinalExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:etal1}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=34, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:ptb1}
+  }
+  \subfloat[]{
+    \includegraphics[page=40, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:ptb2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=14, width=0.37\textwidth]{BulkSelection/SR_Bulk_FinalExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:pta1}
+  }
+  \subfloat[]{
+    \includegraphics[page=20, width=0.37\textwidth]{BulkSelection/SR_Bulk_FinalExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:pta2}
+  }
+
+  \caption{Basic variables sensitive to the interference between
+    \ttbar and single-top.
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:ptl1} lepton \pt distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:etal1} lepton \eta distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:ptb1} \( \pt(b_{1}) \) distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:ptb2} \( \pt(b_{2}) \) distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:pta1} \( \pt(j_{1}) \) distribution, and
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:pta2} \( \pt(j_{2}) \) distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Bulk_Final_l_4j_incl_blinded:basic}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=2, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:met}
+  }
+  \subfloat[]{
+    \includegraphics[page=8, width=0.37\textwidth]{BulkSelection/SR_Bulk_FinalExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:mtlep}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=8, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:amt2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=22, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:mtblmin}
+  }
+  \subfloat[]{
+    \includegraphics[page=16, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:mblmin}
+  }
+
+  \caption{Compound variables sensitive to the interference between
+    \ttbar and \tW.\@
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:met} \met distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:mtlep}  \mtW distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:amt2} asymmetric \amttwo distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:mtblmin} \mtblmin distribution, and
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:mblmin} \mblmin distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Bulk_Final_l_4j_incl_blinded:compound}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=50, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:mbb}
+  }
+  \subfloat[]{
+    \includegraphics[page=44, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:ptbb}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=56, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:drbb}
+  }
+  \subfloat[]{
+    \includegraphics[page=62, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl_blinded}%
+    \label{fig:SR_Bulk_Final_l_4j_incl_blinded:drbbl}
+  }
+
+  \caption{Variables related to two \bjets.\@
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:mbb} \mbb distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:ptbb} \ptbb distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:drbb} \deltaRbb distribution, and
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:drbbl} \deltaRbbl distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+%
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Bulk_Final_l_4j_incl_blinded:bb}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=116, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:bjet1eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=118, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:bjet1phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=120, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:bjet2eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=122, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:bjet2phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=74, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:lepphi}
+  }
+  \caption{Variables showing the agreement between data and MC in the bulk interference region:
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:bjet1eta} leading \bjet \eta distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:bjet1phi} leading \bjet \phi distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:bjet2eta} subleading \bjet \eta distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:bjet2phi} subleading\bjet \phi distribution, and
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:lepphi} lepton \phi distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+%
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Bulk_Final_l_4j_incl:additional1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=15, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:metphi}
+  }
+  \subfloat[]{
+    \includegraphics[page=167, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:mu}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=163, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:njet}
+  }
+  \subfloat[]{
+    \includegraphics[page=165, width=0.37\textwidth]{BulkSelection/SR_Bulk_Final_l_4j_incl}%
+    \label{fig:SR_Bulk_Final_l_4j_incl:nbjet}
+  }
+  \caption{Variables showing the agreement between data and MC in the bulk interference region:
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:metphi} \met \phi distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:mu} pile-up distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:njet} number of jets distribution, and
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl:nbjet} number of \bjets distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Bulk_Final_l_4j_incl:additional2}
+\end{figure}
+
+\FloatBarrier
+
+
+\section{Search-Like Interference Region}%
+\label{sec:regions-search}
+
+Besides looking at the bulk selection the aim is to investigate also
+a phase space inspired by BSM searches that is particularly sensitive
+to the interference between \ttbar and \tW, and where the modelling
+approaches can be studied in a region that is particularly
+important for BSM searches.
+This choice is driven by substantial uncertainties already present
+in the search phase space, particularly those pertaining to the theoretical
+modelling of single-top events. For example, SUSY searches or searches looking
+for Dark Matter~\cite{EXOT-2021-01}. The aim of conducting this study is
+to facilitate a more precise calibration of theoretical models related
+to single-top processes, ultimately leading to a reduction of associated
+uncertainties.
+Initial sensitivity analyses and event selection optimizations were carried out,
+employing two distinct approaches:
+The first utilises a high \met cut, while the second involves a high lepton
+\pt cut (see \cref{app:optimisation-searchlike} for details).
+The result of these investigations revealed that both variables had a substantial
+influence to discriminate difference between the interference
+modelling with the DR or DS scheme.\@ Hence, an event selection was
+formulated by merging the high \met and high lepton \pt cuts, with the condition
+that \met is a linear function of the lepton \pt, such that:
+
+\begin{equation}
+  \met > -A\pt\left(\ell\right) + C
+\end{equation}
+
+Where \(A\) and \(C\) represent the gradient and the intercept, respectively.
+The cut is set at \( \met > -0.625\pt(\ell) + \qty{270}{\GeV} \).
+The optimisation of the selection is described in detail
+in \cref{app:optimisation-searchlike}.
+
+On top of the baseline selection, other cuts are introduced to discriminate
+single-top from \ttbar and \Wjets:
+\begin{itemize}
+  \item  \( \mblmin \) variable was chosen to discriminate single-top from \( \ttbar \). The cut applied was set at \( \mblmin > \qty{150}{\GeV} \).
+  \item \( \Delta R (b_{1}, b_{2}) \) variable was chosen to further reduce the \(\ttbar \) background. The cut applied was set at \( \Delta R (b_{1}, b_{2})  > 1.4\).
+  \item Leading \bjet \pt variable was chosen to reduce the \ttbar and \Wjets background. This was set to \( \pt(b_{1}) > \qty{160}{\GeV} \).
+  \item 4-jet inclusive selection was preferred over a 3-jet inclusive selection, due to a reduction of the \Wjets background.
+  \item 2-\bjet inclusive selection was preferred to a 2-\bjet exclusive selection, due to a reduction of the \Wjets background.
+\end{itemize}
+
+The yields in the search-like interference region are listed in
+\cref{tab:SR_Searches_Triangular_l_4j_incl:yields}.
+Sensitive variables to discriminate predictions using the DR or DS are shown in
+\cref{fig:SR_Searches_Triangular_l_4j_incl_blinded:main,fig:SR_Searches_Triangular_l_4j_incl_blinded:compound}.
+Furthermore variables related to the two \bjets are shown in
+\cref{fig:SR_Searches_Triangular_l_4j_incl_blinded:bb}.
+
+More variables, which are not to be unfolded, are shown for their agreement of data and MC are
+in \cref{fig:SR_Searches_Triangular_l_4j_incl:additional1,fig:SR_Searches_Triangular_l_4j_incl:additional2}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \input{tables/yields_SR_Searches_Triangular_l_4j_incl}
+  \end{center}
+  \caption{Yields of individual signal and background samples in the
+    search-like interference region.
+    The total expected yield is using the nominal \tW DR sample.
+    Uncertainties are statistical only.}%
+  \label{tab:SR_Searches_Triangular_l_4j_incl:yields}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=21, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptl1}
+  }
+  \subfloat[]{
+    \includegraphics[page=1, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_TriangularExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:etal1}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=27, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptb1}
+  }
+  \subfloat[]{
+    \includegraphics[page=33, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptb2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=19, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_TriangularExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:pta1}
+  }
+  \subfloat[]{
+    \includegraphics[page=25, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_TriangularExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:pta2}
+  }
+
+  \caption{Variables sensitive to the interference between \ttbar and \tW.\@
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptl1} lepton \pt distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:etal1} lepton \eta distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptb1} \( \pt(b_{1}) \) distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptb2} \( \pt(b_{2}) \) distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:pta1} \( \pt(j_{1}) \) distribution, and
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:pta2} \( \pt(j_{2}) \) distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:main}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=3, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:met}
+  }
+  \subfloat[]{
+    \includegraphics[page=7, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_TriangularExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:mtlep}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=13, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_TriangularExtra_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:amt2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=9, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:mblmin}
+  }
+  \subfloat[]{
+    \includegraphics[page=15, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:mtblmin}
+  }
+
+  \caption{Variables sensitive to the interference between \ttbar and \tW.\@
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:met} \met distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:mtlep}  \mtW distribution,
+    \protect\subref{fig:SR_Bulk_Final_l_4j_incl_blinded:amt2} asymmetric \amttwo distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:mblmin} \mblmin distribution, and
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:mtblmin} \mtblmin distribution. 
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:compound}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=44, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:mbb}
+  }
+  \subfloat[]{
+    \includegraphics[page=38, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptbb}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=50, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:drbb}
+  }
+  \subfloat[]{
+    \includegraphics[page=56, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl_blinded}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:drbbl}
+  }
+
+  \caption{Variables related to two \bjets.\@
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:mbb} \mbb distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:ptbb} \ptbb distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:drbb} \deltaRbb distribution, and
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl_blinded:drbbl} \deltaRbbl distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The upper ratio panel displays the ratio of the \tW contributions
+    for each of the two modelling schemes to the combined \ttbar+\tW
+    signal predictions.
+    The lower ratio panel displays the ratio of each of the two
+    predictions to the nominal one.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Searches_Triangular_l_4j_incl_blinded:bb}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=70, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:bjet1eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=72, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:bjet1phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=74, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:bjet2eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=76, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:bjet2phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=46, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:lepeta}
+  }
+  \subfloat[]{
+    \includegraphics[page=48, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:lepphi}
+  }
+  \caption{Variables showing the agreement between data and MC in the search-like region:
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:bjet1eta} leading \bjet \eta distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:bjet1phi} leading \bjet \phi distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:bjet2eta} subleading \bjet \eta distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:bjet2phi} subleading \bjet \phi distribution, and
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:lepphi} lepton \phi distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Searches_Triangular_l_4j_incl:additional1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=14, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:metphi}
+  }
+  \subfloat[]{
+    \includegraphics[page=149, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:mu}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=141, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:njet}
+  }
+  \subfloat[]{
+    \includegraphics[page=145, width=0.37\textwidth]{SearchLikeTriangular/SR_Searches_Triangular_l_4j_incl}%
+    \label{fig:SR_Searches_Triangular_l_4j_incl:nbjet}
+  }
+  \caption{Variables showing the agreement between data and MC in the search-like region:
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:metphi} \met \phi distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:mu} pile-up distribution,
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:njet} number of jets distribution, and
+    \protect\subref{fig:SR_Searches_Triangular_l_4j_incl:nbjet} number of \bjets distribution.
+    In the legend ``Exp'' indicates the prediction with data statistical uncertainty and ``Sys'' includes only MC statistical uncertainty as systematic uncertainty.
+    The two predictions differ only in the modelling of the \tW
+    contribution and are marked DR (nominal sample) and DS.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Searches_Triangular_l_4j_incl:additional2}
+\end{figure}
+
+\FloatBarrier
+
+\input{chapters/regions/RegionWbWb}
+

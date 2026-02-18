@@ -1,0 +1,236 @@
+\section{Electron Fake Factor Measurement}%
+\label{sec:bkg-fakes-electron}
+
+Fake electrons arise from three background sources. They are either
+mis-reconstructed jets, mostly originating from light quark or gluon
+fragmentation, photon conversions or real electrons arising from secondary
+decays of light and heavy flavour mesons within jets. Fake electrons are
+normally less isolated than prompt electrons and have a lower chance of passing
+tighter identification levels. The simulation does not offer an optimal
+modelling of fake electrons which ultimately arise as the final product of
+a chain prompted by strong interactions.
+
+The electron fake contribution to the measurement region is estimated as described
+in \cref{sec:bkg-fakefactor}, which involves a data driven estimate of
+the fake factor.
+
+Electron fake factors are measured by selecting a region in data that
+is significantly enriched in fake electrons while still kinematically close
+enough to the measurement region. This is not easily achieved because fake electrons
+can very closely mimic the attributes of prompt electrons, and the contribution
+of prompt leptons cannot be completely suppressed, so one needs to explicitly
+subtract the expected prompt electron contamination using MC predictions.
+
+
+\subsection{Electron Fake Factor Measurement}
+
+To select a region with a significant content of fake electrons, a special
+single electron region is defined. The cut on \( \met + \mtW \) has been
+reversed to require the observable smaller than \qty{60}{\GeV}. Additionally,
+to increase the statistics, jet and \bjet selections have been loosened
+to at least 3 jets of which at least one should be a \bjet. The region requirements
+are summarised in \cref{tab:FakeRegionDefinitions}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{l c c}
+      \toprule
+      Selection            & Electron fakes region             & Muon fakes region  \\
+      \midrule
+      \( N \)(central jet) & \multicolumn{2}{c}{\( \geq 3\)}                        \\
+      \( N_{\bjets}\)      & \multicolumn{2}{c}{\( \geq 1 \)}                       \\
+      \( \met + \mtW \)    & \multicolumn{2}{c}{\( (0, 60) \)}                      \\
+      \( N \)(lep)         & 1                                 & 1                  \\
+      \( N(\ell) \)        & 1                                 & 0                  \\
+      \( N(\mu) \)         & 0                                 & 1                  \\
+      \( \pt(\ell) \)      & \( (30, \infty) \)                & \( (30, \infty) \)                \\
+      \( \pt(j1)\)         & ---                               & \( (35, \infty) \) \\
+      \( \Delta \phi(\mu, \mathrm{jet})\) & --- & \( \geq 2.7\) \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{A summary of the event selection for fake measurement regions.}%
+  \label{tab:FakeRegionDefinitions}
+\end{table}
+
+All object definitions are the same as defined in \cref{ch:definitions}.
+The defined region is called the \textit{fakes-enriched region}.
+Two sub-regions are defined out of the fakes-enriched region, \textit{tight}
+and \textit{loose}, which are filled with electrons satisfying the corresponding
+tightness requirement.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\textwidth]{fakes/fake_factors_e_nominal}%
+  \label{fig:Fakes_Electrons-nominal}
+  \caption{Electron fake factors measured as a function of \pt for different \eta bins.
+  }%
+  \label{fig:Fakes_Electrons}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=7, width=0.4\textwidth]{fakes/Fakes_Electrons_e_nominal}%
+    \label{fig:Fakes_Electrons-pt-loose}
+  }
+  \subfloat[]{
+    \includegraphics[page=3, width=0.4\textwidth]{fakes/Fakes_Electrons_e_nominal}%
+    \label{fig:Fakes_Electrons-pt-tight}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=12, width=0.4\textwidth]{fakes/Fakes_Electrons_e_nominal}%
+    \label{fig:Fakes_Electrons-eta-loose}
+  }
+  \subfloat[]{
+    \includegraphics[page=11, width=0.4\textwidth]{fakes/Fakes_Electrons_e_nominal}%
+    \label{fig:Fakes_Electrons-eta-tight}
+  }
+
+  \caption{Fakes-enriched regions in the nominal selection.
+    \protect\subref{fig:Fakes_Electrons-pt-loose} \pt distribution of loose electrons in the fakes-enriched region,
+    \protect\subref{fig:Fakes_Electrons-pt-tight} \pt distribution of tight electrons in the fakes-enriched region,
+    \protect\subref{fig:Fakes_Electrons-eta-loose} \eta distribution of loose electrons in the fakes-enriched region,
+    \protect\subref{fig:Fakes_Electrons-eta-tight} \eta distribution of tight electrons in the fakes-enriched region.
+    All the distributions show data events and the prompt MC component subtracted from data, to ensure a fake dominated region.
+  }%
+  \label{fig:Fakes_Electrons-distributions}
+\end{figure}
+
+The fakes-enriched regions are shown in \cref{fig:Fakes_Electrons-distributions}.
+Selected events still contain prompt electrons after all selection requirements
+are applied. These residual prompt electrons are subtracted from data before
+the calculation of fake factors using the Monte Carlo simulation.
+The MC samples used are \Wjets (before the fit), \Zjets, \ttbar and single top, diboson, and rare
+top decays. The MC subtraction is much larger in the tight region
+compared to the loose region and the number of subtracted prompt leptons
+in that region amounts to up to \qty{100}{\%} of all electrons.
+The \pt dependence of the fake factor is shown in \cref{fig:Fakes_Electrons}.
+The fake factor was measured in three \eta slices (two slices for the forward
+region and one slice for the barrel region). The last \pt bin includes the
+overflow and is extended to infinity and no extrapolation of the fake
+factor is performed.
+
+
+\subsection{Systematic Uncertainties on Electron Fake-factors}%
+\label{sec:bkg-fakes-electron-sys}
+
+The main sources of the systematic uncertainties of the fake factor arise from
+Monte Carlo modelling of the subtracted leptons, from different composition
+of fake electrons in the fake enriched region compared to the measurement region,
+and from the normalisation of Monte Carlo samples in the fakes-enriched region.
+
+Given that the amount of tight fakes is very low, only the MC normalisation
+uncertainty is evaluated by varying all samples simultaneously by \qty{10}{\%} to account
+for cross-section and luminosity uncertainties as well as the modelling of
+the prompt MC used in the subtraction procedure.
+
+Additionally the effect of the \( \met + \mtW \) cut is tested by varying it
+to \qty{50}{\GeV} and \qty{70}{\GeV}. The effect of this variation on the fake
+factors is negligible.
+
+The effect on the number of \(b-\)jets was tested by varying \( N_{\bjets}\) to include at least 2 \(b-\)jets. This effect isn't negligible and can be quite large in some bins in the electron \pt distribution. 
+
+This region is kinematically quite far from the measurement region so the observed
+variation in the fake factor due to varying composition of the fakes enriched
+sample is a quite conservative estimate of the systematic uncertainty.
+
+% \begin{table}[htbp]
+%   \begin{center}
+%     \begin{tabular}{ c c }
+%       \toprule
+%       Variation & Purpose \\
+%       \midrule
+%       Flipped requirement on number of jets      & fakes composition                 \\
+%       Removed \met requirement      & fakes composition                 \\
+%       MC scaled up by \qty{10}{\%}     & MC modelling, cross-section and luminosity \\
+%       MC scaled down by \qty{10}{\%}   & MC modelling, cross-section and luminosity \\
+%       \bottomrule
+%     \end{tabular}
+%   \end{center}
+
+%   \caption{Summary of the variations used for the determination of the systematic uncertainty of the fake factors.}%
+%   \label{tab:fakes-electron-sys}
+% \end{table}
+
+The resulting fake factors are shown on \crefrange{fig:Fakes_Electrons-elsys1}{fig:Fakes_Electrons-elsys4}.
+Combined systematics of the fake factors was calculated by adding all variations
+and the statistical uncertainty in quadrature. The measurement is relatively
+stable overall up to very high electron \pt but the maximum uncertainty can get
+very high, up to \qty{100}{\%}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=1, width=0.4\textwidth]{fakes/fake_factors_e_final}%
+    \label{fig:Fakes_Electrons-elsys1}
+  }
+  \subfloat[]{
+    \includegraphics[page=2, width=0.4\textwidth]{fakes/fake_factors_e_final}%
+    \label{fig:Fakes_Electrons-elsys2}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=3, width=0.4\textwidth]{fakes/fake_factors_e_final}%
+    \label{fig:Fakes_Electrons-elsys3}
+  }
+  \subfloat[]{
+    \includegraphics[page=4, width=0.4\textwidth]{fakes/fake_factors_e_final}%
+    \label{fig:Fakes_Electrons-elsys4}
+  }
+
+  \caption{The measured fake factor with systematic uncertainties.
+    \protect\subref{fig:Fakes_Electrons-elsys1} fake factor variations for the first \eta bin,
+    \protect\subref{fig:Fakes_Electrons-elsys2} fake factor variations for the second \eta bin,
+    \protect\subref{fig:Fakes_Electrons-elsys3} fake factor variations for the third \eta bin and
+    \protect\subref{fig:Fakes_Electrons-elsys4} fake factor variations for the fourth \eta bin.
+  }
+\end{figure}
+
+
+\subsection{Validation of Fake-factors for Electrons}%
+\label{subsec:bkg-fakes-electron-validation}
+
+The measured fake factors were validated by performing the direct closure test
+in the fakes-enriched region. The same event selection was used as for the
+estimation, but no special binning has been applied. Fakes have been estimated
+from data using the measured fake factors. The reconstructed object selection
+was the same as the nominal event selection (\cref{ch:definitions}).
+
+Prompt Monte Carlo processes that were used are the same as for the estimation.
+The remaining events are described well by the fake factor method as seen on
+\cref{fig:Fakes_ClosureElectrons}.
+The only considered systematic uncertainty in this region was
+the systematic uncertainty of the fake factor. Overall the agreement is good
+even up to very high electron energies.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=2, width=0.4\textwidth]{fakes/Fakes_ClosureElectrons_e_validation_sys}%
+    \label{fig:Fakes_ClosureElectrons-pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=5, width=0.4\textwidth]{fakes/Fakes_ClosureElectrons_e_validation_sys}%
+    \label{fig:Fakes_ClosureElectrons-eta}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=7, width=0.4\textwidth]{fakes/Fakes_ClosureElectrons_e_validation_sys}%
+    \label{fig:Fakes_ClosureElectrons-met}
+  }
+  \subfloat[]{
+    \includegraphics[page=13, width=0.4\textwidth]{fakes/Fakes_ClosureElectrons_e_validation_sys}%
+    \label{fig:Fakes_ClosureElectrons-mt}
+  }
+
+  \caption{The electron fake-factors closure.
+    \protect\subref{fig:Fakes_ClosureElectrons-pt} electron \pt distribution,
+    \protect\subref{fig:Fakes_ClosureElectrons-eta} electron \eta distribution,
+    \protect\subref{fig:Fakes_ClosureElectrons-met} \met distribution, and
+    \protect\subref{fig:Fakes_ClosureElectrons-mt} \mtW distribution.
+    The dashed band shows the systematic uncertainty associated to the fake factor measurement.
+  }%
+  \label{fig:Fakes_ClosureElectrons}
+\end{figure}

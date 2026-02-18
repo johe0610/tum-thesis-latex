@@ -1,0 +1,159 @@
+\subsection{Likelihood Fit}%
+\label{sec:LikelihoodFit}
+
+\subsubsection{Background Information}
+
+The fitting procedure of this analysis is implemented using the
+\textsc{HistFitter}~\cite{Baak:2014wma} fitting framework.
+A background-only likelihood fit is performed for the dedicated Control Region
+(\Wjets CR) introduced in \cref{sec:WjetsCR}.
+The fit makes use of a probability density function (PDF) that combines
+Poisson terms for all events corresponding
+to each background process in all relevant regions.
+
+The normalisation of the \Wjets background is regulated by a free-floating
+parameter, also known as a normalisation parameter.
+Other parameters, the so-called nuisance parameters are modelled as having Gaussian distributions, which capture uncertainties associated with various sources such as statistical fluctuations and systematic effects. The likelihood fit aims to maximize the logarithm of the likelihood
+function, taking into account the observed data in the Control Region and
+the expected background predictions.
+The pre- and post-fit distributions for the control region are shown in \cref{fig:LikelihoodFitCR}. 
+
+The extrapolation from the CR to the measurement regions (SR) is determined by
+the so-called transfer factor for the normalised \Wjets background process.
+This factor determines the estimation of the yields in the measurement regions
+and is calculated as follows: 
+
+\begin{equation}
+  N\mathrm{(SR, est.)} = N\mathrm{(CR, fit.)} \times \dfrac{\mathrm{MC}\mathrm{(SR, init.)}}{\mathrm{MC}\mathrm{(CR, init.)}} = \mu \times \mathrm{MC}\mathrm{(SR, init)}
+  \label{eq:transferFactor}
+\end{equation}
+
+where \(N\mathrm{(SR, est.)} \) represents the estimated background
+in the measurement regions (SR) for the normalised \Wjets background process,
+\(N\mathrm{(CR, fit.)}\) is the fitted number of  events for \Wjets in the CR,
+and \({\mathrm{MC}\mathrm{(SR, init.)}}\) and \({\mathrm{MC}\mathrm{(CR, init.)}}\)
+are the initial estimates of the contributions from the \Wjets background
+in the SR and CR respectively, as obtained in MC simulation.
+\(N\mathrm{(CR, fit.)}\) is often
+rewritten as \( \mu \) multiplied by a fixed, nominal background prediction,
+where \( \mu \) is the actual normalisation factor obtained in the fit to data.
+The application of the TF allows systematic uncertainties in the predicted
+background processes to be (partially) cancelled in the extrapolation.
+
+
+\subsubsection{Fit Setup}
+The analysis employs a straightforward 1-bin fit focusing on a single parameter of interest: the W+jets normalisation. All \Wjets systematics (modelling and detector) are normalised to the nominal sample yield. Internally, The HistFitter framework splits each uncertainty nuisance parameter into a normalisation and shape component for \Wjets. However, for this 1-bin control region, the normalisation component is removed, simplifying the fit. All uncertainties (both shape and normalisation) from other processes are also included in the fit as well, which helps to provide a more accurate estimation of the \Wjets background, especially given the large contamination from \ttbar events.
+
+Initially, only the uncertainties directly affecting the shape of the \Wjets background were included in the fit. However, since the impact on the unfolding results was minimal between this setup and the one with all systematics included, the nominal fit was ultimately performed with the full set of systematic uncertainties. For more details, see \cref{app:FitSystematicsUsage}.
+% The framework internally splits each uncertainty nuisance parameter into
+% normalisation and shape components. 
+% All systematics related to the \Wjets sample are treated in a special way where the normalisation component is disregarded and the systematic samples are normalised to the nominal yield in the control
+% region. This reduces the complexity of the fit and removes unnecessary
+% correlations between the normalisation parameter and individual systematics
+% nuisance parameters.  Apart from that, systematics are considered for all samples with normalisation and shape components
+% as described in \cref{ch:systematics}. 
+
+
+\subsubsection{Results}
+
+
+The obtained normalisation factor for \Wjets background from the fit to data is 1.095 \(\pm \) 0.099.
+
+\cref{fig:LikelihoodFit:pullPlot} shows the pull plots of individual systematic
+nuisance parameters. The central values are consistently zero and none of the
+parameters is over- or under-constrained.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[page=1, width=1.0\textwidth]{LikelihoodFit/pull_WbWb_WFit_sysBKG_bulk_sigdefault}%
+  \caption{Pull plot for CR-only likelihood fit. Luminosity point actually does not represent a pull but is automatically put on this plot by \textsc{HistFitter}.}%
+  \label{fig:LikelihoodFit:pullPlot}
+\end{figure}
+
+The correlation matrix \cref{fig:LikelihoodFit:corrMatrix} displays only correlations between the normalisation factor for \Wjets background and fake electrons and some signal (\ttbar and single top) modelling uncertainties (ISR, renormalisation scale).
+The shown 6 nuisance parameters have the highest (anti-)correlations, the rest % chktex 36
+are negligible and not shown. Due to the use of 1-bin fit by construction all
+nuisance parameters that are shared between the \Wjets sample and any other sample
+do not impact the normalisation significantly as they are collectively constrained
+by data. On the other hand nuisance parameters that are not shared with the \Wjets
+sample are directly (anti-)correlated, for example cross-section uncertainty on the signal: % chktex 36
+when signal increases the floating \Wjets sample has to decrease to maintain the same
+constant yield as data has.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[page=1, width=1.0\textwidth]{LikelihoodFit/c_corrMatrix_RooExpandedFitResult_afterFit}%
+  \caption{Correlation matrix for CR-only likelihood fit. ``Normalisation\_signal'' parameter refers to the scale uncertainties for the single top and \ttbar signals}%
+  \label{fig:LikelihoodFit:corrMatrix}
+\end{figure}
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{LikelihoodFit/WjetsRanking.png}%
+  \caption{Ranking of uncertainties for the CR-only likelihood fit}
+\end{figure}
+
+The distributions without and with fit results taken into account for the bulk and the search-like
+measurement regions (defined in \cref{ch:regions}) are shown in \cref{fig:LikelihoodFitBulk,fig:LikelihoodFitSearch},
+respectively. A small reduction in uncertainties is observed in the tail
+of the \mblmin and \amttwo variables in the bulk measurement region where
+the fraction on \Wjets background is particularly high.
+The uncertainty is still high as the signal modelling uncertainty is unchanged
+and only the \Wjets background is affected by the fit.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/CR_Wsys_l_3j_excl_nleptons_log_pre}%
+    \label{fig:LikelihoodFitCR:BulkPreFit}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/CR_Wsys_l_3j_excl_nleptons_log_post}%
+    \label{fig:LikelihoodFitCR:BulkPostFit}
+  }
+  \caption{Pre-fit and post-fit distributions for the lepton multiplicity in the \Wjets control region.}%
+  \label{fig:LikelihoodFitCR}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/IR/mblmin_nofit}%
+  }
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/IR/mblmin_fit}%
+  }
+  \caption{Distributions of \mblmin in the bulk measurement region without fit inputs (left) and with fit inputs (right).}%
+  \label{fig:LikelihoodFitBulk}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/SR/mblmin_nofit}%
+  }
+  \subfloat[]{
+    \includegraphics[width=0.37\textwidth]{figures/LikelihoodFit/SR/mblmin_fit}%
+  }
+
+  \caption{Distributions of \mblmin in the search-like measurement region without fit inputs (left) and with fit inputs (right).}%
+  \label{fig:LikelihoodFitSearch}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  %\includegraphics[width=0.4\textwidth]{LikelihoodFit/CorrTestSystematic.png}%
+  \includegraphics[width=0.4\textwidth]{LikelihoodFit/ratioHistBKGRelDiff.pdf}
+  \caption{Test of impact of correlations in systematic uncertainties on the \Wjets background modelling. The plot shows the impact of the shifted mu value on the background modelling systematics.}%
+  \label{f:testcorrelation}
+\end{figure}
+
+\subsubsection{Propagation of uncertainties to unfolding}
+In the unfolding procedure, uncertainties are treated as uncorrelated. From the fit, the individual normalisation parameter of the \Wjets background, its uncertainty, and the shape-only component of other \Wjets uncertainties are propagated to the unfolding.
+Given that the normalisation parameter incorporates correlation with the normalisation of the other systematic uncertainties, using it in the unfolding may introduce a slight over- or underestimation of the propagated uncertainty. While the correlations within \Wjets uncertainties are minimal and have a negligible impact—since the normalisation parameter primarily reflects the normalization component of \Wjets systematic uncertainties—this assumption does not hold for modelling uncertainties from other samples.
+With this in mind, the correlation matrix \cref{fig:LikelihoodFit:corrMatrix} shows strong (anti-)correlations between the \Wjets normalisation parameter and specific uncertainties, particularly from fake electrons and ISR signal modelling. By propagating the normalisation parameter with these embedded correlations to the unfolding, we introduce a minor double-counting effect, leading to a more conservative (overestimated) uncertainty on the total result. % chktex 36
+This effect was roughly validated by re-fitting the mu \Wjets parameter after moving the nominal value of the dominant systematic uncertainty (top shower modelling systematic) to its +1 sigma variation. The resulting mu parameter is then used through the unfolding to assess a new version of the systematic under study. The systematic is not changed by this procedure and the two systematics are identical. The new mu value has an impact on the \Wjets background modelling systematic which is also shown in \cref{f:testcorrelation}. 
+
+
+

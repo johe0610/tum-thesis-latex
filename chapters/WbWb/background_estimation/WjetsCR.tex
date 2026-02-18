@@ -1,0 +1,77 @@
+\section{\texorpdfstring{\Wjets}{W+jets} control region}%
+\label{sec:WjetsCR}
+The dominant background in the analysis arises from \Wjets background processes.
+In order to effectively determine the background estimate and constrain
+the normalisation of the \Wjets background across all measurement regions,
+a dedicated control region is defined. This control region is designed to have
+similar kinematic properties as the respective SRs but involves an inverted
+variable selection. This inversion effectively reduces signal contamination
+while increasing the yield and purity of a specific background.
+
+The CR for the \Wjets background contains exactly three jets, which are selected
+to ensure orthogonality to the SR.\@ At least one of the jets is \btagged.
+Additionally the \Wboson-hadronic signal region is vetoed although the overlap is expected
+to be small.
+To enhance the fraction of \Wjets events, a cut centred around the \Wboson boson
+mass is applied through the variable \mtW. Additionally, to reduce the \ttbar
+contribution, a cut on \(\mblmin > \qty{180}{\GeV}\) is set.
+The resulting \Wjets selection is shown in \cref{tab:RegionDefinitionsCR}
+and the corresponding yields in \cref{tab:CR_Wsys:yields}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{l c}
+      \toprule
+      Selection              & \Wjets CR            \\
+      \midrule
+      \( N \)(central jet)   & \( = 3 \)            \\
+      \( N_{\bjets} \)       & \( \geq 1 \)         \\
+      \( \mtW + \met \)      & \( (60, \infty) \)   \\
+      \( \pt(\ell) \)        & \( (30, \infty) \)   \\
+      \( \pt(j)\)            & \( (25, \infty) \)   \\
+      \( \mtW \)             & \( (40, 100) \)      \\
+      \mblmin                & \( (180, \infty) \)  \\
+      SR veto                & enabled              \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{A summary of the event selection for the \Wjets control region.}%
+  \label{tab:RegionDefinitionsCR}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \input{tables/yields_CR_Wsys_l_3j_excl}
+  \end{center}
+  \caption{Yields of individual signal and background samples in the
+    \Wjets control region.
+    The total expected yield is using the nominal \tW DR sample.
+    Uncertainties are statistical only.}%
+  \label{tab:CR_Wsys:yields}
+\end{table}
+
+
+\cref{fig:WJetsCR:mblmin} shows the distribution of the \mblmin variable.
+The \Wjets purity is roughly \qty{50}{\%} and there is no significant
+sensitivity to the \ttbar and \tW interference observed.
+A single-bin distribution is used in the likelihood fit as described
+in \cref{sec:LikelihoodFit} and illustrated in \cref{fig:WJetsCR:nleptons}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=1, width=0.37\textwidth]{CR_WJets/CR_Wsys_l_3j_excl}%
+    \label{fig:WJetsCR:mblmin}
+  }
+  \subfloat[]{
+    \includegraphics[page=5, width=0.37\textwidth]{CR_WJets/CR_Wsys_l_3j_excl}%
+    \label{fig:WJetsCR:nleptons}
+  }
+
+  \caption{Distributions in the \Wjets CR.\@
+    \protect\subref{fig:WJetsCR:mblmin} \mblmin distribution and
+    \protect\subref{fig:WJetsCR:nleptons} \(N_\mathrm{leptons} \) distribution.
+    The full uncertainty without any fit taken into account is shown for the nominal setup using the \tW DR sample.
+  }%
+  \label{fig:WJetsCR}
+\end{figure}

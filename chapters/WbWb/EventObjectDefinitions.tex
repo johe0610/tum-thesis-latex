@@ -1,0 +1,405 @@
+\section{Baseline Event Selection and Object Definitions}%
+\label{ch:definitions}
+
+In this subsection we describe the baseline event and object definitions.
+The further selection optimisation is described in \cref{ch:regions}.
+
+Electron and muons are reconstructed, identified and isolated according to the latest
+recommendations by ATLAS' performance group's~\cite{web:EGammaRecommendations, web:MuonRecommendations}.
+Combining electrons and muons form the leptons in this analysis. The data driven method
+used by the analysis for the prediction of fake leptons in the measurement region
+requires two distinct definitions of leptons, called \textit{tight}
+and \textit{loose}. The method relies on measuring the transition probability
+of leptons between both regions. The tight definition is the same as the final
+analysis lepton definition. The transition rate from the loose to the tight
+region must be small enough to ensure the stability of the methods. Also the
+loose definition has to be loose enough so that the
+\( N_\mathrm{tight}/N_\mathrm{loose} \) ratio is not too large and within
+a small statistical uncertainty.
+
+\subsection{Tracking and Vertex Requirements}
+
+All of the events considered in the analysis are required to have a primary
+vertex, following the guidelines of the ATLAS Inner Detector
+Group~\cite{web:TrackingRecommendations}.
+To further reject non-collision backgrounds originating from cosmic rays and
+beam-halo events, at least one reconstructed collision vertex is required with
+at least two associated tracks with transverse momentum greater than
+\qty{500}{\MeV}. The vertex candidate with the highest sum of the squared
+transverse momenta of all associated tracks is identified as the primary vertex.
+
+\subsection{Trigger}%
+\label{sec:definitions-triggers}
+
+Signal trigger requirements are specific for each year of the Run 2 data
+taking and are summarised in \cref{tab:trigger-analysis}. All used
+triggers are unprescaled in 2015, 2016, 2017 and 2018
+periods~\cite{web:LowestUnprescaled}.
+The single-muon or single-electron triggers are described in
+Refs.~\cite{TRIG-2016-01,TRIG-2018-05,TRIG-2018-01,ATL-DAQ-PUB-2016-001,ATL-DAQ-PUB-2017-001,ATL-DAQ-PUB-2018-002,ATL-DAQ-PUB-2019-001}.  % cspell:disable-line
+A matching between online objects firing the trigger and an offline reconstructed object is required.
+
+\begin{table}[htbp]
+  \begin{center}
+    \small
+    \resizebox{\textwidth}{!}%
+    {%
+      \begin{tabular}{ l c c c }
+        \toprule
+                    & 2015                                                                     & 2016+2017+2018                                                                            \\
+        \midrule
+        \( e \)     & \texttt{HLT\_e24\_lhmedium\_L1EM20VH OR HLT\_e60\_lhmedium OR HLT\_e120\_lhloose} & \texttt{HLT\_e26\_lhtight\_nod0\_ivarloose OR HLT\_e60\_lhmedium\_nod0 OR HLT\_e140\_lhloose\_nod0} \\
+        \( \mu \)   & \texttt{HLT\_mu20\_iloose\_L1MU15 OR HLT\_mu50}   & \texttt{HLT\_mu26\_ivarmedium OR HLT\_mu50}                                               \\
+        \bottomrule
+      \end{tabular}
+    }
+  \end{center}
+
+  \caption{A summary of the trigger requirements.}%
+  \label{tab:trigger-analysis}
+\end{table}
+
+All the triggers used are unprescaled High Level Triggers (HLT).
+They require 1 lepton above a certain \pt threshold, which in GeV unit equals
+to the number after the ``\texttt{e}'' and ``\texttt{mu}'' characters in the
+trigger name. For example \texttt{HLT\_e140\_lhloose\_nod0} requires
+one electron above \qty{140}{\GeV}.
+
+Electron triggers require electrons to have at least \texttt{LHLoose},
+\texttt{LHMedium} or \texttt{LHTight} offline reconstruction level, depending
+on the tag in trigger name, and do not require any isolation level on the
+electrons. A combination of triggers is taken where the identification criterion
+is stricter going towards lower momenta to keep the trigger rate low enough.
+Additionally, for the 2016, 2017 and 2018 triggers no information on the
+impact parameter \dzero was used, as stated by the ``\texttt{nod0}'' tag in
+the trigger name.
+
+The low momentum muon triggers ask for an isolation requirement on the muon
+according to a loose or medium working point of the muon reconstruction
+algorithm at trigger level, depending on the year.
+
+\subsection{Electrons}%
+\label{sec:definitions-electrons}
+
+The basic definition of electrons in different working points are provided
+centrally by the ATLAS EGamma group~\cite{web:EGammaRecommendations} and are common to all
+ATLAS analyses. These basic definitions are based on three categories:
+electron reconstruction, identification, and isolation. Analyses then
+choose one of the basic working points and complement it with additional
+specific analysis cuts.
+
+The reconstruction of electron objects is based on the information measured by
+the EM calorimeter and the ID subsystems~\cite{ATLAS-CONF-2014-032, PERF-2013-03}.
+% The electron reconstruction efficiency measured in 2015 was greater than
+% \qty{98}{\%} in almost all the phase space regions~\cite{web:EGammaReco}.
+In order to account for differences in simulation and data scale factors
+are applied to reconstructed electrons in Monte Carlo. The scale factors
+are provided centrally by the EGamma group and are expressed in bins of
+electron \pt and \eta~\cite{web:EGammaRecommendations}. 
+% They differ from 1.0 maximally up to
+% \qty{0.5}{\%} in all of the bins~\cite{web:EGammaRecommendations}.
+
+There is no guarantee that objects, reconstructed as electrons, truly
+are electrons. The main sources of fake electron objects are jets, electrons
+from photon conversions or heavy flavour hadron decays and Dalitz decays.
+The EGamma group provides common working points~\cite{web:EGammaRecommendations}
+to discriminate between prompt and fake electrons which are based on
+a Multivariate likelihood fit of the tracking and cluster information.
+The reconstruction and identification working points used are called
+\texttt{LHLoose} and \texttt{LHTight}. The use of two working points
+is further described in the section on the electron fakes background estimation
+in \cref{sec:bkg-fakes-electron}. Briefly, the data driven method used
+by the analysis to predict fake electrons in the measurement region requires two
+distinct definitions of electrons (\cref{sec:bkg-fakefactor}).
+They are called \textit{tight} and \textit{loose} definitions, and the methods
+rely on measuring the probability of fake electrons to transition between
+both regions.
+
+The \texttt{LHTight} working point classifies a subset of electrons tagged
+by the \texttt{LHLoose} working point. Similarly as for the electron
+reconstruction, scale factors need to be used for
+electron identification as well~\cite{web:EGammaRecommendations}.
+
+The \texttt{PLImprovedTight} isolation~\cite{web:PLImprovedWPs} working point
+is used to identify and reject the non-prompt electrons and muons candidates
+from decays of heavy flavour (\(b\) and \(c\)) hadrons. It uses
+a boosted decision tree algorithm trained on standard isolation variables
+which measure the distance of the electron to the closest particle in a cone,
+and a recurrent neural network using track impact parameters.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{ c c c }
+      \toprule
+      Requirement                      & Signal electrons (tight)                  & Background electrons (loose)        \\
+      \midrule
+      Identification                   & \texttt{LHTight}                          & \texttt{LHLoose}                    \\
+      Isolation                        & \texttt{PLImprovedTight}                  & fail \texttt{PLImprovedTight} or fail tight selection  \\
+      \pt cut                          & \( \pt > \qty{10}{\GeV} \)                & \( \pt > \qty{10}{\GeV} \)           \\
+      \eta cut                         & \( |\eta| < 2.47 \)                       & \( |\eta| < 2.47 \)                 \\
+      Crack veto                       & veto \( 1.37 < |\eta| < 1.52 \)           & veto \( 1.37 < |\eta| < 1.52 \)     \\
+      \(|\dzero|/\sigma_{\dzero}\) cut & \(|\dzero|/\sigma_{\dzero} < 5.0\)        & \(|\dzero|/\sigma_{\dzero} < 5.0\)  \\
+      \(|\zzsth|\) cut                 & \(|\zzsth| < \qty{0.5}{\mm}\)             & \(|\zzsth| < \qty{0.5}{\mm}\)        \\
+      Bad cluster veto                 & yes                                       & yes                                 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \caption{A summary of the electron definitions in the analysis.}%
+  \label{tab:definitions-electrons}
+\end{table}
+
+
+
+To avoid trigger bias and to ensure a large enough difference between tight
+and loose selection of electrons in the fake estimation, the \texttt{LHTight}
+identification level was chosen as the signal working point.
+The \texttt{PLImprovedTight} isolation working point was chosen for the signal
+electron definition. The definition of electrons in the analysis is
+summarised in \cref{tab:definitions-electrons}.
+The selections on the transverse \dzero and longitudinal \zzero track impact parameters are
+used to ensure that the electron originates from a primary vertex.
+The object quality cut ``Bad cluster veto'' is a requirement of a good pulse shape in the LAr cells
+forming the cluster and is stored in the
+\texttt{xAOD::EgammaParameters::BADCLUSELECTRON} flag.  % cspell:disable-line
+
+Leptons are counted using the \qty{10}{\GeV} cut to reduce multi-lepton event
+contamination of the single-lepton selection. Later in analysis regions
+further cut of \qty{30}{\GeV} is applied.
+
+
+\subsection{Muons}%
+\label{sec:definitions-muons}
+
+Two different sets of muon selection requirements are defined for this analysis.
+Muons satisfying these criteria are referred to as \textit{tight} and
+\textit{loose} muons, as defined in \cref{tab:definitions-muons}.
+Tight muons are selected in the measurement regions, while loose
+muons are primarily used for background estimation.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{ c c c }
+      \toprule
+      Requirement                       & Signal muons (tight)                  & Background muons (loose)              \\
+      \midrule
+      Quality                           & \texttt{Medium}                       & \texttt{Medium}                       \\
+      Bad muon veto                     & yes                                   & yes                                   \\
+      Isolation                         & \texttt{PLImprovedTight}              & fail \texttt{PLImprovedTight}          \\
+      \pt cut                           & \( \pt > \qty{10}{\GeV} \)            & \( \pt > \qty{10}{\GeV} \)             \\
+      \eta cut                          & \( |\eta| < 2.5 \)                    & \( |\eta| < 2.5 \)                    \\
+      \(|\dzero|/\sigma_{\dzero}\) cut  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  \\
+      \(|\zzsth|\) cut                  & \( |\zzsth| < \qty{0.5}{\mm} \)        & \( |\zzsth| < \qty{0.5}{\mm} \)        \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \caption{Summary of the muon definitions in the analysis.}%
+  \label{tab:definitions-muons}
+\end{table}
+
+Muons with \(\pt > \qty{10}{\GeV}\) and within the acceptance \(|\eta| < 2.5\)
+are used in the analysis. Quality requirements are imposed on the muon
+reconstruction and identification according to the \texttt{Medium} working point~\cite{PERF-2015-10}.
+
+Background muons are real muons embedded within a jet and produced by in-flight
+decays of secondary mesons inside the jet. For this reason, the detector
+activity surrounding these muons, known as \textit{isolation}, is used
+to discriminate between background and prompt muons.
+Signal muons must fulfil the criteria of the \texttt{PLImprovedTight} isolation working 
+point~\cite{web:PLImprovedWPs},
+while loose muons are required to fail this selection.
+
+Finally, requirements on the transverse impact parameter significance,
+\( \mathrm{Sig}(\dzero)=|\dzero|/\sigma_{\dzero} \),
+and the longitudinal impact parameter multiplied by the polar angle,
+\( |\zzsth| \), are utilised to distinguish between prompt and background muons,
+as described in \cref{tab:definitions-muons}.
+
+To account for isolation and reconstruction selection efficiency differences
+between data and MC, the muon performance group of the ATLAS collaboration
+provides calibration factors measured in data which are applied to simulated
+muons in this analysis~\cite{web:MuonRecommendations}.
+
+Leptons are counted using the \qty{10}{\GeV} cut to reduce multi-lepton event
+contamination of the single-lepton selection. Later in analysis regions
+further cut of \qty{30}{\GeV} is applied.
+
+
+\subsection{Jets}%
+\label{sec:definitions-jets}
+
+Jets or particles originating from the hadronisation of partons are
+reconstructed by clustering energy deposits in the calorimeter calibrated at
+the EM scale. The \antikt algorithm~\cite{Cacciari:2008gp} is used with
+a radius parameter of 0.4. The signal selection requires 
+\(\pt > \qty{25}{GeV}\) jets with no \eta requirements but the subsequent \bjet
+requirement restricts our jets to be central with \(\abseta < 2.5\),
+as described below.
+An additional category of jets, the baseline jets are defined with more loose
+selection criteria. The baseline jets are used for the \met reconstruction (\cref{sec:definitions-met}) and
+overlap removal procedure (\cref{sec:definitions-overlap-removal}).
+For all jets the expected average transverse energy
+contribution from pile-up is subtracted using an area-based \pt density
+subtraction method and a residual correction derived from the MC simulation,
+both detailed in \Refn{\cite{Cacciari:2007fd, PERF-2016-04}}.
+The jet definitions and selections are summarised in \cref{tab:definitions-jets}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{ c c c }
+      \toprule
+      Requirement         & Signal jets                                   & Baseline jets                \\
+      \midrule
+      Jet type            & \texttt{AntiKt4EMPFlowJets}                   & \texttt{AntiKt4EMPFlowJets}  \\
+      JVT working point   & \texttt{Tight}                                & \texttt{Tight}               \\
+      fJVT working point  & ---                                           & ---                          \\
+      \pt cut             & \( \pt > \qty{25}{\GeV} \)                    & \( \pt > \qty{20}{\GeV} \)    \\
+      \eta cut            & \( |\eta| < 2.5 \)                            & \( |\eta| < 4.5 \)           \\
+      \(b\)-tagging       & \texttt{DL1r} with \texttt{FixedCutBEff\_77}  &                              \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \caption{Summary of the jet definitions in the analysis.}%
+  \label{tab:definitions-jets}
+\end{table}
+
+The majority of pile-up jets are rejected using the \textit{jet vertex tagger}
+(JVT) tool~\cite{ATLAS-CONF-2014-018}, which is a combination of track-based
+variables providing discrimination against pile-up jets. The \texttt{Tight}
+working point is used for jets in the momentum range \( 20 < \pt < \qty{60}{\GeV} \)
+and \( |\eta| < 2.4 \).
+
+In this analysis, events containing jets tagged as \bjets are selected,
+as described in \cref{ch:regions}. These jets are identified as
+detailed in~\cite{ATL-PHYS-PUB-2016-012}. Due to the limitations of the identification
+of \bjets only jets within \(|\eta| < 2.5\) are considered.
+The \texttt{DL1r} tagger~\cite{web:FlavourTagging} was used with a fixed-cut
+working point selecting \bjets with \qty{77}{\%} efficiency.
+
+Additionally, the jet-based event cleaning procedure~\cite{web:JetCleaning},
+recommended by the Jet/EtMiss group was performed. The \textit{loose} working
+point was chosen.
+
+
+\subsection{Missing Transverse Momentum}%
+\label{sec:definitions-met}
+
+The missing transverse momentum, or \textit{missing transverse energy} \MET,
+arises due to undetected energy in the event, either due to neutrinos escaping
+detection or to other particles outside the acceptance, badly reconstructed
+or failing reconstruction.
+
+The \MET is computed as the unbalance of the total visible \pt in the event with
+contributions from all visible objects in the event which are selected,
+reconstructed and fully calibrated, plus a term, the so-called
+\textit{soft-term}, accounting for all tracks in the event which are not
+associated with any visible object but are associated with the identified
+hard-scatter vertex. The usage of a track-based soft-term is motivated by an
+improved performance in \MET reconstruction against pile-up~\cite{JETM-2020-03}.
+The \texttt{Tight} working point is used for the \MET calculation.
+
+
+\subsection{Overlap Removal}%
+\label{sec:definitions-overlap-removal}
+
+% description of the procedure (standard)
+% https://indico.cern.ch/event/539619/contributions/2191033/attachments/1284239/1909241/Farrell_ort_asg.pdf
+
+It could happen that a physical object is reconstructed by several different
+algorithms designed to reconstruct different particles, e.g.\ an electron is
+also reconstructed as a jet, resulting in a double counting of energy deposit in
+the calorimeter. To account for this, ambiguous objects are removed following
+the recommendations of the study documented in reference~\cite{Adams:1700874}
+and by using the produced common tool~\cite{web:OverlapRemoval}.
+The `Standard' working-point of the tool is used and electrons, muons, and jets
+are considered by the algorithms in all regions.
+Loose object definitions are used for the procedure.
+
+The overlap removal algorithm resolves overlaps in the following order:
+\begin{itemize}
+  \item \textbf{muon-PFlow jets:} Removes PFlow jets that are actually muons.
+  \item \textbf{electron-muon:} If a muon overlapping with an electron leaves
+  a sufficiently high energy deposit in the calorimeter and shares a track
+  reconstructed in the inner detector with the electron, then the muon is removed.
+  Any electron sharing an ID track with the remaining muons is removed.
+  \item \textbf{electron-jet:} Jets within \(\Delta R < 0.2\) of an electron
+  are removed. Electrons within \(\Delta R < 0.4\) of the remaining jets are
+  discarded.
+  \item \textbf{muon-jet:} Jets within \(\Delta R < 0.2\) of a muon
+  and either featuring less than three tracks or fulfilling
+  \(\pt(\mu) / \pt(\mathrm{jet}) > 0.5\) and
+  \(\pt(\mu) / \sum\pt(\mathrm{all\;jet\;tracks}) > 0.7\) are removed.
+  Muons overlapping with \(\Delta R < 0.4\) of the remaining jets are removed.
+\end{itemize}
+
+\subsection{Particle level object definition}
+
+Stable particles are used for the definition of particle level objects.
+Every particles with a lifetime \( \tau \) such that \(c\tau > \qty{10}{mm}\)
+is fulfilled, is considered a stable particle.
+The objects are defined in a way to be as close to the detector level as possible.
+
+Leptons are defined as electrons, muons and neutrinos originating from \Wboson
+or \Zboson decays, as well as from \( \tau \)-lepton decays.
+The charged leptons are ``dressed'' by recombining them with every photon
+within a \(\Delta R = 0.1\) cone.
+They are counted using the \qty{10}{\GeV} and the pseudo-rapidity
+\(|\eta| < 2.5\) cuts to reduce multi-lepton event
+contamination of the single-lepton selection.
+Additionally, they have to pass cuts on the
+transverse momentum \(\pt > \qty{30}{\GeV}\) in the analysis regions.
+
+The particle level small-\(R\) jet collection is defined using the four-momenta
+of stable particles. The leptons defined above are excluded from jets.
+Non-prompt leptons from hadron decays are included in the clustering.
+We use the same \antikt algorithm with the radius parameter \(0.4\) as the
+detector level jets defined above. In the ATLAS software, this jet collection
+is denoted as \texttt{AntiKt4TruthDressedWZJets}.
+Only jets with \(\pt > \qty{25}{\GeV}\) and \(|\eta| < 2.5\) are considered
+for the analysis. We do not apply any overlap removal on particle level.
+
+A jet is \btagged if a \(b\)-hadron with \(\pt > \qty{5}{\GeV}\) can
+be found within \(\Delta R (jet, b) < 0.3\). The hadron is assigned to
+the closest jet, in case two jets satisfy the \(\Delta R\) requirement.
+This corresponds to the \texttt{HadronConeExclTruthLabelID} variable in
+the ATLAS software.
+
+Particle-level selections follow closely the one of the analysis. This also implies that events with two leptons 
+(e.g.\ dilepton \ttbar events) may be selected in the fiducial volume if one lepton falls outside the detector acceptance. 
+The composition of reconstructed events based on true \(WW\) decay products
+is shown in \cref{fig:WWcomposition}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.3\textwidth]{Composition/IR}%
+    \label{fig:WWcomposition:IR}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.3\textwidth]{Composition/SR}%
+    \label{fig:WWcomposition:SR}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.3\textwidth]{Composition/WR}%
+    \label{fig:WWcomposition:WR}
+  }
+
+  \caption{True \(WW\) composition in the reconstructed events for
+    \protect\subref{fig:WWcomposition:IR} inclusive bulk selection,
+    \protect\subref{fig:WWcomposition:SR} search-like selection, and
+    \protect\subref{fig:WWcomposition:WR} hadronic \Wboson selection.
+    All events are shown including background. An event is classified as `Unknown'
+    if the number of \Wboson bosons is different than two.
+  }%
+  \label{fig:WW:composition}
+\end{figure}
+
+\subsection{Software Infrastructure}
+
+\texttt{AnalysisBase} version 21.2.242 is used to process the data and calibrate
+it. CP algorithms\footnote{\url{https://gitlab.cern.ch/tadej/MultiLeptonAnalysis}}
+are used for the ntuples production and have been validated against
+\texttt{AnalysisTop}.\ \texttt{TNAnalysis}\footnote{\url{https://gitlab.cern.ch/tadej/TNAnalysis}}
+is used for final processing and plotting.

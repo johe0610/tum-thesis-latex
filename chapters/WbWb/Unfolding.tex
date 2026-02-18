@@ -1,0 +1,426 @@
+\section{Unfolding}%
+\label{ch:unfolding}
+
+The differential cross-sections are obtained from detector-level events using an unfolding technique that corrects for the detector and reconstruction effects. The Tikhonov-Phillips regularisation scheme as implemented in the ROOT class TUnfold is used~\cite{Schmitt:2012kp}.
+
+The unfolding starts from the detector-level event distribution (\(N_{r,j}\)), from which the backgrounds (\(N_{b,j}\)), as described in \cref{ch:data-sim}, are subtracted first. The same selection requirements are placed at particle and at detector-level. Events that pass the selection conditions at both particle-level and at detector-level are referred to as matched events. Some events in a reconstructed-level bin can move to another bin at particle-level.
+
+The response matrix \(M_{R,i,j}\) is derived from the MC simulation and it describes how many events migrate from bin particle-level \( i\) to reconstructed bin \(j\).
+Normalising the response matrix to the sum of the particle level rows, one obtains the migration matrix \(M_{i,j}\):
+\begin{equation}\label{eq:mm}
+    M_{i,j} = \frac{M_{Ri,j}}{\sum_j{M_{R,i,j}}}
+\end{equation}
+
+The probability for particle level events to be reconstructed in the same bin of the reconstructed level event is represented in the elements on the diagonal of the migration matrix. The fraction of events that is off-diagonal represents the elements that migrated to the other bins. The probability for particle level events to remain in the same bin is therefore represented by the elements in the diagonal, while the one that are off-diagonal are the events that migrate to another bin. Consequently, the elements of each row sum up to unity as shown in~\cref{fig:MM:ptl_lep}.
+
+The choice of the bin boundaries is important for the migration matrix as the fraction of events on the diagonal depends on it: the choice is made such that on the diagonal of the matrix contains at least the \qty{60}{\%} of particle-level events of a row. For unfolding purposes the number of reconstructed distribution bins is chosen to be twice the number of particle level bins. The bin edges of the particle level bins are used in the reconstruction level binning as well and another intermediate bin is derived, ensuring a smooth distribution at reconstruction level.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[page=17, width=0.5\textwidth]{BulkSelection/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_NOSYS}
+\caption{Migration Matrix for lepton \pt}%
+\label{fig:MM:ptl_lep}
+\end{figure}
+
+The migration matrix multiplied with the particle level distribution yields the reconstructed distribution. However, since the migration matrix describes just those events that pass both the particle and reconstructed-level selection, two other distributions need to be taken into account.
+
+The unfolding acceptance \(A_{j}\) is defined as the fraction of reconstructed events that have a match at particle-level. The acceptance corrects for events that pass the detector-level selection, but not the particle-level one. It can be calculated according to:
+\begin{equation}\label{eq:acc}
+    f_\mathrm{acc}^{j} = \frac{\sum_{i} M_{R,i,j}}{N_{r,j}}
+\end{equation}
+
+where \(N_{r,j}\) is the total number of reconstructed events in bin \(j\).
+
+Similarly, it is possible to define the unfolding efficiency \(\epsilon_{i}\):
+\begin{equation}\label{eq:eff}
+    \epsilon_{i} = \frac{\sum_{j} M_{R,i,j}}{N_{t,i}}
+\end{equation}
+
+\(N_{t,i}\) indicates the total number of particle level events in bin \(i\). The efficiency corrects for events which pass the particle-level selection but are not reconstructed at the detector-level.
+
+Both the acceptance and the efficiency are defined just for the processes of interest that are unfolded (i.e.~\ttbar and \tW).
+
+Finally, the differential cross-section for a variable \(X\) at particle level can be written as:
+\begin{equation}\label{eq:cs}
+    \frac {d \sigma_\mathrm{fid}}{d X_{i}} = \frac{1}{\mathrm{L} \cdot \Delta X_{i}} \cdot \frac{1}{\epsilon_{i}} \cdot \sum_{j} M^{-1}_{i,j} f_\mathrm{acc}^{j} (N_{d,j} - N_{b,j})
+\end{equation}
+
+where \(\Delta X_{i}\) indicates the bin width, \(\mathrm{L}\) is the integrated luminosity, \( \epsilon \), \(M\), \(f_{acc}\) are obtained from MC as described above and \(N_{d}\) represents the data. 
+
+Note that the migration matrix is not actually inverted in this analysis, as this often comes with large statistical uncertainties. Instead, a Tikhonov-Phillips regularisation scheme is used, reducing the statistical uncertainty at the price of a bias. More details can be found in \cref{app:unfolding-regularisation}. The bias is quantified in this analysis and found to be small, see \cref{sec:unfolding-tests}.
+
+\cref{fig:Acceptance_Efficiency:ptl1} shows the acceptance and the efficiency corrections for the transverse momentum of the lepton, \(\pt^l\), in the bulk region.
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[page=19, width=0.5\textwidth]{BulkSelection/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_NOSYS}
+\caption{Acceptance (\(f_{acc}\)), in red, and efficiency (\( \epsilon \)) corrections, in blue, for lepton \pt}%
+\label{fig:Acceptance_Efficiency:ptl1}
+\end{figure}
+
+The acceptance is high indicating a good correlation between the detector and the particle level reconstruction.
+
+\subsection{Algorithm to propagate uncertainties through the unfolding}\label{uncertainty_propagation}
+
+All uncertainties are first evaluated at reconstruction level and propagated to particle level using varied input samples and pseudo-experiments. Uncertainties related to the limited amount of data and Monte Carlo statistic employ pseudo-experiments while the uncertainties related to detector systematics and modelling employ varied samples without the use of pseudo-experiments. 
+Using pseudo-experiments for detector and modelling uncertainties was evaluated. As the resulting uncertainties were found to be consistent with the ones obtained from using the varied samples (see \cref{app:comparePseudoFixedVars}), it was decided to go for the varied samples in the interest of computational expensiveness.
+
+For the uncertainties related to the limited statistics in data, the data in each bin is varied using a Poisson distribution, as detailed in \cref{sec:data_statistics}.
+
+Uncertainties due to the limited statistics in the MC samples are evaluated for the unfolding signal and the background processes using Gaussian variations as described in \cref{sec:systematics:finiteMC}.
+
+The detector and theoretical uncertainties are evaluated using up and down variations at detector level, which are propagated to particle level. The up and down uncertainties resulting from individual uncertainties are then combined at particle level, by adding them in quadrature, thereby not assuming any correlation:
+\begin{equation}
+    {\left(\sigma_{\mathrm{tot}}^{\mathrm{up/down}}\right)}^2 = \sum_\mathrm{sys}  {\left(\sigma^\mathrm{up/down}_{\mathrm{sys, rel}}\right)}^2
+\end{equation}
+If an uncertainty is single-sided only, it is symmetrised at reconstruction level and the two resulting up/down variations are propagated to particle level. The relative uncertainty is used for all systematics propagations.
+
+Depending on the type of uncertainty, different propagation procedures are employed as detailed in the following paragraphs.
+
+\subsubsection{Detector systematic propagation}
+There are multiple ways to propagate detector related uncertainties. Two of them were studied and are presented in \cref{usingToyPropagation}. Only the one used in the analysis is discussed here.
+
+Detector systematics are propagated from detector to particle level by calculating varied unfolding corrections, i.e.~acceptance, efficiency, migration matrix and background predictions. The data is then unfolded with these varied corrections and the difference to the nominal unfolded data defines the uncertainty \( \sigma \):
+\begin{equation}
+  U' = \frac{1}{\epsilon'_{k,i}} \cdot \sum_{j} {M^{-1}}'_{i,j} A'_{k,j} \left[ N_{d,j} - N'_{b,j} \right], \sigma_{\mathrm{det.}} = U-U'  % chktex 35
+\end{equation}
+In the equation, primed quantities indicate varied quantities. \(R^{'}\) and \(M^{'}\) are used to construct the unfolding corrections: acceptance, \(A'\), and efficiency \(\epsilon'\). 
+
+\subsubsection{Signal modelling}
+
+The propagation of the signal modelling uncertainties is implemented as it follows:
+\begin{itemize}
+  \item Unfold nominal \emph{pseudo-data} \(N_{pd}\), where \(N_{pd}= N_{r} + N_{b}\), calculated using Monte Carlo quantities, using varied migration matrix, acceptance and efficiency
+  \begin{equation}
+    N'_{t} = \dfrac{1}{\epsilon'_{i}} \cdot \sum_{j} {M^{-1}}_{i,j} A'_{k,j} \left[ N_{pd, j} - N'_{b,j} \right]
+  \end{equation}
+  \item Compare the result with Monte Carlo nominal truth, \(N_{t}\)
+  \begin{equation}
+    \sigma_{\mathrm{sig. mod.}} = N_{t} - N'_{t}  % chktex 35
+  \end{equation}
+  \item Use this uncertainty as uncertainty on the unfolded data.
+\end{itemize}
+
+\subsubsection{Background modelling}
+
+Uncertainties affecting the modelling of the background are propagated to the unfolded result by varying the background prediction, while preserving all other unfolding corrections and unfolding the data:
+\begin{equation}
+  U' = \frac{1}{\epsilon_{k,i}} \cdot \sum_{j} {M^{-1}}_{i,j} A_{k,j} \left[ N_{d,j} - N'_{b,j} \right], \sigma_{\mathrm{bkg. mod.}} = U-U'  % chktex 35
+\end{equation}
+
+\subsection{Binning optimisation method}
+The binning of the variables to be unfolded can strongly influence the result. Therefore, a binning optimisation has been carried out using a simple algorithm, focusing on the stability of the unfolding (many events on the diagonal of the migration matrix) and on the statistical uncertainty (at least \(N\) events in a bin) in which the statistical uncertainty is less than \qty{10}{\%}. This method supersedes a more complex algorithm which is detailed in \cref{app:unfolding-binning-optimisation}.
+
+% For the variables of interest that will eventually be unfolded, the method for optimising the bin edges uses the 2D migration matrix and the 1D data histogram as input. The migration matrix is used to calculate the purity in each bin. Here the purity, P is defined as the ratio of events reconstructed in the same bin as its corresponding truth bin (\(M^{\mathrm{R}}_{ii}\)), to the matched truth events in the truth bin \(i\) (\(T^{\mathrm{m}}_i=\sum_{\mathrm{reco} j} M^{\mathrm{R}}_{ij}\)). 
+
+% \begin{equation}
+%     P_i = M^{\mathrm{R}}_{ii} / T^{\mathrm{m}}
+% \end{equation}
+
+% The 1D data histogram is used to measure the expected statistical uncertainty (\(\sigma_i=\sqrt{N_i}\)) in each bin. Each bin must satisfy the following purity and statistical uncertainty conditions: 
+
+% \begin{enumerate}
+%     \item \(P_i\) > 0.6
+%     \item \(\sigma_i\) < 0.1
+% \end{enumerate}
+
+% The initial binning is very fine (e.g.~bins of \qty{1}{\GeV} along truth for the lepton \pt) and equidistant. 
+% The migration matrix is initially filled using a binning scheme where the y-axis (truth-axis) contains half of the bins of the x-axis (reconstruction-axis) to satisfy the conditions of the TUnfold package. Therefore, the minimum bin width is defined as the bin width of each bin on the y-axis in this initial binning scheme. The migration matrix and the corresponding data histogram is initially rebinned using the bin edges of the truth-axis to guarantee a square migration matrix and a data histogram that satisfies this minimum bin width condition. 
+
+% After this initial rebinning, the algorithm first checks the purity and statistical uncertainty conditions of the last bin. We begin at the last bin because this bin is guaranteed to have the least number of events and is the most probable bin to fail. If the conditions are met, then the algorithm simply moves onto the next bin. However, if the conditions are not met, then increment by the minimum bin width and combine the resulting bins. This process continues until both the purity and statistical uncertainty conditions are met. The left edge of the grouped bins then becomes the next bin edge and the process repeats until reaching the left edge of the very first bin.
+
+% This gives us the particle level binning, which was set equal to the reconstruction level binning. In the next steps, the reconstruction level binning is optimised. Initially, an additional bin is defined at reconstruction level by dividing each particle level bin in two equal halves. Then starting from the left, the intermediate bin edge is optimised such that the resulting reconstruction level distribution is smooth and contains a minimum number of events. 
+
+% \crefrange{fig:ptl1_optimization}{fig:ptj1_optimization} demonstrate the results of this algorithm for several variables of interest of the WbWb selection.
+
+% \begin{figure}[htbp]
+%   \centering
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/optimal_2d_histogram_l_2b_inclusive_ptl1}%
+%     \label{fig:ptl1_mig_matrix}
+%   }
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/purity_stat_uncertainty_l_2b_inclusive_ptl1}%
+%     \label{fig:ptl1_purity_uncertainty}
+%   }
+%   \caption{Leading lepton \pt binning scheme post-optimisation.
+%     \protect\subref{fig:ptl1_mig_matrix} lepton \pt migration matrix and \protect\subref{fig:ptl1_purity_uncertainty} lepton \pt purity and statistical uncertainty values per bin.}%
+%   \label{fig:ptl1_optimization}
+% \end{figure}
+
+% \begin{figure}[htbp]
+%   \centering
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/optimal_2d_histogram_l_2b_inclusive_ptb1}%
+%     \label{fig:ptb1_mig_matrix}
+%   }
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/purity_stat_uncertainty_l_2b_inclusive_ptb1}%
+%     \label{fig:ptb1_purity_uncertainty}
+%   }
+%   \caption{Leading \bjet \pt binning scheme post-optimisation.
+%     \protect\subref{fig:ptb1_mig_matrix} leading \bjet \pt migration matrix and \protect\subref{fig:ptb1_purity_uncertainty} leading \bjet \pt purity and statistical uncertainty values per bin.}%
+%   \label{fig:ptb1_optimization}
+% \end{figure}
+
+% \begin{figure}[htbp]
+%   \centering
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/optimal_2d_histogram_l_2b_inclusive_ptj1}%
+%     \label{fig:ptj1_mig_matrix}
+%   }
+%   \subfloat[]{
+%     \includegraphics[width=0.4\textwidth]{figures/Systematics/BinningOptimization/purity_stat_uncertainty_l_2b_inclusive_ptj1}%
+%     \label{fig:ptj1_purity_uncertainty}
+%   }
+%   \caption{Leading light jet \pt binning scheme post-optimisation.
+%     \protect\subref{fig:ptj1_mig_matrix} leading light jet \pt migration matrix and \protect\subref{fig:ptj1_purity_uncertainty} leading light jet \pt purity and statistical uncertainty values per bin.}%
+%   \label{fig:ptj1_optimization}
+% \end{figure}
+
+
+\subsection{Unfolding tests}%
+\label{sec:unfolding-tests}
+
+Unfolding relies on matrix inversion. However, matrix inversion can come with numerical instabilities, which may amplify statistical uncertainties.
+For that reason, it is common to introduce a regularisation term when performing unfolding. The introduction of such a regularisation term can introduce
+bias. That is that an unfolded reconstruction level distribution does not correspond to its original truth-level distribution. To quantify the bias of
+a regularisation method, bias tests are conducted. They all quantify a bias \(b\), defined as
+\begin{align*}
+ b = U(R) - T
+\end{align*}
+with \(U\) the unfolding function, \(R\) a reconstruction-level and \(T\) a truth-level distribution.
+
+\subsubsection{Closure tests}
+In a closure test a basic property of the unfolding is checked: whether unfolding the reconstruction-level signal Monte Carlo (\ttbar \(+\) \tW) distribution gives the Monte Carlo truth-level distribution.
+
+Three types of closure tests are considered here:
+\begin{itemize}
+     \item \textbf{Simple closure test} In the simple closure test, the signal Monte Carlo reconstruction-level distribution is unfolded and compared to the Monte Carlo truth level distribution.
+      Following expression is evaluated, with \(T_i\) the unfolding signal Monte Carlo truth-level distributions in bin \(i\) and
+      \(R_i\) the unfolding signal Monte Carlo reconstruction-level distributions in bin \(i\)
+      \begin{align*}
+        \Delta_i = {U(R)}_i - T_i.
+      \end{align*}
+      If \(\Delta_i\) is smaller than the statistical uncertainty of the unfolding, the simple closure test is said to close.
+      All closure tests close with perfect agreement between the unfolded reconstruction-level Monte Carlo and the particle-level Monte Carlo. As an example, the result for the lepton transverse momentum in the bulk region is shown in \cref{fig:unfolding:closure_test_ptl1}.
+      
+     % \item \textbf{Pull test} The pull test is a variation of the simple closure test. Instead of unfolding \(R_i\), a total of \(\mathcal{N}= 1000\) toys are generated of the reconstruction-level distribution.
+     % Each toy modifies the number \(n_i\) of events in each bin in a Poisson way, that is within the standard deviation \(\sigma_i=\sqrt{n_i}\). For each toy, the bias is considered
+     % \begin{align*}
+     %   \Delta_i = {U(\mathrm{toy}[R])}_i - T_i
+     % \end{align*}
+     % as well as \emph{the pull}
+     % \begin{align*}
+     %   p_i = \frac{{U(\mathrm{toy}[R])}_i - T_i}{\sigma_{U,i}}.
+     % \end{align*}
+     % Here \(\sigma_{U,i}\) denotes the uncertainty on the unfolded result in bin \(i\) as calculated as the square-root of the diagonal elements of the covariance matrix \(\sqrt{C_{i,i}}\). The
+     % mean and rooted-mean squared (RMS) of all \(p_i\) is calculated. For an unbiased unfolding, the mean and RMS are expected to be compatible with zero and one, respectively.
+     % Furthermore, for each toy the agreement of the unfolded distribution and the truth-distribution is quantified in terms of a \(\chi^2\):
+     % \begin{align*}
+     %   \chi^2 := \sum_{i,j} ({U(\mathrm{toy}[R])}_i - T_i) c_{i,j}^{-1} ({U(\mathrm{toy}[R])}_j - T_j).
+      %\end{align*}
+      %The distribution of the \(\chi^2\)-values from the toys should follow a \(\chi^2\)-distribution with the degrees of freedom equal to the number of truth bins.\@ \(c_{i,j}\) represents the covariance matrix, defined in \cref{sec:covariance-matrices}.
+      % To verify this, a histogram of the calculated $\chi^2$ with the expected curve will be shown.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[page=20, width=0.5\textwidth]{BulkSelection/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_NOSYS} 
+    \caption{Unfolded distribution for the lepton transverse momentum in blue compared to the particle-level distribution in black. The lower panel shows the ratio between the particle-level distribution and the unfolded one.}%
+    \label{fig:unfolding:closure_test_ptl1}
+  \end{figure}
+  
+
+%\subparagraph{Tests with alternative generators}
+% In this test, signal samples are generated with other Monte Carlo generator settings or entirely different generator programs (e.g.\ Ph+Py8 instead of MG+Hw7). Using the resulting alternative reconstruction-level and truth-level distributions, the difference
+% \begin{align*}
+%     \Delta_i = {U(\mathrm{alt}[R])}_i - \mathrm{alt}[T_i]
+% \end{align*}
+% is calculated. Here ``alt'' indicates usage of an alternative distribution. If this difference is lower than the statistical uncertainty of the unfolded result, no bias is assumed.
+
+% Aim of the test is to show that the unfolding is unbiased and reproduces the truth-level distribution from the reconstruction-level distribution for a distribution similar to the signal.
+
+\subsubsection{Stress tests}
+
+Stress tests describe bias tests which evaluate how well the unfolding reproduces the truth-level distribution, if both shape and normalisation are very different from the nominal signal. Generally, stress tests define a weight per truth-level bin. This weight is applied to all events that fall into the
+corresponding truth-level bin, as well as to the corresponding reconstruction-level event. It is worthwhile emphasizing that stress tests apply per-event modifications.
+Denote the number of truth bins by \(N_t\). First, \(N_t\) weights \(w_i\) are defined. Each truth event \(e_t\) that falls into bin \(i\) is weighted with \(w_i\).
+The corresponding reconstruction-level event \(e_r\) is weighted with \(w_i\), too. Given these modified event-weights, the reconstruction- and truth-level distributions are calculated. The resulting distributions are denoted by \(T_i^{rw}\) and \(R_j^{rw}\), respectively. Note that the weight of reconstruction-level events is not modified, if their corresponding truth-level event is not contained in any of the truth-level distribution bins. However a reconstruction-level event is reweighted, even if the truth-level event does not pass the fiducial criteria.
+
+Stress tests compare the unfolded reweighted reconstruction-level \(R_j^{rw}\) to the truth-level \(T_i^{rw}\), that is, the bias
+\begin{align*}
+    \Delta_i = {U(R^{rw})}_i - T_i^{rw}
+\end{align*}
+is considered. If this difference is within the statistical uncertainties of the unfolding, no bias is assumed.
+
+Which weights to use depends on what bias is supposed to be evaluated. Several possibilities are evaluated in this analysis:
+\begin{itemize}
+    \item In the \emph{linear stress test} the weights are chosen such that \(w_0=-0.5\) and \(w_{N_t}=0.5\), with the weight increasing linearly across the truth bins. That is
+    \begin{align*}
+        w_i = \frac{2\beta}{N_t} i - \beta, \beta = 0.5.
+    \end{align*}
+    The linear stress test tests the bias with respect to large shape differences.
+
+    \item In the \emph{data-driven stress test}, the weights \(w_i\) are defined such that the difference \(|D_i - R_i^{rw}|\) between the data and the reweighted reconstruction-level distribution is small. In this analysis, the weights are obtained by first unfolding the data with the matrix-inversion method, that is without any regularisation term by using the inverse migration matrix. A smooth function is then fit to the ratio \(\frac{{U_{\mathrm{MI}}(D)}_i}{T_i}\) of the matrix-inversion unfolded data and the truth-level Monte Carlo prediction (\(U_{\mathrm{MI}}\) denotes the unfolding function for the matrix-inversion method). The weights \(w\) are then defined as the value of this smooth function. If \(|D_i - R_i^{rw}|\) is small, the data-driven stress test evaluates the bias for a distribution that is similar to the data.
+
+    If the difference \(\Delta i\) is smaller than the statistical uncertainties, the data-driven stress test is said to close. If it does not close, \(\Delta i\) is used as an additional uncertainty.
+
+    \item Note, that the weights of the data-driven stress tests described here are calculated at truth-level. Other analysis teams evaluate these at reconstruction-level and apply them to the reconstruction-level and corresponding truth-level events. This has the advantage that no matrix-inversion unfolding is necessary and that \(|D_i - R_i^s|\) is small by definition. Generally, due to the different treatment of unmatched events, the two approaches may yield slightly different results.
+
+    % \item The weights of the data-driven stress test are derived for all variables that are considered for unfolding in this analysis. To test the impact of other, orthogonal variables on the unfolding, the weights are also derived in other variables than the one that is unfolded. This stress test is called \emph{hidden variable test}. The weights are derived by unfolding the data in the alternative variable with the matrix-inversion technique. A smooth function is then fit to the ratio of the unfolded data and the truth-level Monte Carlo prediction. Each simulated event is then reweighted according to the value of this smooth function. The reconstruction-level Monte Carlo distribution in the variable of interest is then unfolded and the bias is evaluated as described above.
+\end{itemize}
+
+A stress-test is defined as closed, if the unfolded reweighted reconstruction-level and the reweighted truth-level distributions agree within statistical uncertainties. If a stress-test does not close, the difference between the unfolded reweighted reconstruction-level and the reweighted truth-level distributions is considered as an additional systematic uncertainty.
+
+In this analysis, a small modification to the stress test is applied, accounting for the fact that events that pass the event selection at reconstruction level, but not the truth level are not reweighted in the stress test. These events are treated as background at reconstruction level (i.e.\ we only consider matched events when unfolding) and no acceptance correction is carried out in the unfolding process.
+
+\subsubsection{Results of the linear stress tests}
+
+The results of the linear stress test are shown in \cref{fig:linear_stress_test}. The first row shows the lepton \pt and the \met in the bulk region. The second row shows the leading \bjet \pt and the \mtblmin in the search region, while the third row shows hadronic \Wboson, \pt and \mbWminimax the in the hadronic \Wboson region. The uncertainties show the MC statistical uncertainties. 
+The results of the the linear stress test for the other variables in the different analysis phase space can be found in Appendix \cref{app:stress-tests}.
+
+The unfolded reweighted reconstruction-level distribution and the reweighted particle-level distribution either agree within uncertainties, or the reweighted reconstruction-level distribution is just outside of the uncertainty band, such that the difference would be covered by the not shown uncertainties.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=10, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_bulk_lepton_pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=2, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_bulk_met}
+  } \\
+  \subfloat[]{
+    \includegraphics[page=10, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Searches_Triangular_l_4j_incl_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_search_like_bjet1_pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=6, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Searches_Triangular_l_4j_incl_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_search_like_mtblmin}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=16, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_whad_whad_pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=34, width=0.4\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_stress_STRESS_TEST_LINEAR}%
+    \label{fig:stress_test_linear_whad_minimax}
+  }
+  \caption{Result of the linear stress test (particle level).
+  The upper row shows the
+  \protect\subref{fig:stress_test_linear_bulk_lepton_pt} lepton \pt and the
+  \protect\subref{fig:stress_test_linear_bulk_met} \met in the bulk region.
+  The middle row shows the
+  \protect\subref{fig:stress_test_linear_search_like_bjet1_pt} leading \bjet \pt and the
+  \protect\subref{fig:stress_test_linear_search_like_mtblmin} \mtblmin in the search region.
+  The bottom row shows the
+  \protect\subref{fig:stress_test_linear_whad_whad_pt} \Whad \pt and the
+  \protect\subref{fig:stress_test_linear_whad_minimax} \mbWminimax in the 
+  hadronic \Wboson region.
+  Uncertainties are statistical MC uncertainties only.}%
+  \label{fig:linear_stress_test}
+\end{figure}
+
+\subsubsection{Results of the data-driven stress tests}
+
+The results of the data-driven stress test are shown in \cref{fig:stress_test_data}. The left column shows the weights at particle level and the fitted function. The middle column shows reconstruction level 
+distributions, where the acceptance correction has already been applied. The result of the data-driven stress test is shown in the right column. 
+
+The agreement between the data and the reweighted reconstruction-level distribution can not always be achieved to be within the statistical uncertainties from the data due to demanding reweighting in some variables. Nevertheless, the unfolded reweighted reconstruction-level distribution and the reweighted particle-level distribution agree within MC statistical uncertainties.
+Non-closure, if observed, yields an uncertainty that is way below the uncertainty observed from other sources as seen in \cref{ch:results}.
+The results of the the data-driven stress test for the other variables in the different analysis phase space can be found in \cref{app:stress-tests}.
+
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=13, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_bulk_lepton_pt_fct}
+  }
+  \subfloat[]{
+    \includegraphics[page=14, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_bulk_lepton_pt_reco}
+  }
+  \subfloat[]{
+    \includegraphics[page=15, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Bulk_Final_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_bulk_lepton_pt_truth}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=7, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Searches_Triangular_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_search_like_mtblmin_fct}
+  }
+  \subfloat[]{
+    \includegraphics[page=8, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Searches_Triangular_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_search_like_mtblmin_reco}
+  }
+  \subfloat[]{
+    \includegraphics[page=9, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Searches_Triangular_l_4j_incl_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_search_like_mtblmin_truth}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=49, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_whad_minimax_fct}
+  }
+  \subfloat[]{
+    \includegraphics[page=50, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_whad_minimax_reco}
+  }
+  \subfloat[]{
+    \includegraphics[page=51, width=0.3\textwidth]{figures/StressTests/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_stress_STRESS_TEST_DATA}%
+    \label{fig:stress_test_data_whad_minimax_truth}
+  }
+  \caption{The selected data driven stress test results. The left column shows the weights at particle level and the fitted function. 
+  The middle column shows reconstruction level distributions, where the acceptance correction has already been performed. 
+  The result of the data driven stress test is shown in the right column.
+  The upper row shows the lepton \pt in the bulk region
+  (\protect\subref{fig:stress_test_data_bulk_lepton_pt_fct}, \protect\subref{fig:stress_test_data_bulk_lepton_pt_reco}, 
+  \protect\subref{fig:stress_test_data_bulk_lepton_pt_truth}),
+  the middle row the \mtblmin in the search-like region (\protect\subref{fig:stress_test_data_search_like_mtblmin_fct}, \protect\subref{fig:stress_test_data_search_like_mtblmin_reco}, \protect\subref{fig:stress_test_data_search_like_mtblmin_truth}),
+  and the bottom row the \mbWminimax in the hadronic \Wboson region (\protect\subref{fig:stress_test_data_whad_minimax_fct}, 
+  \protect\subref{fig:stress_test_data_whad_minimax_reco}, \protect\subref{fig:stress_test_data_whad_minimax_truth}). 
+  Only statistical MC uncertainties are shown.}%
+  \label{fig:stress_test_data}
+\end{figure}
+
+\subsection{Covariance matrices}%
+\label{sec:covariance-matrices}
+Covariance matrices are calculated for each systematic uncertainty described in the previous paragraphs. Its elements describe the covariance between two bins for a systematic uncertainty. It is computed as follow for each systematic uncertainty and bins \(i\) and \(j\):
+
+\begin{equation}
+    c_{i,j} =
+    \begin{pmatrix}
+    c_{11} & c_{12} & \cdots & c_{1n} \\
+    c_{21} & c_{22} & \cdots & c_{2n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    c_{n1} & c_{n2} & \cdots & c_{nn} \\
+
+    \end{pmatrix}
+    \label{eq:cov_matrix}
+\end{equation}
+
+where \(c_{i,j} = \sigma_{i} \cdot \sigma_{j}\).
+
+The \(\sigma_{i}\) are defined as:
+
+\begin{equation}
+    \sigma_{i} = \frac{\sigma^\mathrm{up}_{i} + \sigma^\mathrm{down}_{i} }{2}
+    \label{eq:cov_sigma}
+\end{equation}
+
+\(\sigma^{up, down}_{i}\) represent respectively the up and down absolute variation in bin \(i\). If an uncertainty is single-sided only, it is symmetrised at reconstruction level and the two resulting up/down variations are propagated to particle level.
+
+To obtain a covariance matrix for a systematic uncertainties, the covariance matrices of all systematic uncertainties are summed. Similarly, a total covariance matrix is defined, considering the covariance matrices of all systematic and statistical uncertainties.
+
+Correlation matrices can then be computed, starting from the covariance matrices, using this equation:
+
+\begin{equation}\label{eq:corr_matrix}
+    \mathrm{Corr}_{i,j} = \frac{\mathrm{Cov}_{i,j}}{\sqrt{\mathrm{Cov}_{i,i} \times \mathrm{Cov}_{j,j}}}
+\end{equation}
+
+Covariance and correlation matrices are shown in \cref{ch:results}.

@@ -1,0 +1,593 @@
+\section{\texorpdfstring{\Wboson}{W}-hadronic Measurement Region}%
+\label{sec:regions-wbwb}
+
+%Furthermore this analysis focuses also on the \WbWb-process itself.
+The purpose of this measurement region is to focus on the \WbWb process
+itself and therefore the relevant objects are directly the \Wboson bosons and \bjets, 
+instead of lower level objects.
+The goal is to measure cross sections as a function of the \WbWb kinematic
+observables. These observables include the \pt distribution of the leading \bjet
+and of the hadronically decaying \Wboson boson (\Whad). 
+In this phase-space, the hadronically decaying \Wboson boson may also be combined with one 
+of the \bjets to define properties that are sensitive to doubly-resonant top quark pair contributions.
+
+The phase space is
+defined by the baseline cuts outlined in \cref{sec:BaselineCuts}.
+In addition, a dedicated reconstruction algorithm for \Whad was developed.
+It is explained in detail in \cref{sec:WhadReco}.
+In the next step several options of recombining \Whad with one of the
+\bjets were investigated. This allowed the definition of a set of observables
+similar to those in top-quark pair measurements, and they are expected to be sensitive to the top-quark mass and width. The final phase space definition
+ is given at the end of this section, including a list of all the cuts.
+
+\subsection{On the Reconstruction of a W Boson from Light Jets}%
+\label{sec:WhadReco}
+
+The set of observables we would like to unfold in the \Wboson-hadronic measurement region (WR)
+includes the properties of the hadronically decaying boson \Whad, as well
+as combinations of \Whad, \bjets and the lepton.
+The explicit reconstruction of the \Whad four-vector and selection based on its properties makes the WR explicitly different to the other two regions.
+This requires to derive a reconstruction algorithm for \Whad that can be applied at the detector
+(reconstruction) and particle level.
+We consider only small-\(R\) jets as the only input to the algorithm, in order to be consistent with the bulk region. 
+All light jets passing the baseline \pt and \eta
+cuts are considered in the reconstruction of \Whad. 
+The study is performed by analysing semi-leptonic \ttbar events.
+We require each event to have one hadronically decaying \Wboson and at least one light jet on particle and detector level fulfilling the \(\pt > \qty{25}{GeV}\) and \(|\eta|<2.5\) cuts. No further cuts are applied.
+
+In order to test and compare several recombination schemes,
+a criterion on how to measure the matching efficiency has to be defined.
+For one event, \(\Delta R\) is calculated between the \Whad candidates
+on detector and particle level and the parton level \Wparton boson.
+\Wparton denotes the true \Wboson before it decays into quarks.
+When \(\Delta R < 0.5\) the candidates are considered as matched.
+
+The \Wboson boson decays into two quarks. The most natural approach is therefore
+to reconstruct \Whad from two jets. However, it is also possible for one
+of the quarks to radiate a hard gluon. This would result in a third jet.
+In contrast, at high \pt(\Wboson), the angle between the two quarks becomes small due to a considerable Lorentz boost.
+It is then no longer possible to resolve the two resulting jets, but
+the decay products of the \Wboson are clustered into one jet.
+
+\begin{figure}[htpb]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_1j_mWeff}%
+    \label{fig:WhadReco_1jm}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_mWeff}%
+    \label{fig:WhadReco_2jm}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_3j_mWeff}%
+    \label{fig:WhadReco_3jm}
+  }
+  \\
+   \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_1j_ptWeff}%
+    \label{fig:WhadReco_1jpt}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_ptWeff}%
+    \label{fig:WhadReco_2jpt}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_3j_ptWeff}%
+    \label{fig:WhadReco_3jpt}
+  }
+  \caption{Simple reconstruction of a \Wboson boson from light jets.
+    Select the 1, 2, or 3-jet combination closest to the \Wboson mass or with
+    the highest \pt. This can be done on detector (reconstruction) and
+    on particle level. The three curves show the reconstruction efficiency
+    between the reconstruction, particle and parton level.
+    The efficiency is defined as number of matched events divided by the total
+    number of events passing the baseline cuts. An event is considered matched
+    between two levels when the respective \Wboson candidates fulfil \( \Delta R < 0.5 \).
+    \protect\subref{fig:WhadReco_1jm} Reconstruct from the jet with mass closest to the \Wboson mass,
+    \protect\subref{fig:WhadReco_2jm} Reconstruct from the two jet combination with mass closest to the \Wboson mass,
+    \protect\subref{fig:WhadReco_3jm} Reconstruct from the three jet combination with mass closest to the \Wboson mass,
+    \protect\subref{fig:WhadReco_1jpt} Reconstruct from the jet with highest \pt,
+    \protect\subref{fig:WhadReco_2jpt} Reconstruct from the two jet combination with highest \pt,
+    \protect\subref{fig:WhadReco_3jpt} Reconstruct from the three jet combination with highest \pt.
+  }%
+  \label{fig:WhadReco_naive}
+\end{figure}
+
+\cref{fig:WhadReco_naive} displays the matching efficiency when the \Wboson
+is reconstructed from one, two or three jets. 
+%The matching efficiency was evaluated by imposing selections on the light jets themselves. Each light jet is required to have \(\pt > \qty{25}{\GeV}\), be central in the detector (\(|\eta|<2.5\)), and must fail the \(b\)-tagging requirement. This simple selection was used solely to evaluate the matching efficiency for the various algorithms.
+In the upper row, the jet
+combination whose invariant mass is closest to the \Wboson mass is selected.
+The second row selects the hardest jet combination.
+It can be observed that \pt ordering is preferred over mass ordering.
+The efficiency drops in all panels towards low \pt(\Whad). If the transverse
+momentum of the \Wboson boson is small, so is the transverse momentum of its
+decay products. Some of the objects originating from the \Wboson boson may not
+fulfil the minimal \pt requirement, which makes an accurate reconstruction
+impossible. The single jet selection performs especially well at high \pt,
+while the two-jet selection breaks down. The reconstruction efficiency of
+the three-jet selection is low over the entire \pt range.
+It should be noted that the shape of the distribution when matching detector
+and particle level (green curve) can vary from the other two curves.
+A high detector-particle matching efficiency means that the jets are matched.
+It does not mean that the \Wboson boson was reconstructed successfully.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_1j_ptWeff}%
+    \label{fig:WhadReco_1jpt_2}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_ptWeff}%
+    \label{fig:WhadReco_2jpt_2}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_leadWeff}%
+    \label{fig:WhadReco_3jpt_2}
+  }
+  \\
+   \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_1j_ptWeffCutM}%
+    \label{fig:WhadReco_1jpt_m}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_ptWeffCutM}%
+    \label{fig:WhadReco_2jpt_m}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth,trim={4cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder_2j_leadWeffCutM}%
+    \label{fig:WhadReco_3jpt_m}
+  }
+  \caption{Improved \Wboson selection. The \Wboson boson is reconstructed from the leading jet (left),
+    the hardest 2-jet combination (middle) or the combination of leading and subleading jet (right).
+    More information on the plots is given in the caption of \cref{fig:WhadReco_naive} and in the text.
+    \protect\subref{fig:WhadReco_1jpt_2} Reconstruct \Whad from the jet with highest \pt,
+    \protect\subref{fig:WhadReco_2jpt_2} reconstruct from two jet combination with highest \pt,
+    \protect\subref{fig:WhadReco_3jpt_2} reconstruct from the combination of leading and subleading jet,
+    \protect\subref{fig:WhadReco_1jpt_m} reconstruct from jet with highest \pt including a cut on mass of the reconstructed \(\qty{60}{\GeV} < m(\Whad) < \qty{100}{\GeV}\),
+    \protect\subref{fig:WhadReco_2jpt_m} reconstruct from two jet combination with highest \pt including the same mass cut,
+    \protect\subref{fig:WhadReco_3jpt_m} reconstruct from leading and subleading jet including the same mass cut.
+  }%
+  \label{fig:WhadReco_improved}
+\end{figure}
+
+Similar plots as in \cref{fig:WhadReco_naive} are shown
+in \cref{fig:WhadReco_improved}. The third column shows the efficiency when
+the 4-vectors of leading and sub-leading jet are added. The panels in the
+lower row include a mass cut on the reconstructed \Wboson candidate
+\(\qty{60}{\GeV} < m(\Whad^\mathrm{cand}) < \qty{100}{\GeV} \). 
+This increases the matching
+efficiency drastically to more than \qty{90}{\%}. The highest efficiency
+at medium \pt can be achieved when combining leading and sub-leading jet.
+In order to obtain a recombination scheme that is efficient over a large
+\pt range it makes sense to pre-select single-jet, two-jet and three-jet
+objects. In a next step the \Whad candidate can be chosen from the pre-selected
+objects. However, if too many objects are chosen in the pre-selection,
+the combinatorial background increases.
+
+After testing several options for
+the pre-selection, the matching efficiencies of the best \Whad reconstruction
+methods are shown in \cref{fig:WhadReco_best}.
+In \cref{fig:WhadReco_5cands} five objects are pre-selected, namely the leading
+and the sub-leading jet, the sum of both and the hardest two-jet and three-jet
+combinations. The pre-selected object which has a mass closest to the \Wboson
+mass is chosen as the \Whad candidate. After the turn-on curve, a plateau
+is reached at \(\pt(\Whad) > \qty{200}{\GeV} \). An additional cut on the mass
+\(\qty{60}{\GeV} < m(\Whad^\mathrm{cand}) < \qty{100}{\GeV} \) is included in \cref{fig:WhadReco_5cands_mass}. 
+This increases the reconstruction efficiency even further to more than \qty{90}{\%} over a large \pt range.
+It is even sufficient to pre-select only three candidates, the leading and sub-leading jet as well as the sum of both. 
+This can be seen in \cref{fig:WhadReco_5cands_mass}.
+The latter selection is applied in the analysis. Therefore, only the leading and sub-leading light jet are considered in the \Whad reconstruction.
+
+The derived reconstruction algorithm can be used to reconstruct \Whad on
+detector and on particle level. The reconstruction is easy to understand and
+straight-forward to implement. This makes it easier to compare the unfolded
+observables in the \Wboson-hadronic region to independent particle level predictions.
+
+
+\begin{figure}[htbp]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.46\textwidth,trim={3cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder4Weff}%
+		\label{fig:WhadReco_5cands}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.46\textwidth,trim={3cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder4WeffCutM}%
+		\label{fig:WhadReco_5cands_mass}
+	}
+	\\	
+	\subfloat[]{
+		\includegraphics[width=0.46\textwidth,trim={3cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder2Weff}%
+		\label{fig:WhadReco_3cands}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.46\textwidth,trim={3cm 0 5cm 0}]{WhadReconstruction/UpdatePlots/WFinder2WeffCutM}%
+		\label{fig:WhadReco_3cands_mass}
+		
+	}
+	\caption{Efficiencies of the optimized reconstruction of a hadronically
+		decaying \Wboson boson from light jets. The highest efficiencies can be
+		obtained when a cut on the mass of the reconstructed \Wboson is applied.
+		Only events with \(\qty{60} < m(\Whad) < \qty{100}{\GeV}\) are considered in
+		\protect\subref{fig:WhadReco_5cands_mass} and \protect\subref{fig:WhadReco_3cands_mass}, while no mass cut is applied
+		in \protect\subref{fig:WhadReco_5cands} and \protect\subref{fig:WhadReco_3cands}. 
+		Panel~\protect\subref{fig:WhadReco_3cands_mass} shows the efficiency of the method that is used in the analysis. It considers the leading jet, the sub-leading jet, as well as their sum as candidates for the hadronic \Wboson.
+		More information is given
+		in the caption of \cref{fig:WhadReco_naive} and in the text.}%
+	\label{fig:WhadReco_best}
+\end{figure}
+
+The \pt resolution for the different \Whad reconstruction algorithms is shown in \cref{fig:WhadResolution}. The resolution plots are obtained from the same \(t\bar{t}\)-sample used in the efficiency study above.
+The resolution is defined as
+\((\pt(W_\mathrm{reco})-\pt(W_\mathrm{reference}))/\pt(W_\mathrm{reco})\) 
+for every event, where the reference \(W_\mathrm{reference}\) is either the true (upper row) or particle level (lower row) \Wboson boson. The plots on the right (\ref{fig:W_res_reco_truth_mass},\ref{fig:W_res_reco_part_mass}) include the mass cut \(60<m(W_\mathrm{reco})<\qty{100}{\GeV}\). To make the comparison easier, the mean \( \mu \) and standard deviation \( \sigma \) are given for each distribution. The values are calculated from the binned histograms.
+Applying the mass cut makes the distribution more symmetrical, while at the same time lowering the event yield.
+The fraction of events where the leading jet has a mass in the window is expected to be small. It can barely be seen in the figures on the right.
+The resolution of combining the two leading jets is very similar to the one with 3 preselected candidates. This is no surprise, since the single jets taken into consideration for the latter algorithm only contribute in the tails, while the resolution distribution is dominated by the low-\pt bulk.
+
+\begin{figure}[htpb]
+	\centering
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth,trim={2cm 0 2cm 0}]{WhadReconstruction/Resolution/reco_truth}%
+		\label{fig:W_res_reco_truth}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth,trim={2cm 0 2cm 0}]{WhadReconstruction/Resolution/reco_truth_mass}%
+		\label{fig:W_res_reco_truth_mass}
+	}
+	\\
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth,trim={2cm 0 2cm 0}]{WhadReconstruction/Resolution/reco_part}%
+	\label{fig:W_res_reco_part}
+	}
+	\subfloat[]{
+		\includegraphics[width=0.45\textwidth,trim={2cm 0 2cm 0}]{WhadReconstruction/Resolution/reco_part_mass}%
+		\label{fig:W_res_reco_part_mass}
+	}
+	\caption{The \pt resolution of the \Wboson boson for comparing the candidate on detector level (\(W_\mathrm{reco}\)) to the true \Wboson boson (\protect\subref{fig:W_res_reco_truth}, \protect\subref{fig:W_res_reco_truth_mass})
+	and the particle level \Wboson 
+	(\protect\subref{fig:W_res_reco_part},
+	\protect\subref{fig:W_res_reco_part_mass}).
+	The mass cut \(60<m(W_\mathrm{reco})<\qty{100}{\GeV}\) is applied in both plots on the right. The mean \( \mu \) and standard deviation \( \sigma \) obtained from the binned histograms are shown in the legend.
+	}%
+	\label{fig:WhadResolution}
+\end{figure}
+
+
+\subsection{Recombining the hadronic W-boson with a b-jet}%
+\label{subsec:wbwb:recombining_had_w}
+
+After reconstructing the \Wboson boson from light jets, one can attempt the
+recombination of the \Wboson with one of the \bjets. Only leading and
+sub-leading \bjets are considered for this study. Therefore, there are two
+possible \Wb combinations. The \Wb system corresponds to a top decaying,
+in the case of resonant top quark production.
+\cref{fig:TopReconstructionMethods} shows the invariant mass and the \pt
+distribution of the \Wb system on truth, particle and detector level.
+Six different combination methods are compared in the plots.
+These are briefly presented in the following.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_MASS_TRUTH}%
+    \label{fig:StudyTopMassTruth}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_MASS_PART}%
+    \label{fig:StudyTopMassPart}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_MASS}%
+    \label{fig:StudyTopMassReco}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_PT_TRUTH}%
+    \label{fig:StudyTopPtTruth}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_PT_PART}%
+    \label{fig:StudyTopPtPart}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.32\textwidth]{TopReconstruction/TOP_PT}%
+    \label{fig:StudyTopPtReco}
+  }
+  \caption{
+    Study on the reconstruction of a hadronically decaying top quark.
+    Different selection criteria on how to combine the hadronically decaying
+    \Wboson with one of the b jets are compared. Details on the different
+    selections are given in the text. The recombined \Wb system is
+    denoted with \(t\) in the label of the plots.
+    The invariant mass distribution of the reconstructed \Wb system is shown
+    on \protect\subref{fig:StudyTopMassTruth} truth,
+    \protect\subref{fig:StudyTopMassPart} particle and
+    \protect\subref{fig:StudyTopMassReco} detector level, as well as the
+    \pt distribution on \protect\subref{fig:StudyTopPtTruth} truth,
+    \protect\subref{fig:StudyTopPtPart} particle and
+    \protect\subref{fig:StudyTopPtReco} detector level.}%
+  \label{fig:TopReconstructionMethods}
+\end{figure}
+
+The first method selects the \Wb combination with higher \pt, while
+the second one selects the pair that has a mass closer to the top mass.
+For the third variation, a parameter \(\chi^2\) is defined which can be
+calculated for both combinations \((i=1,j=2\) and \(i=2,j=1)\)
+\begin{align*}
+    \chi^2_i = {\left( \frac{m(Wb_i)-172.5}{20} \right)}^2 + {\left( \frac{m(lb_j)-100}{30}\right)}^2
+\end{align*}
+where \(b_1\) and \(b_2\) denote the leading and sub-leading \bjet.
+The numerical values in the equation are an estimation of the central
+value and width of the \(m(Wb)\) and the \(m(lb)\) distribution, respectively.
+The \Wb combination with the smaller \(\chi^2\) is selected as the correct \Wb
+combination. The second and third method make explicit use of the top mass.
+The fourth method calculates the angular distance \(\Delta R\) between \Wboson
+boson and \bjet and selects the pair that is closer.
+The fifth methods makes use of the \(m_{Wb}^\mathrm{minmax}\) variable
+\begin{align*}
+    m_{Wb}^\mathrm{minmax} = \min\left( \max(m(Wb_1),m(lb_2)),\max(m(lb_1),m(Wb_2))\right).
+\end{align*}
+The observable definition always returns a mass from the first or the second
+term. When the observable returns a mass from the first term, \Wboson and
+\(b_1\) are combined. When a mass from the second term is returned,
+the combination of \(W\) and \(b_2\) is selected.
+The last method shown in \cref{fig:TopReconstructionMethods} is a variation
+of the \(m_{Wb}^\mathrm{minmax}\) method.
+A new observable is defined which also returns a \(Wb\) combination that can
+be used as the top candidate
+\begin{align*}
+    m_{Wb}^\mathrm{maxmin} = \max\left( \min(m(Wb_1),m(Wb_2)),\min(m(lb_1),m(lb_2))\right).
+\end{align*}
+The width of the mass distribution shown in the upper row of
+\cref{fig:TopReconstructionMethods} is increasing when going from the truth
+level to particle and detector level. This is expected due to the increasing
+combinatorics in the \(W\) reconstruction and the imperfect resolution
+on detector level. The selection method choosing the pair closest to the
+top mass has the best solution, followed by the minimal \(\chi^2\) method.
+The shape of the \pt distribution shown in the lower row is consistent over
+all levels. Selecting the harder \Wb pair or the combination with smaller
+\(\Delta R(b,\Whad)\) leads to a bias towards higher \pt.
+
+The \(m_{Wb}^\mathrm{minmax}\) and the \(m_{Wb}^\mathrm{maxmin}\) selection
+behave similarly. The \pt bias is smaller, the mass resolution is reasonable
+and they do not make use of an explicit value for the top mass.
+Therefore, the \(m_{Wb}^\mathrm{minimax}\) selection will be used for
+the combination of the hadronic \Wboson and a \bjet.
+
+This procedure is used in the definition of several unfolded observables. Specifically, this procedure
+is applied to the assignment of the two leading \bjets to the lepton or the reconstructed hadronic \Wboson.
+This ensures that the same \bjets cannot be assigned to both objects.
+In the text,
+observables that have the superscript \textit{selected} use this procedure to select the accompanying \bjets.
+
+In the next step, one can define a matching efficiency for the \Wb
+reconstruction. Similarly to what was done for the reconstruction of \Whad,
+one can again study the angular distance between the \(Wb\) system on detector
+and truth level. A detector level \(Wb\) is considered to be matched
+to truth level, when \(\Delta R\) between the two objects is
+smaller than \(0.4\).
+
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/W_PT_BKGD_NODATA}%
+    \label{fig:TopMatchingWPtNoData}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/B_PT_BKGD_NODATA}%
+    \label{fig:TopMatchingBPtNoData}
+  }
+  \caption{Distribution of the transverse momentum of \protect\subref{fig:TopMatchingWPtNoData}
+    \Whad and \protect\subref{fig:TopMatchingBPtNoData} the \bjet selected
+    with the \(m_{Wb}^\mathrm{minimax}\) method as described in the text.
+    ``Correct match'' denotes events where
+    \(\Delta R(Wb_\mathrm{reco},Wb_\mathrm{truth}) < 0.4\),
+    where \Wb is the sum of the \Wboson and \bjet 4-vectors.
+    ``No \Wb'' denotes events where either \Whad or the \bquark does not exist
+    on truth level.}%
+    \label{fig:TopMatchNoData}
+\end{figure}
+
+\cref{fig:TopMatchNoData} shows the detector level \Wboson and \bjet \pt distributions. 
+The \WbWb phase space selection is applied on detector level.
+It includes a tighter cut on the \Wboson mass
+\((60 < m(\Whad) < \qty{100}{\GeV} \mathrm{and~} \pt > \qty{80}{\GeV})\).
+These stricter cuts help to improve the matching efficiency. The plots show the fraction of correctly matched events for the \mbWminimax method.
+%All six combination schemes were tested.
+%The best results were achieved with the \(m_{Wb}^\mathrm{minimax}\) method.
+%Therefore, the results of the other methods are not shown here.
+Only the \bjets that were selected using the
+\mbWminimax method are considered.
+The background contribution is small and can not be seen on a linear scale.
+The events of the signal processes are split into three categories.
+Correct match and wrong match describe the events where
+\(\Delta R({(Wb)}_\mathrm{truth},{(Wb)}_\mathrm{reco}) < 0.4\) is fulfilled or not.
+The third category ``No Wb'' denotes the events where either \Whad or \bjet
+does not exist on truth level. These are mainly \ttbar dilepton events that
+were not discarded in the detector level event selection.
+The fraction of ``No Wb'' events is in the low percent range.
+The fraction of correctly matched events does not depend on \bjet \pt,
+while a lower efficiency at small \Wboson \pt can be observed.
+This discrepancy can be traced back to a lower reconstruction efficiency
+of the \Whad at lower \pt. This can be seen in \cref{fig:TopMatchingWPtNoData}.
+The \Wb matching efficiency could be further improved when increasing
+the \Wboson \pt cut.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/W_MASS_BKGD}%
+    \label{fig:TopMatchingWMass}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/W_PT_BKGD}%
+    \label{fig:TopMatchingWPt}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/TOP_MASS_BKGD}%
+    \label{fig:TopMatchingTopMass}
+  }
+  \subfloat[]{
+    \includegraphics[width=0.4\textwidth]{TopReconstruction/TOP_PT_BKGD}%
+    \label{fig:TopMatchingTopPt}
+  }
+  \caption{
+    Mass and \pt distribution of the reconstructed \Whad and \(Wb\) object. The Figure compares the MC prediction to the data. The \(Wb\) combination is found with the \(m_{Wb}^\mathrm{minimax}\) method, as described in the text. More information is given in the caption of~\cref{fig:TopMatchNoData} and in the text.
+    }%
+    \label{fig:TopMatchWithData}
+\end{figure}
+
+The invariant mass distribution of \Whad and \Wb is displayed
+in \cref{fig:TopMatchWithData}, as well as the \pt distributions.
+The applied detector level cuts on \(m(\Whad)\) and \(\pt(\Whad)\) can be seen
+in the upper row. The \(m(Wb)\) distribution peaks at the top mass.
+The tails are slightly asymmetrical towards higher masses.
+An offset between correctly and wrongly matched events can be seen
+in the \(\pt(Wb)\) distribution. The fraction of correctly matched events
+can be improved when increasing the \(\pt(\Whad)\) cut,
+or by introducing an additional \(\pt(Wb)\) cut.
+In the boosted regime \((\pt > \qty{200}{\GeV})\) the matching efficiency
+is almost perfect. The agreement between data an Monte Carlo is reasonable.
+
+\subsection{W-hadronic Region Final Event Selection}%
+
+The event selection for the \Wboson-hadronic region follows the strategy outlined
+in \cref{sec:BaselineCuts}.
+Additional cuts are derived from the \Whad reconstruction studies.
+The requirement of at least 4 baseline jets is relaxed.
+After selecting exactly 2 \bjets, the remaining jets are passed
+on to the \Whad reconstruction algorithm.
+\Whad is reconstructed from the one or two leading jets, as described
+in \cref{sec:WhadReco}.
+The reconstructed \Whad candidate has to fulfil
+\begin{itemize}
+    \item \( 60 < m(\Whad) < \qty{100}{\GeV} \)
+    \item \( \qty{80}{\GeV} < \pt(\Whad) \)
+\end{itemize}
+Several thresholds for the mass and \pt cut were tested in dedicated studies.
+It was found that the stricter cuts chosen in the end improve the \Whad reconstruction.
+At the same time they increase the signal to background ration by almost a factor of 2.
+The exact values of the \Whad cuts do not affect the size of the systematic uncertainties.
+
+The yields in the \Wboson-hadronic region are listed in
+\cref{tab:SR_Whad_Final:yields}.
+
+\begin{table}[htbp]
+  \begin{center}
+    \input{tables/yields_SR_Whad_Final_l_Whad}
+  \end{center}
+  \caption{Yields of individual signal and background samples in the
+    \Wboson-hadronic measurement region.
+    The total expected yield is using the nominal \tW DR sample.
+    Uncertainties are statistical only.}%
+  \label{tab:SR_Whad_Final:yields}
+\end{table}
+
+More variables, which are not to be unfolded, are shown for their agreement of data and MC are
+in \cref{fig:SR_Whad_Final_l_Whad_particle:additional1,fig:SR_Whad_Final_l_Whad_particle:additional2}.
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=5, width=0.3\textwidth]{WhadSelection/SR_Whad_FinalExtra_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:met}
+  }
+  \subfloat[]{
+    \includegraphics[page=5, width=0.3\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:metphi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=9, width=0.3\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:lep1pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=13, width=0.3\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:lep1eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=15, width=0.3\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:lep1phi}
+  }
+  \caption{Variables showing the agreement between data and MC in the \Wboson-hadronic region:
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:met} \met distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:metphi} \met \phi distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:lep1pt} lepton \pt distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:lep1eta} lepton \eta distribution, and
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:lep1phi} lepton \phi distribution.
+    The four predictions differ only in the modelling of the \tW
+    contributions, where the predictions using dynamic scales are marked
+    DR (nominal sample) and DS while the legacy samples with fixed scales
+    are marked DRF and DSF.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Whad_Final_l_Whad_particle:additional1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \subfloat[]{
+    \includegraphics[page=25, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet1pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=36, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet1eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=38, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet1phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=31, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet2pt}
+  }
+  \subfloat[]{
+    \includegraphics[page=40, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet2eta}
+  }
+  \subfloat[]{
+    \includegraphics[page=42, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:bjet2phi}
+  }
+  \\
+  \subfloat[]{
+    \includegraphics[page=175, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:mu}
+  }
+  \subfloat[]{
+    \includegraphics[page=171, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:njets}
+  }
+  \subfloat[]{
+    \includegraphics[page=173, width=0.23\textwidth]{WhadSelection/SR_Whad_Final_l_Whad_particle}%
+    \label{fig:SR_Whad_Final_l_Whad_particle:nbjets}
+  }
+  \caption{Variables showing the agreement between data and MC in the \WbWb region:
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet1pt} leading \bjet \pt distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet1eta} leading \bjet \eta distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet1phi} leading \bjet \phi distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet2pt} subleading \bjet \pt distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet2eta} subleading \bjet \eta distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:bjet2phi} subleading \bjet \phi distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:mu} pile-up distribution,
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:njets} number of jets distribution, and
+    \protect\subref{fig:SR_Whad_Final_l_Whad_particle:nbjets} number of \bjets distribution.
+    The four predictions differ only in the modelling of the \tW
+    contributions, where the predictions using dynamic scales are marked
+    DR (nominal sample) and DS while the legacy samples with fixed scales
+    are marked DRF and DSF.\@
+    The ratio panel displays the ratio of the total MC to the data.
+    Expected data uncertainty is displayed using error bars.
+    Shaded areas show MC statistical uncertainty only.
+  }%
+  \label{fig:SR_Whad_Final_l_Whad_particle:additional2}
+\end{figure}

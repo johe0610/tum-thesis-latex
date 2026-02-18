@@ -1,0 +1,378 @@
+\section{Data and Simulated Samples}%
+\label{ch:data-sim}
+
+%------------------------------------------------------------------------------
+
+The analysis presented in this note uses the full dataset collected by the ATLAS
+detector during Run2 operations (2015-2018). This consists of data from proton-proton  %chktex 8
+collision at a centre-of-mass energy of \qty{13}{\TeV} and has a total integrated
+luminosity of \lumi.
+
+%-------------------------------------------------------------------------------
+\subsection{Data sample}%
+\label{sec:datamc:data}
+%-------------------------------------------------------------------------------
+
+
+Only data collected during stable beam LHC operations and with the ATLAS detector
+fully functioning is included. The partial integrated luminosities for each year
+of operation\footnote{\url{https://twiki.cern.ch/twiki/bin/view/Atlas/LuminosityForPhysics}},
+as well as the corresponding Good Run Lists (GRLs) used are reported in \cref{tab:datamc:lumi}:
+
+\begin{table}[htbp]
+	\centering
+  \caption{Integrated luminosity per year.}%
+	\label{tab:datamc:lumi}
+	\begin{tabular}{cSl}
+		\toprule
+		Year & {Int.\ lumi.\ (\si{\per\pb})} & GRL \\
+		\midrule
+		2015 & 3244.54   & data15\_13TeV/20170619/physics\_25ns\_21.0.19.xml \\
+		2016 & 33402.2	 & data16\_13TeV/20180129/physics\_25ns\_21.0.19.xml \\
+		2017 & 44630.6	 & data17\_13TeV/20180619/physics\_25ns\_Triggerno17e33prim.xml \\
+		2018 & 58791.6   & data18\_13TeV/20190318/physics\_25ns\_Triggerno17e33prim.xml  \\
+		\midrule
+		Run 2 & 140068.94 & \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+%-------------------------------------------------------------------------------
+\subsection{Monte Carlo simulated samples}%
+\label{sec:datamc:mc} 
+%-------------------------------------------------------------------------------  
+
+The contribution of SM processes is evaluated from Monte Carlo (MC) simulated
+samples~\cite{SOFT-2010-01}.
+The corresponding dataset IDs are given in~\cref{app:samples}.
+
+The effect of multiple interactions in the same and neighbouring bunch
+crossings (\pileup) was modelled by overlaying the simulated hard-scattering event with
+inelastic proton--proton (\(pp\)) events generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}  %chktex 8
+using the \NNPDF[2.3lo] set of parton distribution functions (PDF)~\cite{Ball:2012cx} and the
+A3 set of tuned parameters~\cite{ATL-PHYS-PUB-2016-017}.
+
+The detector response is simulated with \texttt{Geant4}~\cite{Agostinelli:2002hh}.
+As a full simulation of the detector response is computationally expensive for
+some of the estimates of modelling uncertainties, the fast-simulation package
+\textsc{AtlFast-II}~\cite{SOFT-2010-01} is used, which parametrises hadronic
+showers in the electromagnetic and hadronic calorimeter to speed up the simulation.
+
+The Monte Carlo (MC) events were weighted to reproduce the
+distribution of the average number of interactions per bunch crossing
+(\(\left<\mu \right>\)) observed in the data. The \(\left<\mu \right>\)
+value in data was rescaled by a factor of \(1.03\pm 0.04\) to improve
+agreement between data and simulation in the visible inelastic
+proton--proton (\(pp\)) cross-section~\cite{STDM-2015-05}.  %chktex 8
+
+The signal samples are defined as the sum of the \ttbar and the \tW samples,
+simulated with the same combination of hard process generators and parton showers.
+The description of the MC samples is taken from the official PMG documentation.
+
+Only prompt leptons are taken from Monte Carlo. They originate from decays of
+\Zboson, \Wboson, and \Hboson bosons, or from prompt
+leptonic \( \tau \) decays. Fake lepton contributions come from processes such
+as in-flight decays of mesons, jets reconstructed as leptons, and electron
+photon conversions. More details on fake estimation are provided in \cref{sec:bkg-estimation}.
+
+%-------------------------------------------------------------------------------
+\subsubsection{Nominal signal sample}%
+\label{sec:datamc:mc_nominal_signal} 
+%-------------------------------------------------------------------------------  
+
+\paragraph*{\ttbar production}
+
+The production of \ttbar events was modelled using the
+\POWHEGBOX[v2]~\cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd}
+generator, which provided matrix elements at next-to-leading
+order~(NLO) in the strong coupling constant \alphas, and used the
+\NNPDF[3.0nlo]~\cite{Ball:2014uwa} set of parton distribution functions~(PDFs) as input.
+The \hdamp parameter, which influences the matching of \POWHEG hard scatter events
+and parton shower, and effectively regulates the high-\pt radiation against which the
+\ttbar system recoils, was set to 1.5\,\mtop~\cite{ATL-PHYS-PUB-2016-020}.
+The functional form of the renormalisation and factorisation scales was
+set to the default scale \(\sqrt{\mtop^{2} + p_\mathrm{T\ top}^2}\).
+The events were interfaced with
+\PYTHIA[8.230]~\cite{Sjostrand:2014zea} for the parton shower and
+hadronisation, using the A14 set of tuned
+parameters~\cite{ATL-PHYS-PUB-2014-021} and the \NNPDF[2.3lo]
+set of PDFs~\cite{Ball:2012cx}.
+The decays of bottom and charm hadrons were simulated using the
+\EVTGEN[1.6.0] program~\cite{Lange:2001uf}.
+
+The \ttbar sample was normalised to the cross-section prediction at
+next-to-next-to-leading order (NNLO) in QCD including the resummation of
+next-to-next-to-leading logarithmic (NNLL) soft-gluon terms calculated using
+\TOPpp[2.0]~\cite{Beneke:2011mq,Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa,Czakon:2011xx}.
+For proton--proton collisions at a centre-of-mass energy of  % chktex 8
+\(\rts = \qty{13}{\TeV}\), this cross-section corresponds to
+\(\sigma{(\ttbar)}_{\mathrm{NNLO+NNLL}} = 832^{+41}_{-51}\,\unit{\pb}\) using
+a top-quark mass of \(\mtop = \qty{172.5}{\GeV}\).
+The uncertainties in the cross-section due to the PDF and \alphas were
+calculated using the \PDFforLHC[15] prescription~\cite{Butterworth:2015oua}
+with the \MMHT[nnlo]~\cite{Harland-Lang:2014zoa},
+\CT[14nnlo]~\cite{Dulat:2015mca} and \NNPDF[3.0lo]~\cite{Ball:2014uwa}
+PDF sets in the five-flavour scheme.
+
+The uncertainty due to initial-state radiation (ISR) was estimated by
+comparing the nominal \ttbar sample with two additional
+variations. The \hdamp value was increased to 3.0\,\mtop and compared to the
+nominal value. Separately the Var3c parameter of the A14 parton shower tune was varied,
+largely corresponding to the variation of \alphas for ISR~\cite{ATL-PHYS-PUB-2014-021}.
+The impact of final-state radiation (FSR) was evaluated by
+varying the renormalisation scale for emissions from the
+parton shower up and down by a factor of two.
+
+The statistically enhanced \ttbar sample, using slices in particle-level 
+ \MET (\( \MET > \qty{200}{\GeV} \)) and \HT
+(\( \HT > \qty{600}{\GeV} \& \MET < \qty{200}{\GeV} \)), is used in addition
+to the nominal sample (\(\MET < \qty{200}{\GeV} \& \HT < \qty{600}{\GeV}\)).
+Orthogonal cuts between the samples ensure no overlap.
+The samples are listed in \cref{app:samples}. When an additional sample is needed
+for systematics variation it is not statistically enhanced.
+
+Additionally, all \ttbar and \tW events with at least one lepton in the final state (including dilepton events that pass the selection due to out-of-acceptance effects) are taken into account in the signal
+region due to the use of fully inclusive \ttbar samples.
+
+Two additional \ttbar variations are used in the final
+comparison. One which is obtained by reweighting the nominal \ttbar sample
+to a NNLO QCD + NLO EW prediction~\cite{Czakon:2017wor} at parton-level,
+using the setting proposed in the reference. The reweighting is performed
+on the three kinematic variables \(p_T(t)\), \(m(t\bar{t})\) and \(p_T(t\bar{t})\)
+of the top quarks in the MC samples after initial- and final-state radiation.
+The predictions for \(p_T(t)\) and \(m(t\bar{t})\) are calculated at NNLO in
+QCD with NLO electroweak (EW) corrections with the NNPDF3.0qed PDF set using
+the dynamic renormalisation and factorisation scales \(m_T(t)/2\) for
+\(p_T(t)\) and \(H_T/4\) for \(m(t\bar{t})\) as proposed in Ref.~\cite{Czakon:2017wor}.
+The prediction for \(p_T(t\bar{t})\) is calculated at NNLO in QCD with the
+NNPDF3.0 PDF set and with \(\mu_r\) and \(\mu_f\) set to \(H_T/4\).
+The reweighting was performed iteratively, such that at the end of the procedure
+the reweighed MC sample agrees well with the higher-order prediction for each
+of the three variables. The re-weighted predictions themselves are not
+equivalent to complete NNLO+parton shower calculations and are only indicative
+of the NNLO contributions on the measured observables. The short name for this
+sample is marked as  (NNLO rew.).
+The second alternative MC sample  to model \ttbar processes at NNLO QCD
+incorporates all-order radiative corrections through parton-shower simulations
+as detailed in Ref.~\cite{Mazzitelli:2020jio}.
+The sample is normalised to the same NNLO+NNLL in pQCD calculated with
+the Top++ 2.0 program, as previously mentioned.
+Two  different
+configurations for the \(p_T,hard\) and \(p_T,def\) parameters were generated:
+one with \(p_T,hard = 0\) and \(p_T,def = 2\), and another with \(p_T,hard = 1\)
+and \(p_T,def = 1\). In all subsequent figures and tables, predictions based
+on these samples are referred to as `MiNNLO' and `MiNNLO (alt)', respectively.
+
+
+
+
+
+\paragraph*{\tW production}
+
+Single-top \(tW\) associated production was modelled using the
+\POWHEGBOX[v2]~\cite{Re:2010bp,Nason:2004rx,Frixione:2007vw,Alioli:2010xd}
+generator, which provided matrix elements at next-to-leading
+order~(NLO) in the strong coupling constant \alphas\ and made use of the five-flavour
+scheme with the \NNPDF[3.0nlo]~\cite{Ball:2014uwa} parton
+distribution function~(PDF) set.
+The functional form of the renormalisation and factorisation scales was
+set to the dynamic scale \( \HT / 2 \)~\cite{ATL-PHYS-PUB-2021-042}.
+The diagram removal scheme~\cite{Frixione:2008yi} was employed to handle the
+interference with \ttbar production~\cite{ATL-PHYS-PUB-2016-020}.
+The events were interfaced with \PYTHIA[8.230]~\cite{Sjostrand:2014zea}
+using the A14 tune~\cite{ATL-PHYS-PUB-2014-021} and the \NNPDF[2.3lo] PDF set.
+The decays of bottom and charm hadrons were simulated using the
+\EVTGEN[1.6.0] program~\cite{Lange:2001uf}.
+
+The inclusive cross-section was corrected to the theory prediction
+calculated at NLO in QCD with NNLL soft-gluon
+corrections~\cite{Kidonakis:2021vob}.  For proton--proton  % chktex 8
+collisions at a centre-of-mass energy of \(\rts = \qty{13}{\TeV}\), this
+cross-section corresponds to \(\sigma{(tW)}_{\mathrm{NLO+NNLL}} = 79.3 \pm 2.9\,\unit{\pb}\),
+using a top-quark mass of \(\mtop = \qty{172.5}{\GeV}\).
+The uncertainties in the cross-section due to the PDF and \alphas were
+calculated using the \PDFforLHC[15] prescription~\cite{Butterworth:2015oua}
+with the \MMHT[nnlo]~\cite{Harland-Lang:2014zoa},
+\CT[14nnlo]~\cite{Dulat:2015mca} and \NNPDF[3.0lo]~\cite{Ball:2014uwa}
+PDF sets in the five-flavour scheme.
+
+Like in the \ttbar sample uncertainty due to initial-state radiation (ISR)
+was estimated by separately varying the \hdamp parameter and
+the Var3c parameter of the A14 tune
+as described in Ref.~\cite{ATL-PHYS-PUB-2017-007}. The impact of
+final-state radiation (FSR) was evaluated by varying the renormalisation scale
+for emissions from the parton shower up or down by a factor two.
+
+This sample is displayed on plots and in tables as PH+PY8 (DR) or \tW (DR).
+
+%-------------------------------------------------------------------------------  
+\subsubsection{Alternative signal samples}%
+\label{sec:datamc:mc_alt_signal} 
+%-------------------------------------------------------------------------------  
+
+Several additional \ttbar and \tW samples are considered for evaluating modelling systematics and for comparison with data. 
+
+\begin{itemize}
+	\item \tW PH+PY8 (DS): similar to the nominal PH+PY8 sample using dynamic scales but using
+    the diagram subtraction scheme~\cite{Frixione:2008yi,ATL-PHYS-PUB-2016-020}.
+    Combined with the nominal \ttbar sample, it is presented in legends and tables as PH+PY8 (DS).
+	\item \tW PH+PY8 with fixed scales (both DR and DS):
+    similar to the nominal PH+PY8 sample but with the renormalisation and
+    factorisation scales fixed to the default scale, \(\mtop = \qty{172.5}{\GeV}\).
+    Combined with the nominal \ttbar sample, they are presented in legends
+    and tables as PH+PY8 (DRF) and PH+PY8 (DSF) respectively. See Ref.~\cite{ATL-PHYS-PUB-2021-042} for detailed on improvements of using dynamic scales.
+	\item \ttbar and \tW PH+PY8 (\(\hdamp = 3 \mtop \)):
+    produced with the same settings as the nominal PH+PY8 sample but with the 
+	\hdamp parameter set to \( 3 \mtop \). The short name used in the paper is PH+PY8 (\hdamp).
+	\item \ttbar and \tW PH+H7: events were generated using the same \POWHEGBOX[v2] set-up
+    using the \NNPDF[3.0nlo] PDF, interfaced to \HERWIG[7.1.3]~\cite{Bellm:2015jjp,Bahr:2008pv},
+    which includes an angular-ordered parton-shower model with a different hadronisation model. This sample was generated using the \HERWIG[7.1]
+    default set of tuned parameters and the \MMHT[lo] PDF set~\cite{Harland-Lang:2014zoa}.
+    For the \tW process, events were generated with the \POWHEGBOX[v2] generator were
+    interfaced to \HERWIG[7.2].
+    The decays of the bottom and charm hadrons were simulated using the \EVTGEN[1.6.0]
+    program~\cite{Lange:2001uf}. The short name used in the paper is PH+H7.
+	\item \ttbar and \tW PH+PY8 (\pthard): similar to the nominal PH+PY8 sample
+    but using \( \pthard = 1 \) instead of  \( \pthard = 0 \)~\cite{10.21468/SciPostPhys.12.1.010}.
+    This parameter regulates the definition of the vetoed region of the showering,
+    important to avoid hole/overlap in the phase space filled by \POWHEG and \PYTHIA.
+    The short name for this sample is PH+PY8 (\pthard).
+	\item \ttbar and \tW PH+PY8 with varied top-quark mass:
+    mass variations of \( \pm 0.5 \mtop \) for both \ttbar and \tW are used.
+	\item \ttbar PH+PY8+MadSpin: similar to the nominal PH+PY8 sample but with
+    \madspin~\cite{Artoisenet:2012st} program used to decay the top quarks.
+    The decays of the bottom and charm hadrons were simulated using the \EVTGEN[1.7.0]
+    program. This sample is combined with the nominal \tW sample and is named PH+PY8+MadSpin.
+    \item \ttbar with recoil to top-quark: similar to the nominal PH+PY8 sample
+    but the modelling of the parton shower employs the recoiling against top quarks instead of \bquarks.
+    \item \ttbar and \tW aMC@NLO+PY8: \MGNLO generator is used instead of \PYTHIA for the matrix element calculation.
+\end{itemize}
+
+All the alternative samples are normalised to the same total cross-section
+as the nominal, except for the top-quark mass variations, which are normalised
+to the corresponding higher-order cross-sections.
+
+
+%-------------------------------------------------------------------------------
+\subsubsection{Background samples}%
+\label{sec:datamc:mc_background}
+%------------------------------------------------------------------------------- 
+
+Below is the list of the background samples used in the analysis. The dominant
+background are the \Wjets events. Other backgrounds are grouped in categories.
+In the plots and tables ``\OtherT'' consists of \(s\)-channel and \(t\)
+channel single-top production and the \ttV / \ttH samples.
+``\OtherV''  consists of \Zjets and diboson samples.
+Treatment of misidentified and fake leptons, denoted also as ``Mis-ID lep.''  % chktex 38
+is described in more detail in \cref{sec:bkg-estimation}.
+
+\paragraph*{\Wjets and \Zjets production}
+
+The production of \(V+\)jets was simulated with the \SHERPA[2.2.11]~\cite{Bothmann:2019yzt}
+generator. In this set-up, NLO-accurate matrix elements for up to two additional partons,
+and LO-accurate matrix elements for up
+to five additional partons were calculated with the Comix~\cite{Gleisberg:2008fv} and
+\OPENLOOPS~\cite{Buccioni:2019sur,Cascioli:2011va,Denner:2016kdg} libraries.
+The default \SHERPA parton showering algorithm~\cite{Schumann:2007mg} based on
+the Catani--Seymour dipole factorisation and the cluster hadronisation model~\cite{Winter:2003tt}  % chktex 8
+was used. The dedicated set of tuned parameters developed by the
+\SHERPA authors and the Hessian \NNPDF[3.0nnlo] PDF set~\cite{Ball:2014uwa,Carrazza:2015aoa} were employed.
+
+The NLO matrix elements for a given jet multiplicity were matched to the parton
+shower (PS) using a colour-exact variant of the MC@NLO
+algorithm~\cite{Hoeche:2011fd}. Different jet multiplicities were then merged
+into an inclusive sample using an improved CKKW matching
+procedure~\cite{Catani:2001cc,Hoeche:2009rj} which was extended to NLO
+accuracy using the \MEPSatNLO prescription~\cite{Hoeche:2012yf}. The merging threshold
+was set to \qty{20}{\GeV}.
+
+Electroweak virtual corrections are included in the 2.2.11 configuration,
+and are available as an alternative generator weight based on the
+NLO \(EW_\mathrm{virt}\) approach using the exponentiated
+approach~\cite{Kallweit:2014xda,Kallweit:2015dum}.
+
+Uncertainties from missing higher orders were
+evaluated~\cite{Bothmann:2016nao} using seven variations of the QCD
+factorisation and renormalisation scales in the matrix elements, changing them by
+factors of \(0.5\) and \(2\), avoiding variations in opposite directions.
+An envelope is taken of all variations.
+
+Uncertainties in the nominal PDF set were evaluated using 100 replica
+variations. Additionally, the results were cross-checked using the
+central values of the \CT[14nnlo]~\cite{Dulat:2015mca} and
+\MMHT[nnlo]~\cite{Harland-Lang:2014zoa} PDF sets. The effect of the uncertainty
+in the strong coupling constant \( \alphas \) was assessed by variations
+of \(\pm 0.001\).
+
+The \(V\)+jets samples were normalised to a next-to-next-to-leading-order (NNLO)
+prediction~\cite{Anastasiou:2003ds}.
+
+
+\paragraph*{Diboson production}
+
+Samples of diboson final states (\(VV\)) were simulated with the
+\SHERPA[2.2.1] or 2.2.2~\cite{Bothmann:2019yzt} generator depending on the process,
+%~\footnote{This is an admixture of 2.2.1 and above versions, so the version should be kept generic to avoid confusions. As an
+%alternative, the sentence can be modified indicating that samples are simulated with the \SHERPA[2.2.1] or 2.2.2 depending on the process.}
+including off-shell effects and Higgs boson contributions, where appropriate.
+Fully leptonic final states and semileptonic final states, where one boson
+decays leptonically and the other hadronically, were generated using
+matrix elements at NLO accuracy in QCD for up to one additional parton
+and at LO accuracy for up to three additional parton
+emissions. Samples for the loop-induced processes \(gg \to VV\) were
+generated using LO-accurate matrix elements with up to one
+additional parton emission for both the cases of fully leptonic and
+semileptonic final states. The matrix element calculations were matched
+and merged with the \SHERPA parton shower based on the Catani--Seymour  % chktex 8
+dipole factorisation~\cite{Gleisberg:2008fv,Schumann:2007mg} using the MEPS@NLO
+prescription~\cite{Hoeche:2011fd,Hoeche:2012yf,Catani:2001cc,Hoeche:2009rj}.
+The virtual QCD corrections were provided by the
+\OPENLOOPS library~\cite{Buccioni:2019sur,Cascioli:2011va,Denner:2016kdg}. The
+\NNPDF[3.0nnlo] set of PDFs was used~\cite{Ball:2014uwa}, along with the
+dedicated set of tuned parton-shower parameters developed by the
+\SHERPA authors.
+
+No overlap with the \Wjets and \Zjets samples is present, as hadronic decays
+are prompt vector boson decays and not associated jet production. Hence the kinematics
+of the corresponding events are different.
+
+\paragraph*{Other single top production}
+
+Single-top \(t\)-channel and \(s\)-channel productions were modelled using the
+\POWHEGBOX[v2]~\cite{Frederix:2012dh,Alioli:2009je,Nason:2004rx,Frixione:2007vw,Alioli:2010xd}
+generator at NLO in QCD using the four-flavour scheme for \(t\)- and five-flavour scheme for \(s\)-channel and the
+corresponding \NNPDF[3.0nlo] set of PDFs~\cite{Ball:2014uwa}.  The events were
+interfaced with \PYTHIA[8.230]~\cite{Sjostrand:2014zea} using the A14
+tune~\cite{ATL-PHYS-PUB-2014-021} and the \NNPDF[2.3lo] set of
+PDFs~\cite{Ball:2012cx}.
+
+
+\paragraph*{\ttV production}
+
+The production of \ttV events was modelled using the \MGNLO[2.3.3]~\cite{Alwall:2014hca}
+generator, which provided matrix elements at
+next-to-leading order~(NLO) in the strong coupling constant \alphas
+and used the \NNPDF[3.0nlo]~\cite{Ball:2014uwa} set of parton distribution
+functions~(PDFs). The functional form of the renormalisation and
+factorisation scales was set to the default of
+\(0.5 \times \sum_i \sqrt{m^2_i+p^2_{\mathrm{T},i}}\),
+where the sum runs over all the particles
+generated in the matrix element calculation. Top quarks were decayed
+at LO using \MADSPIN~\cite{Frixione:2007zp,Artoisenet:2012st} to
+preserve spin correlations. The events were interfaced with
+\PYTHIA[8.210]~\cite{Sjostrand:2014zea} for the parton shower and
+hadronisation, using the A14 set of tuned
+parameters~\cite{ATL-PHYS-PUB-2014-021} and the
+\NNPDF[2.3lo]~\cite{Ball:2014uwa} PDF set.
+The decays of bottom and charm hadrons were simulated using the \EVTGEN[1.2.0] program~\cite{Lange:2001uf}.
+
+
+\subsubsection*{\ttH production}
+
+The production of \ttH events was modelled using the
+\POWHEGBOX[v2]~\cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd,Hartanto:2015uka}
+generator at NLO with the \NNPDF[3.0nlo]~\cite{Ball:2014uwa} PDF set.
+The events were interfaced to \PYTHIA[8.230]~\cite{Sjostrand:2014zea}~using
+the A14 tune~\cite{ATL-PHYS-PUB-2014-021} and the
+\NNPDF[2.3lo]~\cite{Ball:2014uwa} PDF set. The decays of bottom and charm hadrons
+were performed by \EVTGEN[1.6.0]~\cite{Lange:2001uf}.
