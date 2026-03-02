@@ -1,0 +1,53 @@
+\subsection{On the reconstruction of W bosons}
+
+This section tackles the challenge of the reconstruction of the hadronically decaying \Wboson.
+While the \Wboson decays into exactly two quarks, the signature in the detector can look quite differently.
+In most cases, both decay products form jets which can be reconstructed with the standard jet clustering.
+However, there can also be a third jet, originating from a gluon radiated from one of the quarks.
+When the momentum of the \Wboson is sufficiently large, the system becomes boosted.
+All decay products of the \Wboson are clustered into just one jet, since the two initial quarks can no longer be resolved.
+The difficulty in the reconstruction is therefore two-fold.
+The goal of this section is to find one reconstruction algorithm that can handle different event topologies, while solving the combinatorics arising from different jet multiplicities.
+
+This study employs the the nominal \ttbar sample with the loose selection described in the previous chapter.
+A purity $p$ is defined as matched events divided by all events passing the loose selection.
+Matched events include all events where the angular distance $\Delta R$ between the true \Wboson before the decay \Wtruth
+with the candidate reconstructed from jets is smaller than 0.5:
+\begin{equation}
+	p = \frac{\#(Events with \Delta R(\Wtruth, \Wcand)<0.5)}{\#Events}
+\end{equation}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth, page=1]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad reconstruction.}
+		\label{fig:Whadreco:partnocut}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth, page=2]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad reconstruction.}
+		\label{fig:Whadreco:reconocut}
+	\end{subfigure}
+	\caption{Comparison of the particle and detector level reconstruction of the hadronically decaying \Wboson from light jets.}
+	\label{fig:Whadreco:nocut}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth, page=3]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad reconstruction.}
+		\label{fig:Whadreco:partmasscut}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=\linewidth, page=4]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad reconstruction.}
+		\label{fig:Whadreco:recomasscut}
+	\end{subfigure}
+	\caption{Comparison of the particle and detector level reconstruction of the hadronically decaying \Wboson from light jets. 
+		Only events passing $60<m(\Wcand)<100$ GeV are considered for the calculation of the purity.}
+	\label{fig:Whadreco:masscut}
+\end{figure}
+
