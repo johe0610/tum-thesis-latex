@@ -3,21 +3,25 @@
 This section tackles the challenge of the reconstruction of the hadronically decaying \Wboson.
 While the \Wboson decays into exactly two quarks, the signature in the detector can look quite differently.
 In most cases, both decay products form jets which can be reconstructed with the standard jet clustering.
-However, there can also be a third jet, originating from a gluon radiated from one of the quarks.
-When the momentum of the \Wboson is sufficiently large, the system becomes boosted.
+There can also be a third jet, originating from a gluon radiated from one of the quarks.
+When the momentum of the \Wboson is sufficiently large, the system becomes collimated, or Lorentz-boosted.
 All decay products of the \Wboson are clustered into just one jet, since the two initial quarks can no longer be resolved.
-The difficulty in the reconstruction is therefore two-fold.
-The goal of this section is to find one reconstruction algorithm that can handle different event topologies, while solving the combinatorics arising from different jet multiplicities.
+Thus, the difficulty in the reconstruction is two-fold, handling different event topologies, while solving the combinatorics arising from varying jet multiplicities.
+The goal of this section is to find one reconstruction algorithm that can solve the issues, while being easy to implement.
 
 This study employs the the nominal \ttbar sample with the loose selection described in the previous chapter.
-A purity $p$ is defined as matched events divided by all events passing the loose selection.
+Different jet-combinations are considered as possible candidates for the \Wboson.
+The different choices can be compared by defining the purity $p$.
+It is defined as matched events divided by all events passing the loose selection.
 Matched events include all events where the angular distance $\Delta R$ between the true \Wboson before the decay \Wtruth
 with the candidate reconstructed from jets is smaller than 0.5:
 \begin{equation}
 	p = \frac{\#(Events with \Delta R(\Wtruth, \Wcand)<0.5)}{\#Events}
 \end{equation}
-
-
+The jet combination that is selected is labeled as \Wcand.
+We decided to focus on purity, instead of acceptance or efficiency, since the number of events in the analyzed data set is sufficiently large.
+Therefore, we can afford to sacrifice efficiency for the benefit of a cleaner event selection.
+Figure~\ref{fig:Whadreco:nocut} depicts the purity as a function of \(p_{T}(W)\) for the comparison of \Wtruth to \Wparticle \ref{fig:Whadreco:partnocut} and \Wreco~\ref{fig:Whadreco:reconocut}.
 \begin{figure}[h!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
