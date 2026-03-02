@@ -21,33 +21,43 @@ with the candidate reconstructed from jets is smaller than 0.5:
 The jet combination that is selected is labeled as \Wcand.
 We decided to focus on purity, instead of acceptance or efficiency, since the number of events in the analyzed data set is sufficiently large.
 Therefore, we can afford to sacrifice efficiency for the benefit of a cleaner event selection.
-Figure~\ref{fig:Whadreco:nocut} depicts the purity as a function of \(p_{T}(W)\) for the comparison of \Wtruth to \Wparticle \ref{fig:Whadreco:partnocut} and \Wreco~\ref{fig:Whadreco:reconocut}.
-\begin{figure}[h!]
+The purity as a function of \(p_{T}(\Wtruth)\) for the comparison of \Wtruth to \Wparticle and \Wreco is displayed in Figures~\ref{fig:Whadreco:partnocut} and~\ref{fig:Whadreco:reconocut}. The error band depicts the statistical uncertainty of the MC sample.
+\begin{figure}[ht!]
 	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth, page=1]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Purity for the particle level \Whad reconstruction.}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad\\
+        reconstruction.}
 		\label{fig:Whadreco:partnocut}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth, page=2]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Purity for the detector level \Whad reconstruction.}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad \\
+        reconstruction.}
 		\label{fig:Whadreco:reconocut}
 	\end{subfigure}
 	\caption{Comparison of the particle and detector level reconstruction of the hadronically decaying \Wboson from light jets.}
 	\label{fig:Whadreco:nocut}
 \end{figure}
+Various jet combinations are selected as the \Wboson candidate. 
+The highest purities in the low \pT regime \(\pT < 100 \GeV\) are obtained 
+by selecting the dijet combination whose mass is closest to the known \Wboson mass (orange).
+The performance in the medium \pT range is similar for all considered options with a purity around \(80\%\).
+Only the purple curve selecting the 4-vector sum of the leading and sub-leading light jet
+performs slightly poorer with a purity of around \(60\%\).
+At high \Wboson momenta, a preference towards high-momenta candidates can be observed: The leading light jet (light blue) as well as the hardest dijet combination (red) perform best.
+The purities obtained for the particle and detector level studies are similar, with slightly larger values obtained for the particle level study.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth, page=3]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Purity for the particle level \Whad reconstruction.}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad \\ reconstruction.}
 		\label{fig:Whadreco:partmasscut}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=\linewidth, page=4]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Purity for the detector level \Whad reconstruction.}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=4]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad \\ reconstruction.}
 		\label{fig:Whadreco:recomasscut}
 	\end{subfigure}
 	\caption{Comparison of the particle and detector level reconstruction of the hadronically decaying \Wboson from light jets. 
@@ -55,3 +65,59 @@ Figure~\ref{fig:Whadreco:nocut} depicts the purity as a function of \(p_{T}(W)\)
 	\label{fig:Whadreco:masscut}
 \end{figure}
 
+The same plots are shown in Figure~\ref{fig:Whadreco:masscut} with the addition of a selection cut on the mass of the \Wboson candidate \(60<m(\Wcand)<100\GeV\). This cut is applied in the nominator as well as the denominator of the purity definition.
+Single bins are merged in the plotting step to reduce the statistical uncertainties.
+Selecting the jet combination whose mass is closest to the true \Wboson mass, is not the best choice as \Wcand (orange curve).
+The highest purity is obtained by selecting the dijet system containing leading and sub-leading light jet (purple).
+At highest \Wboson momenta, selecting the leading jet results in the highest purity.
+The statistical uncertainties are significantly smaller, compared to the other options.
+It becomes evident, that one should pre-select different jet combinations as preliminary candidates to account for the different topologies from resolved and boosted events.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad \\ reconstruction.}
+		\label{fig:Whadreco:combinedpart}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad \\ reconstruction.}
+		\label{fig:Whadreco:combinedreco}
+	\end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the particle level \Whad \\ reconstruction with mass cut.}
+		\label{fig:Whadreco:combinedpartmasscut}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[width=1.\linewidth, page=8]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Purity for the detector level \Whad \\ reconstruction with mass cut.}
+		\label{fig:Whadreco:combinedrecomasscut}
+	\end{subfigure}
+	\caption{Comparison of the particle (left) and detector level (right) reconstruction of the hadronically decaying \Wboson from light jets. 
+        Different combinations of jets are pre-selected as the \Wboson candidate. The candidate that minimizes \(|m(\Wboson)-m(\Wcand)|\) is selected as pseudo-\Wboson.
+        Only events passing the $60<m(\Wcand)<100$ GeV cut are considered in the lower row.
+        The results are compared to the purities obtained from a DNN. More information is given in the text.}
+	\label{fig:Whadreco:combined}
+\end{figure}
+
+Figure~\ref{fig:Whadreco:combined} compares two different pre-selections.
+The blue curve labelled "1-,2-,3-jet" a total of five objects are pre-selected: the leading jet, the subleading jet, the vectorial sum of the two 4-vectors, the leading dijet and the leading 3-jet combination. The "1-,2-jet" algorithm displayed in red drops the last two candidates from the list.
+While both options produce satisfactory results, the highest purity is obtained with the latter algorithm, when selecting a mass window around the \Wboson mass. This is the final algorithm that will be used in the analysis for event selection as well as observable definitions. The purity exceeds $90\%$ for \Wboson momenta larger than 120\GeV.
+
+A pseudo-\Wboson can be found for each event.
+Selection cuts can be applied on \Wcand. The mass cut $60<m(\Wcand)<100$ GeV is motivated by the purity studies.
+An additional cut on \pT(\Whad) will be applied to ensure a good quality of the reconstruction for each event.
+A \(\pT > 80\GeV\) cut-off was chosen to ensure, that the purity exceeds \(60\%\) for the particle and detector level reconstruction.
+
+The results obtained from the classical reconstruction approach are compared to a Machine-Learning based reconstruction.
+A fully-connected Neural Network with a total of ... nodes and ... parameters organized in 5 layers is defined.
+Input features,....
+Classification network...
+
+
+Describe the DNN
+Data set is split into training and validation samples. The purities are calculated on the validation sample.
+The statistical uncertainties are thus not comparable to the ones obtained in the classical method.
