@@ -113,11 +113,18 @@ An additional cut on \pT(\Whad) will be applied to ensure a good quality of the 
 A \(\pT > 80\GeV\) cut-off was chosen to ensure, that the purity exceeds \(60\%\) for the particle and detector level reconstruction.
 
 The results obtained from the classical reconstruction approach are compared to a Machine-Learning based reconstruction.
-A fully-connected Neural Network with a total of ... nodes and ... parameters organized in 5 layers is defined.
-Input features,....
-Classification network...
+A fully-connected classification neural network is designed and trained for that purpose.
+The five leading light jets are considered for that study.
+Every 1-, 2- and 3-jet combination built from the input jets is considered as a \Wboson candidate.
+This results in a total of 25 combinations.
+The 4-vectors of the jet combinations are passed as input to the network.
+The jet combination with the smallest distance to \Wtruth in \(\DeltaR\) is labeled with "1", while "0" is assigned to all other combinations as training label.
+The network consists of five layers with 8, 16, 32, 16, 8 nodes, respectively.
+This results in a total of 1401 trainable parameters.
+The layout of the neural network is illustrated in Figure....
 
+The study is performed on \ttbar samples generated with Powheg+Pythia.
+The data is split equally into training and validation samples with XXXX \ttbar events each.
 
-Describe the DNN
-Data set is split into training and validation samples. The purities are calculated on the validation sample.
+The purities are calculated on the validation sample.
 The statistical uncertainties are thus not comparable to the ones obtained in the classical method.
