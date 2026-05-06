@@ -1,0 +1,173 @@
+\chapter{Object Reconstruction}
+\label{chap:ObjectReco}
+
+The raw data output of the ATLAS experiment consists of electrical signals from $\approx 40$ million channels. 
+Particle trajectory and energy cluster information are combined in a Particle Flow (PFlow) algorithm to construct objects that serve as input to jet clustering algorithms.
+Objects, such as jets, leptons and \ETmiss are reconstructed as high-level objects for
+physics analyses. The objects are subsequently calibrated to account for differences
+in MC simulation and data and to ensure accurate and precise measurements of their
+properties.
+
+This chapter details the reconstruction of tracks, calorimeter cluster and physics objects within the ATLAS detector.
+The subsequent calibration will be discussed for the example of $b$ tag calibration in Chapter ...
+The calibration of other objects will not be discussed
+in detail.
+
+
+along with the reconstruction and calibration
+procedures for physics objects used in analysis.
+%From alice:
+%The identiﬁcation of particles was previously introduced in Section 3.2.2; this section
+%will focus on the reconstruction and calibration of physics objects relevant to the analyses
+%presented in Chapters 5-7.
+
+\section{Reconstruction of Tracks, Clusters and Vertices}
+This section provides a concise summary of low level objects that will serve as an input for the reconstruction of physics objects.
+
+\vspace{.5cm}
+\noindent
+\textbf{Tracks}
+\vspace{.5cm}
+
+\noindent
+As illustrated in Figure~\ref{fig:ATLAS:DiagramParticles}, charged particles traversing
+the various layers of the ATLAS detector produce spatial hits and energy depositions.
+The particles are forced on helical trajectories by the
+strong magnetic field, enabling the determination of momentum and charge.
+The trajectories are reconstructed from ID and MS signals to form tracks.
+
+The first step in the reconstruction of charged particles is the creation of three-dimensional \textit{space points} from neighboring cells in Pixel and SCT that exceed a certain threshold~\cite{PERF-2015-08}.
+%The pixel clusters in the barrel are about two pixels in the $r$-$\varphi$ plane and from one to three pixels in the $\eta$ plane.
+
+Sets of three space points form \textit{track seeds} which allow a first crude momentum estimate while maximizing the number of possible combinations.
+The candidates are extrapolated by assuming a perfect helical
+trajectory in a uniform magnetic field to estimate the distance to beam line. These are also called \textit{transverse impact parameter} $d_0$ and \textit{longitudinal impact parameter} $z_0$.
+
+After applying a first set of momentum and impact parameter requirements, 
+a combinatorial Kalman filter~\cite{FRUHWIRTH1987444} is used to
+build track candidates from the chosen seeds in an iterative fitting process.
+It incorporates additional space-points from the remaining
+layers of the Pixel and SCT detectors which are compatible with the preliminary trajectory.
+Track candidates created from random collection of space points are rejected to manage the available CPU budget for event reconstruction.
+
+A \textit{track score} is defined evaluating tracks according to their momentum, number of clusters and $\chi^2$ of the fit, where more energetic tracks with an increased number of clusters are ranked higher.
+The tracks a processed by an ambiguity solver in descending order of the track score to resolve overlapping space points.
+
+The ambiguity solver rejects all tracks that fail a number of criteria
+including kinematic cuts ($\pt > 400 \MeV$, $|\eta|<2.5$) and on the total 
+number of clusters and holes. A hole is defined as an intersection of the reconstructed track trajectory with a sensitive detector element that does not contain a matching cluster. The detailed list can be found in~\cite{PERF-2015-08}.
+
+The tracks can be extended in the outer TRT in the next step.
+%A two-step approach is used.
+An extension algorithm searches for seeded candidates before a second module
+processes and evaluates these extensions.
+It should be noted, that this is a pure extension, not a combination.
+The silicon-only tracks are not modified~\cite{Cornelissen_2008}.
+
+The first step in the reconstruction of muons in the MS~\cite{PERF-2015-10} is to form segments from hit patterns in the muon chambers.
+A Hough transform~\cite{ILLINGWORTH198887} is used to search for aligned hits in MDT and trigger chambers.
+It speeds up the reconstruction and makes it more robust against misidentification.
+
+A straight line is fitted to the hits in each layer is performed to reconstruct the MDT segments.
+Muon track candidates are then built by combining hits from segments in different layers. 
+The segment-seeded combinatorial search starts from the middle
+layers of the detector where more trigger hits are available,
+and is then extended to use the segments from the outer and inner layers.
+Finally, a global $\chi^2$ fit is performed to
+the hits associated with each track candidate.
+
+The information provided by ID, MS and calorimeters is combined, defining four types of muons~\cite{PERF-2015-10}, ranked by reconstruction quality:
+\begin{itemize}
+    \item Combined (CB) muons are formed with a global refit that uses the independent
+    reconstructions in ID and MS.
+    \item Segment-tagged (ST) muons classify an ID track as a muon if it is associated with
+    at least one local track segment in the MDT or CSC.
+    \item Calorimeter-tagged (CT) muons match a track in th ID with an energy deposit in the
+    calorimeter compatible with a minimum-ionizing particle.
+    \item Extrapolated (ME) muons are reconstructed from MS hits only, adding a loose
+    requirement that the origin of the track is compatible with the IP.
+\end{itemize}
+Overlaps between the categories are resolved before producing the collection of muons used in physics analyses.
+
+\vspace{.5cm}
+\noindent
+\textbf{Calorimeter cluster}
+\vspace{.5cm}
+
+\noindent
+
+The reconstruction of particles depositing energy in the calorimeter system is 
+based on a three-dimensional topological clustering of individual calorimeter cell signals~\cite{PERF-2014-07}.
+The resulting topological cell clusters (\textit{topo-clusters}) carry both, shape and location information.
+
+The cell significance $\varsigma^\text{EM}_\text{cell}$ is defined to control the 
+cluster formation
+\begin{equation}
+    \varsigma^\text{EM}_\text{cell} = \frac{E^\text{EM}_\text{cell}}{\sigma^\text{EM}_\text{noise,cell}}
+    \label{eq:ObjReco:topo_threshold}
+\end{equation}
+where $E^\text{EM}_\text{cell}$ and $\sigma^\text{EM}_\text{noise,cell}$
+denote the cell signal and average (expected) noise, respectively.
+The algorithm to form topo-clusters starts from seeds with highly significant signal
+$|\varsigma^\text{EM}_\text{cell}|>4$ (primary seed threshold). Each of the seed cells forms a \textit{proto cluster}.
+All neighboring cells with $|\varsigma^\text{EM}_\text{cell}|>2$ (growth threshold) are collected
+iteratively, as well as cells with $|\varsigma^\text{EM}_\text{cell}|>0$ (principal cell filter).
+In this case, neighboring cells refers to cells adjacent in
+a given sampling layer, as well as cells with partial overlap in adjacent layers.
+
+The resulting proto-cluster is characterized by a core of
+seed cells, surrounded by an envelope of cells with less significant signals.
+The energy of the massless cluster is given by the energy sum of the associated cells taking geometrical signal weights into account,
+while $\eta$ and $\varphi$ are calculated from the energy-weighted average of the cells.
+
+\vspace{.5cm}
+\noindent
+\textbf{Vertices}
+\vspace{.5cm}
+
+\noindent
+As mentioned in Section ... , there are multiple proton-proton collisions per bunch crossing.
+In order to identify the one collision of interest, the intersection of multiple tracks, referred to as \textit{vertex} is reconstructed~\cite{ATL-PHYS-PUB-2015-026}.
+The vertices at the beam line are denoted as \textit{primary vertices}, where the one with the largest sum of squared transverse momenta of associated tracks is labeled the \textit{hard-scatter vertex}.
+
+\textit{Secondary vertices} are displaced with respect to the beam line.
+They can be an indication for long-lived particles such as $b$ hadrons, that travel a short distance in the detector before decaying.
+
+
+\section{Electron Reconstruction}
+
+\section{Muon Reconstruction}
+
+\section{Jet Reconstruction}
+
+\section{MET Reconstruction}
+
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/ATLAS/cern_accelerator.pdf}
+    \caption{Overview of CERN accelerator complex showing pre-accelerators and the LCH (dark blue) with the four major experiments ATLAS, CMS, ALICE and LHCb~\cite{Mobs:2636343}.}
+    \label{fig:ObjectReco:Placeholder}
+\end{figure}
+
+
+
+
+\section{Definition of physics objects on particle level}
+
+The aim of this section is to provide definitions of physics objects, such as leptons, jets and missing momentum, that allow for a direct comparison of theoretical and experimental results.
+The ATLAS collaboration provides recommendations~\cite{ATL-PHYS-PUB-2015-013} for particle level definitions with a minimal model dependence.
+They should be accurate, unambiguous and allow the comparison of predictions with measurement results between experiments without extensive prior experimental knowledge.
+The specified particle level objects are as close to experimentally reconstructed objects as possible, 
+avoiding large extrapolations to regions outside of the detector acceptance.
+
+\begin{itemize}
+    \item All \textbf{stable particles}, defined by a lifetime $c\tau_0 > 10$ mm within the angular acceptance $|\eta| < 5$ are considered.
+    \item \textbf{Prompt leptons} are generated final-state neutrinos, electrons and muons not originating from hadron decays.
+    Charged leptons from subsequent $\tau$ decays $(W\rightarrow \tau\nu_\tau \rightarrow \ell\nu_\ell\nu_\tau)$ are therefore also categorized as prompt.
+    To take QED FSR into account, the charged leptons are \textit{dressed} by clustering all photons within a cone around the \textit{bare} lepton (after simulating QED FSR) with the anti-$k_t$ algorithm. The clustering distance parameter is set to $R=0.1$.
+    \item \textbf{Jets} are build in a subsequent step by collecting all stable particles apart from the identified prompt dressed leptons and prompt photons. The anti-$k_t$ algorithm with $R=0.4$ is employed for the jet building.
+    The jet is labeled as a $b$ jet if a $b$ hadron with $p_T>5\GeV$ is found within $\Delta R < 0.3$ around the jet axis. Otherwise it is labeled as a \textit{light} jet. No jet-lepton overlap removal is applied.
+    \item \textbf{Missing transverse momentum} $\ETmiss$
+    corresponds to the transverse vector sum of all neutrinos not from hadron decays.
+\end{itemize}
