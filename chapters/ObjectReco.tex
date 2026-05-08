@@ -104,7 +104,7 @@ The cell significance $\varsigma^\text{EM}_\text{cell}$ is defined to control th
 cluster formation
 \begin{equation}
     \varsigma^\text{EM}_\text{cell} = \frac{E^\text{EM}_\text{cell}}{\sigma^\text{EM}_\text{noise,cell}}
-    \label{eq:ObjReco:topo_threshold}
+    \label{eq:ObjReco:topo_threshold},
 \end{equation}
 where $E^\text{EM}_\text{cell}$ and $\sigma^\text{EM}_\text{noise,cell}$
 denote the cell signal and average (expected) noise, respectively.
@@ -115,10 +115,14 @@ iteratively, as well as cells with $|\varsigma^\text{EM}_\text{cell}|>0$ (princi
 In this case, neighboring cells refers to cells adjacent in
 a given sampling layer, as well as cells with partial overlap in adjacent layers.
 
+If a proto cluster has more than one local maximum it is split into separate clusters.
+A local maximum is defined as a cell with $E^\text{EM}_\text{cell} > 500~\MeV$
+and at least four neighbors, none of them with larger signal.
+
 The resulting proto-cluster is characterized by a core of
 seed cells, surrounded by an envelope of cells with less significant signals.
-The energy of the massless cluster is given by the energy sum of the associated cells taking geometrical signal weights into account,
-while $\eta$ and $\varphi$ are calculated from the energy-weighted average of the cells.
+The energy of the cluster is given by the energy sum of the associated cells taking geometrical signal weights into account,
+while $\eta$ and $\varphi$ are calculated from the energy-weighted average of the cells. The clusters are assumed to be massless pseudo-particles.
 
 \vspace{.5cm}
 \noindent
@@ -133,10 +137,46 @@ The vertices at the beam line are denoted as \textit{primary vertices}, where th
 \textit{Secondary vertices} are displaced with respect to the beam line.
 They can be an indication for long-lived particles such as $b$ hadrons, that travel a short distance in the detector before decaying.
 
+\section{Lepton reconstruction}
 
-\section{Electron Reconstruction}
+%Elliot thesis
+Leptons are reconstructed using either tracks or a combination of tracks and topo-
+clusters. This discussion focuses on the reconstruction and calibration of electrons
+and muons, as tau leptons are not considered in the work presented in Part II or the
+analysis in Part III. However, the results may include events where electrons and
+muons originate from tau lepton decays.
 
-\section{Muon Reconstruction}
+\subsection{Electron Reconstruction}
+
+Offline electron reconstruction starts from dynamic, variable size clusters in the
+ECal. The seed clusters need to exceed $E_T > 1~\GeV$ and be matched to a track with at least four space points~\cite{EGAM-2018-01}.
+Clusters within $\Delta\eta\times\Delta\varphi = 0.125\times 0.300$
+that are matched to the same track tend to represent secondary EM showers originating from the same initial electron and are called \textit{satellite clusters}.
+Seed clusters with their associated satellite clusters are called \textit{superclusters}.
+
+In order to distinguish between \textit{prompt} electrons, that can originate from a $W$ or $Z$ boson decay from the primary vertex, \textit{non-prompt} electrons
+that can be produced in hadron decays, photons and low energetic jets, a set of discriminating observables is defined~\cite{PERF-2017-01, EGAM-2018-01}. 
+These observables are defined in the region covered by the ECal ($|\eta|<2.47$) and include the number of hits in the ID subsystems and the ration of
+energies in the calorimeter system. 
+%isolation??
+They can be used to define the three working points (WPs) Loose, Medium and Tight
+that impose increasingly strict requirements.
+%The electron identification efficiency for the three WPs is shown in Figure~\ref{}.
+Therefore, the Tight WP exhibits the strongest background suppression, at the cost of a loss in efficiency.
+
+It is vital to account for performance differences in identification, reconstruction and isolation between data and simulation.
+By comparing the respective efficiencies in $Z\rightarrow e^+e^-$ and $J/\psi \rightarrow e^+e^-$ events scale factors (SFs) can be obtained~\cite{EGAM-2018-01}.
+The SFs are applied to the MC weights to better describe the data.
+
+The absolute energy scale and the energy resolution is corrected using $Z\rightarrow e^+e^-$ events~\cite{EGAM-2021-02}.
+Validation of the calibration is performed with $J/\psi \rightarrow e^+e^-$
+and radiative $Z$ processes.
+
+
+%Since the reconstruction, identification, and isolation efficiencies directly affect electron candidate reconstruction, they also influence physics analyses that use these objects.
+%To account for these effects in a physics analysis, systematic uncertainties from the efficiency measurements are propagated to the analysis [125, 128]. Systematic uncertainties associated with the electron energy scale and resolution that arise from pileup modelling, calorimeter layer inter-calibration, and discrepancies between data and simulation, are propagated to the energy scale and resolution corrections [127]
+
+\subsection{Muon Reconstruction}
 
 \section{Jet Reconstruction}
 
