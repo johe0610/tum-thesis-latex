@@ -76,18 +76,6 @@ and is then extended to use the segments from the outer and inner layers.
 Finally, a global $\chi^2$ fit is performed to
 the hits associated with each track candidate.
 
-The information provided by ID, MS and calorimeters is combined, defining four types of muons~\cite{PERF-2015-10}, ranked by reconstruction quality:
-\begin{itemize}
-    \item Combined (CB) muons are formed with a global refit that uses the independent
-    reconstructions in ID and MS.
-    \item Segment-tagged (ST) muons classify an ID track as a muon if it is associated with
-    at least one local track segment in the MDT or CSC.
-    \item Calorimeter-tagged (CT) muons match a track in th ID with an energy deposit in the
-    calorimeter compatible with a minimum-ionizing particle.
-    \item Extrapolated (ME) muons are reconstructed from MS hits only, adding a loose
-    requirement that the origin of the track is compatible with the IP.
-\end{itemize}
-Overlaps between the categories are resolved before producing the collection of muons used in physics analyses.
 
 \vspace{.5cm}
 \noindent
@@ -152,7 +140,7 @@ Offline electron reconstruction starts from dynamic, variable size clusters in t
 ECal. The seed clusters need to exceed $E_T > 1~\GeV$ and be matched to a track with at least four space points~\cite{EGAM-2018-01}.
 Clusters within $\Delta\eta\times\Delta\varphi = 0.125\times 0.300$
 that are matched to the same track tend to represent secondary EM showers originating from the same initial electron and are called \textit{satellite clusters}.
-Seed clusters with their associated satellite clusters are called \textit{superclusters}.
+Seed clusters with their associated satellite clusters constitute \textit{superclusters}.
 
 In order to distinguish between \textit{prompt} electrons, that can originate from a $W$ or $Z$ boson decay from the primary vertex, \textit{non-prompt} electrons
 that can be produced in hadron decays, photons and low energetic jets, a set of discriminating observables is defined~\cite{PERF-2017-01, EGAM-2018-01}. 
@@ -168,9 +156,10 @@ It is vital to account for performance differences in identification, reconstruc
 By comparing the respective efficiencies in $Z\rightarrow e^+e^-$ and $J/\psi \rightarrow e^+e^-$ events scale factors (SFs) can be obtained~\cite{EGAM-2018-01}.
 The SFs are applied to the MC weights to better describe the data.
 
-The absolute energy scale and the energy resolution is corrected using $Z\rightarrow e^+e^-$ events~\cite{EGAM-2021-02}.
+The absolute energy scale and the energy resolution is corrected using $Z\rightarrow e^+e^-$ events.
 Validation of the calibration is performed with $J/\psi \rightarrow e^+e^-$
 and radiative $Z$ processes.
+The uncertainties assigned to the calibration are typically 0.05\% for electrons from resonant $Z$ decays~\cite{EGAM-2021-02}.
 
 
 %Since the reconstruction, identification, and isolation efficiencies directly affect electron candidate reconstruction, they also influence physics analyses that use these objects.
@@ -178,22 +167,110 @@ and radiative $Z$ processes.
 
 \subsection{Muon Reconstruction}
 
+Muons are minimum-ionizing particles.
+Their signature in the detector includes tracks in ID and MS.
+The characteristic
+energy deposits in the calorimeter are also used to account for cases with large energy loss
+in the calorimeter system and MS-independent identification.
+The information provided by ID, MS and calorimeters is combined, defining five categories of muons~\cite{MUON-2018-03}:
+\begin{itemize}
+    \item Combined (CB) muons are formed with a global refit that uses the independent
+    reconstructions in ID and MS.
+    \item Inside-out combined (IO) muons are reconstructed using a complementary
+    algorithm that extrapolates ID tracks to the MS. Reconstruction can be improved in regions with limited MS coverage, as well as for low-\pt muons, that may be stopped in the MS.
+    \item Segment-tagged (ST) muons classify an ID track as a muon if it is associated with
+    at least one local track segment in the MDT or CSC.
+    \item Calorimeter-tagged (CT) muons match a track in th ID with an energy deposit in the
+    calorimeter compatible with a minimum-ionizing particle. The muon \pt threshold has to be increased from 2~\GeV to 5~\GeV due to large background contamination at low \pt.
+    \item Extrapolated (ME) muons are reconstructed from MS hits only, adding a loose
+    requirement that the origin of the track is compatible with the IP. Thus, extending the coverage to $|\eta|< 2.7$ to exploit the full MS range. 
+\end{itemize}
+Overlaps between the categories are resolved before producing the collection of muons used in physics analyses.
+Similar to the electron identification, a \textit{Loose, Medium} and \textit{Tight} WP is defined for muons to suit the needs of the wide variety of physics analyses involving final states containing muons.
+The \textit{Medium} WP, which will be used in the analysis presented in Chapter ...
+only accepts CB and IO muons within the ID acceptance $|\eta|<2.5$.
+The fraction of CB muons passing the \textit{Medium} WP in \ttbar events exceeds 98\%~\cite{MUON-2018-03}.
+
+Again, a calibration procedure is defined and applied to simulated data to match
+the performance measured in real data~\cite{MUON-2022-01}.
+Samples of $J/\psi\rightarrow \mu^+\mu^-$ and $Z\rightarrow \mu^+\mu^-$ events
+are used to measure the momentum scale and resolution.
+The momentum scale and resolution are measured with an uncertainty of 0.5\% and 1.5\% at the Z peak. Charge dependent biases are removed with a dedicated correction.
+
+Systematic uncertainties are defined for variations in the SFs associated with
+decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or statistical uncertainties. The full list is given in~\cite{MUON-2022-01}.
+
+
 \section{Jet Reconstruction}
+
+Quarks and gluons cannot be reconstructed as single particles in the detector.
+Due to QCD color confinement, they hadronize into collimated sprays of color-neutral particles, which are reconstructed as jets. 
+ATLAS constructs jets from Particle Flow (PFlow) objects~\cite{PERF-2015-09}, which optimally combine tracking and calorimeter information. Integrating tracking significantly improves the energy and angular resolution for low-momentum particles, below typical calorimeter noise thresholds.
+Furthermore, track-based vertex association allows effective rejection of pile-up contributions.
+
+The PFlow algorithm begins by selecting well-measured tracks and matching them to calorimeter topo-clusters. Overlaps between the momentum and energy measurements made in the inner detector and calorimeters are removed by a cell-based energy subtraction algorithm.
+The expected calorimeter energy deposit from the particle that also created the track is estimated from the track momentum and and topo-cluster position.
+
+Since single particles often deposit energy across multiple topo-clusters, the algorithm evaluates shower overlap probabilities and adds relevant clusters where necessary to recover the full shower energy. The expected track energy is then subtracted cell-by-cell from the matched topo-clusters. Any remaining calorimeter energy inconsistent with single-particle shower fluctuations is discarded, yielding a clean list of PFlow objects. 
+
+These objects are subsequently clustered into jets using the anti-$k_T$ algorithm~\cite{Cacciari:2008gp}.
+A sequential recombination algorithm is defined introducing distances $d_{ij}$ between entities (particles, pseudojets) $i$ and $j$ and $d_{iB}$ between entity $i$ and the beam $(B)$
+\begin{subequations}
+\begin{align}
+    d_{ij} = \text{min}(k_{ti}^{2p},k_{tj}^{2p})\frac{\Delta_{ij}^2}{R^2},\\
+    d_{iB} = k_{ti}^{2p}
+\end{align}
+\end{subequations}
+where $\Delta^2_{ij} = (y_i - y_j )^2 + (\varphi_i - \varphi_j )^2$ and $k_{ti}$, $y_i$ and $\varphi_i$ are respectively the transverse momentum,
+rapidity and azimuth of particle $i$. The jet radius parameter $R$ controls the jet size.
+
+The inclusive sequential recombination algorithm iteratively selects the smallest distance from a set of pairwise $(d_{ij})$ and beam $(d_{iB})$ measures. If the minimum is between entities $(d_{ij})$, they are merged into a single object, 
+otherwise $(d_{iB})$, the entity is declared a final jet and removed from the list.
+The distances are updated and the procedure repeats until all particles are clustered into jets.
+
+The choice of $p$ defines jet algorithm, where $p=1$ corresponds to the $k_t$~\cite{Ellis_1993}, $p=0$ to the Cambridge/Aachen~\cite{Dokshitzer_1997} and $p = -1$ to the anti-$k_t$ algorithm.
+The latter is generally used in ATLAS analyses, as it 
+constitutes a simple, IRC safe and soft-resilient jet algorithm, constructing
+jets whose shape is not influenced by soft radiation.
+The hardest particles act as seeds for the reconstruction reducing sensitivity to pileup and UE effects~\cite{Cacciari:2008gp}.
+
+
 
 \section{MET Reconstruction}
 
+In an ideal collision, the protons collide head-on along the beam line with a vanishing momentum component in the transverse plane.
+An imbalance in the final state transverse momentum of an event therefore indicates particles that do not leave a measurable signals in the detector.
+The missing transverse energy \ETmiss is typically associated with neutrinos
+in physics analyses that do not consider BSM processes.
 
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.85\linewidth]{figures/ATLAS/cern_accelerator.pdf}
-    \caption{Overview of CERN accelerator complex showing pre-accelerators and the LCH (dark blue) with the four major experiments ATLAS, CMS, ALICE and LHCb~\cite{Mobs:2636343}.}
-    \label{fig:ObjectReco:Placeholder}
-\end{figure}
+Two contributions characterize the reconstructed \ETmiss~\cite{JETM-2020-03}.
+The fully reconstructed and calibrated leptons, photons and jets enter, being part of the
+\textit{hard event}. The second contribution comes from  \textit{soft event} signals
+consisting of calibrated tracks associated with the hard scatter vertex, that are not associated to any other reconstructed objects.
+\ETmiss is constructed from the transverse momentum vectors of the various contribution as the negative vector sum.
+The \textit{signal ambiguity resolver} ensures that there is no double counting of the same signal when reconstructing \ETmiss by removing overlapping objects.
+
+Systematic uncertainties on
+\ETmiss are driven by the energy scale and resolution of all objects contributing to the soft and hard terms. The hard term composition is analysis-specific and uncertainties are extracted per object type using official ATLAS recommendations. 
+Uncertainties for identical object types are treated as fully correlated, while those for different object types are assumed uncorrelated, reflecting the independent reconstruction and calibration chains.
+
+
+
+\section{Definition of physics objects}
+
+\subsection{On detector level}
+
+%\begin{figure}[ht!]
+%    \centering
+%    \includegraphics[width=0.85\linewidth]{figures/ATLAS/cern_accelerator.pdf}
+%    \caption{Overview of CERN accelerator complex showing pre-accelerators and the LCH (dark blue) with the four major experiments ATLAS, CMS, ALICE and LHCb~\cite{Mobs:2636343}.}
+%    \label{fig:ObjectReco:Placeholder}
+%\end{figure}
 
 
 
 
-\section{Definition of physics objects on particle level}
+\subsection{Definition of physics objects on particle level}
 
 The aim of this section is to provide definitions of physics objects, such as leptons, jets and missing momentum, that allow for a direct comparison of theoretical and experimental results.
 The ATLAS collaboration provides recommendations~\cite{ATL-PHYS-PUB-2015-013} for particle level definitions with a minimal model dependence.
