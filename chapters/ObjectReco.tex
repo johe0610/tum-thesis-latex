@@ -205,6 +205,13 @@ decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or stat
 
 Quarks and gluons cannot be reconstructed as single particles in the detector.
 Due to QCD color confinement, they hadronize into collimated sprays of color-neutral particles, which are reconstructed as jets. 
+
+\vspace{.5cm}
+\noindent
+\textbf{Particle flow}
+\vspace{.5cm}
+
+\noindent
 ATLAS constructs jets from Particle Flow (PFlow) objects~\cite{PERF-2015-09}, which optimally combine tracking and calorimeter information. Integrating tracking significantly improves the energy and angular resolution for low-momentum particles, below typical calorimeter noise thresholds.
 Furthermore, track-based vertex association allows effective rejection of pile-up contributions.
 
@@ -213,7 +220,13 @@ The expected calorimeter energy deposit from the particle that also created the 
 
 Since single particles often deposit energy across multiple topo-clusters, the algorithm evaluates shower overlap probabilities and adds relevant clusters where necessary to recover the full shower energy. The expected track energy is then subtracted cell-by-cell from the matched topo-clusters. Any remaining calorimeter energy inconsistent with single-particle shower fluctuations is discarded, yielding a clean list of PFlow objects. 
 
-These objects are subsequently clustered into jets using the anti-$k_T$ algorithm~\cite{Cacciari:2008gp}.
+\vspace{.5cm}
+\noindent
+\textbf{Jet clustering}
+\vspace{.5cm}
+
+\noindent
+The PFlow objects are subsequently clustered into jets using the anti-$k_T$ algorithm~\cite{Cacciari:2008gp}.
 A sequential recombination algorithm is defined introducing distances $d_{ij}$ between entities (particles, pseudojets) $i$ and $j$ and $d_{iB}$ between entity $i$ and the beam $(B)$
 \begin{subequations}
 \begin{align}
@@ -233,8 +246,109 @@ The latter is generally used in ATLAS analyses, as it
 constitutes a simple, IRC safe and soft-resilient jet algorithm, constructing
 jets whose shape is not influenced by soft radiation.
 The hardest particles act as seeds for the reconstruction reducing sensitivity to pileup and UE effects~\cite{Cacciari:2008gp}.
+The analysis presented in Chapter ... employs jets clustered from PFlow objects with the anti$k_t$ algorithm and $R=0.4$. %(\textsc{AntiKt4EMPFlowJets}).
+The majority of pile-up jets are rejected using the jet vertex tagger (JVT) tool~\cite{ATLAS-CONF-2014-018}.
+
+\vspace{.5cm}
+\noindent
+\textbf{$b$ tagging}
+\vspace{.5cm}
+
+\noindent
+In order to measure cross sections with the $WbWb$ final state, it is vital to identify jets originating from b quarks.
+$b$ jet identification in ATLAS exploits the distinct decay topology of $b$ hadrons.
+Their longer lifetimes and larger masses compared to light-flavor or charm hadrons, result in measurable displaced decay vertices. The algorithm relies on ID track information, primarily transverse impact parameters and reconstructed secondary or tertiary vertices. The DL1r~\cite{FTAG-2019-07} algorithm combines multiple low-level taggers into a single discriminant using a deep neural network. 
+Further improvements are obtained by exploiting a recurrent neural network in the RNNIP algorithm~\cite{ATL-PHYS-PUB-2017-003}, significantly enhancing discrimination against light-flavor and $c$ jet backgrounds.
+
+Several WPs are defined to balance $b$ jet tagging efficiency against $c$ jet and light flavor rejection. 
+For this analysis, the DL1r tagger at WP $77\%$ is employed.
+The performance of the low level taggers compared to the combined DL1r tagger is highlighted in Figure~\ref{fig:ObjectReco:FtagPerf}.
 
 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/ATLAS/ftag_perf_dl1r.pdf}
+    \caption{The light flavor jet and $c$ jet rejection factors as a function of the $b$ tagging efficiency for DL1r as well as the low-level taggers  RNNIP, SVKine, and JFKine. The ratio of light and $c$ jet rejection rates are shown in the two lower panels. $f_c$ denotes the effective $c$ jet fraction in the background hypothesis~\cite{FTAG-2019-07}.}
+    \label{fig:ObjectReco:FtagPerf}
+\end{figure}
+
+ATLAS flavor taggers are trained on simulated MC samples.
+The calibration procedure is detailed in Chapter ...
+
+\vspace{.5cm}
+\noindent
+\textbf{Jet energy scale}
+\vspace{.5cm}
+
+\noindent
+A multi-step calibration framework is implemented to derive corrections that account for detector response, reconstruction biases, and environmental effects in the \textit{Jet Energy Scale} (JES)~\cite{JETM-2018-05}. The complete calibration chain is summarized in Figure~\ref{fig:ObjectReco:jes_calib}.
+Throughout all calibration stages, the jet four-momentum is consistently corrected by scaling jet \pt, energy, and mass.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.65\linewidth]{figures/ATLAS/jes_calib_chain.pdf}
+    \caption{Illustration of the several jet energy calibration steps. Each correction is applied to the jet four-momentum~\cite{JETM-2018-05}.}
+    \label{fig:ObjectReco:jes_calib}
+\end{figure}
+
+To remove excess energy from additional $pp$ interactions (pile-up) from an event, a correction based on \pt density and jet area is derived from MC simulation.
+The second step is a residual correction parameterized as a function of 
+%the mean number of interactions per bunch crossing
+$\mu$ and the number of reconstructed primary vertices in the event ($N_{PV}$). 
+
+The absolute JES calibration corrects the 4-momentum of the jets in bins of \pt and $\eta$ to account for energy losses in passive material and biases in the reconstruction.
+Reconstructed jets are geometrically matched to truth jets to derive the calibration from
+simulations of dĳet events.
+
+The global sequential calibration removes the dependence on observables constructed using information from the tracking, calorimeter, and muon systems.
+The discrepancies originate from the different average energy distributions and constituent multiplicities of quark or gluon-initiated jets.
+It improves the jet resolution without changing the average jet energy response.
+
+All these calibrations are applied to both data and MC
+simulation. 
+
+To correct for remaining differences between data and MC simulation
+a three staged in-situ calibration is applied to the data only.
+The differences are caused by an imperfect simulation of both detector materials and
+underlying physics processes, including pile-up, jet formation or interaction of particles with the detector material.
+
+The first step corrects the energy scale of forward jets ($0.8 < |\eta_\text{det}| < 4.5$) to match those of central jets ($|\eta_\text{det}| < 0.8)$.
+Subsequently, the hadronic recoil in an event is balanced against well calibrated $Z$ bosons or photons. The same concept is applied in the last step, where a system of well-calibrated low-\pt jets is used to calibrate single high-\pt jets. %Multi Jet Balance (MJB)
+
+An extensive list of systematic uncertainties with 125 components is defined for the JES~\cite{JETM-2018-05} including uncertainties on the pile-up and flavor composition modeling, as well as dependence on the reference objects used in the calibration.
+Several sources can be combined, taking the respective correlations between the JES uncertainties of two jets at different \pt and $\eta$ into account.
+The \verb|CategoryReduction| scheme~\cite{web:JetSystematics} is used in the measurement. It provides roughly 30 independent variations that parametrize the uncertainties in the JES.
+
+The JES systematic uncertainty is one of the dominating uncertainties for jet based observables.
+For central jets it ranges from $1\%$ up to $5\%$ close to the \pt threshold at 20~\GeV~\cite{JETM-2018-05}. 
+
+
+\vspace{.5cm}
+\noindent
+\textbf{Jet energy resolution}
+\vspace{.5cm}
+
+\noindent
+In addition to a precise understanding of the JES and the associated uncertainties, 
+the \textit{Jet Energy Resolution} (JER).
+In order to measure the JER, two jets need to be balanced against each other in a well-defined dijet system. It can be parametrized using a functional form with three independent terms  related to noise, stochastic effects and a constant offset~\cite{JETM-2018-05}.
+
+The noise term accounts for fluctuations from electronics and pile-up.
+It scales like $1/\pt$ and is expected to be significant for low energetic jets.
+Direct estimations can be obtained with the \textit{random cone} method.
+
+
+Statistical fluctuations in the amount of energy deposited are captured by the stochastic
+(S) term, which represents the limiting term in the resolution up to several hundred GeV in jet ��T. The S
+term contribution to the JER scales like $1/\sqrt{\pt}$. 
+
+The constant (C) term corresponds to fluctuations that are
+a constant fraction of the jet \pt, such as energy depositions in passive material (e.g. cryostats and solenoid
+coil), the starting point of the hadron showers, and non-uniformities of response across the calorimeter.
+The constant term is expected to dominate the high-\pt region, above approximately 400 GeV.
+
+
+~\cite{JETM-2018-05}
 
 \section{MET Reconstruction}
 
