@@ -358,7 +358,7 @@ The fully reconstructed and calibrated leptons, photons and jets enter, being pa
 \textit{hard event}. The second contribution comes from  \textit{soft event} signals
 consisting of calibrated tracks associated with the hard scatter vertex, that are not associated to any other reconstructed objects.
 \ETmiss is constructed from the transverse momentum vectors of the various contribution as the negative vector sum.
-The \textit{signal ambiguity resolver} ensures that there is no double counting of the same signal when reconstructing \ETmiss by removing overlapping objects.
+%The \textit{signal ambiguity resolver} ensures that there is no double counting of the same signal when reconstructing \ETmiss by removing overlapping objects.
 
 Systematic uncertainties on
 \ETmiss are driven by the energy scale and resolution of all objects contributing to the soft and hard terms. The hard term composition is analysis-specific and uncertainties are extracted per object type using official ATLAS recommendations. 
@@ -367,22 +367,22 @@ Uncertainties for identical object types are treated as fully correlated, while 
 \section{Overlap removal}
 
 
+To mitigate double counting of energy deposits arising from objects that are reconstructed twice (e.g., an electron also forming a jet),
+ambiguous object are resolved using an overlap removal procedure~\cite{Adams:1700874}.
+Loose object definitions listed in Tables~\ref{} are applied for electrons, muons, and jets for this step.
+The overlap removal algorithm resolves overlaps in the following order:
+\begin{itemize}
+    \item Remove PFlow jets that are actually muons.
+    \item Muons overlapping with electrons that leaves a sufficiently high energy deposit
+    in the calorimeter and share the same ID track. Any electron sharing a track with the remaining muons is removed.
+    \item Jets within $\Delta\eta< 0.2$ of an electron are removed. Electrons within $\Delta\eta< 0.4$ of the remaining jets are discarded.
+    \item muon-jet: Jets within $\Delta\eta< 0.2$ of a muon are removed if they feature less than three tracks or fulfill 
+    $p_{T,\mu} / p_{T,\text{jet}} > 0.5$ and $p_{T,\mu} / \Sigma p_{T,\text{tracks}} > 0.7$ are removed. Muons overlapping with $\Delta\eta< 0.4$ of the remaining jets are removed.
+\end{itemize}
 
-\section{Definition of physics objects}
-
-\subsection{On detector level}
-
-%\begin{figure}[ht!]
-%    \centering
-%    \includegraphics[width=0.85\linewidth]{figures/ATLAS/cern_accelerator.pdf}
-%    \caption{Overview of CERN accelerator complex showing pre-accelerators and the LCH (dark blue) with the four major experiments ATLAS, CMS, ALICE and LHCb~\cite{Mobs:2636343}.}
-%    \label{fig:ObjectReco:Placeholder}
-%\end{figure}
 
 
-
-
-\subsection{Definition of physics objects on particle level}
+\section{Definition of physics objects on particle level}
 
 The aim of this section is to provide definitions of physics objects, such as leptons, jets and missing momentum, that allow for a direct comparison of theoretical and experimental results.
 The ATLAS collaboration provides recommendations~\cite{ATL-PHYS-PUB-2015-013} for particle level definitions with a minimal model dependence.
@@ -396,7 +396,8 @@ avoiding large extrapolations to regions outside of the detector acceptance.
     Charged leptons from subsequent $\tau$ decays $(W\rightarrow \tau\nu_\tau \rightarrow \ell\nu_\ell\nu_\tau)$ are therefore also categorized as prompt.
     To take QED FSR into account, the charged leptons are \textit{dressed} by clustering all photons within a cone around the \textit{bare} lepton (after simulating QED FSR) with the anti-$k_t$ algorithm. The clustering distance parameter is set to $R=0.1$.
     \item \textbf{Jets} are build in a subsequent step by collecting all stable particles apart from the identified prompt dressed leptons and prompt photons. The anti-$k_t$ algorithm with $R=0.4$ is employed for the jet building.
-    The jet is labeled as a $b$ jet if a $b$ hadron with $p_T>5\GeV$ is found within $\Delta R < 0.3$ around the jet axis. Otherwise it is labeled as a \textit{light} jet. No jet-lepton overlap removal is applied.
+    The jet is labeled as a $b$ jet if a $b$ hadron with $p_T>5\GeV$ is found within $\Delta R < 0.3$ around the jet axis. Otherwise it is labeled as a \textit{light} jet. 
+    No jet-lepton overlap removal is applied.
     \item \textbf{Missing transverse momentum} $\ETmiss$
     corresponds to the transverse vector sum of all neutrinos not from hadron decays.
 \end{itemize}
