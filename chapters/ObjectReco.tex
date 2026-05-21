@@ -331,24 +331,20 @@ For central jets it ranges from $1\%$ up to $5\%$ close to the \pt threshold at 
 \noindent
 In addition to a precise understanding of the JES and the associated uncertainties, 
 the \textit{Jet Energy Resolution} (JER).
-In order to measure the JER, two jets need to be balanced against each other in a well-defined dijet system. It can be parametrized using a functional form with three independent terms  related to noise, stochastic effects and a constant offset~\cite{JETM-2018-05}.
-
+In order to measure the JER, two jets need to be balanced against each other in a well-defined dijet system. It can be parametrized using a functional form with three independent terms  related to noise ($N$), stochastic effects ($S$) and a constant offset ($C$)~\cite{JETM-2018-05}
+\begin{equation}
+    \frac{\sigma(\pt)}{\pt} = \frac{N}{\pt} \oplus \frac{S}{\sqrt{\pt}} \oplus C
+\end{equation}
 The noise term accounts for fluctuations from electronics and pile-up.
-It scales like $1/\pt$ and is expected to be significant for low energetic jets.
-Direct estimations can be obtained with the \textit{random cone} method.
+It is independent of the energy deposited in the calorimeters and is expected to be significant for low energetic jets. Direct estimations can be obtained with the \textit{random cone} method described in Reference~\cite{JETM-2018-05}.
+The stochastic term scales with $1/\sqrt{\pt}$ and accounts for fluctuations in the amount of energy deposited. It represents the limiting term in the resolution.
+The dominating term at high momenta $(\pt > 400~\GeV)$ is a constant contribution corresponding
+to fluctuations in the starting point of the hadron shower as well as a non-uniform response
+across the calorimeter and and energy depositions in the passive material.
 
-
-Statistical fluctuations in the amount of energy deposited are captured by the stochastic
-(S) term, which represents the limiting term in the resolution up to several hundred GeV in jet ��T. The S
-term contribution to the JER scales like $1/\sqrt{\pt}$. 
-
-The constant (C) term corresponds to fluctuations that are
-a constant fraction of the jet \pt, such as energy depositions in passive material (e.g. cryostats and solenoid
-coil), the starting point of the hadron showers, and non-uniformities of response across the calorimeter.
-The constant term is expected to dominate the high-\pt region, above approximately 400 GeV.
-
-
-~\cite{JETM-2018-05}
+%The relative jet energy resolution ranges from $(24\pm 1.5)~\%$ at 20~\GeV to $(6\pm 0.5)~\%$ at 300~\GeV.
+A smearing procedure is introduced to ensure that the resolution of the jet energy scale in simulation matches that in data~\cite{JETM-2018-05}.
+The uncertainty in the jet energy resolution is assessed using the \verb|FullJER| scheme~\cite{web:JetSystematics} providing 13 independent variations.
 
 \section{MET Reconstruction}
 
@@ -367,6 +363,8 @@ The \textit{signal ambiguity resolver} ensures that there is no double counting 
 Systematic uncertainties on
 \ETmiss are driven by the energy scale and resolution of all objects contributing to the soft and hard terms. The hard term composition is analysis-specific and uncertainties are extracted per object type using official ATLAS recommendations. 
 Uncertainties for identical object types are treated as fully correlated, while those for different object types are assumed uncorrelated, reflecting the independent reconstruction and calibration chains.
+
+\section{Overlap removal}
 
 
 
