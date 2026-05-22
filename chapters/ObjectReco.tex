@@ -22,6 +22,7 @@ procedures for physics objects used in analysis.
 %presented in Chapters 5-7.
 
 \section{Reconstruction of Tracks, Clusters and Vertices}
+\label{sec:ObjRecl:Tracks}
 This section provides a concise summary of low level objects that will serve as an input for the reconstruction of physics objects.
 
 \vspace{.5cm}
@@ -152,6 +153,10 @@ that impose increasingly strict requirements.
 %The electron identification efficiency for the three WPs is shown in Figure~\ref{}.
 Therefore, the Tight WP exhibits the strongest background suppression, at the cost of a loss in efficiency.
 
+To suppress electrons originating from heavy hadron decays, 
+an isolation criteria is applied, checking for detector activity in a cone $(\Delta R < 0.2)$ around the electron.
+The \texttt{PLImprovedTight} isolation working point~\cite{web:PLImprovedWPs} is employed.
+
 It is vital to account for performance differences in identification, reconstruction and isolation between data and simulation.
 By comparing the respective efficiencies in $Z\rightarrow e^+e^-$ and $J/\psi \rightarrow e^+e^-$ events scale factors (SFs) can be obtained~\cite{EGAM-2018-01}.
 The SFs are applied to the MC weights to better describe the data.
@@ -161,6 +166,26 @@ Validation of the calibration is performed with $J/\psi \rightarrow e^+e^-$
 and radiative $Z$ processes.
 The uncertainties assigned to the calibration are typically 0.05\% for electrons from resonant $Z$ decays~\cite{EGAM-2021-02}.
 
+\begin{table}[htbp]
+\begin{center}
+  \begin{tabular}{ c c c }
+    \toprule
+      Requirement          & Signal electrons (tight)     & Background electrons (loose)        \\
+      \midrule    
+      Identification       & \texttt{LHTight}             & \texttt{LHLoose}                    \\
+      Isolation            & \texttt{PLImprovedTight}     & fail \texttt{PLImprovedTight} or fail tight selection  \\
+      \pt cut              & \( \pt > \qty{10}{\GeV} \)   & \( \pt > \qty{10}{\GeV} \)           \\
+      \eta cut             & \( |\eta| < 2.47 \)          & \( |\eta| < 2.47 \)                 \\
+      Crack veto           & veto \( 1.37 < |\eta| < 1.52 \)   & veto \( 1.37 < |\eta| < 1.52 \)     \\
+      \(|\dzero|/\sigma_{\dzero}\) cut & \(|\dzero|/\sigma_{\dzero} < 5.0\)  & \(|\dzero|/\sigma_{\dzero} < 5.0\)  \\
+      \(|\zzsth|\) cut                 & \(|\zzsth| < \qty{0.5}{\mm}\)       & \(|\zzsth| < \qty{0.5}{\mm}\)        \\
+      Bad cluster veto                 & yes                                 & yes             \\
+      \bottomrule 
+    \end{tabular}
+  \end{center}
+  \caption{A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \label{tab:ObjReco:Electrons}
+\end{table}
 
 %Since the reconstruction, identification, and isolation efficiencies directly affect electron candidate reconstruction, they also influence physics analyses that use these objects.
 %To account for these effects in a physics analysis, systematic uncertainties from the efficiency measurements are propagated to the analysis [125, 128]. Systematic uncertainties associated with the electron energy scale and resolution that arise from pileup modelling, calorimeter layer inter-calibration, and discrepancies between data and simulation, are propagated to the energy scale and resolution corrections [127]
@@ -200,6 +225,25 @@ The momentum scale and resolution are measured with an uncertainty of 0.5\% and 
 Systematic uncertainties are defined for variations in the SFs associated with
 decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or statistical uncertainties. The full list is given in~\cite{MUON-2022-01}.
 
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{ c c c }
+      \toprule
+      Requirement      & Signal muons (tight)        & Background muons (loose)      \\
+      \midrule
+      Quality          & \texttt{Medium}             & \texttt{Medium}               \\
+      Bad muon veto    & yes                         & yes                           \\
+      Isolation        & \texttt{PLImprovedTight}    & fail \texttt{PLImprovedTight}  \\
+      \pt cut          & \( \pt > \qty{10}{\GeV} \)  & \( \pt > \qty{10}{\GeV} \)     \\
+      \eta cut         & \( |\eta| < 2.5 \)          & \( |\eta| < 2.5 \)            \\
+      \(|\dzero|/\sigma_{\dzero}\) cut  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  \\
+      \(|\zzsth|\) cut & \( |\zzsth| < \qty{0.5}{\mm} \)   & \( |\zzsth| < \qty{0.5}{\mm} \) \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  \caption{Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \label{tab:ObjReco:Muons}
+\end{table}
 
 \section{Jet Reconstruction}
 
@@ -274,6 +318,25 @@ The performance of the low level taggers compared to the combined DL1r tagger is
 
 ATLAS flavor taggers are trained on simulated MC samples.
 The calibration procedure is detailed in Chapter ...
+
+\begin{table}[htbp]
+  \begin{center}
+    \begin{tabular}{ c c c }
+      \toprule
+      Requirement        & Signal jets                 & Baseline jets                \\
+      \midrule
+      Jet type           & \texttt{AntiKt4EMPFlowJets} & \texttt{AntiKt4EMPFlowJets}  \\
+      JVT working point  & \texttt{Tight}              & \texttt{Tight}               \\
+      \pt cut            & \( \pt > \qty{25}{\GeV} \)  & \( \pt > \qty{20}{\GeV} \)    \\
+      \eta cut           & \( |\eta| < 2.5 \)          & \( |\eta| < 4.5 \)           \\
+      \(b\)-tagging      & \texttt{DL1r} with \texttt{FixedCutBEff\_77}  &            \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \caption{Summary of the jet definitions in the analysis.}%
+  \label{tab:ObjReco:Jets}
+\end{table}
 
 \vspace{.5cm}
 \noindent
