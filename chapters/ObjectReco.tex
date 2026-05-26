@@ -9,6 +9,8 @@ in MC simulation and data and to ensure accurate and precise measurements of the
 properties.
 
 This chapter details the reconstruction of tracks, calorimeter cluster and physics objects within the ATLAS detector.
+
+
 The subsequent calibration will be discussed for the example of $b$ tag calibration in Chapter ...
 The calibration of other objects will not be discussed
 in detail.
@@ -166,6 +168,8 @@ Validation of the calibration is performed with $J/\psi \rightarrow e^+e^-$
 and radiative $Z$ processes.
 The uncertainties assigned to the calibration are typically 0.05\% for electrons from resonant $Z$ decays~\cite{EGAM-2021-02}.
 
+Table~\ref{tab:ObjReco:Electrons} summarizes the electron definition used for the analysis (tight),
+while the loose selection is used for the overlap removal, see Section~\ref{sec:ObjRec:OR}.
 \begin{table}[htbp]
 \begin{center}
   \begin{tabular}{ c c c }
@@ -428,7 +432,7 @@ Systematic uncertainties on
 Uncertainties for identical object types are treated as fully correlated, while those for different object types are assumed uncorrelated, reflecting the independent reconstruction and calibration chains.
 
 \section{Overlap removal}
-
+\label{sec:ObjRec:OR}
 
 To mitigate double counting of energy deposits arising from objects that are reconstructed twice (e.g., an electron also forming a jet),
 ambiguous object are resolved using an overlap removal procedure~\cite{Adams:1700874}.
@@ -446,7 +450,7 @@ The overlap removal algorithm resolves overlaps in the following order:
 
 
 \section{Definition of physics objects on particle level}
-
+\label{sec:ObjReco:Part}
 The aim of this section is to provide definitions of physics objects, such as leptons, jets and missing momentum, that allow for a direct comparison of theoretical and experimental results.
 The ATLAS collaboration provides recommendations~\cite{ATL-PHYS-PUB-2015-013} for particle level definitions with a minimal model dependence.
 They should be accurate, unambiguous and allow the comparison of predictions with measurement results between experiments without extensive prior experimental knowledge.
