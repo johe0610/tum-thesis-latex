@@ -3,7 +3,7 @@
 
 The phase space regions of interest, also known as signal regions, are defined by the complex final state topology of the \WbWb process.
 The signal consists of all processes resulting in a \WbWb final state.
-However, contibutions from diboson production in association with a $b$ quark are considered negligible.
+However, contributions from diboson production in association with a $b$ quark are considered negligible.
 Exemplary diagrams of the two dominant process, \ttbar and \tW production are depicted in Figure ...
 
 The semileptonic final state is considered in this thesis, where one \Wboson boson decays leptonically, while the other decays hadronically.
@@ -11,25 +11,35 @@ The \WbWb final state is therefore defined by
 \begin{equation*}
     pp \rightarrow WbWb \rightarrow \ell\nu q \bar{q}' b \bar{b}
 \end{equation*}
-where the lepton is either an electron or a muon.
+The lepton is either an electron or a muon and can also originate from a subsequent $W\rightarrow\tau\rightarrow l$ decay.
 In order to enhance the signal process and reduce background contamination, a variety of initial requirements (cuts) are applied.
 The event selection is optimized using simulated MC event samples.
 
-The same cuts are applied on particle and detector level.
-This way extrapolating into phase spaces that cannot be measured is avoided.
+When not explicitly stated otherwise, the same cuts are applied on particle and detector level.
+Extrapolation into phase spaces that cannot be measured kept to a minimum.
 
 \begin{itemize}
-    \item Exactly one signal lepton, as defined in ... is required. Events are selected with a single lepton trigger.
-    It has to exceed $\pT > 30 \GeV$ and fulfill $|\eta|<2.5$.
+    \item Exactly one detector level signal lepton, as defined in Table~\ref{tab:ObjReco:Electrons} (electrons) or Table~\ref{tab:ObjReco:Muons} (muons) is required.
+    Events are selected with a single lepton trigger. An additional $30~\GeV$ cut on \pt is applied on the identified lepton.
+    While the detector level electrons need to fulfill $|\eta|<1.37$ and $1.52<|\eta|<2.47$, the full range $|\eta| < 2.5$ is employed on particle level.
     \item Since the neutrino cannot be detected, significant \ETmiss is expected in the event.
-    It is combined with the transverse mass of leptonically decaying \Wboson boson $m_T^W$ computed from the lepton and
+    It is combined with the transverse mass of leptonically decaying \Wboson boson $m_T^W$ computed from the signal lepton and
     \ETmiss 4-vectors where the z-component is set to 0.
-    The final cut at $\ETmiss + m_T^W > 60 \GeV$ aims to suppress QCD background, with a mid-identified or non-prompt lepton.
-    \item At least three jets reconstructed with the anti-$k_t$ clustering and a jet radius parameter of $R=0.4$, as defined in Chapter ... ,
-    are requred. They need to pass $p_T > 25 \GeV$ and $|\eta|<2.5$. At least two of them have to fulfill $b$ tagging requirements at WP $77\%$.
+    The final cut at $\ETmiss + m_T^W > 60 \GeV$ aims to suppress QCD background.
+    \item At least three jets are required, reconstructed with the anti-$k_t$ clustering and a jet radius parameter of $R=0.4$, as defined in Table~\ref{tab:ObjReco:Jets},
+    They need to pass $p_T > 25 \GeV$ and $|\eta|<2.5$. At least two of them have to be identified as originating from a $b$ quark ($b$ tag at WP $77\%$).
 \end{itemize}
 
-This baseline selection is applied to all events.
+This baseline selection defines the \textit{loose signal region} and is applied to all events.
+
+The data will be corrected for detector resolution and acceptance effects in the \textit{unfolding} step.
+This step requires the definition of an unfolding target.
+The unfolding target corresponds to the phase space definition on particle level.
+In order to keep acceptance and efficiency corrections as small as possible, the particle level phase space is defined as close to the detector level phase space
+as possible. 
+The object definition can be found in Section~\ref{sec:ObjReco:Part}.
+
+
 The properties of the hadronically decaying \Wboson boson have not been exploited so far.
 In the next section, a procedure is derived for the explicit reconstruction of a \Whad candidate.
 
