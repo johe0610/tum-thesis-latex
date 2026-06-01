@@ -1,0 +1,41 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main.blg'
+[42] biber:342> INFO - === Di Mai 26, 2026, 13:24:15
+[53] Biber.pm:421> INFO - Reading 'main.bcf'
+[109] Biber.pm:1002> INFO - Found 98 citekeys in bib section 0
+[118] Biber.pm:4487> INFO - Processing section 0
+[128] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[128] bibtex.pm:1713> INFO - LaTeX decoding ...
+[130] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[131] Biber.pm:4678> INFO - Looking for bibtex file 'bib/ATLAS-useful.bib' for section 0
+[134] bibtex.pm:1713> INFO - LaTeX decoding ...
+[259] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/ATLAS-useful.bib'
+[329] Biber.pm:4678> INFO - Looking for bibtex file 'bib/ATLAS-SUSY.bib' for section 0
+[330] bibtex.pm:1713> INFO - LaTeX decoding ...
+[387] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/ATLAS-SUSY.bib'
+[391] Biber.pm:4678> INFO - Looking for bibtex file 'bib/ATLAS-errata.bib' for section 0
+[392] bibtex.pm:1713> INFO - LaTeX decoding ...
+[430] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/ATLAS-errata.bib'
+[432] Biber.pm:4678> INFO - Looking for bibtex file 'bib/ATLAS.bib' for section 0
+[462] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1462] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/ATLAS.bib'
+[1708] Biber.pm:4678> INFO - Looking for bibtex file 'bib/CMS.bib' for section 0
+[1735] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2684] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/CMS.bib'
+[2751] Biber.pm:4678> INFO - Looking for bibtex file 'bib/ConfNotes.bib' for section 0
+[2769] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3231] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/ConfNotes.bib'
+[3281] Biber.pm:4678> INFO - Looking for bibtex file 'bib/PubNotes.bib' for section 0
+[3286] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3435] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/PubNotes.bib'
+[3467] Biber.pm:4678> INFO - Looking for bibtex file 'bib/thesis.bib' for section 0
+[3468] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3496] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/thesis.bib'
+[3728] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3728] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3728] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[3728] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[3769] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[3803] bbl.pm:779> INFO - Output to main.bbl
+[3803] Biber.pm:132> WARN - BibTeX subsystem: /tmp/biber_tmp_yoJG/ddc2d036815ba58ceac143d47ca375df_178325.utf8, line 13999, warning: 12 characters of junk seen at toplevel
+[3803] Biber.pm:134> INFO - WARNINGS: 1

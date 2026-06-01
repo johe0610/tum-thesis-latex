@@ -1,0 +1,2722 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  26 MAY 2026 13:24
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/nag/nag.sty
+Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
+\c@nag@c=\count275
+\c@nag@sins=\count276
+Package nag Info: Loaded nag-l2tabu.cfg  on input line 552.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/nag/nag-l2tabu.cfg
+File: nag-l2tabu.cfg 2010/05/17 v2.11 l2tabu rules for nag.sty (ulmi)
+)
+Package nag Info: Loaded nag-orthodox.cfg  on input line 552.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/nag/nag-orthodox.cfg
+File: nag-orthodox.cfg 2006/04/19 v1.8 strict rules for nag.sty (ulmi)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2025/09/09 v3.48 KOMA-Script document class (book)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2025/09/09 v3.48 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2025/09/09 v3.48 KOMA-Script package (file load hooks)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2025/09/09 v3.48 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2025/09/09 v3.48 KOMA-Script package (logo)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2025/09/09 v3.48 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip49
+\scr@dte@tocline@numbox=\box53
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 143.
+Class scrbook Info: File `scrsize11pt.clo' used to setup font sizes on input li
+ne 2710.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2025/09/09 v3.48 KOMA-Script font size class option (11pt
+)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2025/09/09 v3.48 KOMA-Script package (type area)
+\ta@bcor=\skip50
+\ta@div=\count277
+\ta@hblk=\skip51
+\ta@vblk=\skip52
+\ta@temp=\skip53
+\footheight=\skip54
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 34.1433pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 422.52348pt
+(typearea)              DIV departure   = -7%
+(typearea)              \evensidemargin = 21.62411pt
+(typearea)              \oddsidemargin  = 8.82036pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 609.40027pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1807.
+)
+\c@part=\count278
+\c@chapter=\count279
+\c@section=\count280
+\c@subsection=\count281
+\c@subsubsection=\count282
+\c@paragraph=\count283
+\c@subparagraph=\count284
+\scr@dte@chapter@maxnumwidth=\skip55
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\chapter on input line 6076.
+\scr@dte@section@maxnumwidth=\skip56
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\section on input line 6087.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\section on input line 6087.
+\scr@dte@part@maxnumwidth=\skip57
+Class scrbook Info: using compatibility default `afterindent=true'
+(scrbook)           for `\part on input line 6096.
+\scr@dte@subsection@maxnumwidth=\skip58
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsection on input line 6106.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsection on input line 6106.
+\scr@dte@subsubsection@maxnumwidth=\skip59
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsubsection on input line 6116.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsubsection on input line 6116.
+\scr@dte@paragraph@maxnumwidth=\skip60
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\paragraph on input line 6127.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\paragraph on input line 6127.
+\scr@dte@subparagraph@maxnumwidth=\skip61
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subparagraph on input line 6137.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subparagraph on input line 6137.
+\abovecaptionskip=\skip62
+\belowcaptionskip=\skip63
+\c@pti@nb@sid@b@x=\box54
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7350.
+\scr@dte@figure@maxnumwidth=\skip64
+\c@figure=\count285
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7363.
+\scr@dte@table@maxnumwidth=\skip65
+\c@table=\count286
+Class scrbook Info: Redefining `\numberline' on input line 7534.
+\bibindent=\dimen148
+)
+(./settings.tex (/usr/local/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/10/01 v25.13 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count287
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2045.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2047.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2049.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2050.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2053.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2078.
+\U@D=\dimen149
+\l@unhyphenated=\language90
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count288
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2024/12/10 v2.15 German support for babel (post-1996 orthogra
+phy)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.t
+ex
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 12.
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2024/12/10 v2.15 German support for babel (post-1996 orthogr
+aphy)
+Package babel Info: Making " an active character on input line 122.
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/babel-english/american.ldf
+Language: american 2017/06/06 v3.3r English support from the babel system
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-american.
+tex
+Package babel Info: Importing font and identification data for american
+(babel)             from babel-en-US.ini. Reported on input line 12.
+)
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language22). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language22). Reported on input line 108.
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/scrhack/scrhack.sty
+Package: scrhack 2024-09-04 v3.42 scrhack emulation package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count289
+\lst@gtempboxa=\box55
+\lst@token=\toks20
+\lst@length=\count290
+\lst@currlwidth=\dimen152
+\lst@column=\count291
+\lst@pos=\count292
+\lst@lostspace=\dimen153
+\lst@width=\dimen154
+\lst@newlines=\count293
+\lst@lineno=\count294
+\lst@maxwidth=\dimen155
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
+\lst@framebox=\box56
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lstaddons/lstautogobble.sty
+Package: lstautogobble 2012/05/03 v0.1 Implements 'autogobble' option for 'list
+ings'
+\lstag@spacecount=\count297
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen156
+\pgfutil@tempdimb=\dimen157
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box57
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen158
+\pgf@y=\dimen159
+\pgf@xa=\dimen160
+\pgf@ya=\dimen161
+\pgf@xb=\dimen162
+\pgf@yb=\dimen163
+\pgf@xc=\dimen164
+\pgf@yc=\dimen165
+\pgf@xd=\dimen166
+\pgf@yd=\dimen167
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count298
+\c@pgf@countb=\count299
+\c@pgf@countc=\count300
+\c@pgf@countd=\count301
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count302
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count303
+\pgfsyssoftpath@bigbuffer@items=\count304
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen168
+\ar@mcellbox=\box58
+\extrarowheight=\dimen169
+\NC@list=\toks28
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box59
+)
+\everycr=\toks29
+\minrowclearance=\skip68
+\rownum=\count305
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2024/09/29 v3.02 Predefined colors according to SVG 1.1 (UK)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count306
+\pgfmath@box=\box60
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count307
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count308
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen189
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen193
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count309
+\pgf@shadingcount=\count310
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box64
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box65
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count311
+\pgfplotmarksize=\dimen199
+)
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count312
+\tikznumberofchildren=\count313
+\tikznumberofcurrentchild=\count314
+\tikz@fig@count=\count315
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count316
+\pgfmatrixcurrentcolumn=\count317
+\pgf@matrix@numberofcolumns=\count318
+)
+\tikz@expandcount=\count319
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen264
+\c@pgfplots@coordindex=\count320
+\c@pgfplots@scanlineindex=\count321
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count322
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count323
+\t@pgfplotstable@a=\toks38
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count324
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen265
+\pgfdecoratedremainingdistance=\dimen266
+\pgfdecoratedinputsegmentcompleteddistance=\dimen267
+\pgfdecoratedinputsegmentremainingdistance=\dimen268
+\pgf@decorate@distancetomove=\dimen269
+\pgf@decorate@repeatstate=\count325
+\pgfdecorationsegmentamplitude=\dimen270
+\pgfdecorationsegmentlength=\dimen271
+)
+\tikz@lib@dec@box=\box70
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex)
+\pgfplots@numplots=\count326
+\pgfplots@xmin@reg=\dimen272
+\pgfplots@xmax@reg=\dimen273
+\pgfplots@ymin@reg=\dimen274
+\pgfplots@ymax@reg=\dimen275
+\pgfplots@zmin@reg=\dimen276
+\pgfplots@zmax@reg=\dimen277
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2025/08/14 v1.18.2 Table typesetting and Pretty-printing
+ (1.18.2)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+.coltype.code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen278
+\lightrulewidth=\dimen279
+\cmidrulewidth=\dimen280
+\belowrulesep=\dimen281
+\belowbottomsep=\dimen282
+\aboverulesep=\dimen283
+\abovetopsep=\dimen284
+\cmidrulesep=\dimen285
+\cmidrulekern=\dimen286
+\defaultaddspace=\dimen287
+\@cmidla=\count327
+\@cmidlb=\count328
+\@aboverulesep=\dimen288
+\@belowrulesep=\dimen289
+\@thisruleclass=\count329
+\@lastruleclass=\count330
+\@thisrulewidth=\dimen290
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen291
+\captionmargin=\dimen292
+\caption@leftmargin=\dimen293
+\caption@rightmargin=\dimen294
+\caption@width=\dimen295
+\caption@indent=\dimen296
+\caption@parindent=\dimen297
+\caption@hangindent=\dimen298
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\@abovecaptionbreak \vs
+kip \abovecaptionskip \@abovecaptionbreak \@@makecaption \@firstofone {#1}{#2}\
+@belowcaptionbreak \vskip \belowcaptionskip \@belowcaptionbreak  on input line 
+1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count331
+\c@continuedfloat=\count332
+Package caption Info: listings package is loaded.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count333
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count334
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen299
+\Hy@linkcounter=\count335
+\Hy@pagecounter=\count336
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count337
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count338
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen300
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count339
+\Field@Width=\dimen301
+\Fld@charsize=\dimen302
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count340
+\c@Item=\count341
+\c@Hfootnote=\count342
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count343
+\c@bookmark@seq@number=\count344
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip69
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip70
+\multirow@cntb=\count345
+\multirow@dima=\skip71
+\bigstrutjot=\dimen303
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen304
+\TX@old@table=\dimen305
+\TX@old@col=\dimen306
+\TX@target=\dimen307
+\TX@delta=\dimen308
+\TX@cols=\count346
+\TX@ftn=\toks39
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip72
+\RaggedLeftLeftskip=\skip73
+\RaggedRightLeftskip=\skip74
+\CenteringRightskip=\skip75
+\RaggedLeftRightskip=\skip76
+\RaggedRightRightskip=\skip77
+\CenteringParfillskip=\skip78
+\RaggedLeftParfillskip=\skip79
+\RaggedRightParfillskip=\skip80
+\JustifyingParfillskip=\skip81
+\CenteringParindent=\skip82
+\RaggedLeftParindent=\skip83
+\RaggedRightParindent=\skip84
+\JustifyingParindent=\skip85
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count347
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count348
+)
+(./latex/atlasmisc.sty
+\figwidth=\skip86
+\dkwidth=\dimen309
+) (./latex/atlaspackage.sty
+Package: latex/atlaspackage 2024/10/09 v15.7.0 ATLAS LaTeX packages
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+Package atlaspackage Info: No texlive option given - good! on input line 70.
+
+atlaspackage: using default settings
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count349
+\calc@Bcount=\count350
+\calc@Adimen=\dimen310
+\calc@Bdimen=\dimen311
+\calc@Askip=\skip87
+\calc@Bskip=\skip88
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count351
+\calc@Cskip=\skip89
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip90
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks40
+\ex@=\dimen312
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen313
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count352
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count353
+\leftroot@=\count354
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count355
+\DOTSCASE@=\count356
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box71
+\strutbox@=\box72
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen314
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count357
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count358
+\dotsspace@=\muskip18
+\c@parentequation=\count359
+\dspbrk@lvl=\count360
+\tag@help=\toks41
+\row@=\count361
+\column@=\count362
+\maxfields@=\count363
+\andhelp@=\toks42
+\eqnshift@=\dimen315
+\alignsep@=\dimen316
+\tagshift@=\dimen317
+\tagwidth@=\dimen318
+\totwidth@=\dimen319
+\lineht@=\dimen320
+\@envbody=\toks43
+\multlinegap=\skip91
+\multlinetaggap=\skip92
+\mathdisplay@stack=\toks44
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
+\g_MT_multlinerow_int=\count364
+\l_MT_multwidth_dim=\dimen321
+\origjot=\skip93
+\l_MT_shortvdotswithinadjustabove_dim=\dimen322
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen323
+\l_MT_above_intertext_sep=\dimen324
+\l_MT_below_intertext_sep=\dimen325
+\l_MT_above_shortintertext_sep=\dimen326
+\l_MT_below_shortintertext_sep=\dimen327
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen328
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2025/05/13 line numbers on paragraphs v5.5
+\linenopenalty=\count365
+\output=\toks45
+\linenoprevgraf=\count366
+\linenumbersep=\dimen329
+\linenumberwidth=\dimen330
+\c@linenumber=\count367
+\c@pagewiselinenumber=\count368
+\c@LN@truepage=\count369
+\c@internallinenumber=\count370
+\c@internallinenumbers=\count371
+\quotelinenumbersep=\dimen331
+\bframerule=\dimen332
+\bframesep=\dimen333
+\bframebox=\box74
+\@LN@amsmath@ams@eqpen=\count372
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+\MT@toks=\toks46
+\MT@tempbox=\box75
+\MT@count=\count373
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks47
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen334
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count374
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip94
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count375
+\csq@gtype=\count376
+\csq@glevel=\count377
+\csq@qlevel=\count378
+\csq@maxlvl=\count379
+\csq@tshold=\count380
+\csq@ltx@everypar=\toks48
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count381
+))
+atlaspackage: loading siunitx definitions.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count382
+\l__siunitx_number_exponent_fixed_int=\count383
+\l__siunitx_number_min_decimal_int=\count384
+\l__siunitx_number_min_integer_int=\count385
+\l__siunitx_number_round_precision_int=\count386
+\l__siunitx_number_lower_threshold_int=\count387
+\l__siunitx_number_upper_threshold_int=\count388
+\l__siunitx_number_group_first_int=\count389
+\l__siunitx_number_group_size_int=\count390
+\l__siunitx_number_group_minimum_int=\count391
+\l__siunitx_angle_tmp_dim=\dimen335
+\l__siunitx_angle_marker_box=\box76
+\l__siunitx_angle_unit_box=\box77
+\l__siunitx_compound_count_int=\count392
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box78
+\l__siunitx_table_tmp_dim=\dimen336
+\l__siunitx_table_column_width_dim=\dimen337
+\l__siunitx_table_integer_box=\box79
+\l__siunitx_table_decimal_box=\box80
+\l__siunitx_table_uncert_box=\box81
+\l__siunitx_table_before_box=\box82
+\l__siunitx_table_after_box=\box83
+\l__siunitx_table_before_dim=\dimen338
+\l__siunitx_table_carry_dim=\dimen339
+\l__siunitx_unit_tmp_int=\count393
+\l__siunitx_unit_position_int=\count394
+\l__siunitx_unit_total_int=\count395
+)
+
+Package siunitx Info: Option "separate-uncertainty" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "uncertainty-mode = separate" as a replacement.
+
+
+Package siunitx Info: Option "detect-all" has been deprecated in this release.
+(siunitx)             
+(siunitx)             Use "mode = match, propagate-math-font = true,
+(siunitx)             reset-math-version = false, reset-text-family = false,
+(siunitx)             reset-text-series = false, reset-text-shape = false,
+(siunitx)             text-family-to-math = true, text-series-to-math = true"
+(siunitx)             as a replacement.
+
+
+atlaspackage: using siunitx version 3
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 365.
+
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 365.
+Package hyperref Info: Option `colorlinks' set `true' on input line 365.
+Package hyperref Info: Option `breaklinks' set `true' on input line 365.
+Package hyperref Info: Option `unicode' set `true' on input line 365.
+Package hyperref Info: Option `psdextra' set `true' on input line 365.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/psdextra.def
+File: psdextra.def 2025-07-12 v7.01o Hyperref: Additions to PDF string support
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `listings' support loaded on input line 3131.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+25.
+Package cleveref Info: no abbreviation of names on input line 7852.
+Package cleveref Info: always capitalise cross-reference names on input line 78
+52.
+)
+==> First Aid for cleveref.sty applied!
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count396
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count397
+\c@listtotal=\count398
+\c@listcount=\count399
+\c@liststart=\count400
+\c@liststop=\count401
+\c@citecount=\count402
+\c@citetotal=\count403
+\c@multicitecount=\count404
+\c@multicitetotal=\count405
+\c@instcount=\count406
+\c@maxnames=\count407
+\c@minnames=\count408
+\c@maxitems=\count409
+\c@minitems=\count410
+\c@citecounter=\count411
+\c@maxcitecounter=\count412
+\c@savedcitecounter=\count413
+\c@uniquelist=\count414
+\c@uniquename=\count415
+\c@refsection=\count416
+\c@refsegment=\count417
+\c@maxextratitle=\count418
+\c@maxextratitleyear=\count419
+\c@maxextraname=\count420
+\c@maxextradate=\count421
+\c@maxextraalpha=\count422
+\c@abbrvpenalty=\count423
+\c@highnamepenalty=\count424
+\c@lownamepenalty=\count425
+\c@maxparens=\count426
+\c@parenlevel=\count427
+\blx@tempcnta=\count428
+\blx@tempcntb=\count429
+\blx@tempcntc=\count430
+\c@blx@maxsection=\count431
+\blx@maxsegment@0=\count432
+\blx@notetype=\count433
+\blx@parenlevel@text=\count434
+\blx@parenlevel@foot=\count435
+\blx@sectionciteorder@0=\count436
+\blx@sectionciteorderinternal@0=\count437
+\blx@entrysetcounter=\count438
+\blx@biblioinstance=\count439
+\labelnumberwidth=\skip95
+\labelalphawidth=\skip96
+\biblabelsep=\skip97
+\bibitemsep=\skip98
+\bibnamesep=\skip99
+\bibinitsep=\skip100
+\bibparsep=\skip101
+\bibhang=\skip102
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language91
+\c@mincomprange=\count440
+\c@maxcomprange=\count441
+\c@mincompwidth=\count442
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric-comp.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count443
+\c@savedafterword=\count444
+\c@annotator=\count445
+\c@savedannotator=\count446
+\c@author=\count447
+\c@savedauthor=\count448
+\c@bookauthor=\count449
+\c@savedbookauthor=\count450
+\c@commentator=\count451
+\c@savedcommentator=\count452
+\c@editor=\count453
+\c@savededitor=\count454
+\c@editora=\count455
+\c@savededitora=\count456
+\c@editorb=\count457
+\c@savededitorb=\count458
+\c@editorc=\count459
+\c@savededitorc=\count460
+\c@foreword=\count461
+\c@savedforeword=\count462
+\c@holder=\count463
+\c@savedholder=\count464
+\c@introduction=\count465
+\c@savedintroduction=\count466
+\c@namea=\count467
+\c@savednamea=\count468
+\c@nameb=\count469
+\c@savednameb=\count470
+\c@namec=\count471
+\c@savednamec=\count472
+\c@translator=\count473
+\c@savedtranslator=\count474
+\c@shortauthor=\count475
+\c@savedshortauthor=\count476
+\c@shorteditor=\count477
+\c@savedshorteditor=\count478
+\c@labelname=\count479
+\c@savedlabelname=\count480
+\c@institution=\count481
+\c@savedinstitution=\count482
+\c@lista=\count483
+\c@savedlista=\count484
+\c@listb=\count485
+\c@savedlistb=\count486
+\c@listc=\count487
+\c@savedlistc=\count488
+\c@listd=\count489
+\c@savedlistd=\count490
+\c@liste=\count491
+\c@savedliste=\count492
+\c@listf=\count493
+\c@savedlistf=\count494
+\c@location=\count495
+\c@savedlocation=\count496
+\c@organization=\count497
+\c@savedorganization=\count498
+\c@origlocation=\count499
+\c@savedoriglocation=\count500
+\c@origpublisher=\count501
+\c@savedorigpublisher=\count502
+\c@publisher=\count503
+\c@savedpublisher=\count504
+\c@language=\count505
+\c@savedlanguage=\count506
+\c@origlanguage=\count507
+\c@savedoriglanguage=\count508
+\c@pageref=\count509
+\c@savedpageref=\count510
+\shorthandwidth=\skip103
+\shortjournalwidth=\skip104
+\shortserieswidth=\skip105
+\shorttitlewidth=\skip106
+\shortauthorwidth=\skip107
+\shorteditorwidth=\skip108
+\locallabelnumberwidth=\skip109
+\locallabelalphawidth=\skip110
+\localshorthandwidth=\skip111
+\localshortjournalwidth=\skip112
+\localshortserieswidth=\skip113
+\localshorttitlewidth=\skip114
+\localshortauthorwidth=\skip115
+\localshorteditorwidth=\skip116
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count511
+\c@textcitetotal=\count512
+\c@textcitemaxnames=\count513
+\c@biburlbigbreakpenalty=\count514
+\c@biburlbreakpenalty=\count515
+\c@biburlnumpenalty=\count516
+\c@biburlucpenalty=\count517
+\c@biburllcpenalty=\count518
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count519
+)
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count520
+\c@bbx:relatedtotal=\count521
+)))
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count522
+\c@cbx@tempcntb=\count523
+\c@cbx@tempcntc=\count524
+\c@cbx@tempcntd=\count525
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-09-02 L3 programming layer (loader) 
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count526
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-09-02 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+)))
+(./latex/atlasparticle.sty
+Package: latex/atlasparticle 2024/10/09 v15.7.0 ATLAS particle definitins
+)) (./macros.tex)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+LaTeX Font Info:    Trying to load font information for T1+pplx on input line 3
+3.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pplx.fd
+File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
+) (./main.aux
+Package babel Info: 'ngerman' activates 'ngerman' shorthands.
+(babel)             Reported on input line 12.
+
+
+LaTeX Warning: Label `fig:Whadreco:masscut' multiply defined.
+
+
+LaTeX Warning: Label `fig:Whadreco:masscut@cref' multiply defined.
+
+(./chapters/TopMass/Introduction.aux) (./chapters/TopMass/LTF.aux)
+(./chapters/TopMass/Templates.aux) (./chapters/TopMass/Results.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+Package nag Info: pgf.sty is broken: disabling dollar check on input line 33.
+Package nag Info: Command \bf not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \it not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \rm not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \sc not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \sf not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \sl not defined, skipping amendment on input line 33.
+
+Package nag Info: Command \tt not defined, skipping amendment on input line 33.
+
+Package scrbase Info: activating american \partname on input line 33.
+Package scrbase Info: activating american \chaptername on input line 33.
+Package scrbase Info: activating american \appendixname on input line 33.
+Package scrbase Info: activating american \figurename on input line 33.
+Package scrbase Info: activating american \tablename on input line 33.
+Package scrbase Info: activating american \contentsname on input line 33.
+Package scrbase Info: activating american \listfigurename on input line 33.
+Package scrbase Info: activating american \listtablename on input line 33.
+Package scrbase Info: activating american \bibname on input line 33.
+Package scrbase Info: activating american \indexname on input line 33.
+
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count527
+\scratchdimen=\dimen340
+\scratchbox=\box84
+\nofMPsegments=\count528
+\nofMParguments=\count529
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count530
+\MPscratchDim=\dimen341
+\MPnumerator=\count531
+\makeMPintoPDFobject=\count532
+\everyMPtoPDFconversion=\toks50
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count533
+Package tocbasic Info: setting babel extension for `lol' on input line 33.
+\scr@dte@lstlisting@maxnumwidth=\skip117
+
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 33.
+LaTeX Info: Redefining \microtypecontext on input line 33.
+Package microtype Info: Applying patch `item' on input line 33.
+Package microtype Info: Applying patch `toc' on input line 33.
+Package microtype Info: Applying patch `eqnum' on input line 33.
+Package microtype Info: Applying patch `footnote' on input line 33.
+Package microtype Info: Applying patch `verbatim' on input line 33.
+LaTeX Info: Redefining \microtypesetup on input line 33.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Redefining babel's language switching commands.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `trans
+lations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `german'. on input line 33.
+Package biblatex Info: Trying to load language 'american'...
+Package biblatex Info: ... file 'american.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+File: american.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+
+(./main.bbl)
+Package biblatex Info: Reference section=0 on input line 33.
+Package biblatex Info: Reference segment=0 on input line 33.
+Package nag Info: Command \hc@caption not defined, skipping amendment on input 
+line 33.
+Package nag Info: Command \topcaption not defined, skipping amendment on input 
+line 33.
+ (./pages/cover.tex
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pplx.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omlzplm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omszplm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omxzplm.fd)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1zplm.fd)
+File: figures/logos/TUM.png Graphic file (type png)
+<use figures/logos/TUM.png>
+Package pdftex.def Info: figures/logos/TUM.png  used on input line 8.
+(pdftex.def)             Requested size: 43.7277pt x 22.76228pt.
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 8--9
+[][] 
+ []
+
+
+
+[1
+
+
+
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc} <./figures/logos/TUM.pn
+g>])
+
+[2
+
+
+] (./pages/disclaimer.tex
+
+[1]
+
+[2
+
+
+]) (./pages/acknowledgments.tex
+
+[3]
+
+[4
+
+
+]) (./pages/abstract.tex
+chapter without number
+)
+
+[5
+
+
+]
+
+[6
+
+
+]
+Package tocbasic Info: character protrusion at toc deactivated on input line 47
+.
+ (./main.toc
+Underfull \vbox (badness 1527) has occurred while \output is active []
+
+
+
+[7
+
+
+])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+
+
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 50.
+[8] (./chapters/Introduction.tex
+chapter 1.
+
+LaTeX Warning: Reference `fig:intro:feynman' on page 1 undefined on input line 
+20.
+
+
+
+[1
+
+
+
+
+]) (./chapters/SM.tex
+
+[2]
+chapter 2.
+) (./chapters/ATLAS.tex
+
+[3
+
+
+]
+
+[4
+
+
+]
+chapter 3.
+<figures/ATLAS/cern_accelerator.pdf, id=202, 5121.49371pt x 4552.43803pt>
+File: figures/ATLAS/cern_accelerator.pdf Graphic file (type pdf)
+<use figures/ATLAS/cern_accelerator.pdf>
+Package pdftex.def Info: figures/ATLAS/cern_accelerator.pdf  used on input line
+ 22.
+(pdftex.def)             Requested size: 359.14754pt x 319.18948pt.
+
+
+[5]
+
+[6 <./figures/ATLAS/cern_accelerator.pdf>]
+<figures/ATLAS/atlas_pileup_run2.pdf, id=287, 569.12625pt x 408.52625pt>
+File: figures/ATLAS/atlas_pileup_run2.pdf Graphic file (type pdf)
+<use figures/ATLAS/atlas_pileup_run2.pdf>
+Package pdftex.def Info: figures/ATLAS/atlas_pileup_run2.pdf  used on input lin
+e 117.
+(pdftex.def)             Requested size: 198.58655pt x 142.54997pt.
+<figures/ATLAS/atlas_int_lumi_run2.pdf, id=288, 569.12625pt x 408.52625pt>
+File: figures/ATLAS/atlas_int_lumi_run2.pdf Graphic file (type pdf)
+<use figures/ATLAS/atlas_int_lumi_run2.pdf>
+Package pdftex.def Info: figures/ATLAS/atlas_int_lumi_run2.pdf  used on input l
+ine 123.
+(pdftex.def)             Requested size: 198.58655pt x 142.54997pt.
+
+Underfull \hbox (badness 1163) in paragraph at lines 124--124
+[][][]|\T1/pplx/m/n/10 (+20) To-tal in-te-grated lu-mi-nos-ity and data-
+ []
+
+
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[8 <./figures/ATLAS/atlas_pileup_run2.pdf> <./figures/ATLAS/atlas_int_lumi_run2
+.pdf>]
+<figures/ATLAS/ATLAS_schematic.jpg, id=344, 810.52812pt x 520.94624pt>
+File: figures/ATLAS/ATLAS_schematic.jpg Graphic file (type jpg)
+<use figures/ATLAS/ATLAS_schematic.jpg>
+Package pdftex.def Info: figures/ATLAS/ATLAS_schematic.jpg  used on input line 
+171.
+(pdftex.def)             Requested size: 380.26855pt x 244.41553pt.
+<figures/ATLAS/ATLAS_Coordinate_System.pdf, id=348, 597.50829pt x 845.0471pt>
+File: figures/ATLAS/ATLAS_Coordinate_System.pdf Graphic file (type pdf)
+<use figures/ATLAS/ATLAS_Coordinate_System.pdf>
+Package pdftex.def Info: figures/ATLAS/ATLAS_Coordinate_System.pdf  used on inp
+ut line 211.
+(pdftex.def)             Requested size: 253.51666pt x 196.48473pt.
+
+
+[9 <./figures/ATLAS/ATLAS_schematic.jpg>]
+<figures/ATLAS/magnet_system.png, id=363, 3854.4pt x 2168.1pt>
+File: figures/ATLAS/magnet_system.png Graphic file (type png)
+<use figures/ATLAS/magnet_system.png>
+Package pdftex.def Info: figures/ATLAS/magnet_system.png  used on input line 25
+0.
+(pdftex.def)             Requested size: 422.52348pt x 237.66467pt.
+
+
+[10 <./figures/ATLAS/ATLAS_Coordinate_System.pdf>]
+<figures/ATLAS/ID_overview_labeled.jpg, id=489, 810.52812pt x 540.51938pt>
+File: figures/ATLAS/ID_overview_labeled.jpg Graphic file (type jpg)
+<use figures/ATLAS/ID_overview_labeled.jpg>
+Package pdftex.def Info: figures/ATLAS/ID_overview_labeled.jpg  used on input l
+ine 282.
+(pdftex.def)             Requested size: 422.52348pt x 281.77274pt.
+
+
+[11 <./figures/ATLAS/magnet_system.png>]
+
+[12 <./figures/ATLAS/ID_overview_labeled.jpg>]
+<figures/ATLAS/calo_overview_labeled.jpg, id=519, 810.52812pt x 545.53813pt>
+File: figures/ATLAS/calo_overview_labeled.jpg Graphic file (type jpg)
+<use figures/ATLAS/calo_overview_labeled.jpg>
+Package pdftex.def Info: figures/ATLAS/calo_overview_labeled.jpg  used on input
+ line 367.
+(pdftex.def)             Requested size: 422.52348pt x 284.38902pt.
+
+
+[13]
+Underfull \vbox (badness 1675) has occurred while \output is active []
+
+
+
+[14 <./figures/ATLAS/calo_overview_labeled.jpg>]
+<figures/ATLAS/muon_system_labeled.jpg, id=547, 750.805pt x 563.10374pt>
+File: figures/ATLAS/muon_system_labeled.jpg Graphic file (type jpg)
+<use figures/ATLAS/muon_system_labeled.jpg>
+Package pdftex.def Info: figures/ATLAS/muon_system_labeled.jpg  used on input l
+ine 447.
+(pdftex.def)             Requested size: 359.14754pt x 269.36736pt.
+Package epstopdf Info: Source file: <figures/ATLAS/ms_structure.eps>
+(epstopdf)                    date: 2026-05-26 13:13:04
+(epstopdf)                    size: 212405 bytes
+(epstopdf)             Output file: <figures/ATLAS/ms_structure-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2026-05-26 13:13:24
+(epstopdf)                    size: 59168 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/ATLAS/ms_structure
+-eps-converted-to.pdf figures/ATLAS/ms_structure.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+<figures/ATLAS/ms_structure-eps-converted-to.pdf, id=550, 1027.84pt x 770.88pt>
+
+File: figures/ATLAS/ms_structure-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/ATLAS/ms_structure-eps-converted-to.pdf>
+Package pdftex.def Info: figures/ATLAS/ms_structure-eps-converted-to.pdf  used 
+on input line 454.
+(pdftex.def)             Requested size: 359.14754pt x 268.85936pt.
+
+
+[15]
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+
+
+[16 <./figures/ATLAS/muon_system_labeled.jpg>]
+
+[17 <./figures/ATLAS/ms_structure-eps-converted-to.pdf>]
+<figures/ATLAS/trigger_schematic.pdf, id=611, 627.87013pt x 465.90376pt>
+File: figures/ATLAS/trigger_schematic.pdf Graphic file (type pdf)
+<use figures/ATLAS/trigger_schematic.pdf>
+Package pdftex.def Info: figures/ATLAS/trigger_schematic.pdf  used on input lin
+e 559.
+(pdftex.def)             Requested size: 401.39601pt x 297.85747pt.
+
+
+[18]
+
+[19 <./figures/ATLAS/trigger_schematic.pdf>]
+<figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png, id=689, 1927.2pt x
+ 1084.05pt>
+File: figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png Graphic file (
+type png)
+<use figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png>
+Package pdftex.def Info: figures/ATLAS/ATLAS_Detector_Schematic_white_particles
+.png  used on input line 629.
+(pdftex.def)             Requested size: 422.52348pt x 237.66467pt.
+LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
+635.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pplx.fd
+File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
+)
+
+[20 <./figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png (PNG copy)>])
+(./chapters/ObjectReco.tex
+
+[21]
+
+[22
+
+
+]
+chapter 4.
+
+
+[23]
+
+[24]
+
+[25]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+Package nag Warning: `center' environment in table.
+(nag)                Maybe you want \centering instead on input line 185.
+
+
+Overfull \hbox (8.67456pt too wide) in paragraph at lines 171--185
+ [] 
+ []
+
+
+
+[26{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+}]
+
+Package nag Warning: `center' environment in table.
+(nag)                Maybe you want \centering instead on input line 243.
+
+
+
+[27]
+
+[28]
+<figures/ATLAS/ftag_perf_dl1r.pdf, id=787, 578.16pt x 578.16pt>
+File: figures/ATLAS/ftag_perf_dl1r.pdf Graphic file (type pdf)
+<use figures/ATLAS/ftag_perf_dl1r.pdf>
+Package pdftex.def Info: figures/ATLAS/ftag_perf_dl1r.pdf  used on input line 3
+14.
+(pdftex.def)             Requested size: 359.14754pt x 359.1436pt.
+
+
+Package nag Warning: `center' environment in table.
+(nag)                Maybe you want \centering instead on input line 335.
+
+
+
+[29]
+<figures/ATLAS/jes_calib_chain.pdf, id=803, 955.84012pt x 392.66533pt>
+File: figures/ATLAS/jes_calib_chain.pdf Graphic file (type pdf)
+<use figures/ATLAS/jes_calib_chain.pdf>
+Package pdftex.def Info: figures/ATLAS/jes_calib_chain.pdf  used on input line 
+352.
+(pdftex.def)             Requested size: 274.63768pt x 112.82149pt.
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+
+
+[30 <./figures/ATLAS/ftag_perf_dl1r.pdf>]
+
+[31 <./figures/ATLAS/jes_calib_chain.pdf>]
+
+LaTeX Warning: Reference `' on page 32 undefined on input line 435.
+
+
+Underfull \vbox (badness 4036) has occurred while \output is active []
+
+
+
+[32]
+
+[33]) (./chapters/CjetCalib.tex
+
+[34]
+chapter 5.
+) (./chapters/WbWb/Analysis.tex
+
+[35
+
+
+]
+
+[36
+
+
+]
+chapter 6.
+) (./chapters/WbWb/EventSelection.tex) (./chapters/WbWb/WReconstruction.tex
+
+[37]
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1019, page=1, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 1>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page1 use
+d on input line 28.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1020, page=2, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 2>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page2 use
+d on input line 34.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1021, page=3, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page3 use
+d on input line 54.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1022, page=4, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 4>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page4 use
+d on input line 59.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+
+
+[38]
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1031, page=5, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 5>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page5 use
+d on input line 79.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1032, page=6, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 6>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page6 use
+d on input line 84.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1033, page=7, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 7>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page7 use
+d on input line 90.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1034, page=8, 845.1575pt x 597.
+23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 8>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page8 use
+d on input line 95.
+(pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
+
+
+[39 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+<./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./f
+igures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./figur
+es/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>]
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1051, page=25, 845.1575pt x 597
+.23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 25>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page25 us
+ed on input line 113.
+(pdftex.def)             Requested size: 207.03882pt x 191.40952pt.
+<figures/WbWb/WhadReconstruction/purity.pdf, id=1053, page=24, 845.1575pt x 597
+.23125pt>
+File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
+<use figures/WbWb/WhadReconstruction/purity.pdf, page 24>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page24 us
+ed on input line 118.
+(pdftex.def)             Requested size: 207.03882pt x 191.40952pt.
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1055, 
+page=1, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+1>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page1 used on input line 131.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+
+Package nag Warning: \label in float, but not after \caption on input line 133.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 133.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1057, 
+page=2, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+2>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page2 used on input line 136.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 138.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 138.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1059, 
+page=3, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+3>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page3 used on input line 142.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 144.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 144.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1061, 
+page=4, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+4>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page4 used on input line 147.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 149.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 149.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1063, 
+page=5, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+5>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page5 used on input line 153.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 155.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 155.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1065, 
+page=6, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+6>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page6 used on input line 158.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 160.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 160.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1067, 
+page=7, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+7>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page7 used on input line 164.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 166.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 166.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1069, 
+page=8, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+8>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page8 used on input line 169.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 171.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 171.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1071, 
+page=17, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+17>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page17 used on input line 180.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 182.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 182.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1073, 
+page=18, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+18>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page18 used on input line 185.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 187.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 187.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1075, 
+page=19, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+19>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page19 used on input line 191.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 193.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 193.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1077, 
+page=20, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+20>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page20 used on input line 196.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 198.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 198.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1079, 
+page=21, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+21>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page21 used on input line 202.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 204.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 204.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1081, 
+page=22, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+22>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page22 used on input line 207.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 209.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 209.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1083, 
+page=23, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+23>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page23 used on input line 213.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 215.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 215.
+
+
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1085, 
+page=24, 597.23125pt x 845.1575pt>
+File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
+ic file (type pdf)
+<use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
+24>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/resolution_j12_three_p
+t_ordered.pdf , page24 used on input line 218.
+(pdftex.def)             Requested size: 126.75833pt x 124.8424pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 220.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 220.
+
+
+
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+
+
+[40 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+<./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./f
+igures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./figur
+es/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>])
+(./chapters/WbWb/Regions.tex)
+
+[41 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+<./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Text page 42 contains only floats.
+
+
+Overfull \vbox (1.36957pt too high) has occurred while \output is active []
+
+
+
+[42 <./figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./
+figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures
+/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/W
+hadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReco
+nstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruct
+ion/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/res
+olution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/resolution
+_j12_three_pt_ordered.pdf>]
+
+LaTeX Warning: Text page 43 contains only floats.
+
+
+Overfull \vbox (1.36957pt too high) has occurred while \output is active []
+
+
+
+[43 <./figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./
+figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures
+/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/W
+hadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReco
+nstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruct
+ion/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/res
+olution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/resolution
+_j12_three_pt_ordered.pdf>]
+\openout2 = `chapters/TopMass/Introduction.aux'.
+
+ (./chapters/TopMass/Introduction.tex
+
+[44
+
+
+
+]
+chapter 7.
+)
+
+[45]
+\openout2 = `chapters/TopMass/LTF.aux'.
+
+ (./chapters/TopMass/LTF.tex)
+
+[46
+
+
+
+]
+\openout2 = `chapters/TopMass/Templates.aux'.
+
+ (./chapters/TopMass/Templates.tex)
+
+[47
+
+
+
+]
+\openout2 = `chapters/TopMass/Results.aux'.
+
+ (./chapters/TopMass/Results.tex)
+
+[48
+
+
+
+] (./chapters/Conclusion.tex
+chapter 8.
+) (./chapters/WbWb/Wreco_ML.tex
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1151, page=3, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge3 used on input line 19.
+(pdftex.def)             Requested size: 207.03882pt x 155.28131pt.
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1152, page=3, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge3 used on input line 24.
+(pdftex.def)             Requested size: 207.03882pt x 155.28131pt.
+
+
+LaTeX Warning: Reference `fig:WhadrecoML:loss' on page 49 undefined on input li
+ne 33.
+
+
+
+[49
+
+
+
+
+]
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1157, page=7, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 7>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge7 used on input line 44.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1158, page=1, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 1>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge1 used on input line 49.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1159, page=4, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 4>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge4 used on input line 55.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1166, page=7, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 7>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge7 used on input line 66.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1167, page=1, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 1>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge1 used on input line 71.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1168, page=4, 462.52798p
+t x 346.89601pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 4>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge4 used on input line 77.
+(pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1177, page=10, 867.24pt 
+x 289.08pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 10>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge10 used on input line 94.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+
+Package nag Warning: \label in float, but not after \caption on input line 96.
+
+
+Package nag Warning: \label in float, but not after \caption on input line 96.
+
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1178, page=8, 867.24pt x
+ 289.08pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 8>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge8 used on input line 99.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 101.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 101.
+
+
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1179, page=9, 867.24pt x
+ 289.08pt>
+File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/part_ml_study.pdf, page 9>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
+ge9 used on input line 104.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 106.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 106.
+
+
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1180, page=10, 867.24pt 
+x 289.08pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 10>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge10 used on input line 115.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 117.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 117.
+
+
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1181, page=8, 867.24pt x
+ 289.08pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 8>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge8 used on input line 120.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 122.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 122.
+
+
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1182, page=9, 867.24pt x
+ 289.08pt>
+File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadReconstruction/reco_ml_study.pdf, page 9>
+Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
+ge9 used on input line 125.
+(pdftex.def)             Requested size: 422.52348pt x 140.84322pt.
+
+Package nag Warning: \label in float, but not after \caption on input line 127.
+
+
+
+Package nag Warning: \label in float, but not after \caption on input line 127.
+
+
+)
+
+[50 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+econstruction/reco_ml_study.pdf>]
+
+[51 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+econstruction/part_ml_study.pdf> <./figures/WbWb/WhadReconstruction/part_ml_stu
+dy.pdf>]
+
+[52 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
+econstruction/reco_ml_study.pdf> <./figures/WbWb/WhadReconstruction/reco_ml_stu
+dy.pdf>]
+
+[53 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+econstruction/part_ml_study.pdf> <./figures/WbWb/WhadReconstruction/part_ml_stu
+dy.pdf>]
+
+[54 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
+econstruction/reco_ml_study.pdf> <./figures/WbWb/WhadReconstruction/reco_ml_stu
+dy.pdf>]
+Package tocbasic Info: character protrusion at lof deactivated on input line 81
+.
+ (./main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[55
+
+
+])
+\tf@lof=\write6
+\openout6 = `main.lof'.
+
+
+
+[56]
+Package tocbasic Info: character protrusion at lot deactivated on input line 82
+.
+ (./main.lot)
+\tf@lot=\write7
+\openout7 = `main.lot'.
+
+
+
+[57
+
+
+]
+
+[58
+
+
+]
+chapter without number
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplx/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+
+[59]
+
+[60]
+
+[61]
+
+[62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+Package nag Warning: 47 complaints in total.
+
+
+
+[67] (./main.aux (./chapters/TopMass/Introduction.aux)
+(./chapters/TopMass/LTF.aux) (./chapters/TopMass/Templates.aux)
+(./chapters/TopMass/Results.aux))
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 60335 strings out of 467748
+ 1384354 string characters out of 5426964
+ 2452034 words of memory out of 5000000
+ 87219 multiletter control sequences out of 15000+600000
+ 716702 words of font info for 599 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 111i,14n,115p,11207b,4465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/
+fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (77 pages, 15681899 bytes).
+PDF statistics:
+ 2425 PDF objects out of 2487 (max. 8388607)
+ 1516 compressed objects within 16 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 112374 words of extra memory for PDF output out of 128383 (max. 10000000)
+

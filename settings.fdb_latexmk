@@ -1,0 +1,9 @@
+# Fdb version 4
+["lualatex"] 0 "settings.tex" "settings.pdf" "settings" 0 -1
+  "settings.aux" 0 -1 0 "lualatex"
+  "settings.tex" 0 -1 0 ""
+  (generated)
+  "settings.aux"
+  "settings.log"
+  "settings.pdf"
+  (rewritten before read)
