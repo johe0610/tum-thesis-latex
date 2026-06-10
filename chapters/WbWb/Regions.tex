@@ -146,3 +146,22 @@ A quantitative overview is provided in Table ... where the event yields for the 
 	\caption{Add caption.}
 	\label{fig:Regions:mbl}
 \end{figure}
+
+
+\section{Unfolding}
+
+The distributions measured at the detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, as well as misreconstruction and misidentification of particles. 
+
+In the \textit{unfolding} step, these detector-induced distortions are corrected to recover the underlying physical distributions from the observed data.
+The differential particle-level cross sections that are obtained can be compared to test theoretical predictions probing the SM. All detector specific effects are removed, allowing the comparison of the results across measurements and experiments, as well as to future predictions which may not be available at the time of the analysis.
+
+While the concept of unfolding is conceptually straightforward, its practical implementation presents significant challenges. Various unfolding algorithms and software packages are available, but in this analysis, the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
+
+A \textit{migration matrix} is constructed, which describes how events are redistributed across bins due to detector effects. This matrix is then inverted, adding a regularization term to stabilize the inversion process while avoiding overfitting. Every component of the systematic uncertainties is propagated individually through the unfolding procedure.
+
+This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix and the choice of regularization. Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
+
+\begin{equation}
+    \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{i,j}^{-1}A^j(N_{d,j}-N_{b,j})
+    \label{eq:Unfolding}
+\end{equation}

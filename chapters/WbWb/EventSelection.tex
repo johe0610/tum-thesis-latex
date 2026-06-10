@@ -1,3 +1,38 @@
+\section{Background estimation}
+
+\subsection{\Wboson + jets background}
+
+The dominant background for the analysis arises from events with a final state \Wboson boson in association with several jets,
+where light quark or gluon jets are misidentified as $b$ jets. 
+The misidentification rate for light jets is less than 1\% (see Fig~\ref{fig:ObjectReco:FtagPerf}),
+but when combined with the large cross-section of \Wboson+jets production, it results in a significant contribution to the $WWbb$ signal region.
+Careful modeling of the jet flavor composition, b-tagging efficiencies, and control regions is essential to accurately estimate and subtract the \Wboson+jets contribution in the analysis.
+
+For that purpose, a dedicated control region is defined.
+Describe the fit
+
+\subsection{Misidentified and non-prompt leptons}
+\label{ch:FakeLep}
+
+In the reconstruction step, it may happen that an object is identified as a lepton even though it was not a lepton to begin with.
+These are referred to as "fake leptons" and their contribution is considered as a background in the analysis.
+
+Fake electrons primarily originate from photon conversions, electrons from secondary meson decays within jets or misreconstructed jets (from light quark/gluon fragmentation).
+Compared to prompt electrons, fake electrons typically exhibit poorer isolation and lower efficiency in passing tighter identification criteria.
+Fake muons mainly arise from in-flight decays of mesons within jets.
+While such muons are generally less isolated, they
+can still contribute to the signal region if they satisfy tight isolation and impact parameter requirements.
+
+The fake-factor method~\cite{EGAM-2019-01} is employed to estimate misidentified leptons.
+This approach is data-driven as it is challenging to model these processes with high accuracy in simulation.
+This technique relies on a control region enriched in fake leptons, selected orthogonal to the signal regions.
+
+Fake factors are derived from fractions of leptons passing tight or loose reconstruction criteria, see Tables~\ref{tab:ObjReco:Electrons} and~\ref{tab:ObjReco:Muons}.
+Events containing fake leptons are then weighted by these factors to correct for misidentification in the analysis phase space.
+In the analysis presented in this thesis, the fake and non-prompt backgrounds are found to be small compared to other backgrounds,
+reducing the need for detailed fake-factor corrections.
+
+
 \section{Baseline Event selection}%
 \label{sec:EventSelection}
 
