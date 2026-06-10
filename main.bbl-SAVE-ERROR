@@ -4415,6 +4415,165 @@
       \verb https://cds.cern.ch/record/2022743
       \endverb
     \endentry
+    \entry{EGAM-2019-01}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%
+           family={{ATLAS Collaboration}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{fullhashraw}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{bibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorbibnamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authornamehash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhash}{ebfe6052e5f504e4a3579c49c44afe41}
+      \strng{authorfullhashraw}{ebfe6052e5f504e4a3579c49c44afe41}
+      \field{extraname}{47}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JINST}
+      \field{title}{{Tools for estimating fake/non-prompt lepton backgrounds with the ATLAS detector at the LHC}}
+      \field{volume}{18}
+      \field{year}{2023}
+      \field{pages}{T11004}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/18/11/T11004
+      \endverb
+      \verb{eprint}
+      \verb 2211.16178
+      \endverb
+    \endentry
+    \entry{Schmitt:2012kp}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=673305dda4d2f2c31178558efa058d64}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{fullhash}{673305dda4d2f2c31178558efa058d64}
+      \strng{fullhashraw}{673305dda4d2f2c31178558efa058d64}
+      \strng{bibnamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorbibnamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authornamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorfullhash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorfullhashraw}{673305dda4d2f2c31178558efa058d64}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.data-an}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JINST}
+      \field{title}{{TUnfold: an algorithm for correcting migration effects in high energy physics}}
+      \field{volume}{7}
+      \field{year}{2012}
+      \field{pages}{T10003}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/7/10/T10003
+      \endverb
+      \verb{eprint}
+      \verb 1205.6201
+      \endverb
+    \endentry
+    \entry{Tikhonov1995}{inbook}{}{}
+      \name{author}{4}{}{%
+        {{hash=bbc94e7341709d3558e9d34d9c1e9719}{%
+           family={Tikhonov},
+           familyi={T\bibinitperiod},
+           given={A.\bibnamedelimi N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=577e697eb236edea2973d000a94a368e}{%
+           family={Goncharsky},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=88c9d9ff3b42bd33b0dec09eb74f77c4}{%
+           family={Stepanov},
+           familyi={S\bibinitperiod},
+           given={V.\bibnamedelimi V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=14fcce20b4b14c97fb2c291db8312a1f}{%
+           family={Yagola},
+           familyi={Y\bibinitperiod},
+           given={A.\bibnamedelimi G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{09bd7fd06b3fe135d4fd6b9e9aef6510}
+      \strng{fullhash}{eff921819e1ab3989d71a6929a6769bd}
+      \strng{fullhashraw}{eff921819e1ab3989d71a6929a6769bd}
+      \strng{bibnamehash}{09bd7fd06b3fe135d4fd6b9e9aef6510}
+      \strng{authorbibnamehash}{09bd7fd06b3fe135d4fd6b9e9aef6510}
+      \strng{authornamehash}{09bd7fd06b3fe135d4fd6b9e9aef6510}
+      \strng{authorfullhash}{eff921819e1ab3989d71a6929a6769bd}
+      \strng{authorfullhashraw}{eff921819e1ab3989d71a6929a6769bd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this Chapter we consider methods for solving ill-posed problems under the condition that the a priori information is, in general, insufficient in order to single out a compact set of well-posedness. The main ideas in this Chapter have been expressed in [165], [166]. We will consider the case when the operator is also given approximately, while the set of constraints of the problem is a closed convex set in a Hilbert space. The case when the operator is specified exactly and the case when constraints are absent (i.e. the set of constraints coincides with the whole space) are instances of the problem statement considered here.}
+      \field{booktitle}{Numerical Methods for the Solution of Ill-Posed Problems}
+      \field{isbn}{978-94-015-8480-7}
+      \field{title}{Regularization methods}
+      \field{year}{1995}
+      \field{pages}{7\bibrangedash 63}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1007/978-94-015-8480-7_2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-94-015-8480-7_2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-94-015-8480-7_2
+      \endverb
+    \endentry
+    \entry{Schmitt:2019um}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=673305dda4d2f2c31178558efa058d64}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{fullhash}{673305dda4d2f2c31178558efa058d64}
+      \strng{fullhashraw}{673305dda4d2f2c31178558efa058d64}
+      \strng{bibnamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorbibnamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authornamehash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorfullhash}{673305dda4d2f2c31178558efa058d64}
+      \strng{authorfullhashraw}{673305dda4d2f2c31178558efa058d64}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 11/7/2024}
+      \field{title}{{The TUnfold package: user manual}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.desy.de/~sschmitt/TUnfold/tunfold_manual_v17.9.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.desy.de/~sschmitt/TUnfold/tunfold_manual_v17.9.pdf
+      \endverb
+    \endentry
     \entry{96c6728672be6c39afe14776fd304dba}{article}{skipbib=true,skipbiblist=true,skiplab=true}{}
       \name{author}{1}{}{%
         {{hash=ebfe6052e5f504e4a3579c49c44afe41}{%

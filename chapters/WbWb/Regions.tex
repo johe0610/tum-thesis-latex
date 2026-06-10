@@ -75,34 +75,34 @@ A quantitative overview is provided in Table ... where the event yields for the 
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		%\caption{\pT resolution.}
+		\caption{}
 		\label{fig:WhadLoose:l_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		%\caption{\pT resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:l_ptlep}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\caption{}
 		\label{fig:WhadLoose:m_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:m_ptlep}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\caption{}
 		\label{fig:WhadLoose:e_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:e_ptlep}
 	\end{subfigure}
 	\caption{Add caption.}
@@ -113,34 +113,34 @@ A quantitative overview is provided in Table ... where the event yields for the 
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		%\caption{\pT resolution.}
+		\caption{}
 		\label{fig:WhadLoose:l_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		%\caption{\pT resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:l_mbl}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\caption{}
 		\label{fig:WhadLoose:m_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:m_mbl}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\caption{}
 		\label{fig:WhadLoose:e_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\caption{}
 		\label{fig:WhadLoose:e_mbl}
 	\end{subfigure}
 	\caption{Add caption.}
@@ -161,23 +161,30 @@ A \textit{migration matrix} is constructed, which describes how events are redis
 
 This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix and the choice of regularization. Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
 
-\subsection{Unfolding procedure and cross secrtion definition}
+\subsection{Unfolding procedure and cross section definition}
 
-The measurement is performed as a counting experiment, where events are grouped into certain regions of phase-space, also called bins.
-The definition of the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ is given by the formula
+The measurement is performed as a counting experiment, where events are grouped into certain 
+regions of phase-space, also called bins.
+The definition of the differential fiducial cross section as a function of an observable $X$
+in a given bin $i$ is given by the formula
 \begin{equation}
     \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}f_{\text{acc}}^j(N_{d,j}-N_{b,j}).
     \label{eq:Unfolding}
 \end{equation}
-The measured quantity $N_{d,j}$ denotes the number of data events in bin $j$.
-The first step subtracts the number of background events $N_{b,j}$.
-These are obtained from data driven methods or MC simulations, as explained in Section~\ref{}. The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
+with the integrated luminosity $L$ and the bin width $\Delta X_i$.
+Corrections are applied for the acceptance $f_{\text{acc}}^j$ and the efficiency $\epsilon_i$, respectively.
+The migration matrix is denoted by $M_{ij}$ and its inverse is used to correct for the event migration between bins.
+$N_{d,j}$ denotes the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
 
-
+The first step subtracts the background from the data.
+The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{}.
+The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
 
 The response matrix $M_R$ keeps tracks of event migration.
-Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation are filled in $M_{R,ij}$. An ideal measurement would therefore produce a perfectly diagonal matrix. 
-Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled. The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
+Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation
+are filled in $M_{R,ij}$. An ideal measurement would therefore produce a perfectly diagonal matrix.
+Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled.
+The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
 \begin{equation}
     M_{ij} = \frac{M_{R,ij}}{N_{t,i}},
 \end{equation}
@@ -186,8 +193,10 @@ Thus, $M_{ij}$ can be interpreted as the probability of a particle level event g
 
 A simple inversion of $M$ in order to obtain the true particle level distribution is
 not sufficient, as it can enhance statistical fluctuations in the data.
-Therefore, a \textit{regularization} term is added which ensures a dampening of this effect and therefore a smooth unfolded distribution.
-This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995} is employed as implemented in the TUnfold package~\cite{Schmitt:2019um}.
+Therefore, a \textit{regularization} term is added which ensures a dampening of this effect
+and therefore a smooth unfolded distribution.
+This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995} is employed
+as implemented in the TUnfold package~\cite{Schmitt:2019um}.
 
 \begin{align}
 \mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
@@ -201,10 +210,16 @@ e_j &= \sum_i A_{ij}, && \tag{8}
 
 The acceptance $f^j_\text{acc}$ is defined as the fraction of all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
 It can be calculated from the normalized response matrix as 
-$f^j_\text{acc} = \sum_i M_{R,i,j}$.
+$f^j_\text{acc} = \sum_i M_{R,ij}/N_{d,i}$.
 
-The complementary efficiency $\epsilon_i = \sum_j M_{R,i,j}^\text{norm}$ 
-is defined as the fraction of matched events out of all events passing the particle-level selection. It corrects for events that fail to be reconstructed or selected at the detector level. This can result from limitations in detector coverage, insufficient resolution, trigger thresholds or reconstruction algorithms.
+The complementary efficiency $\epsilon_i = \sum_j M_{R,ij}/N_{t,i}$ 
+is defined as the fraction of matched events out of all events passing the particle-level 
+selection. It corrects for events that fail to be reconstructed or selected at the detector
+level. This can result from limitations in detector coverage, insufficient resolution,
+trigger thresholds or reconstruction algorithms.
+
+Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
+to obtain the differential cross section.
 
 \begin{figure}[ht!]
 	\centering
@@ -230,61 +245,61 @@ is defined as the fraction of matched events out of all events passing the parti
 		\label{fig:whadpart:unfolding:cov_all:lep_pt}
 	\end{subfigure}
 	\caption{Add caption.}
-	\label{fig:Regions:mbl}
+	\label{fig:unfolding:lep_pt}
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:migma:lep_pt}
+		\label{fig:whadpart:unfolding:migma:b1_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:acc_eff:lep_pt}
+		\label{fig:whadpart:unfolding:acc_eff:b1_pt}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:cov_stat:lep_pt}
+		\label{fig:whadpart:unfolding:cov_stat:b1_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:cov_all:lep_pt}
+		\label{fig:whadpart:unfolding:cov_all:b1_pt}
 	\end{subfigure}
 	\caption{Add caption.}
-	\label{fig:Regions:mbl}
+	\label{fig:unfolding:b1_pt}
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:migma:lep_pt}
+		\label{fig:whadpart:unfolding:migma:whad_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:acc_eff:lep_pt}
+		\label{fig:whadpart:unfolding:acc_eff:whad_pt}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:cov_stat:lep_pt}
+		\label{fig:whadpart:unfolding:cov_stat:whad_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
 		\caption{}
-		\label{fig:whadpart:unfolding:cov_all:lep_pt}
+		\label{fig:whadpart:unfolding:cov_all:whad_pt}
 	\end{subfigure}
 	\caption{Add caption.}
-	\label{fig:Regions:mbl}
+	\label{fig:unfolding:whad_pt}
 \end{figure}
 
 
