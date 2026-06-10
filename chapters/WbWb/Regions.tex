@@ -161,7 +161,25 @@ A \textit{migration matrix} is constructed, which describes how events are redis
 
 This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix and the choice of regularization. Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
 
+\subsection{Unfolding procedure}
+
+The measurement is performed as a counting experiment, where events are grouped into certain regions of phase-space, also called bins.
+The definition of the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ is given by the formula
 \begin{equation}
-    \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{i,j}^{-1}A^j(N_{d,j}-N_{b,j})
+    \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{i,j}^{-1}f_{\text{acc}}^j(N_{d,j}-N_{b,j}).
     \label{eq:Unfolding}
 \end{equation}
+The measured quantity $N_{d,j}$ denotes the number of data events in bin $j$.
+The first step subtracts the number of background events $N_{b,j}$.
+These are obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:bkg-estimation}. The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
+
+The acceptance $f^j_\text{acc}$ is defined as the fraction of all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
+It can be calculated from the normalized response matrix as 
+$f^j_\text{acc} = \sum_i M_{R,i,j}^\text{norm}$.
+
+The complementary efficiency $\epsilon_i = \sum_j M_{R,i,j}^\text{norm}$ 
+is defined as the fraction of matched events out of all events passing the particle-level selection. It corrects for events that fail to be reconstructed or selected at the detector level. This can result from limitations in detector coverage, insufficient resolution, trigger thresholds or reconstruction algorithms.
+
+The final ste
+
+\subsection{Propagation of uncertainties}
