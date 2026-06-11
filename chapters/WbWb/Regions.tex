@@ -190,29 +190,43 @@ The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
 \end{equation}
 where $N_{t,i}$ is the number of particle level (true) events in bin $i$.
 Thus, $M_{ij}$ can be interpreted as the probability of a particle level event generated in bin $i$ to be reconstructed in bin $j$.
+The choice of the bin boundaries is such that the diagonal elements of the matrix contain at least 60\% of particle level events per row.
 
 A simple inversion of $M$ in order to obtain the true particle level distribution is
 not sufficient, as it can enhance statistical fluctuations in the data.
-Therefore, a \textit{regularization} term is added which ensures a dampening of this effect
+Therefore, a regularization term is added which ensures a dampening of this effect
 and therefore a smooth unfolded distribution.
 This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995} is employed
 as implemented in the TUnfold package~\cite{Schmitt:2019um}.
+A least squares method with Tikhonov regularization and additional area constraint is employed to estimate
+the true distribution. The number of degrees of freedom in the minimization has to be larger than zero.
+Therefore, the number of bins on reconstructed level is chosen to be twice as large, compared to the particle level distribution.
+The bin edges coincide, adding an intermediate bin on detector level to ensure convergence and a smooth distribution
+at reconstruction level.
 
-\begin{align}
-\mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
-\mathcal{L}_1 &= (\boldsymbol{y} - \mathbf{A}\boldsymbol{x})^\top \mathbf{V}_{yy}^{-1} (\boldsymbol{y} - \mathbf{A}\boldsymbol{x}), && \tag{4} \\
-\mathcal{L}_2 &= \tau^2 (\boldsymbol{x} - f_b \boldsymbol{x}_0)^\top (\mathbf{L}^\top \mathbf{L}) (\boldsymbol{x} - f_b \boldsymbol{x}_0), && \tag{5} \\
-\mathcal{L}_3 &= \lambda (Y - \boldsymbol{e}^\top \boldsymbol{x}) && \text{and} \tag{6} \\
-Y &= \sum_i y_i, && \tag{7} \\
-e_j &= \sum_i A_{ij}, && \tag{8}
-\end{align}
+%\begin{align}
+%\mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
+%\mathcal{L}_1 &= (\boldsymbol{y} - \mathbf{A}\boldsymbol{x})^\top \mathbf{V}_{yy}^{-1} (\boldsymbol{y} - \mathbf{A}\boldsymbol{x}), && \tag{4} \\
+%\mathcal{L}_2 &= \tau^2 (\boldsymbol{x} - f_b \boldsymbol{x}_0)^\top (\mathbf{L}^\top \mathbf{L}) (\boldsymbol{x} - f_b \boldsymbol{x}_0), && \tag{5} \\
+%\mathcal{L}_3 &= \lambda (Y - \boldsymbol{e}^\top \boldsymbol{x}) && \text{and} \tag{6} \\
+%Y &= \sum_i y_i, && \tag{7} \\
+%e_j &= \sum_i A_{ij}, && \tag{8}
+%\end{align}
 
+Only those events that pass both the particle and reconstructed-
+level selection are described by the migration matrix.
+Therefore, two other distributions need to be taken into account.
 
 The acceptance $f^j_\text{acc}$ is defined as the fraction of all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
-It can be calculated from the normalized response matrix as 
-$f^j_\text{acc} = \sum_i M_{R,ij}/N_{d,i}$.
+It can be calculated from the response matrix as 
+\begin{equation}
+    f^j_\text{acc} = \sum_i M_{R,ij}/N_{d,i}.
+\end{equation}
 
-The complementary efficiency $\epsilon_i = \sum_j M_{R,ij}/N_{t,i}$ 
+The complementary efficiency 
+\begin{equation}
+    \epsilon_i = \sum_j M_{R,ij}/N_{t,i}
+\end{equation}
 is defined as the fraction of matched events out of all events passing the particle-level 
 selection. It corrects for events that fail to be reconstructed or selected at the detector
 level. This can result from limitations in detector coverage, insufficient resolution,
@@ -221,6 +235,7 @@ trigger thresholds or reconstruction algorithms.
 Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
 to obtain the differential cross section.
 
+LATER: Control distributions are shown. Decide on which to show and how to arrange them
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
@@ -304,3 +319,11 @@ to obtain the differential cross section.
 
 
 \subsection{Propagation of uncertainties}
+
+Statistical uncertainties
+
+Background modelling
+
+Signal modelling
+
+Systematic uncertainties
