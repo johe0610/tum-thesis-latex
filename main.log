@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  26 MAY 2026 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  10 JUN 2026 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,8 +1473,88 @@ LaTeX Warning: Label `fig:Whadreco:masscut' multiply defined.
 
 LaTeX Warning: Label `fig:Whadreco:masscut@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:WhadLoose:l_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:l_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:l_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:l_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:m_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:m_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:m_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:m_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:e_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:e_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:e_ptlep' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:e_ptlep@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:l_mbl' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:l_mbl@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:l_mbl' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:l_mbl@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:m_mbl' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:m_mbl@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:m_mbl' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:m_mbl@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:e_mbl' multiply defined.
+
+
+LaTeX Warning: Label `fig:WhadLoose:e_mbl@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:e_mbl' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:WhadLoose:e_mbl@cref' multiply defined.
+
 (./chapters/TopMass/Introduction.aux) (./chapters/TopMass/LTF.aux)
 (./chapters/TopMass/Templates.aux) (./chapters/TopMass/Results.aux))
+Runaway argument?
+{\contentsline {chapter}{\nonumberline List of Tables}{67}{chapter*.4\ETC.
+! File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.33 \begin{document}
+                     
+? 
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1520,7 +1600,6 @@ Package scrbase Info: activating american \listfigurename on input line 33.
 Package scrbase Info: activating american \listtablename on input line 33.
 Package scrbase Info: activating american \bibname on input line 33.
 Package scrbase Info: activating american \indexname on input line 33.
-
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count527
@@ -1627,16 +1706,16 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
+Package biblatex Info: ... file 'main.bbl' not found.
 
-(./main.bbl)
+No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
 line 33.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
 line 33.
- (./pages/cover.tex
+(./pages/cover.tex
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pplx.fd)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omlzplm.fd)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omszplm.fd)
@@ -1712,8 +1791,114 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
 [8] (./chapters/Introduction.tex
 chapter 1.
 
+LaTeX Warning: Citation 'TOPQ-2016-01' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'TOPQ-2018-15' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'CMS-TOP-16-007' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'CMS-TOP-16-014' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'CMS-TOP-17-002' on page 1 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'Czakon:2011xx' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Czakon:2015owf' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Citation 'Czakon:2016dgf' on page 1 undefined on input line 14.
+
+
+Overfull \hbox (3.74068pt too wide) in paragraph at lines 11--17
+\T1/pplx/m/n/10.95 (-20) ($\OML/zplm/m/it/10.95 WbWb$\T1/pplx/m/n/10.95 (-20) )
+. Dif-fer-en-tial cross sec-tions for $\OML/zplm/m/it/10.95 t[]$ \T1/pplx/m/n/1
+0.95 (-20) pro-duc-tion have been mea-sured [[],
+ []
+
+
+Overfull \hbox (82.1619pt too wide) in paragraph at lines 11--17
+[]\T1/pplx/m/n/10.95 (-20) , [], [], []] and cal-cu-lated [[],
+ []
+
+
 LaTeX Warning: Reference `fig:intro:feynman' on page 1 undefined on input line 
 20.
+
+
+LaTeX Warning: Citation 'White:2009yt' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation 'Frixione:2008yi' on page 1 undefined on input line 43.
+
+
+
+LaTeX Warning: Citation 'Hollik:2012rc' on page 1 undefined on input line 43.
+
+
+LaTeX Warning: Citation 'Demartin:2016axk' on page 1 undefined on input line 43
+.
+
+
+LaTeX Warning: Citation 'ATL-PHYS-PUB-2016-020' on page 1 undefined on input li
+ne 43.
+
+
+LaTeX Warning: Citation 'TOPQ-2018-26' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'TOPQ-2020-06' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'TOPQ-2018-15' on page 1 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'SUSY-2015-02' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'SUSY-2016-17' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'SUSY-2014-07' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'SUSY-2015-01' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'SUSY-2016-15' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'SUSY-2015-08' on page 1 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'Denner:2010jp' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation 'Jezo:2016ujg' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation 'Jezo:2023rht' on page 1 undefined on input line 49.
+
+
+LaTeX Warning: Citation 'Denner:2017kzu' on page 1 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'TOPQ-2017-05' on page 1 undefined on input line 53.
+
+
+Overfull \hbox (55.31516pt too wide) in paragraph at lines 42--54
+\T1/pplx/m/n/10.95 (-20) view [[], [], [], [], []]
+ []
+
+
+Overfull \hbox (41.78403pt too wide) in paragraph at lines 42--54
+[]\T1/pplx/m/n/10.95 (-20) , []] and BSM searches [[], [], [],
+ []
 
 
 
@@ -1738,24 +1923,88 @@ chapter 2.
 
 ]
 chapter 3.
-<figures/ATLAS/cern_accelerator.pdf, id=202, 5121.49371pt x 4552.43803pt>
+
+LaTeX Warning: Citation 'DiscoveryPositron' on page 5 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation 'DiscoveryMuon' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'DiscoveryWeakCurrent' on page 5 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation 'TOP-CDF' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'TOP-D0' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'HIGG-2012-27' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation 'CMS-CMS-00-002' on page 5 undefined on input line 4.
+
+<figures/ATLAS/cern_accelerator.pdf, id=174, 5121.49371pt x 4552.43803pt>
 File: figures/ATLAS/cern_accelerator.pdf Graphic file (type pdf)
 <use figures/ATLAS/cern_accelerator.pdf>
 Package pdftex.def Info: figures/ATLAS/cern_accelerator.pdf  used on input line
  22.
 (pdftex.def)             Requested size: 359.14754pt x 319.18948pt.
 
+LaTeX Warning: Citation 'Mobs:2636343' on page 5 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Mobs:2636343' on page 5 undefined on input line 23.
+
+
+LaTeX Warning: Citation 'Evans:2008zzb' on page 5 undefined on input line 38.
+
+
+LaTeX Warning: Citation 'LEP-TDR' on page 5 undefined on input line 39.
+
+
 
 [5]
 
+LaTeX Warning: Citation 'CERN-ACC-WEB' on page 6 undefined on input line 48.
+
+
+LaTeX Warning: Citation 'PERF-2007-01' on page 6 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'CMS-CMS-00-001' on page 6 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'ALICE-TDR' on page 6 undefined on input line 61.
+
+
+LaTeX Warning: Citation 'LHCb-TDR' on page 6 undefined on input line 61.
+
+
+
 [6 <./figures/ATLAS/cern_accelerator.pdf>]
-<figures/ATLAS/atlas_pileup_run2.pdf, id=287, 569.12625pt x 408.52625pt>
+
+LaTeX Warning: Citation 'HLLHC_TDR' on page 7 undefined on input line 68.
+
+
+LaTeX Warning: Citation 'CERN-2004-003-V-1' on page 7 undefined on input line 8
+7.
+
+
+LaTeX Warning: Citation 'DAPR-2021-01' on page 7 undefined on input line 88.
+
+
+
+[7]
+<figures/ATLAS/atlas_pileup_run2.pdf, id=241, 569.12625pt x 408.52625pt>
 File: figures/ATLAS/atlas_pileup_run2.pdf Graphic file (type pdf)
 <use figures/ATLAS/atlas_pileup_run2.pdf>
 Package pdftex.def Info: figures/ATLAS/atlas_pileup_run2.pdf  used on input lin
 e 117.
 (pdftex.def)             Requested size: 198.58655pt x 142.54997pt.
-<figures/ATLAS/atlas_int_lumi_run2.pdf, id=288, 569.12625pt x 408.52625pt>
+<figures/ATLAS/atlas_int_lumi_run2.pdf, id=242, 569.12625pt x 408.52625pt>
 File: figures/ATLAS/atlas_int_lumi_run2.pdf Graphic file (type pdf)
 <use figures/ATLAS/atlas_int_lumi_run2.pdf>
 Package pdftex.def Info: figures/ATLAS/atlas_int_lumi_run2.pdf  used on input l
@@ -1767,69 +2016,196 @@ Underfull \hbox (badness 1163) in paragraph at lines 124--124
  []
 
 
+LaTeX Warning: Citation 'DAPR-2018-01' on page 8 undefined on input line 134.
 
-[7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Citation 'DAPR-2018-01' on page 8 undefined on input line 134.
+
+
+LaTeX Warning: Citation 'DAPR-2021-01' on page 8 undefined on input line 151.
+
+
+LaTeX Warning: Citation 'CERN-EP-2025-211' on page 8 undefined on input line 15
+3.
+
+
+Overfull \hbox (74.81459pt too wide) in paragraph at lines 153--154
+[]\T1/pplx/m/n/10.95 (-20) To put things in per-spec-tive, when us-ing the $\OM
+L/zplm/m/it/10.95 t[]$ \T1/pplx/m/n/10.95 (-20) pro-duc-tion cross sec-tion of 
+829 pb [[]],
+ []
 
 
 
 [8 <./figures/ATLAS/atlas_pileup_run2.pdf> <./figures/ATLAS/atlas_int_lumi_run2
 .pdf>]
-<figures/ATLAS/ATLAS_schematic.jpg, id=344, 810.52812pt x 520.94624pt>
+
+LaTeX Warning: Citation 'PERF-2007-01' on page 9 undefined on input line 159.
+
+<figures/ATLAS/ATLAS_schematic.jpg, id=280, 810.52812pt x 520.94624pt>
 File: figures/ATLAS/ATLAS_schematic.jpg Graphic file (type jpg)
 <use figures/ATLAS/ATLAS_schematic.jpg>
 Package pdftex.def Info: figures/ATLAS/ATLAS_schematic.jpg  used on input line 
 171.
 (pdftex.def)             Requested size: 380.26855pt x 244.41553pt.
-<figures/ATLAS/ATLAS_Coordinate_System.pdf, id=348, 597.50829pt x 845.0471pt>
+
+LaTeX Warning: Citation 'CERN-GE-0803012' on page 9 undefined on input line 172
+.
+
+
+LaTeX Warning: Citation 'CERN-GE-0803012' on page 9 undefined on input line 172
+.
+
+<figures/ATLAS/ATLAS_Coordinate_System.pdf, id=282, 597.50829pt x 845.0471pt>
 File: figures/ATLAS/ATLAS_Coordinate_System.pdf Graphic file (type pdf)
 <use figures/ATLAS/ATLAS_Coordinate_System.pdf>
 Package pdftex.def Info: figures/ATLAS/ATLAS_Coordinate_System.pdf  used on inp
 ut line 211.
 (pdftex.def)             Requested size: 253.51666pt x 196.48473pt.
 
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2025-016' on page 9 undefined on input 
+line 212.
+
+
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2025-016' on page 9 undefined on input 
+line 212.
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 212--212
+[][][]|\T1/pplx/m/n/10.95 (+20) Il-lus-tra-tion of the AT-LAS co-or-di-nate sys
+-tem. Fig-ure taken from
+ []
+
+
 
 [9 <./figures/ATLAS/ATLAS_schematic.jpg>]
-<figures/ATLAS/magnet_system.png, id=363, 3854.4pt x 2168.1pt>
+
+LaTeX Warning: Citation 'ATLAS-TDR-06' on page 10 undefined on input line 244.
+
+<figures/ATLAS/magnet_system.png, id=292, 3854.4pt x 2168.1pt>
 File: figures/ATLAS/magnet_system.png Graphic file (type png)
 <use figures/ATLAS/magnet_system.png>
 Package pdftex.def Info: figures/ATLAS/magnet_system.png  used on input line 25
 0.
 (pdftex.def)             Requested size: 422.52348pt x 237.66467pt.
 
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2021-075' on page 10 undefined on input
+ line 252.
+
+
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2021-075' on page 10 undefined on input
+ line 252.
+
+
 
 [10 <./figures/ATLAS/ATLAS_Coordinate_System.pdf>]
-<figures/ATLAS/ID_overview_labeled.jpg, id=489, 810.52812pt x 540.51938pt>
+
+LaTeX Warning: Citation 'ATLAS-TDR-04' on page 11 undefined on input line 268.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-05' on page 11 undefined on input line 268.
+
+
+Overfull \hbox (20.718pt too wide) in paragraph at lines 268--273
+\T1/pplx/m/n/10.95 (-20) Closest to the beam line is the AT-LAS In-ner De-tec-t
+or (ID) [[], []],
+ []
+
+
+LaTeX Warning: Citation 'PERF-2007-01' on page 11 undefined on input line 275.
+
+<figures/ATLAS/ID_overview_labeled.jpg, id=411, 810.52812pt x 540.51938pt>
 File: figures/ATLAS/ID_overview_labeled.jpg Graphic file (type jpg)
 <use figures/ATLAS/ID_overview_labeled.jpg>
 Package pdftex.def Info: figures/ATLAS/ID_overview_labeled.jpg  used on input l
 ine 282.
 (pdftex.def)             Requested size: 422.52348pt x 281.77274pt.
 
+LaTeX Warning: Citation 'CERN-GE-0803014' on page 11 undefined on input line 29
+1.
+
+
+LaTeX Warning: Citation 'CERN-GE-0803014' on page 11 undefined on input line 29
+1.
+
+
 
 [11 <./figures/ATLAS/magnet_system.png>]
 
+LaTeX Warning: Citation 'ATLAS-TDR-11' on page 12 undefined on input line 301.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-19' on page 12 undefined on input line 304.
+
+
+LaTeX Warning: Citation 'PIX-2018-001' on page 12 undefined on input line 304.
+
+
+
 [12 <./figures/ATLAS/ID_overview_labeled.jpg>]
-<figures/ATLAS/calo_overview_labeled.jpg, id=519, 810.52812pt x 545.53813pt>
+
+LaTeX Warning: Citation 'IDET-2013-01' on page 13 undefined on input line 323.
+
+
+LaTeX Warning: Citation 'ATLAS_TRT_TDR' on page 13 undefined on input line 338.
+
+
+
+LaTeX Warning: Citation 'MINDUR2017257' on page 13 undefined on input line 347.
+
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-01' on page 13 undefined on input line 351.
+
+<figures/ATLAS/calo_overview_labeled.jpg, id=425, 810.52812pt x 545.53813pt>
 File: figures/ATLAS/calo_overview_labeled.jpg Graphic file (type jpg)
 <use figures/ATLAS/calo_overview_labeled.jpg>
 Package pdftex.def Info: figures/ATLAS/calo_overview_labeled.jpg  used on input
  line 367.
 (pdftex.def)             Requested size: 422.52348pt x 284.38902pt.
 
+LaTeX Warning: Citation 'CERN-GE-0803015' on page 13 undefined on input line 36
+8.
+
+
+LaTeX Warning: Citation 'CERN-GE-0803015' on page 13 undefined on input line 36
+8.
+
+
 
 [13]
-Underfull \vbox (badness 1675) has occurred while \output is active []
+
+LaTeX Warning: Citation 'ATLAS-TDR-02' on page 14 undefined on input line 378.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-03' on page 14 undefined on input line 396.
 
 
 
 [14 <./figures/ATLAS/calo_overview_labeled.jpg>]
-<figures/ATLAS/muon_system_labeled.jpg, id=547, 750.805pt x 563.10374pt>
+
+LaTeX Warning: Citation 'ATLAS-TDR-02' on page 15 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-02' on page 15 undefined on input line 420.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-10' on page 15 undefined on input line 431.
+
+<figures/ATLAS/muon_system_labeled.jpg, id=438, 750.805pt x 563.10374pt>
 File: figures/ATLAS/muon_system_labeled.jpg Graphic file (type jpg)
 <use figures/ATLAS/muon_system_labeled.jpg>
 Package pdftex.def Info: figures/ATLAS/muon_system_labeled.jpg  used on input l
 ine 447.
 (pdftex.def)             Requested size: 359.14754pt x 269.36736pt.
+
+LaTeX Warning: Citation 'CERN-GE-0803017' on page 15 undefined on input line 44
+8.
+
+
+LaTeX Warning: Citation 'CERN-GE-0803017' on page 15 undefined on input line 44
+8.
+
 Package epstopdf Info: Source file: <figures/ATLAS/ms_structure.eps>
 (epstopdf)                    date: 2026-05-26 13:13:04
 (epstopdf)                    size: 212405 bytes
@@ -1841,7 +2217,7 @@ o.pdf>
 -eps-converted-to.pdf figures/ATLAS/ms_structure.eps>
 (epstopdf)             \includegraphics on input line 454.
 Package epstopdf Info: Output file is already uptodate.
-<figures/ATLAS/ms_structure-eps-converted-to.pdf, id=550, 1027.84pt x 770.88pt>
+<figures/ATLAS/ms_structure-eps-converted-to.pdf, id=439, 1027.84pt x 770.88pt>
 
 File: figures/ATLAS/ms_structure-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/ATLAS/ms_structure-eps-converted-to.pdf>
@@ -1849,27 +2225,81 @@ Package pdftex.def Info: figures/ATLAS/ms_structure-eps-converted-to.pdf  used
 on input line 454.
 (pdftex.def)             Requested size: 359.14754pt x 268.85936pt.
 
+LaTeX Warning: Citation 'TRIG-2012-03' on page 15 undefined on input line 457.
+
+
+LaTeX Warning: Citation 'TRIG-2012-03' on page 15 undefined on input line 457.
+
+
+LaTeX Warning: Citation 'Bauer_2001' on page 15 undefined on input line 468.
+
+
 
 [15]
+
+LaTeX Warning: Citation 'ATLAS-TDR-10' on page 16 undefined on input line 501.
+
+
+LaTeX Warning: Citation 'ATLAS_CSC' on page 16 undefined on input line 502.
+
+
 Underfull \vbox (badness 1147) has occurred while \output is active []
 
 
 
 [16 <./figures/ATLAS/muon_system_labeled.jpg>]
 
+LaTeX Warning: Citation 'ATLAS_RPC' on page 17 undefined on input line 519.
+
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+
+
 [17 <./figures/ATLAS/ms_structure-eps-converted-to.pdf>]
-<figures/ATLAS/trigger_schematic.pdf, id=611, 627.87013pt x 465.90376pt>
+
+LaTeX Warning: Citation 'ATLAS-TDR-10' on page 18 undefined on input line 544.
+
+
+LaTeX Warning: Citation 'ATLAS-TDR-16' on page 18 undefined on input line 550.
+
+<figures/ATLAS/trigger_schematic.pdf, id=487, 627.87013pt x 465.90376pt>
 File: figures/ATLAS/trigger_schematic.pdf Graphic file (type pdf)
 <use figures/ATLAS/trigger_schematic.pdf>
 Package pdftex.def Info: figures/ATLAS/trigger_schematic.pdf  used on input lin
 e 559.
 (pdftex.def)             Requested size: 401.39601pt x 297.85747pt.
 
+LaTeX Warning: Citation 'TRIG-2019-04' on page 18 undefined on input line 561.
+
+
+LaTeX Warning: Citation 'TRIG-2019-04' on page 18 undefined on input line 561.
+
+
+LaTeX Warning: Citation 'TRIG-2019-04' on page 18 undefined on input line 568.
+
+
 
 [18]
 
+LaTeX Warning: Citation 'TRIG-2019-04' on page 19 undefined on input line 593.
+
+
+LaTeX Warning: Citation 'PERF-2007-01' on page 19 undefined on input line 602.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 [19 <./figures/ATLAS/trigger_schematic.pdf>]
-<figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png, id=689, 1927.2pt x
+
+LaTeX Warning: Citation 'ATLAS-TIER-0' on page 20 undefined on input line 616.
+
+
+LaTeX Warning: Citation 'TRIG-2019-04' on page 20 undefined on input line 618.
+
+<figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png, id=556, 1927.2pt x
  1084.05pt>
 File: figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png Graphic file (
 type png)
@@ -1877,9 +2307,16 @@ type png)
 Package pdftex.def Info: figures/ATLAS/ATLAS_Detector_Schematic_white_particles
 .png  used on input line 629.
 (pdftex.def)             Requested size: 422.52348pt x 237.66467pt.
+
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2021-052' on page 20 undefined on input
+ line 631.
+
+
+LaTeX Warning: Citation 'ATLAS-OUTREACH-2021-052' on page 20 undefined on input
+ line 631.
+
 LaTeX Font Info:    Trying to load font information for TS1+pplx on input line 
 635.
-
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1pplx.fd
 File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 )
@@ -1895,10 +2332,61 @@ File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 ]
 chapter 4.
 
+LaTeX Warning: Citation 'PERF-2015-08' on page 23 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'FRUHWIRTH1987444' on page 23 undefined on input line 5
+0.
+
+
 
 [23]
 
+LaTeX Warning: Citation 'PERF-2015-08' on page 24 undefined on input line 61.
+
+
+LaTeX Warning: Citation 'Cornelissen_2008' on page 24 undefined on input line 6
+8.
+
+
+LaTeX Warning: Citation 'PERF-2015-10' on page 24 undefined on input line 70.
+
+
+LaTeX Warning: Citation 'ILLINGWORTH198887' on page 24 undefined on input line 
+71.
+
+
+Overfull \hbox (23.05681pt too wide) in paragraph at lines 70--73
+\T1/pplx/m/n/10.95 (-20) ments from hit pat-terns in the muon cham-bers. A Houg
+h trans-form [[]]
+ []
+
+
+LaTeX Warning: Citation 'PERF-2014-07' on page 24 undefined on input line 90.
+
+
+Overfull \hbox (21.1839pt too wide) in paragraph at lines 88--92
+\T1/pplx/m/n/10.95 (-20) three-dimensional topo-log-i-cal clus-ter-ing of in-di
+-vid-ual calorime-ter cell sig-nals [[]].
+ []
+
+
+
 [24]
+
+LaTeX Warning: Citation 'ATL-PHYS-PUB-2015-026' on page 25 undefined on input l
+ine 124.
+
+
+LaTeX Warning: Citation 'EGAM-2018-01' on page 25 undefined on input line 142.
+
+
+LaTeX Warning: Citation 'PERF-2017-01' on page 25 undefined on input line 148.
+
+
+LaTeX Warning: Citation 'EGAM-2018-01' on page 25 undefined on input line 148.
+
+
 
 [25]
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1907,64 +2395,175 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
+LaTeX Warning: Citation 'web:PLImprovedWPs' on page 26 undefined on input line 
+159.
+
+
+LaTeX Warning: Citation 'EGAM-2018-01' on page 26 undefined on input line 162.
+
+
+LaTeX Warning: Citation 'EGAM-2021-02' on page 26 undefined on input line 168.
+
+
 Package nag Warning: `center' environment in table.
-(nag)                Maybe you want \centering instead on input line 185.
+(nag)                Maybe you want \centering instead on input line 188.
 
 
-Overfull \hbox (8.67456pt too wide) in paragraph at lines 171--185
+Overfull \hbox (8.67456pt too wide) in paragraph at lines 174--188
  [] 
  []
+
+
+LaTeX Warning: Citation 'MUON-2018-03' on page 26 undefined on input line 203.
 
 
 
 [26{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 }]
 
+LaTeX Warning: Citation 'MUON-2018-03' on page 27 undefined on input line 220.
+
+
+LaTeX Warning: Citation 'MUON-2022-01' on page 27 undefined on input line 223.
+
+
+LaTeX Warning: Citation 'MUON-2022-01' on page 27 undefined on input line 229.
+
+
 Package nag Warning: `center' environment in table.
-(nag)                Maybe you want \centering instead on input line 243.
+(nag)                Maybe you want \centering instead on input line 246.
+
+
+LaTeX Warning: Citation 'PERF-2015-09' on page 27 undefined on input line 262.
 
 
 
 [27]
 
+LaTeX Warning: Citation 'Cacciari:2008gp' on page 28 undefined on input line 27
+6.
+
+
+Overfull \hbox (48.93486pt too wide) in paragraph at lines 275--279
+\T1/pplx/m/n/10.95 (-20) The PFlow ob-jects are sub-se-quently clus-tered into 
+jets us-ing the anti-$\OML/zplm/m/it/10.95 k[]$ \T1/pplx/m/n/10.95 (-20) al-go-
+rithm [[]].
+ []
+
+
+
 [28]
-<figures/ATLAS/ftag_perf_dl1r.pdf, id=787, 578.16pt x 578.16pt>
+
+LaTeX Warning: Citation 'Ellis_1993' on page 29 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Dokshitzer_1997' on page 29 undefined on input line 29
+1.
+
+
+LaTeX Warning: Citation 'Cacciari:2008gp' on page 29 undefined on input line 29
+5.
+
+
+LaTeX Warning: Citation 'ATLAS-CONF-2014-018' on page 29 undefined on input lin
+e 297.
+
+
+LaTeX Warning: Citation 'FTAG-2019-07' on page 29 undefined on input line 307.
+
+
+LaTeX Warning: Citation 'ATL-PHYS-PUB-2017-003' on page 29 undefined on input l
+ine 308.
+
+<figures/ATLAS/ftag_perf_dl1r.pdf, id=615, 578.16pt x 578.16pt>
 File: figures/ATLAS/ftag_perf_dl1r.pdf Graphic file (type pdf)
 <use figures/ATLAS/ftag_perf_dl1r.pdf>
 Package pdftex.def Info: figures/ATLAS/ftag_perf_dl1r.pdf  used on input line 3
-14.
+17.
 (pdftex.def)             Requested size: 359.14754pt x 359.1436pt.
+
+LaTeX Warning: Citation 'FTAG-2019-07' on page 29 undefined on input line 318.
+
+
+LaTeX Warning: Citation 'FTAG-2019-07' on page 29 undefined on input line 318.
 
 
 Package nag Warning: `center' environment in table.
-(nag)                Maybe you want \centering instead on input line 335.
+(nag)                Maybe you want \centering instead on input line 338.
+
+
+LaTeX Warning: Citation 'JETM-2018-05' on page 29 undefined on input line 350.
+
+<figures/ATLAS/jes_calib_chain.pdf, id=617, 955.84012pt x 392.66533pt>
+File: figures/ATLAS/jes_calib_chain.pdf Graphic file (type pdf)
+<use figures/ATLAS/jes_calib_chain.pdf>
+Package pdftex.def Info: figures/ATLAS/jes_calib_chain.pdf  used on input line 
+355.
+(pdftex.def)             Requested size: 274.63768pt x 112.82149pt.
+
+LaTeX Warning: Citation 'JETM-2018-05' on page 29 undefined on input line 356.
+
+
+LaTeX Warning: Citation 'JETM-2018-05' on page 29 undefined on input line 356.
 
 
 
 [29]
-<figures/ATLAS/jes_calib_chain.pdf, id=803, 955.84012pt x 392.66533pt>
-File: figures/ATLAS/jes_calib_chain.pdf Graphic file (type pdf)
-<use figures/ATLAS/jes_calib_chain.pdf>
-Package pdftex.def Info: figures/ATLAS/jes_calib_chain.pdf  used on input line 
-352.
-(pdftex.def)             Requested size: 274.63768pt x 112.82149pt.
-
 Underfull \vbox (badness 1270) has occurred while \output is active []
 
 
 
 [30 <./figures/ATLAS/ftag_perf_dl1r.pdf>]
 
+LaTeX Warning: Citation 'JETM-2018-05' on page 31 undefined on input line 384.
+
+
+LaTeX Warning: Citation 'web:JetSystematics' on page 31 undefined on input line
+ 386.
+
+
+LaTeX Warning: Citation 'JETM-2018-05' on page 31 undefined on input line 389.
+
+
+
 [31 <./figures/ATLAS/jes_calib_chain.pdf>]
 
-LaTeX Warning: Reference `' on page 32 undefined on input line 435.
+LaTeX Warning: Citation 'JETM-2018-05' on page 32 undefined on input line 400.
 
 
-Underfull \vbox (badness 4036) has occurred while \output is active []
+LaTeX Warning: Citation 'JETM-2018-05' on page 32 undefined on input line 405.
+
+
+LaTeX Warning: Citation 'JETM-2018-05' on page 32 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'web:JetSystematics' on page 32 undefined on input line
+ 413.
+
+
+LaTeX Warning: Citation 'JETM-2020-03' on page 32 undefined on input line 422.
 
 
 
 [32]
+
+LaTeX Warning: Citation 'Adams:1700874' on page 33 undefined on input line 437.
+
+
+
+LaTeX Warning: Reference `' on page 33 undefined on input line 438.
+
+
+LaTeX Warning: Citation 'ATL-PHYS-PUB-2015-013' on page 33 undefined on input l
+ine 454.
+
+
+Overfull \hbox (17.80423pt too wide) in paragraph at lines 453--458
+\T1/pplx/m/n/10.95 (-20) tal re-sults. The AT-LAS col-lab-o-ra-tion pro-vides r
+ec-om-men-da-tions [[]]
+ []
+
+
 
 [33]) (./chapters/CjetCalib.tex
 
@@ -1982,32 +2581,38 @@ chapter 5.
 
 ]
 chapter 6.
-) (./chapters/WbWb/EventSelection.tex) (./chapters/WbWb/WReconstruction.tex
+) (./chapters/WbWb/EventSelection.tex
 
-[37]
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1019, page=1, 845.1575pt x 597.
-23125pt>
+LaTeX Warning: Citation 'EGAM-2019-01' on page 37 undefined on input line 26.
+
+
+
+[37]) (./chapters/WbWb/WReconstruction.tex
+
+[38]
+<figures/WbWb/WhadReconstruction/purity.pdf, id=833, page=1, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 1>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page1 use
 d on input line 28.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1020, page=2, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=834, page=2, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 2>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page2 use
 d on input line 34.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1021, page=3, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=835, page=3, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 3>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page3 use
 d on input line 54.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1022, page=4, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=836, page=4, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 4>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page4 use
@@ -2015,30 +2620,30 @@ d on input line 59.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
 
 
-[38]
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1031, page=5, 845.1575pt x 597.
-23125pt>
+[39]
+<figures/WbWb/WhadReconstruction/purity.pdf, id=847, page=5, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 5>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page5 use
 d on input line 79.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1032, page=6, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=848, page=6, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 6>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page6 use
 d on input line 84.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1033, page=7, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=849, page=7, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 7>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page7 use
 d on input line 90.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1034, page=8, 845.1575pt x 597.
-23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=850, page=8, 845.1575pt x 597.2
+3125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 8>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page8 use
@@ -2046,26 +2651,26 @@ d on input line 95.
 (pdftex.def)             Requested size: 207.03882pt x 146.30014pt.
 
 
-[39 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+[40 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./f
 igures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./figur
 es/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>]
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1051, page=25, 845.1575pt x 597
-.23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=865, page=25, 845.1575pt x 597.
+23125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 25>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page25 us
 ed on input line 113.
 (pdftex.def)             Requested size: 207.03882pt x 191.40952pt.
-<figures/WbWb/WhadReconstruction/purity.pdf, id=1053, page=24, 845.1575pt x 597
-.23125pt>
+<figures/WbWb/WhadReconstruction/purity.pdf, id=867, page=24, 845.1575pt x 597.
+23125pt>
 File: figures/WbWb/WhadReconstruction/purity.pdf Graphic file (type pdf)
 <use figures/WbWb/WhadReconstruction/purity.pdf, page 24>
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/purity.pdf , page24 us
 ed on input line 118.
 (pdftex.def)             Requested size: 207.03882pt x 191.40952pt.
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1055, 
-page=1, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=869, p
+age=1, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2082,8 +2687,8 @@ Package nag Warning: \label in float, but not after \caption on input line 133.
 Package nag Warning: \label in float, but not after \caption on input line 133.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1057, 
-page=2, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=871, p
+age=2, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2099,8 +2704,8 @@ Package nag Warning: \label in float, but not after \caption on input line 138.
 Package nag Warning: \label in float, but not after \caption on input line 138.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1059, 
-page=3, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=873, p
+age=3, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2116,8 +2721,8 @@ Package nag Warning: \label in float, but not after \caption on input line 144.
 Package nag Warning: \label in float, but not after \caption on input line 144.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1061, 
-page=4, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=875, p
+age=4, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2133,8 +2738,8 @@ Package nag Warning: \label in float, but not after \caption on input line 149.
 Package nag Warning: \label in float, but not after \caption on input line 149.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1063, 
-page=5, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=877, p
+age=5, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2150,8 +2755,8 @@ Package nag Warning: \label in float, but not after \caption on input line 155.
 Package nag Warning: \label in float, but not after \caption on input line 155.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1065, 
-page=6, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=879, p
+age=6, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2167,8 +2772,8 @@ Package nag Warning: \label in float, but not after \caption on input line 160.
 Package nag Warning: \label in float, but not after \caption on input line 160.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1067, 
-page=7, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=881, p
+age=7, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2184,8 +2789,8 @@ Package nag Warning: \label in float, but not after \caption on input line 166.
 Package nag Warning: \label in float, but not after \caption on input line 166.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1069, 
-page=8, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=883, p
+age=8, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2201,8 +2806,8 @@ Package nag Warning: \label in float, but not after \caption on input line 171.
 Package nag Warning: \label in float, but not after \caption on input line 171.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1071, 
-page=17, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=885, p
+age=17, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2218,8 +2823,8 @@ Package nag Warning: \label in float, but not after \caption on input line 182.
 Package nag Warning: \label in float, but not after \caption on input line 182.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1073, 
-page=18, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=887, p
+age=18, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2235,8 +2840,8 @@ Package nag Warning: \label in float, but not after \caption on input line 187.
 Package nag Warning: \label in float, but not after \caption on input line 187.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1075, 
-page=19, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=889, p
+age=19, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2252,8 +2857,8 @@ Package nag Warning: \label in float, but not after \caption on input line 193.
 Package nag Warning: \label in float, but not after \caption on input line 193.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1077, 
-page=20, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=891, p
+age=20, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2269,8 +2874,8 @@ Package nag Warning: \label in float, but not after \caption on input line 198.
 Package nag Warning: \label in float, but not after \caption on input line 198.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1079, 
-page=21, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=893, p
+age=21, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2286,8 +2891,8 @@ Package nag Warning: \label in float, but not after \caption on input line 204.
 Package nag Warning: \label in float, but not after \caption on input line 204.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1081, 
-page=22, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=895, p
+age=22, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2303,8 +2908,8 @@ Package nag Warning: \label in float, but not after \caption on input line 209.
 Package nag Warning: \label in float, but not after \caption on input line 209.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1083, 
-page=23, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=897, p
+age=23, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2320,8 +2925,8 @@ Package nag Warning: \label in float, but not after \caption on input line 215.
 Package nag Warning: \label in float, but not after \caption on input line 215.
 
 
-<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=1085, 
-page=24, 597.23125pt x 845.1575pt>
+<figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, id=899, p
+age=24, 597.23125pt x 845.1575pt>
 File: figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf Graph
 ic file (type pdf)
 <use figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf, page 
@@ -2342,30 +2947,14 @@ Underfull \vbox (badness 3029) has occurred while \output is active []
 
 
 
-[40 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+[41 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./f
 igures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> <./figur
 es/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>])
-(./chapters/WbWb/Regions.tex)
+(./chapters/WbWb/Regions.tex
 
-[41 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
+[42 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees> 
 <./figures/WbWb/WhadReconstruction/purity.pdf, page is rotated 90 degrees>]
-
-LaTeX Warning: Text page 42 contains only floats.
-
-
-Overfull \vbox (1.36957pt too high) has occurred while \output is active []
-
-
-
-[42 <./figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./
-figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures
-/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/W
-hadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReco
-nstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruct
-ion/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/res
-olution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/resolution
-_j12_three_pt_ordered.pdf>]
 
 LaTeX Warning: Text page 43 contains only floats.
 
@@ -2382,24 +2971,349 @@ nstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruct
 ion/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/res
 olution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/resolution
 _j12_three_pt_ordered.pdf>]
+
+LaTeX Warning: Text page 44 contains only floats.
+
+
+Overfull \vbox (1.36957pt too high) has occurred while \output is active []
+
+
+
+[44 <./figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./
+figures/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures
+/WbWb/WhadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/W
+hadReconstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReco
+nstruction/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruct
+ion/resolution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/res
+olution_j12_three_pt_ordered.pdf> <./figures/WbWb/WhadReconstruction/resolution
+_j12_three_pt_ordered.pdf>]
+<figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, id=947, page=23, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf 
+, page23 used on input line 77.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, id=948, page=23, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particl
+e.pdf , page23 used on input line 82.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf, id=949, page=23, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf 
+, page23 used on input line 88.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf, id=950, page=23, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particl
+e.pdf , page23 used on input line 93.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf, id=951, page=23, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf 
+, page23 used on input line 99.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf, id=952, page=23, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particl
+e.pdf , page23 used on input line 104.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, id=953, page=44, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf 
+, page44 used on input line 115.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, id=954, page=44, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particl
+e.pdf , page44 used on input line 120.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf, id=955, page=44, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf 
+, page44 used on input line 126.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf, id=956, page=44, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particl
+e.pdf , page44 used on input line 131.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf, id=957, page=44, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf 
+, page44 used on input line 137.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+<figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf, id=958, page=44, 
+569.12625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf Graphic file 
+(type pdf)
+<use figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf, page 44>
+Package pdftex.def Info: figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particl
+e.pdf , page44 used on input line 142.
+(pdftex.def)             Requested size: 126.75833pt x 121.61224pt.
+
+
+[45]
+
+[46 <./figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, page is rotated 9
+0 degrees> <./figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, page
+ is rotated 90 degrees> <./figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pd
+f, page is rotated 90 degrees> <./figures/WbWb/WhadParticle/SR_Whad_Final_m_Wha
+d_particle.pdf, page is rotated 90 degrees> <./figures/WbWb/WhadLoose/SR_Whad_F
+inal_e_Whad_loose.pdf, page is rotated 90 degrees> <./figures/WbWb/WhadParticle
+/SR_Whad_Final_e_Whad_particle.pdf, page is rotated 90 degrees>]
+
+[47 <./figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf, page is rotated 9
+0 degrees> <./figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf, page
+ is rotated 90 degrees> <./figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pd
+f, page is rotated 90 degrees> <./figures/WbWb/WhadParticle/SR_Whad_Final_m_Wha
+d_particle.pdf, page is rotated 90 degrees> <./figures/WbWb/WhadLoose/SR_Whad_F
+inal_e_Whad_loose.pdf, page is rotated 90 degrees> <./figures/WbWb/WhadParticle
+/SR_Whad_Final_e_Whad_particle.pdf, page is rotated 90 degrees>]
+
+LaTeX Warning: Citation 'Schmitt:2012kp' on page 48 undefined on input line 158
+.
+
+
+LaTeX Warning: Reference `' on page 48 undefined on input line 180.
+
+
+
+[48
+
+]
+
+LaTeX Warning: Citation 'Tikhonov1995' on page 49 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'Schmitt:2019um' on page 49 undefined on input line 199
+.
+
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1238, page=1, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 1>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge1 used on input line 227.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1239, page=3, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge3 used on input line 232.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, id=1240, page=3, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf 
+, page3 used on input line 238.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, id=1241, page=3, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page 3>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf , pa
+ge3 used on input line 243.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1242, page=5, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 5>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge5 used on input line 254.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1243, page=7, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 7>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge7 used on input line 259.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, id=1244, page=6, 569.12
+625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page 6>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf 
+, page6 used on input line 265.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, id=1245, page=6, 569.12625p
+t x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page 6>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf , pa
+ge6 used on input line 270.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1246, page=21, 569.12625
+pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 21>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge21 used on input line 281.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, id=1247, page=23, 569.12625
+pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page 23>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf , pa
+ge23 used on input line 286.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, id=1248, page=18, 569.1
+2625pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf Graphic file (type 
+pdf)
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page 18>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf 
+, page18 used on input line 292.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+<figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureA
+lternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, id=1249, page=18, 569.12625
+pt x 546.04pt>
+File: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClo
+sureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf Graphic file (type pdf)
+
+<use figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClos
+ureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page 18>
+Package pdftex.def Info: figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_
+OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf , pa
+ge18 used on input line 297.
+(pdftex.def)             Requested size: 190.13428pt x 182.41837pt.
+)
+
+[49]
+
+[50 <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonCl
+osureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90 de
+grees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_no
+nClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90
+ degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data
+_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page is rot
+ated 90 degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_Optio
+nA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page is 
+rotated 90 degrees>]
+
+[51 <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonCl
+osureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90 de
+grees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_no
+nClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90
+ degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data
+_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page is rot
+ated 90 degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_Optio
+nA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page is 
+rotated 90 degrees>]
+
+[52 <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonCl
+osureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90 de
+grees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_no
+nClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf, page is rotated 90
+ degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data
+_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf, page is rot
+ated 90 degrees> <./figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_Optio
+nA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf, page is 
+rotated 90 degrees>]
 \openout2 = `chapters/TopMass/Introduction.aux'.
 
  (./chapters/TopMass/Introduction.tex
+chapter 7.
+)
 
-[44
+[53
 
 
 
 ]
-chapter 7.
-)
-
-[45]
 \openout2 = `chapters/TopMass/LTF.aux'.
 
  (./chapters/TopMass/LTF.tex)
 
-[46
+[54
 
 
 
@@ -2408,7 +3322,7 @@ chapter 7.
 
  (./chapters/TopMass/Templates.tex)
 
-[47
+[55
 
 
 
@@ -2417,14 +3331,14 @@ chapter 7.
 
  (./chapters/TopMass/Results.tex)
 
-[48
+[56
 
 
 
 ] (./chapters/Conclusion.tex
 chapter 8.
 ) (./chapters/WbWb/Wreco_ML.tex
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1151, page=3, 462.52798p
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1424, page=3, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2432,7 +3346,7 @@ File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
 ge3 used on input line 19.
 (pdftex.def)             Requested size: 207.03882pt x 155.28131pt.
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1152, page=3, 462.52798p
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1425, page=3, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2442,18 +3356,18 @@ ge3 used on input line 24.
 (pdftex.def)             Requested size: 207.03882pt x 155.28131pt.
 
 
-LaTeX Warning: Reference `fig:WhadrecoML:loss' on page 49 undefined on input li
+LaTeX Warning: Reference `fig:WhadrecoML:loss' on page 57 undefined on input li
 ne 33.
 
 
 
-[49
+[57
 
 
 
 
 ]
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1157, page=7, 462.52798p
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1431, page=7, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2461,7 +3375,7 @@ File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
 ge7 used on input line 44.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1158, page=1, 462.52798p
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1432, page=1, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2469,7 +3383,7 @@ File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
 ge1 used on input line 49.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1159, page=4, 462.52798p
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1433, page=4, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2477,7 +3391,7 @@ File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/part_ml_study.pdf , pa
 ge4 used on input line 55.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1166, page=7, 462.52798p
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1440, page=7, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2485,7 +3399,7 @@ File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
 ge7 used on input line 66.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1167, page=1, 462.52798p
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1441, page=1, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2493,7 +3407,7 @@ File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
 ge1 used on input line 71.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1168, page=4, 462.52798p
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1442, page=4, 462.52798p
 t x 346.89601pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2501,7 +3415,7 @@ File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/WbWb/WhadReconstruction/reco_ml_study.pdf , pa
 ge4 used on input line 77.
 (pdftex.def)             Requested size: 177.45908pt x 133.0975pt.
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1177, page=10, 867.24pt 
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1451, page=10, 867.24pt 
 x 289.08pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2516,7 +3430,7 @@ Package nag Warning: \label in float, but not after \caption on input line 96.
 
 Package nag Warning: \label in float, but not after \caption on input line 96.
 
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1178, page=8, 867.24pt x
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1452, page=8, 867.24pt x
  289.08pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2532,7 +3446,7 @@ Package nag Warning: \label in float, but not after \caption on input line 101.
 Package nag Warning: \label in float, but not after \caption on input line 101.
 
 
-<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1179, page=9, 867.24pt x
+<figures/WbWb/WhadReconstruction/part_ml_study.pdf, id=1453, page=9, 867.24pt x
  289.08pt>
 File: figures/WbWb/WhadReconstruction/part_ml_study.pdf Graphic file (type pdf)
 
@@ -2548,7 +3462,7 @@ Package nag Warning: \label in float, but not after \caption on input line 106.
 Package nag Warning: \label in float, but not after \caption on input line 106.
 
 
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1180, page=10, 867.24pt 
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1454, page=10, 867.24pt 
 x 289.08pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2564,7 +3478,7 @@ Package nag Warning: \label in float, but not after \caption on input line 117.
 Package nag Warning: \label in float, but not after \caption on input line 117.
 
 
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1181, page=8, 867.24pt x
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1455, page=8, 867.24pt x
  289.08pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2580,7 +3494,7 @@ Package nag Warning: \label in float, but not after \caption on input line 122.
 Package nag Warning: \label in float, but not after \caption on input line 122.
 
 
-<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1182, page=9, 867.24pt x
+<figures/WbWb/WhadReconstruction/reco_ml_study.pdf, id=1456, page=9, 867.24pt x
  289.08pt>
 File: figures/WbWb/WhadReconstruction/reco_ml_study.pdf Graphic file (type pdf)
 
@@ -2598,32 +3512,38 @@ Package nag Warning: \label in float, but not after \caption on input line 127.
 
 )
 
-[50 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+[58 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
 econstruction/reco_ml_study.pdf>]
 
-[51 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+[59 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
 econstruction/part_ml_study.pdf> <./figures/WbWb/WhadReconstruction/part_ml_stu
 dy.pdf>]
 
-[52 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
+[60 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
 econstruction/reco_ml_study.pdf> <./figures/WbWb/WhadReconstruction/reco_ml_stu
 dy.pdf>]
 
-[53 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
+[61 <./figures/WbWb/WhadReconstruction/part_ml_study.pdf> <./figures/WbWb/WhadR
 econstruction/part_ml_study.pdf> <./figures/WbWb/WhadReconstruction/part_ml_stu
 dy.pdf>]
 
-[54 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
+[62 <./figures/WbWb/WhadReconstruction/reco_ml_study.pdf> <./figures/WbWb/WhadR
 econstruction/reco_ml_study.pdf> <./figures/WbWb/WhadReconstruction/reco_ml_stu
 dy.pdf>]
 Package tocbasic Info: character protrusion at lof deactivated on input line 81
 .
  (./main.lof
+Overfull \hbox (119.15236pt too wide) in paragraph at lines 11--11
+ [][] [][][]\T1/pplx/m/n/10.95 (-20) Illustration of the AT-LAS co-or-di-nate s
+ys-tem. Fig-ure taken from Ref. [[]].[][] [][]  
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[55
+[63
 
 
 ])
@@ -2631,8 +3551,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout6 = `main.lof'.
 
 
+Underfull \vbox (badness 1694) has occurred while \output is active []
 
-[56]
+
+
+[64]
+
+[65]
+
+[66
+
+
+]
 Package tocbasic Info: character protrusion at lot deactivated on input line 82
 .
  (./main.lot)
@@ -2641,36 +3571,8 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 82
 
 
 
-[57
+LaTeX Warning: Empty bibliography on input line 85.
 
-
-]
-
-[58
-
-
-]
-chapter without number
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplx/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-
-
-[59]
-
-[60]
-
-[61]
-
-[62]
-
-[63]
-
-[64]
-
-[65]
-
-[66]
 
 Package nag Warning: 47 complaints in total.
 
@@ -2690,33 +3592,42 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60335 strings out of 467748
- 1384354 string characters out of 5426964
- 2452034 words of memory out of 5000000
- 87219 multiletter control sequences out of 15000+600000
- 716702 words of font info for 599 fonts, out of 8000000 for 9000
+ 59403 strings out of 467748
+ 1363828 string characters out of 5426964
+ 2445885 words of memory out of 5000000
+ 86492 multiletter control sequences out of 15000+600000
+ 716775 words of font info for 522 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 111i,14n,115p,11207b,4465s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2025/texm
+ 111i,15n,115p,11207b,4465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{chapter*.50} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texl
+ive/2025/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/202
+5/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2025/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2025/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (77 pages, 15681899 bytes).
+Output written on main.pdf (77 pages, 15956955 bytes).
 PDF statistics:
  2425 PDF objects out of 2487 (max. 8388607)
- 1516 compressed objects within 16 object streams
- 258 named destinations out of 1000 (max. 500000)
- 112374 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 1281 compressed objects within 13 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 113558 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -75,34 +75,34 @@ A quantitative overview is provided in Table ... where the event yields for the 
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		%\caption{\pT resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:l_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		%\caption{\pT resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:l_ptlep}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:m_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:m_ptlep}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:e_ptlep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:e_ptlep}
 	\end{subfigure}
 	\caption{Add caption.}
@@ -113,41 +113,41 @@ A quantitative overview is provided in Table ... where the event yields for the 
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		%\caption{\pT resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:l_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		%\caption{\pT resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:l_mbl}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:m_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:m_mbl}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		%\caption{Rapidity resolution.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:e_mbl}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		%\caption{Rapidity resolution with mass cut.}
+		\phantomsubcaption
 		\label{fig:WhadLoose:e_mbl}
 	\end{subfigure}
 	\caption{Add caption.}
 	\label{fig:Regions:mbl}
 \end{figure}
 
-
+\clearpage
 \section{Unfolding}
 
 The distributions measured at the detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, as well as misreconstruction and misidentification of particles. 
@@ -161,51 +161,238 @@ A \textit{migration matrix} is constructed, which describes how events are redis
 
 This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix and the choice of regularization. Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
 
-\subsection{Unfolding procedure and cross secrtion definition}
+\subsection{Unfolding procedure and cross section definition}
 
-The measurement is performed as a counting experiment, where events are grouped into certain regions of phase-space, also called bins.
-The definition of the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ is given by the formula
+The measurement is performed as a counting experiment, where events are grouped into certain 
+regions of phase-space, also called bins.
+The definition of the differential fiducial cross section as a function of an observable $X$
+in a given bin $i$ is given by the formula
 \begin{equation}
     \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}f_{\text{acc}}^j(N_{d,j}-N_{b,j}).
     \label{eq:Unfolding}
 \end{equation}
-The measured quantity $N_{d,j}$ denotes the number of data events in bin $j$.
-The first step subtracts the number of background events $N_{b,j}$.
-These are obtained from data driven methods or MC simulations, as explained in Section~\ref{}. The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
+with the integrated luminosity $L$ and the bin width $\Delta X_i$.
+Corrections are applied for the acceptance $f_{\text{acc}}^j$ and the efficiency $\epsilon_i$, respectively.
+The migration matrix is denoted by $M_{ij}$ and its inverse is used to correct for the event migration between bins.
+$N_{d,j}$ denotes the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
 
-
+The first step subtracts the background from the data.
+The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{}.
+The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
 
 The response matrix $M_R$ keeps tracks of event migration.
-Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation are filled in $M_{R,ij}$. An ideal measurement would therefore produce a perfectly diagonal matrix. 
-Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled. The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
+Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation
+are filled in $M_{R,ij}$. An ideal measurement would therefore produce a perfectly diagonal matrix.
+Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled.
+The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
 \begin{equation}
     M_{ij} = \frac{M_{R,ij}}{N_{t,i}},
 \end{equation}
 where $N_{t,i}$ is the number of particle level (true) events in bin $i$.
 Thus, $M_{ij}$ can be interpreted as the probability of a particle level event generated in bin $i$ to be reconstructed in bin $j$.
+The choice of the bin boundaries is such that the diagonal elements of the matrix contain at least 60\% of particle level events per row.
 
 A simple inversion of $M$ in order to obtain the true particle level distribution is
 not sufficient, as it can enhance statistical fluctuations in the data.
-Therefore, a \textit{regularization} term is added which ensures a dampening of this effect and therefore a smooth unfolded distribution.
-This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995} is employed as implemented in the TUnfold package~\cite{Schmitt:2019um}.
+Therefore, a regularization term is added which ensures a dampening of this effect
+and therefore a smooth unfolded distribution.
+This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995}
+as implemented in the TUnfold package~\cite{Schmitt:2019um}.
 
-\begin{align}
-\mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
-\mathcal{L}_1 &= (\boldsymbol{y} - \mathbf{A}\boldsymbol{x})^\top \mathbf{V}_{yy}^{-1} (\boldsymbol{y} - \mathbf{A}\boldsymbol{x}), && \tag{4} \\
-\mathcal{L}_2 &= \tau^2 (\boldsymbol{x} - f_b \boldsymbol{x}_0)^\top (\mathbf{L}^\top \mathbf{L}) (\boldsymbol{x} - f_b \boldsymbol{x}_0), && \tag{5} \\
-\mathcal{L}_3 &= \lambda (Y - \boldsymbol{e}^\top \boldsymbol{x}) && \text{and} \tag{6} \\
-Y &= \sum_i y_i, && \tag{7} \\
-e_j &= \sum_i A_{ij}, && \tag{8}
-\end{align}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[trim=5cm 15cm 5cm 4.5cm, clip, width=.8\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/lCurve_scan.pdf}
+    \caption{Some caption. Figure taken from~\cite{lCurve}.}
+	\label{fig:unfolding:migma:lcurvescan}
+\end{figure}
 
+A least squares method with Tikhonov regularization and additional
+area constraint is employed to estimate the true distribution. 
+The strength of the regularization parameter $\lambda$ is determined in a \textit{L-curve scan}~\cite{lCurve}. The regularization term is plotted against the least-squares term of the data, schematically shown in Figure~\ref{fig:unfolding:migma:lcurvescan}. The point with the largest curvature defines the value of $\lambda$.
+
+A regularization mode that penalizes the absolute size of the unfolded bins.
+is chosen. It suppresses large fluctuations, while not enforcing smoothness between neighboring bins explicitly.
+
+The number of degrees of freedom in the minimization has to be larger than zero.
+Therefore, the number of bins on reconstructed level is chosen to be twice as large, compared to the particle level distribution.
+The bin edges coincide, adding an intermediate bin on detector level to ensure convergence and a smooth distribution
+at reconstruction level.
+
+%\begin{align}
+%\mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
+%\mathcal{L}_1 &= (\boldsymbol{y} - \mathbf{A}\boldsymbol{x})^\top \mathbf{V}_{yy}^{-1} (\boldsymbol{y} - \mathbf{A}\boldsymbol{x}), && \tag{4} \\
+%\mathcal{L}_2 &= \tau^2 (\boldsymbol{x} - f_b \boldsymbol{x}_0)^\top (\mathbf{L}^\top \mathbf{L}) (\boldsymbol{x} - f_b \boldsymbol{x}_0), && \tag{5} \\
+%\mathcal{L}_3 &= \lambda (Y - \boldsymbol{e}^\top \boldsymbol{x}) && \text{and} \tag{6} \\
+%Y &= \sum_i y_i, && \tag{7} \\
+%e_j &= \sum_i A_{ij}, && \tag{8}
+%\end{align}
+
+Only those events that pass both the particle and reconstructed-
+level selection are described by the migration matrix.
+Therefore, two other distributions need to be taken into account.
 
 The acceptance $f^j_\text{acc}$ is defined as the fraction of all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
-It can be calculated from the normalized response matrix as 
-$f^j_\text{acc} = \sum_i M_{R,i,j}$.
+It can be calculated from the response matrix as 
+\begin{equation}
+    f^j_\text{acc} = \sum_i M_{R,ij}/N_{d,i}.
+\end{equation}
 
-The complementary efficiency $\epsilon_i = \sum_j M_{R,i,j}^\text{norm}$ 
-is defined as the fraction of matched events out of all events passing the particle-level selection. It corrects for events that fail to be reconstructed or selected at the detector level. This can result from limitations in detector coverage, insufficient resolution, trigger thresholds or reconstruction algorithms.
+The complementary efficiency 
+\begin{equation}
+    \epsilon_i = \sum_j M_{R,ij}/N_{t,i}
+\end{equation}
+is defined as the fraction of matched events out of all events passing the particle-level 
+selection. It corrects for events that fail to be reconstructed or selected at the detector
+level. This can result from limitations in detector coverage, insufficient resolution,
+trigger thresholds or reconstruction algorithms.
 
-The final ste
+Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
+to obtain the differential cross section.
+
+LATER: Control distributions are shown. Decide on which to show and how to arrange them
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:migma:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:acc_eff:lep_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_stat:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_all:lep_pt}
+	\end{subfigure}
+	\caption{Add caption.}
+	\label{fig:unfolding:lep_pt}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:migma:b1_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:acc_eff:b1_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_stat:b1_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_all:b1_pt}
+	\end{subfigure}
+	\caption{Add caption.}
+	\label{fig:unfolding:b1_pt}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:migma:whad_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:acc_eff:whad_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_stat:whad_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\phantomsubcaption
+		\label{fig:whadpart:unfolding:cov_all:whad_pt}
+	\end{subfigure}
+	\caption{Add caption.}
+	\label{fig:unfolding:whad_pt}
+\end{figure}
+
 
 \subsection{Propagation of uncertainties}
+
+Uncertainty components associated with the cross section measurement are
+propagated from detector level through the unfolding pipeline to unfolded cross
+section level. Deviations from the nominal results are evaluated separately for
+the upward and downward variation. One-sided uncertainties are symmetrized 
+on detector level. The single uncertainties are assumed to be uncorrelated.
+The propagated uncertainties are therefore summed up in quadrature
+\begin{equation}
+	\sigma_\text{tot}^\text{up/down} = \sqrt{\sum_\text{sys} (\sigma_\text{sys}^\text{up/down})^2}
+\end{equation}
+Depending on the nature of the uncertainty, different propagation procedures are
+used, as described in the following. 
+The systematic uncertainty is defined as the shift in the cross section
+where the nominal result is taken from Equation~\eqref{eq:Unfolding}
+\begin{equation}
+	\Delta\sigma_\text{sys} = \sigma_\text{nom} - \sigma_\text{sys}
+\end{equation}
+The sign of the uncertainties are kept. 
+Up and down variations are expected to be symmetrical.
+
+\vspace{.5cm}
+\noindent
+\textbf{Detector systematic uncertainties}
+\vspace{.5cm}
+
+\noindent
+Detector systematics are propagated from detector to particle level by calculating varied unfolding corrections, i.e. acceptance, efficiency, migration matrix and background predictions
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
+    {f_{\text{acc}}^{j}}'(N_{d,j}-N_{b,j}').
+\end{equation}
+Dashed quantities indicate the systematic variation.
+The nominal data is unfolded with these varied corrections and the difference to the nominal cross section defines the uncertainty
+
+\vspace{.5cm}
+\noindent
+\textbf{Signal modeling}
+\vspace{.5cm}
+
+\noindent
+Uncertainties in the signal modeling are implemented employing pseudo-data obtained from MC simulations. They incorporate signal and background processes $N_{pd} = N_s + N_b$.
+Varying migration matrix and correction factors in the unfolding of the pseudo data returns the systematically shifted cross section
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
+    {f_{\text{acc}}^{j}}'(N_{pd,j}-N_{b,j}').
+\end{equation}
+which is then compared to the nominal result.
+
+\vspace{.5cm}
+\noindent
+\textbf{Background modeling}
+\vspace{.5cm}
+
+\noindent
+Uncertainties in the background modeling are propagated by varying the background prediction, while keeping all other unfolding corrections fixed and reapplying the unfolding procedure to the data
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}
+    f_{\text{acc}}^{j}(N_{d,j}-N_{b,j}').
+\end{equation}
+
+
+Statistical uncertainties
+

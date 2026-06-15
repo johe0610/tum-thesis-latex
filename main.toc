@@ -31,17 +31,22 @@
 \contentsline {section}{\numberline {4.6}Definition of physics objects on particle level}{33}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Calibration of ATLAS flavor taggers}{35}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Measurement of WbWb cross sections}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Baseline Event selection}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}On the reconstruction of W bosons}{38}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Measurement Regions}{41}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Extraction of the top quark mass}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}The Linear Template Fit}{46}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Templates for the fit}{47}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Results of the fit}{48}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Conclusion}{49}{chapter.8}%
-\contentsline {subsection}{\numberline {8.0.1}Machine learning based reconstruction of the hadronically decaying W boson}{49}{subsection.8.0.1}%
+\contentsline {section}{\numberline {6.1}Background estimation}{37}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}\ensuremath {W}\xspace + jets background}{37}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Misidentified and non-prompt leptons}{37}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Baseline Event selection}{38}{section.6.2}%
+\contentsline {section}{\numberline {6.3}On the reconstruction of W bosons}{39}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Measurement Regions}{42}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Unfolding}{48}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Unfolding procedure and cross section definition}{48}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Propagation of uncertainties}{49}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Extraction of the top quark mass}{53}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The Linear Template Fit}{54}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Templates for the fit}{55}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Results of the fit}{56}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{57}{chapter.8}%
+\contentsline {subsection}{\numberline {8.0.1}Machine learning based reconstruction of the hadronically decaying W boson}{57}{subsection.8.0.1}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline List of Figures}{55}{chapter*.30}%
-\contentsline {chapter}{\nonumberline List of Tables}{57}{chapter*.31}%
-\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.32}%
+\contentsline {chapter}{\nonumberline List of Figures}{63}{chapter*.48}%
+\contentsline {chapter}{\nonumberline List of Tables}{67}{chapter*.49}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

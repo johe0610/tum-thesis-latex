@@ -6,13 +6,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref {sec:ObjRecl:Tracks}}}{26}{table.caption.14}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref {sec:ObjRecl:Tracks}}}{28}{table.caption.15}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Summary of the jet definitions in the analysis.}}{29}{table.caption.17}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal and fake estimation (see Sec.~\ref {ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref {sec:ObjRecl:Tracks}}}{26}{table.caption.14}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal and fake estimation (see Sec.~\ref {ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref {sec:ObjRecl:Tracks}}}{28}{table.caption.15}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Summary of the jet definitions in the analysis.}}{31}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces A summary of the event selection for the loose and the \ensuremath {W}\xspace -hadronic measurement regions. The cuts are applied on detector and particle level.}}{45}{table.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \def \@chapapp {\appendixname }
-\addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
