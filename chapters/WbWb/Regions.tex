@@ -196,10 +196,24 @@ A simple inversion of $M$ in order to obtain the true particle level distributio
 not sufficient, as it can enhance statistical fluctuations in the data.
 Therefore, a regularization term is added which ensures a dampening of this effect
 and therefore a smooth unfolded distribution.
-This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995} is employed
+This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995}
 as implemented in the TUnfold package~\cite{Schmitt:2019um}.
-A least squares method with Tikhonov regularization and additional area constraint is employed to estimate
-the true distribution. The number of degrees of freedom in the minimization has to be larger than zero.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[trim=5cm 15cm 5cm 4.5cm, clip, width=.8\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/lCurve_scan.pdf}
+    \caption{Some caption. Figure taken from~\cite{lCurve}.}
+	\label{fig:unfolding:migma:lcurvescan}
+\end{figure}
+
+A least squares method with Tikhonov regularization and additional
+area constraint is employed to estimate the true distribution. 
+The strength of the regularization parameter $\lambda$ is determined in a \textit{L-curve scan}~\cite{lCurve}. The regularization term is plotted against the least-squares term of the data, schematically shown in Figure~\ref{fig:unfolding:migma:lcurvescan}. The point with the largest curvature defines the value of $\lambda$.
+
+A regularization mode that penalizes the absolute size of the unfolded bins.
+is chosen. It suppresses large fluctuations, while not enforcing smoothness between neighboring bins explicitly.
+
+The number of degrees of freedom in the minimization has to be larger than zero.
 Therefore, the number of bins on reconstructed level is chosen to be twice as large, compared to the particle level distribution.
 The bin edges coincide, adding an intermediate bin on detector level to ensure convergence and a smooth distribution
 at reconstruction level.
@@ -327,29 +341,58 @@ the upward and downward variation. One-sided uncertainties are symmetrized
 on detector level. The single uncertainties are assumed to be uncorrelated.
 The propagated uncertainties are therefore summed up in quadrature
 \begin{equation}
-	\sigma_\text{tot}^\text{up/down} = \sqrt{}\sum_\text{sys} (\sigma_\text{sys}^\text{up/down})^2
+	\sigma_\text{tot}^\text{up/down} = \sqrt{\sum_\text{sys} (\sigma_\text{sys}^\text{up/down})^2}
 \end{equation}
 Depending on the nature of the uncertainty, different propagation procedures are
-used, as described in the following. The input data ($N_d$ in Eq.~\eqref{eq:Unfolding}) is 
-fixed, varying the migration matrix 
-and derived acceptance and efficiency corrections.
+used, as described in the following. 
 The systematic uncertainty is defined as the shift in the cross section
 where the nominal result is taken from Equation~\eqref{eq:Unfolding}
 \begin{equation}
-	\Delta\sigma_\text{sys} = \sigma - \sigma_\text{sys}
+	\Delta\sigma_\text{sys} = \sigma_\text{nom} - \sigma_\text{sys}
 \end{equation}
+The sign of the uncertainties are kept. 
+Up and down variations are expected to be symmetrical.
 
-\subsection{Detector systematic uncertainties}
+\vspace{.5cm}
+\noindent
+\textbf{Detector systematic uncertainties}
+\vspace{.5cm}
 
-%\begin{equation}
-%    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}f_{\text{acc}}^j(N_{d,j}-N_{b,j}).
-%\end{equation}
+\noindent
+Detector systematics are propagated from detector to particle level by calculating varied unfolding corrections, i.e. acceptance, efficiency, migration matrix and background predictions
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
+    {f_{\text{acc}}^{j}}'(N_{d,j}-N_{b,j}').
+\end{equation}
+Dashed quantities indicate the systematic variation.
+The nominal data is unfolded with these varied corrections and the difference to the nominal cross section defines the uncertainty
+
+\vspace{.5cm}
+\noindent
+\textbf{Signal modeling}
+\vspace{.5cm}
+
+\noindent
+Uncertainties in the signal modeling are implemented employing pseudo-data obtained from MC simulations. They incorporate signal and background processes $N_{pd} = N_s + N_b$.
+Varying migration matrix and correction factors in the unfolding of the pseudo data returns the systematically shifted cross section
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
+    {f_{\text{acc}}^{j}}'(N_{pd,j}-N_{b,j}').
+\end{equation}
+which is then compared to the nominal result.
+
+\vspace{.5cm}
+\noindent
+\textbf{Background modeling}
+\vspace{.5cm}
+
+\noindent
+Uncertainties in the background modeling are propagated by varying the background prediction, while keeping all other unfolding corrections fixed and reapplying the unfolding procedure to the data
+\begin{equation}
+    \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}
+    f_{\text{acc}}^{j}(N_{d,j}-N_{b,j}').
+\end{equation}
 
 
 Statistical uncertainties
 
-Background modelling
-
-Signal modelling
-
-Systematic uncertainties
