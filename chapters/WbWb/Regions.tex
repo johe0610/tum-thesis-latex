@@ -155,11 +155,13 @@ The distributions measured at the detector level are distorted by a variety of e
 In the \textit{unfolding} step, these detector-induced distortions are corrected to recover the underlying physical distributions from the observed data.
 The differential particle-level cross sections that are obtained can be compared to test theoretical predictions probing the SM. All detector specific effects are removed, allowing the comparison of the results across measurements and experiments, as well as to future predictions which may not be available at the time of the analysis.
 
-While the concept of unfolding is conceptually straightforward, its practical implementation presents significant challenges. Various unfolding algorithms and software packages are available, but in this analysis, the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
+While the procedure of unfolding is conceptually straightforward, its practical implementation presents significant challenges. Various unfolding algorithms and software packages are available, but in this analysis, the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
 
 A \textit{migration matrix} is constructed, which describes how events are redistributed across bins due to detector effects. This matrix is then inverted, adding a regularization term to stabilize the inversion process while avoiding overfitting. Every component of the systematic uncertainties is propagated individually through the unfolding procedure.
 
-This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix and the choice of regularization. Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
+This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix, the choice of regularization and the propagation of uncertainties. 
+
+%Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
 
 \subsection{Unfolding procedure and cross section definition}
 
@@ -173,12 +175,12 @@ in a given bin $i$ is given by the formula
 \end{equation}
 with the integrated luminosity $L$ and the bin width $\Delta X_i$.
 Corrections are applied for the acceptance $f_{\text{acc}}^j$ and the efficiency $\epsilon_i$, respectively.
-The migration matrix is denoted by $M_{ij}$ and its inverse is used to correct for the event migration between bins.
-$N_{d,j}$ denotes the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
+The migration matrix is denoted $M_{ij}$ and its inverse is used to correct for the event migration between bins.
+$N_{d,j}$ is the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
 
 The first step subtracts the background from the data.
-The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{}.
-The remaining events are considered as signal events which is defined by \ttbar and $tWb$.
+The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:background}.
+The remaining events are considered as signal consisting of \ttbar and $tWb$ events.
 
 The response matrix $M_R$ keeps tracks of event migration.
 Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation
@@ -201,17 +203,20 @@ as implemented in the TUnfold package~\cite{Schmitt:2019um}.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[trim=5cm 15cm 5cm 4.5cm, clip, width=.8\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/lCurve_scan.pdf}
-    \caption{Some caption. Figure taken from~\cite{lCurve}.}
+	\includegraphics[trim=5cm 15cm 5cm 4.5cm, clip, width=.7\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/lCurve_scan.pdf}
+    \caption{Generic L-curve for standard-form Tikhonov regularization with different values of the regularization parameter $\lambda$.
+    The regularization term on the $y$ axis is plotted against the residual term on the $x$ axis.
+    Figure taken from~\cite{lCurve}.}
 	\label{fig:unfolding:migma:lcurvescan}
 \end{figure}
 
 A least squares method with Tikhonov regularization and additional
 area constraint is employed to estimate the true distribution. 
-The strength of the regularization parameter $\lambda$ is determined in a \textit{L-curve scan}~\cite{lCurve}. The regularization term is plotted against the least-squares term of the data, schematically shown in Figure~\ref{fig:unfolding:migma:lcurvescan}. The point with the largest curvature defines the value of $\lambda$.
+The strength of the regularization parameter $\lambda$ is determined in a \textit{L-curve scan}~\cite{lCurve}. The regularization term is plotted against the least-squares term of the data, schematically shown in Figure~\ref{fig:unfolding:migma:lcurvescan}. 
+The point with the largest curvature defines the value of $\lambda$, which is typically small $\lambda \ll 1$.
 
 A regularization mode that penalizes the absolute size of the unfolded bins.
-is chosen. It suppresses large fluctuations, while not enforcing smoothness between neighboring bins explicitly.
+is chosen in this analysis. It suppresses large fluctuations, while smoothness between neighboring bins is not enforced explicitly.
 
 The number of degrees of freedom in the minimization has to be larger than zero.
 Therefore, the number of bins on reconstructed level is chosen to be twice as large, compared to the particle level distribution.
@@ -314,8 +319,8 @@ to obtain the differential cross section.
 Uncertainty components associated with the cross section measurement are
 propagated from detector level through the unfolding pipeline to unfolded cross
 section level. Deviations from the nominal results are evaluated separately for
-the upward and downward variation. One-sided uncertainties are symmetrized 
-on detector level. The single uncertainties are assumed to be uncorrelated.
+the upward and downward variation. 
+The single uncertainties are assumed to be uncorrelated.
 The propagated uncertainties are therefore summed up in quadrature
 \begin{equation}
 	\sigma_\text{tot}^\text{up/down} = \sqrt{\sum_\text{sys} (\sigma_\text{sys}^\text{up/down})^2}
@@ -325,10 +330,11 @@ used, as described in the following.
 The systematic uncertainty is defined as the shift in the cross section
 where the nominal result is taken from Equation~\eqref{eq:Unfolding}
 \begin{equation}
-	\Delta\sigma_\text{sys} = \sigma_\text{nom} - \sigma_\text{sys}
+	\sigma_\text{sys} = \frac{d\sigma_\text{nom}}{dX} - \frac{d\sigma_\text{sys}}{dX}
 \end{equation}
-The sign of the uncertainties are kept. 
-Up and down variations are expected to be symmetrical.
+The signs of the cross section shifts are kept.
+Up and down variations are expected to be symmetrical around the nominal result.
+One-sided uncertainties are symmetrized on detector level.
 
 \vspace{.5cm}
 \noindent
@@ -433,14 +439,43 @@ Uncertainties in the background modeling are propagated by varying the backgroun
 The uncertainty arising from limited data statistics is estimated and propagated through the unfolding by creating Poisson smeared pseudo-experiments.
 The number of events in a bin $X$ is shifted by a random number from the Poisson distribution with the mean $X$
 \begin{equation}
-    X_\text{shift} = X - \text{Pois}(X)
+    X_\text{shift} = X - \text{Pois}(X).
 \end{equation}
-Repeating this step 10000 times and reading off the width of the smeared distribution after the unfolding defines the statistical uncertainty in a given bin.
+Repeating this step 10000 times and evaluating the standard deviation of the toy distributions after the unfolding defines the statistical uncertainty in a given bin.
 
 The same pseudo-experiment approach is also employed to estimate the uncertainty from the finite MC sample size.
 The procedure is applied for signal and background samples.
-The number of events in each bin is smeared by a Gaussian shift with mean equal to the yield of the bin, and
-standard deviation equal to the uncertainty of the bin.
+The number of events in each bin is smeared by a Gaussian shift with mean and standard deviation equal
+to the yield and the uncertainty of the bin, respectively.
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_stat:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_stat:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_stat:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=15]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_stat:lb_m}
+	\end{subfigure}
+	\caption{Statistical uncertainties. Fix plot selection later}
+	\label{fig:unfolding:sys_stat}
+\end{figure}
+
+The statistical uncertainties from limited data and MC sample size are shown in Figure~\ref{fig:unfolding:sys_stat}.
+The data statistical uncertainty is small, exceeding 5\% only in the tails of the distributions. The MC statistical uncertainty is typically smaller than 1\%.
 
 \vspace{.5cm}
 \noindent
@@ -450,7 +485,7 @@ standard deviation equal to the uncertainty of the bin.
 \noindent
 The covariance matrix is defined as
 \begin{equation*}
-\text{Corr} = 
+\text{Cov} = 
 \begin{pmatrix}
 c_{11} & c_{12} & \cdots & c_{1n} \\
 c_{21} & c_{22} & \cdots & c_{2n} \\
@@ -458,17 +493,15 @@ c_{21} & c_{22} & \cdots & c_{2n} \\
 c_{n1} & c_{n2} & \cdots & c_{nn}
 \end{pmatrix}
 \end{equation*}
-where $c_{ij} = \sigma_i \cdot \sigma_j$ and
+where $c_{ij} = \rho_{ij} \cdot \sigma_i \cdot \sigma_j$ with the correlation coefficient $\rho_{ij}$ and
 \begin{equation*}
-\sigma_i = \frac{\sigma_i^{\text{up}} + \sigma_i^{\text{down}}}{2}
+\sigma_i = \frac{\sigma_i^{\text{up}} + \sigma_i^{\text{down}}}{2}.
 \end{equation*}
 $\sigma_i^\text{up/down}$ represents the up and down variations in bin $i$. 
-Single-sided uncertainties are symmetrized at reconstruction level and propagated to particle level.
 The correlation matrix can be calculated by normalizing the covariance matrix
 \begin{equation}
     \text{Corr}_{ij} = \frac{\text{Cov}_{ij}}{\sqrt{\text{Cov}_{ii} \times \text{Cov}_{jj}}}
 \end{equation}
-
 The statistical correlation matrices for selected quantities are shown in Figure~\ref{fig:unfolding:corrma_stat}.
 These matrices serve as a critical diagnostic tool for evaluating the validity and stability of the unfolding procedure.
 While the bins are statistically independent prior to unfolding, the unfolding process inherently introduces correlations between them.
