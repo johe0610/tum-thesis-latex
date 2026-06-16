@@ -218,6 +218,36 @@ Therefore, the number of bins on reconstructed level is chosen to be twice as la
 The bin edges coincide, adding an intermediate bin on detector level to ensure convergence and a smooth distribution
 at reconstruction level.
 
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:migma:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:migma:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:migma:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=29]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:migma:lb_m}
+	\end{subfigure}
+	\caption{Migration matrix. Fix plot selection later}
+	\label{fig:unfolding:migma}
+\end{figure}
+
+Figure~\ref{fig:unfolding:migma} presents the migration matrix of selected quantities.
+TO DO: Describe plots.
+
 %\begin{align}
 %\mathcal{L}(x, \lambda) &= \mathcal{L}_1 + \mathcal{L}_2 + \mathcal{L}_3 && \text{where} \tag{3} \\
 %\mathcal{L}_1 &= (\boldsymbol{y} - \mathbf{A}\boldsymbol{x})^\top \mathbf{V}_{yy}^{-1} (\boldsymbol{y} - \mathbf{A}\boldsymbol{x}), && \tag{4} \\
@@ -246,89 +276,36 @@ selection. It corrects for events that fail to be reconstructed or selected at t
 level. This can result from limitations in detector coverage, insufficient resolution,
 trigger thresholds or reconstruction algorithms.
 
+The acceptance and efficiency distributions of selected observables is shown in Figure~\ref{fig:unfolding:eff_acc}.
+Describe the plots....
+
 Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
 to obtain the differential cross section.
-
-LATER: Control distributions are shown. Decide on which to show and how to arrange them
 \begin{figure}[ht!]
 	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:migma:lep_pt}
-	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:acc_eff:lep_pt}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_stat:lep_pt}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_all:lep_pt}
-	\end{subfigure}
-	\caption{Add caption.}
-	\label{fig:unfolding:lep_pt}
-\end{figure}
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:migma:b1_pt}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:eff_acc:lep_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:acc_eff:b1_pt}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:eff_acc:bjet_pt}
 	\end{subfigure}
 	\\
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_stat:b1_pt}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_all:b1_pt}
-	\end{subfigure}
-	\caption{Add caption.}
-	\label{fig:unfolding:b1_pt}
-\end{figure}
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:migma:whad_pt}
-	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:acc_eff:whad_pt}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_stat:whad_pt}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:eff_acc:w_pt}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\phantomsubcaption
-		\label{fig:whadpart:unfolding:cov_all:whad_pt}
+		\includegraphics[width=1.\linewidth, page=31]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:eff_acc:lb_m}
 	\end{subfigure}
-	\caption{Add caption.}
-	\label{fig:unfolding:whad_pt}
+	\caption{Migration matrix. Fix plot selection later}
+	\label{fig:unfolding:eff_acc}
 \end{figure}
 
 
@@ -365,7 +342,34 @@ Detector systematics are propagated from detector to particle level by calculati
     {f_{\text{acc}}^{j}}'(N_{d,j}-N_{b,j}').
 \end{equation}
 Dashed quantities indicate the systematic variation.
-The nominal data is unfolded with these varied corrections and the difference to the nominal cross section defines the uncertainty
+The nominal data is unfolded with these varied corrections and the difference to the nominal cross section defines the uncertainty.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_det:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_det:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_det:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=15]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_det:lb_m}
+	\end{subfigure}
+	\caption{Detector uncertainties. Fix plot selection later}
+	\label{fig:unfolding:sys_det}
+\end{figure}
 
 \vspace{.5cm}
 \noindent
@@ -393,6 +397,151 @@ Uncertainties in the background modeling are propagated by varying the backgroun
     f_{\text{acc}}^{j}(N_{d,j}-N_{b,j}').
 \end{equation}
 
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_theo:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_theo:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=27]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_theo:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=37]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_theo:lb_m}
+	\end{subfigure}
+	\caption{Detector uncertainties. Fix plot selection later}
+	\label{fig:unfolding:sys_theo}
+\end{figure}
 
-Statistical uncertainties
+\vspace{.5cm}
+\noindent
+\textbf{Statistical uncertainties}
+\vspace{.5cm}
+
+\noindent
+The uncertainty arising from limited data statistics is estimated and propagated through the unfolding by creating Poisson smeared pseudo-experiments.
+The number of events in a bin $X$ is shifted by a random number from the Poisson distribution with the mean $X$
+\begin{equation}
+    X_\text{shift} = X - \text{Pois}(X)
+\end{equation}
+Repeating this step 10000 times and reading off the width of the smeared distribution after the unfolding defines the statistical uncertainty in a given bin.
+
+The same pseudo-experiment approach is also employed to estimate the uncertainty from the finite MC sample size.
+The procedure is applied for signal and background samples.
+The number of events in each bin is smeared by a Gaussian shift with mean equal to the yield of the bin, and
+standard deviation equal to the uncertainty of the bin.
+
+\vspace{.5cm}
+\noindent
+\textbf{Correlation matrices}
+\vspace{.5cm}
+
+\noindent
+The covariance matrix is defined as
+\begin{equation*}
+\text{Corr} = 
+\begin{pmatrix}
+c_{11} & c_{12} & \cdots & c_{1n} \\
+c_{21} & c_{22} & \cdots & c_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+c_{n1} & c_{n2} & \cdots & c_{nn}
+\end{pmatrix}
+\end{equation*}
+where $c_{ij} = \sigma_i \cdot \sigma_j$ and
+\begin{equation*}
+\sigma_i = \frac{\sigma_i^{\text{up}} + \sigma_i^{\text{down}}}{2}
+\end{equation*}
+$\sigma_i^\text{up/down}$ represents the up and down variations in bin $i$. 
+Single-sided uncertainties are symmetrized at reconstruction level and propagated to particle level.
+The correlation matrix can be calculated by normalizing the covariance matrix
+\begin{equation}
+    \text{Corr}_{ij} = \frac{\text{Cov}_{ij}}{\sqrt{\text{Cov}_{ii} \times \text{Cov}_{jj}}}
+\end{equation}
+
+The statistical correlation matrices for selected quantities are shown in Figure~\ref{fig:unfolding:corrma_stat}.
+These matrices serve as a critical diagnostic tool for evaluating the validity and stability of the unfolding procedure.
+While the bins are statistically independent prior to unfolding, the unfolding process inherently introduces correlations between them.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma:lb_m}
+	\end{subfigure}
+	\caption{Statistical correlation matrix. Fix plot selection later}
+	\label{fig:unfolding:corrma_stat}
+\end{figure}
+
+A "checkerboard pattern", characterized by strong negative correlations between adjacent bins
+in combination with strong positive combinations in next to neighboring bins
+indicates an over-fitting of statistical fluctuations.
+The regularization is too weak, resulting in an oscillating, physically unrealistic spectrum.
+
+Over-regularization on the other hand manifests itself by large positive correlations across the matrix.
+The data is overly smoothed and biased towards the prior model.
+Positive correlations across neighboring bins can also indicate that the resolution is not sufficient and
+individual bins cannot be resolved.
+A coarser binning would be more appropriate in that region.
+
+The total covariance matrix can be calculated as the sum of all systematic and statistical contributions. 
+The total correlation matrices in Figure~\ref{fig:unfolding:corrma_full} exhibit strong correlations
+over the full range of the distributions.
+This is expected, as all systematic uncertainties are assumed to be fully correlated between
+adjacent bins.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma_full:lep_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma_full:bjet_pt}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma_full:w_pt}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:corrma_full:lb_m}
+	\end{subfigure}
+	\caption{Statistical correlation matrix. Fix plot selection later}
+	\label{fig:unfolding:corrma_full}
+\end{figure}
+
 
