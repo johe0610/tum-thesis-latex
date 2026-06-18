@@ -137,7 +137,7 @@ analysis in Part III. However, the results may include events where electrons an
 muons originate from tau lepton decays.
 
 \subsection{Electron Reconstruction}
-
+\label{sec:reco:el}
 Offline electron reconstruction starts from dynamic, variable size clusters in the
 ECal. The seed clusters need to exceed $E_T > 1~\GeV$ and be matched to a track with at least four space points~\cite{EGAM-2018-01}.
 Clusters within $\Delta\eta\times\Delta\varphi = 0.125\times 0.300$
@@ -194,7 +194,7 @@ while the loose selection is used for the overlap removal, see Section~\ref{sec:
 %To account for these effects in a physics analysis, systematic uncertainties from the efficiency measurements are propagated to the analysis [125, 128]. Systematic uncertainties associated with the electron energy scale and resolution that arise from pileup modelling, calorimeter layer inter-calibration, and discrepancies between data and simulation, are propagated to the energy scale and resolution corrections [127]
 
 \subsection{Muon Reconstruction}
-
+\label{sec:reco:mu}
 Muons are minimum-ionizing particles.
 Their signature in the detector includes tracks in ID and MS.
 The characteristic
@@ -249,6 +249,7 @@ decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or stat
 \end{table}
 
 \section{Jet Reconstruction}
+\label{sec:reco:jets}
 
 Quarks and gluons cannot be reconstructed as single particles in the detector.
 Due to QCD color confinement, they hadronize into collimated sprays of color-neutral particles, which are reconstructed as jets. 
@@ -314,7 +315,7 @@ The performance of the low level taggers compared to the combined DL1r tagger is
 
 \begin{figure}[ht!]
     \centering
-    \includegraphics[width=0.85\linewidth]{figures/ATLAS/ftag_perf_dl1r.pdf}
+    \includegraphics[width=0.75\linewidth]{figures/ATLAS/ftag_perf_dl1r.pdf}
     \caption{The light flavor jet and $c$ jet rejection factors as a function of the $b$ tagging efficiency for DL1r as well as the low-level taggers  RNNIP, SVKine, and JFKine. The ratio of light and $c$ jet rejection rates are shown in the two lower panels. $f_c$ denotes the effective $c$ jet fraction in the background hypothesis~\cite{FTAG-2019-07}.}
     \label{fig:ObjectReco:FtagPerf}
 \end{figure}
@@ -413,6 +414,7 @@ A smearing procedure is introduced to ensure that the resolution of the jet ener
 The uncertainty in the jet energy resolution is assessed using the \verb|FullJER| scheme~\cite{web:JetSystematics} providing 13 independent variations.
 
 \section{MET Reconstruction}
+\label{sec:reco:met}
 
 In an ideal collision, the protons collide head-on along the beam line with a vanishing momentum component in the transverse plane.
 An imbalance in the final state transverse momentum of an event therefore indicates particles that do not leave a measurable signals in the detector.

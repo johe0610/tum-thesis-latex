@@ -148,11 +148,192 @@ A quantitative overview is provided in Table ... where the event yields for the 
 \end{figure}
 
 \clearpage
+
+\section{Systematic uncertainties}
+
+The cross section measurement is affected by a list of uncertainties.
+This section will discuss the uncertainty sources arising from detector components and calibration procedures,
+as well as modeling variations in signal and background samples.
+The propagation of the uncertainties from measurement level to unfolded cross section level will be presented in the next section.
+This chapter details the systematic uncertainties arising from the experiment and
+theoretical modeling of the physics processes involved in this analysis. 
+One sided uncertainties are symmetrized.
+All uncertainties are evaluated on reconstruction level.
+
+\subsection{Experimental systematics uncertainties}
+
+\subsubsection{Leptons}
+
+Uncertainties associated to the understanding of energy scale and resolution as outlined in 
+Section~\ref{sec:reco:el} and~\ref{sec:reco:mu} for electrons and muons respectively,
+are estimated by modifying the lepton momenta. 
+
+Scale factors for identification, isolation, and reconstruction that improve the agreement
+between data and simulation are varied to account for uncertainties from the
+calibration procedure. The same concept is applied to vary scale factors for the 
+lepton trigger efficiencies.
+
+\subsubsection{Jets}
+
+A complete uncertainty model related to the energy scale and resolution of jets
+is employed. The jet energies are shifted according to the uncertainties derived
+from simulation and in-situ calibration measurements.
+The model includes corrections for different detector responses depending on jet momenta,
+position and flavor, as well as pile-up conditions or the JVT efficiency.
+
+\subsubsection{$b$ tagging}
+
+The DL1r algorithm introduced in Section~\ref{sec:reco:jets} was used to identify $b$ jets.
+Uncertainties related to $b$ tagging are derived and evaluated separately for 
+for the $b$ tagging efficiency, as well as $c$ and light jet mis-tagging rates.
+The largest contributions originate from limited statistics and modeling uncertainties in the samples used
+for the calibration, as well as jet uncertainties.
+
+\subsubsection{MET}
+
+Uncertainties affecting lepton and jet energy measurement directly impact \ETmiss.
+and are therefore directly propagated in a correlated way.
+
+The soft term entering the calculation of \ETmiss is treated independently.
+Variations in the soft term modify magnitude and direction of the \ETmiss vector.
+However, this is expected to be a small effect in the analysis, since the
+\ETmiss calculation is not dominated by the soft term~\cite{JETM-2020-03}.
+
+\subsubsection{Luminosity and pile-up}
+
+Further sources of experimental uncertainties arise from the measurement of
+the integrated luminosity and the correction of the number of pile-up
+collisions to data in simulated events. 
+The integrated luminosity of the full Run 2 data sample after standard data-quality selection was
+measured to be $140\pm 1.2~\text{fb}^{-1}$, corresponding to an uncertainty of 0.83\%~\cite{DAPR-2021-01}.
+
+To account for pile-up mismodeling, the MC profile is reweighted to match the data. The resulting systematic uncertainty is evaluated by varying the reweighting scale factors (
+
+possibly cite twiki: https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ExtendedPileupReweighting?extralog=-%20caching%20topic)
+
+\subsection{Theory modeling uncertainties}
+
+Theory systematics quantify uncertainties associated with the choice of event generators 
+and the specific parameters employed during the simulation of the physics processes.
+These uncertainties typically arise from limited theoretical accuracy in the prediction.
+%These uncertainties are typically evaluated by varying the simulation parameters and
+%comparing the resulting distributions to the nominal simulation. 
+
+For the purposes of this analysis, these effects are evaluated separately for
+the signal processes $\ttbar $and$tW$
+and the modeling of the various background contributions.
+
+\subsubsection{Cross section}
+
+The signal consists of the independent $\ttbar$ and $tW$ samples with
+normalizations to the respective absolute cross sections.
+Normalization effects of the signal samples do not cancel in the
+construction of the migration matrix (see Chapter~\ref{sec:unfolding:def})
+due to the relative contributions.
+An uncertainty anti-correlating the cross sections is applied
+to account for possible fraction differences due to cross section uncertainties.
+
+\subsubsection{Parton shower matching}
+
+TODO
+
+\subsubsection{Hadronization model}
+
+In order to estimate the effect of the non-perturbative aspects of the parton shower and the hadronization,
+the difference between the nominal sample to the alternative sample produced with \textsc{Powheg+Herwig} 7.1 
+is defined as a systematic uncertainty. The uncertainty is symmetrized on detector level.
+
+\subsubsection{Scales}
+
+The renormalization scale $\mu_r$ and the factorization scale $\mu_f$
+were introduced to cancel divergences in the perturbative expansion.
+The scales are non-physical and should impact on the physics result.
+The effect of missing higher order predictions is estimated by varying the scales
+by factors of 0.5 or 2.0 in the matrix element as up and down variations.
+
+The scales in the shower are varied to estimate the uncertainty associated
+to the final state radiation (FSR).
+
+(Maybe also mention ISR tune)
+
+\subsubsection{Top recoil scheme}
+
+
+The top-quark decays into a W-boson and a b-quark, t Ñ W ` b. Gluons can be radi-
+ated during this decay. After the first gluon radiation, all secondary gluon emissions are mod-
+eled as recoiling against the b-quark (recoiler). This procedure is implemented in the nomi-
+nal P OWHEG +P YTHIA 8 generator [127]. This procedure tends to produce radiation that is too
+collinear with the b-quark, resulting in jets that are too narrow. To improve the modeling of the
+radiated jets, a modified approach is to use the top quark as the recoiler. This model changes the
+shape of the radiated b-jets and results in a narrower top-mass distribution [128]. This analysis
+uses an alternative sample implementing the top recoil procedure.
+
+
+The modelling of the parton shower of the ��-quarks in �� → �� �� is affected by the gluon recoil scheme.
+The default samples employ the recoiling against ��-quarks. This affects the second and subsequent gluon
+emission from quarks produced by coloured resonance decays, such as the ��-quark in a �� → �� �� process,
+deciding how the momentum is re-arranged between the W and the ��. This uncertainty compares the
+nominal sample with the sample where the top-quark itself works as recoiling object for the second and
+subsequent emissions. This option give wider-angle gluon radiation, resulting in energy deposits that do
+not get clustered into the ��-jet, and lower gluon-energy emission, altering the modelling of the ��-quark
+fragmentation and hardening the ��-hadron momenta. This is the modelling uncertainty in which only the
+top pair component of the signal is modified; the nominal ���� sample is used in the alternative sample
+
+\subsubsection{Top quark mass}
+
+The exact value of the top quark mass directly impacts the kinematics of the 
+decay products. Thus, a variation is the mass affects the number of events
+passing the event selection.
+
+Signal samples with nominal parameters, but a top quark mass of 169\GeV and 176\GeV
+are employed to estimate the uncertainty. The final shift is scaled by 1/7 to
+reflect the known precision of the top quark mass of 0.5\GeV~\cite{TOPQ-2017-03}.
+
+\subsubsection{Diagram removal vs. diagram subtraction}
+
+Special care has to be taken when merging \ttbar and $tW$ signal samples to
+remove the overlap between the samples. 
+The nominal \ttbar sample is combined with $tW$ samples implemented with
+either the diagram removal or diagram subtraction scheme.
+The uncertainty is defined as the difference between the descriptions.
+
+\subsubsection{W mass}
+
+The reconstruction of the hadronic \Whad candidate introduced in Section...
+makes explicit use of a hard-coded value for the \Wboson mass.
+Using a fixed value may lead to a bias in the reconstruction due to the 
+natural width of the \Wboson of $\sigma_W = 2.085\GeV$~\cite{PDG}.
+An uncertainty is defined, varying the value used in the reconstruction
+by $\pm 2\sigma_W$.
+
+\subsection{Background modeling}
+
+\subsubsection{$W$+jets}
+
+The uncertainties assigned to the modeling of the $W+$jets background are conceptually
+the same as for the signal samples, including the modeling uncertainties on PDF, scales
+and electroweak corrections.
+
+Similar to the signal modeling systematics, the uncertainty in the W+ jets background is eval-
+uated by varying the normalization factor of the MC generation parameters. These variations
+include modeling uncertainties on the cross-section, PDFs, scales and electroweak corrections.
+Table 8.7 lists the NPs associated with the W+ jets background modeling.
+
+\subsubsection{Fake leptons}
+
+\subsubsection{Other background}
+
+The “Other V” samples have scale, PDF and electroweak
+uncertainties applied, while the “Other t” samples only apply a conservative 25\% normalization uncertainty.
+Since the contributions from these background processes are small in the selected phase space,
+the impact of the related uncertainties is expected to be negligible.
+
+
 \section{Unfolding}
 
-The distributions measured at the detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, as well as misreconstruction and misidentification of particles. 
+The distributions measured at the detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, as well as reconstruction errors and misidentification of particles. 
 
-In the \textit{unfolding} step, these detector-induced distortions are corrected to recover the underlying physical distributions from the observed data.
+In the \textit{unfolding} step, these detector-induced distortions are corrected to recover the underlying physical spectra from the observed data.
 The differential particle-level cross sections that are obtained can be compared to test theoretical predictions probing the SM. All detector specific effects are removed, allowing the comparison of the results across measurements and experiments, as well as to future predictions which may not be available at the time of the analysis.
 
 While the procedure of unfolding is conceptually straightforward, its practical implementation presents significant challenges. Various unfolding algorithms and software packages are available, but in this analysis, the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
@@ -164,7 +345,7 @@ This chapter provides a comprehensive introduction to the unfolding methodology,
 %Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
 
 \subsection{Unfolding procedure and cross section definition}
-
+\label{sec:unfolding:def}
 The measurement is performed as a counting experiment, where events are grouped into certain 
 regions of phase-space, also called bins.
 The definition of the differential fiducial cross section as a function of an observable $X$
@@ -432,7 +613,7 @@ Uncertainties in the background modeling are propagated by varying the backgroun
 
 \vspace{.5cm}
 \noindent
-\textbf{Statistical uncertainties}
+\textbf{Statistical and luminosity uncertainties}
 \vspace{.5cm}
 
 \noindent
@@ -476,6 +657,10 @@ to the yield and the uncertainty of the bin, respectively.
 
 The statistical uncertainties from limited data and MC sample size are shown in Figure~\ref{fig:unfolding:sys_stat}.
 The data statistical uncertainty is small, exceeding 5\% only in the tails of the distributions. The MC statistical uncertainty is typically smaller than 1\%.
+
+The uncertainty on the luminosity is propagated to the unfolded results by varying
+the luminosity by 0.82\% in the simulated reconstruction level distributions.
+The unfolding is then performed with the nominal corrections.
 
 \vspace{.5cm}
 \noindent
@@ -546,7 +731,7 @@ A coarser binning would be more appropriate in that region.
 
 The total covariance matrix can be calculated as the sum of all systematic and statistical contributions. 
 The total correlation matrices in Figure~\ref{fig:unfolding:corrma_full} exhibit strong correlations
-over the full range of the distributions.
+over the full range of the spectra.
 This is expected, as all systematic uncertainties are assumed to be fully correlated between
 adjacent bins.
 
