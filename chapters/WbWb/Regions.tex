@@ -235,7 +235,17 @@ to account for possible fraction differences due to cross section uncertainties.
 
 \subsubsection{Parton shower matching}
 
-TODO
+The $p_\text{T,hard}$ parameter in the Pythia event generator regulates the 
+definition of the vetoed region in the parton showering.
+Varying this setting assesses the uncertainty associated with matching the
+NLO hard scatter ME to the shower.
+
+\subsubsection{$h_\text{damp}$}
+
+The $h_\text{damp}$ parameter is one of the parameters controlling the ME/PS
+matching in \textsc{Powheg}, effectively regulating the high-\pt radiation.
+The uncertainty is evaluated by multiplying the default value
+by a factor of 2~\cite{ATL-PHYS-PUB-2016-020}.
 
 \subsubsection{Hadronization model}
 
@@ -251,10 +261,19 @@ The scales are non-physical and should impact on the physics result.
 The effect of missing higher order predictions is estimated by varying the scales
 by factors of 0.5 or 2.0 in the matrix element as up and down variations.
 
-The scales in the shower are varied to estimate the uncertainty associated
-to the final state radiation (FSR).
+To estimate the uncertainty associated to the final state radiation (FSR),
+scales variations are also applied in the shower.
+Initial state radiation (ISR) effects are assessed by varying $\alpha_S$
+with the alternative Var3c A14 tune~\cite{ATL-PHYS-PUB-2017-007}. 
 
-(Maybe also mention ISR tune)
+\subsubsection{PDF}
+
+The PDF4LHC recommendations~\cite{Butterworth:2015oua} are followed to evaluate
+the effect of different PDF sets on the cross section.
+An event-by-event reweighting procedure is applied to the nominal Powheg+Pythia8 signal samples,
+separately for PDF and $\alpha_S$ variations.
+The variations are processed with the LHAPDF library~\cite{Buckley:2014ana} 
+which obtains a combined PDF+$\alpha_S$ uncertainty.
 
 \subsubsection{Top recoil scheme}
 
@@ -278,6 +297,22 @@ subsequent emissions. This option give wider-angle gluon radiation, resulting in
 not get clustered into the ��-jet, and lower gluon-energy emission, altering the modelling of the ��-quark
 fragmentation and hardening the ��-hadron momenta. This is the modelling uncertainty in which only the
 top pair component of the signal is modified; the nominal ���� sample is used in the alternative sample
+
+
+The parton shower algorithm simulates the emission of secondary and subsequent
+gluon radiation from the b-quark in top-quark decay. Two possible recoil schemes
+determine which particle is chosen to recoil from this radiation: recoilToColored and
+recoil-to-top. In the nominal tt̄ sample, the recoilToColored scheme is used, where
+the b-quark recoils against the emitted radiation. This influences the radiation pattern
+from the b-quark, affecting the shape of b-jets and leading to narrower reconstructed
+mt distributions. In contrast, the recoil-to-top scheme assigns the the top
+quark itself to recoil from this radiation, resulting in more wide-angle radiation,
+leading to more events where the b-quark is reconstructed as two separate jets in the
+detector. This introduces an additional modelling uncertainty due to the choice of
+recoil scheme. To assess this uncertainty, a dedicated POWHEG +PYTHIA8 sample using
+the alternative recoil-to-top scheme is studied, as described in Section 8.2.2. Since
+this ambiguity arises from approximations in the parton shower, neither scheme is
+expected to perfectly represent real data.
 
 \subsubsection{Top quark mass}
 
