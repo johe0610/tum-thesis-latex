@@ -151,32 +151,32 @@ A quantitative overview is provided in Table ... where the event yields for the 
 
 \section{Systematic uncertainties}
 
-The cross section measurement is affected by a list of uncertainties.
-This section will discuss the uncertainty sources arising from detector components and calibration procedures,
-as well as modeling variations in signal and background samples.
-The propagation of the uncertainties from measurement level to unfolded cross section level will be presented in the next section.
-This chapter details the systematic uncertainties arising from the experiment and
-theoretical modeling of the physics processes involved in this analysis. 
-One sided uncertainties are symmetrized.
-All uncertainties are evaluated on reconstruction level.
+This section presents a comprehensive assessment of the systematic uncertainties that impact the 
+precision of the cross-section measurement. The analysis accounts for sources of experimental uncertainty
+originating from detector response, calibration and reconstruction procedure, as well as those arising
+from variations in the signal and background modeling. All systematic effects are evaluated at the reconstruction
+level and one-sided uncertainties are symmetrized.
 
 \subsection{Experimental systematics uncertainties}
 
-\subsubsection{Leptons}
+The reconstruction and calibration methods used in the analysis were introduced in detail in Chapter~\ref{chap:ObjectReco}. A brief overview on the associated uncertainties is given here.
 
-Uncertainties associated to the understanding of energy scale and resolution as outlined in 
-Section~\ref{sec:reco:el} and~\ref{sec:reco:mu} for electrons and muons respectively,
-are estimated by modifying the lepton momenta. 
+\subsubsection{Leptons}
 
 Scale factors for identification, isolation, and reconstruction that improve the agreement
 between data and simulation are varied to account for uncertainties from the
 calibration procedure. The same concept is applied to vary scale factors for the 
 lepton trigger efficiencies.
 
+Uncertainties associated to the understanding of energy scale and resolution as outlined in 
+Section~\ref{sec:reco:el} and~\ref{sec:reco:mu} for electrons and muons respectively,
+are estimated by modifying the lepton momenta. 
+
 \subsubsection{Jets}
 
-A complete uncertainty model related to the energy scale and resolution of jets
-is employed. The jet energies are shifted according to the uncertainties derived
+The comprehensive \verb|CategoryReduction| uncertainty model~\cite{web:JetSystematics},
+which parametrizes the energy scale and resolution of jets is employed.
+The jet energies are shifted according to the uncertainties derived
 from simulation and in-situ calibration measurements.
 The model includes corrections for different detector responses depending on jet momenta,
 position and flavor, as well as pile-up conditions or the JVT efficiency.
@@ -220,7 +220,7 @@ These uncertainties typically arise from limited theoretical accuracy in the pre
 %comparing the resulting distributions to the nominal simulation. 
 
 For the purposes of this analysis, these effects are evaluated separately for
-the signal processes $\ttbar $and$tW$
+the signal processes \ttbar and $tW$
 and the modeling of the various background contributions.
 
 \subsubsection{Cross section}
@@ -228,17 +228,20 @@ and the modeling of the various background contributions.
 The signal consists of the independent $\ttbar$ and $tW$ samples with
 normalizations to the respective absolute cross sections.
 Normalization effects of the signal samples do not cancel in the
-construction of the migration matrix (see Chapter~\ref{sec:unfolding:def})
+construction of the migration matrix (see Section~\ref{sec:unfolding:def})
 due to the relative contributions.
 An uncertainty anti-correlating the cross sections is applied
 to account for possible fraction differences due to cross section uncertainties.
 
 \subsubsection{Parton shower matching}
 
-The $p_\text{T,hard}$ parameter in the Pythia event generator regulates the 
+The parton shower algorithm is attached to the hard scatter ME
+and simulates the emission of secondary and subsequent
+gluon radiation.
+The $p_\text{T,hard}$ parameter in the \textsc{Pythia} event generator regulates the 
 definition of the vetoed region in the parton showering.
 Varying this setting assesses the uncertainty associated with matching the
-NLO hard scatter ME to the shower.
+ME to the shower.
 
 \subsubsection{$h_\text{damp}$}
 
@@ -277,49 +280,27 @@ which obtains a combined PDF+$\alpha_S$ uncertainty.
 
 \subsubsection{Top recoil scheme}
 
+The radiation pattern in the PS is influenced by the gluon radiation
+scheme. The nominal \textsc{Powheg+Pythia} 8 generator employs the
+\verb|recoilToColor| scheme, where the second and all subsequent
+gluons recoil against the $b$ quark.
+This has direct implications on the $b$ jet shape, suppressing
+hard out-of-cone radiation~\cite{Brooks_2019}.
+Alternatively, in the \verb|recoilToTop| scheme,
+top-quark itself works as recoiling object for the second and
+subsequent emissions.
+This option gives rise to wider-angle gluon radiation, resulting in energy deposits that do not get clustered into the b-jet.
+Thus, potentially reducing the reconstructed momentum and invariant mass.
 
-The top-quark decays into a W-boson and a b-quark, t Ñ W ` b. Gluons can be radi-
-ated during this decay. After the first gluon radiation, all secondary gluon emissions are mod-
-eled as recoiling against the b-quark (recoiler). This procedure is implemented in the nomi-
-nal P OWHEG +P YTHIA 8 generator [127]. This procedure tends to produce radiation that is too
-collinear with the b-quark, resulting in jets that are too narrow. To improve the modeling of the
-radiated jets, a modified approach is to use the top quark as the recoiler. This model changes the
-shape of the radiated b-jets and results in a narrower top-mass distribution [128]. This analysis
-uses an alternative sample implementing the top recoil procedure.
-
-
-The modelling of the parton shower of the ��-quarks in �� → �� �� is affected by the gluon recoil scheme.
-The default samples employ the recoiling against ��-quarks. This affects the second and subsequent gluon
-emission from quarks produced by coloured resonance decays, such as the ��-quark in a �� → �� �� process,
-deciding how the momentum is re-arranged between the W and the ��. This uncertainty compares the
-nominal sample with the sample where the top-quark itself works as recoiling object for the second and
-subsequent emissions. This option give wider-angle gluon radiation, resulting in energy deposits that do
-not get clustered into the ��-jet, and lower gluon-energy emission, altering the modelling of the ��-quark
-fragmentation and hardening the ��-hadron momenta. This is the modelling uncertainty in which only the
-top pair component of the signal is modified; the nominal ���� sample is used in the alternative sample
-
-
-The parton shower algorithm simulates the emission of secondary and subsequent
-gluon radiation from the b-quark in top-quark decay. Two possible recoil schemes
-determine which particle is chosen to recoil from this radiation: recoilToColored and
-recoil-to-top. In the nominal tt̄ sample, the recoilToColored scheme is used, where
-the b-quark recoils against the emitted radiation. This influences the radiation pattern
-from the b-quark, affecting the shape of b-jets and leading to narrower reconstructed
-mt distributions. In contrast, the recoil-to-top scheme assigns the the top
-quark itself to recoil from this radiation, resulting in more wide-angle radiation,
-leading to more events where the b-quark is reconstructed as two separate jets in the
-detector. This introduces an additional modelling uncertainty due to the choice of
-recoil scheme. To assess this uncertainty, a dedicated POWHEG +PYTHIA8 sample using
-the alternative recoil-to-top scheme is studied, as described in Section 8.2.2. Since
-this ambiguity arises from approximations in the parton shower, neither scheme is
-expected to perfectly represent real data.
+The two complementary recoil schemes introduce an additional modeling uncertainty,
+evaluated by taking the difference between
+the descriptions as an uncertainty and symmetrizing it.
 
 \subsubsection{Top quark mass}
 
 The exact value of the top quark mass directly impacts the kinematics of the 
 decay products. Thus, a variation is the mass affects the number of events
 passing the event selection.
-
 Signal samples with nominal parameters, but a top quark mass of 169\GeV and 176\GeV
 are employed to estimate the uncertainty. The final shift is scaled by 1/7 to
 reflect the known precision of the top quark mass of 0.5\GeV~\cite{TOPQ-2017-03}.
@@ -332,7 +313,7 @@ The nominal \ttbar sample is combined with $tW$ samples implemented with
 either the diagram removal or diagram subtraction scheme.
 The uncertainty is defined as the difference between the descriptions.
 
-\subsubsection{W mass}
+\subsubsection{W mass in the reconstruction}
 
 The reconstruction of the hadronic \Whad candidate introduced in Section...
 makes explicit use of a hard-coded value for the \Wboson mass.
@@ -345,14 +326,13 @@ by $\pm 2\sigma_W$.
 
 \subsubsection{$W$+jets}
 
-The uncertainties assigned to the modeling of the $W+$jets background are conceptually
-the same as for the signal samples, including the modeling uncertainties on PDF, scales
-and electroweak corrections.
+%The uncertainties assigned to the modeling of the $W+$jets background are conceptually
+%the same as for the signal samples, including the modeling uncertainties on PDF, scales
+%and electroweak corrections.
 
-Similar to the signal modeling systematics, the uncertainty in the W+ jets background is eval-
-uated by varying the normalization factor of the MC generation parameters. These variations
-include modeling uncertainties on the cross-section, PDFs, scales and electroweak corrections.
-Table 8.7 lists the NPs associated with the W+ jets background modeling.
+%Similar to the signal modeling systematics, the uncertainty in the W+ jets background is evaluated by varying the normalization factor of the MC generation parameters. These variations
+%include modeling uncertainties on the cross-section, PDFs, scales and electroweak corrections.
+%Table 8.7 lists the NPs associated with the W+ jets background modeling.
 
 \subsubsection{Fake leptons}
 
