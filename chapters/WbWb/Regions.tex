@@ -361,34 +361,26 @@ This chapter provides a comprehensive introduction to the unfolding methodology,
 
 \subsection{Unfolding procedure and cross section definition}
 \label{sec:unfolding:def}
-The measurement is performed as a counting experiment, where events are grouped into certain 
-regions of phase-space, also called bins.
-The definition of the differential fiducial cross section as a function of an observable $X$
-in a given bin $i$ is given by the formula
-\begin{equation}
-    \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j M_{ij}^{-1}f_{\text{acc}}^j(N_{d,j}-N_{b,j}).
-    \label{eq:Unfolding}
-\end{equation}
-with the integrated luminosity $L$ and the bin width $\Delta X_i$.
-Corrections are applied for the acceptance $f_{\text{acc}}^j$ and the efficiency $\epsilon_i$, respectively.
-The migration matrix is denoted $M_{ij}$ and its inverse is used to correct for the event migration between bins.
-$N_{d,j}$ is the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
+The measurement is performed as a counting experiment, where events are grouped into certain regions of phase-space, also called bins.
 
-The first step subtracts the background from the data.
-The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:background}.
-The remaining events are considered as signal consisting of \ttbar and $tWb$ events.
-
-The response matrix $M_R$ keeps tracks of event migration.
+The response matrix $M_R$ encapsulates the detector response
+by keeping track of event migration.
 Particle level events generated in bin $i$ that end up in bin $j$ after the detector simulation
 are filled in $M_{R,ij}$. An ideal measurement would therefore produce a perfectly diagonal matrix.
-Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled.
+Due to the limited resolution in real-world experiments, off-diagonal elements may also be filled. The response matrix is constructed from the nominal signal MC samples \ttbar and single top (DR) generated with \textsc{Powheg+Pythia}~8.
+
 The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
 \begin{equation}
     M_{ij} = \frac{M_{R,ij}}{N_{t,i}},
 \end{equation}
 where $N_{t,i}$ is the number of particle level (true) events in bin $i$.
 Thus, $M_{ij}$ can be interpreted as the probability of a particle level event generated in bin $i$ to be reconstructed in bin $j$.
-The choice of the bin boundaries is such that the diagonal elements of the matrix contain at least 60\% of particle level events per row.
+The choice of the bin boundaries for each observable is such that the diagonal elements of the matrix contain at least 60\% of particle level events per row.
+
+
+The first step subtracts the background from the data.
+The $N_{b,j}$ are obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:background}.
+The remaining events are considered as signal consisting of \ttbar and $tWb$ events.
 
 A simple inversion of $M$ in order to obtain the true particle level distribution is
 not sufficient, as it can enhance statistical fluctuations in the data.
@@ -462,10 +454,10 @@ Only those events that pass both the particle and reconstructed-
 level selection are described by the migration matrix.
 Therefore, two other distributions need to be taken into account.
 
-The acceptance $f^j_\text{acc}$ is defined as the fraction of all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
+The acceptance $f^j_\text{acc}$ is defined as all events passing the detector-level selection that are also matched to particle-level, i.e. events that pass-particle and detector-level cuts, normalized to the number of reconstructed events in that bin $N_{r,j}$. A low acceptance indicates that the detector-level selection is too broad relative to the particle-level definition, leading to a mismatch between the observed and true physical phase space.
 It can be calculated from the response matrix as 
 \begin{equation}
-    f^j_\text{acc} = \sum_i M_{R,ij}/N_{d,i}.
+    f^j_\text{acc} = \sum_i M_{R,ij}/N_{r,j}.
 \end{equation}
 
 The complementary efficiency 
@@ -473,7 +465,7 @@ The complementary efficiency
     \epsilon_i = \sum_j M_{R,ij}/N_{t,i}
 \end{equation}
 is defined as the fraction of matched events out of all events passing the particle-level 
-selection. It corrects for events that fail to be reconstructed or selected at the detector
+selection $N_{t,i}$. It corrects for events that fail to be reconstructed or selected at the detector
 level. This can result from limitations in detector coverage, insufficient resolution,
 trigger thresholds or reconstruction algorithms.
 
@@ -482,6 +474,18 @@ Describe the plots....
 
 Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
 to obtain the differential cross section.
+
+After putting all ingredients together, the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ can be defined as
+\begin{equation}
+    \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j f_{\text{acc}}^j M_{ij}^{-1} (N_{d,j}-N_{b,j}).
+    \label{eq:Unfolding}
+\end{equation}
+%with the integrated luminosity $L$ and the bin width $\Delta X_i$.
+%Corrections are applied for the acceptance $f_{\text{acc}}^j$ and the efficiency $\epsilon_i$, respectively.
+%The inverse of the migration matrix $M_{ij}$ is used to correct for the event migration between bins.
+%$N_{d,j}$ is the number of data events in bin $j$, while $N_{b,j}$ is the number of background events in the same bin.
+
+
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
