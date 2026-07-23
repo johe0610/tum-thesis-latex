@@ -1,5 +1,15 @@
 \section{Cross section results}
 
+This section presents the single differential particle level cross section results.
+An extesive set of observables is shown in Figures ... through ....
+The data points include statsitical uncertainties, as well as the full set of systematic uncertainties
+discussed in chapter....
+
+The data are compared to the MC event generators. 
+Powheg interfaced with the Pythia parton shower.is shown in the DR and DS schemes,
+alongside Powheg employing the alternative Herwig parton shower.
+For a quantative comparison, the $\chi^2$ values are provided in Table ... for every observable and theory prediction.
+
 
 
 \vspace{.5cm}
@@ -8,7 +18,11 @@
 \vspace{.5cm}
 
 \noindent
-Uncertainties in the signal modeling are implemented employing pseudo-data obtained from MC simulations. They incorporate signal and background processes 
+Selected observables determining the kinematics of the $WWbb$ process are collected in Figure \dots
+The uncertainties are dominated by \dots
+Data MC agreement within uncertainties
+Trend to overestimate the data at large momenta in all three models.
+
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.42\linewidth}
@@ -103,6 +117,8 @@ Show selected quantities which are sensitive to the top quark mass or can be use
 \noindent
 Additional observables
 
+
+
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -156,6 +172,36 @@ Additional observables
 	\label{fig:whadpart:xsec:extra}
 \end{figure}
 
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Comparison of Generator Performance}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lcccccccccccccccc}
+        %\toprule
+        & \multicolumn{12}{c}{\textbf{Generator}} \\
+        \cmidrule(lr){2-13}
+        \textbf{Observable} & \multicolumn{2}{c}{PH+ PYTHIA 8 (DR)} & \multicolumn{2}{c}{PH+ PYTHIA 8 (DS)} & \multicolumn{2}{c}{PH+ HERWIG 7.1 (DR)}\\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+        & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$\\
+        \midrule
+        Lepton $p_T$ & 45.44 / 8 & $<0.001$ & 55.26 / 11 & $<0.001$ & 25.36 / 11 & 0.008 \\
+        Leading $b$-jet $p_T$ & 30.59 / 12 & 0.002 & 41.35 / 12 & $<0.001$ & 24.28 / 12 & 0.019 \\
+        Subleading $b$-jet $p_T$ & 32.76 / 9 & $<0.001$ & 36.88 / 9 & $<0.001$ & 27.33 / 9 & 0.001 \\
+        Leading light-jet $p_T$ & 15.22 / 10 & 0.124 & 20.25 / 10 & 0.027 & 9.21 / 10 & 0.512 \\
+        Hadronic-W $p_T$ & 17.87 / 11 & 0.085 & 22.70 / 11 & 0.019 & 12.03 / 11 & 0.362 \\
+        Selected ($b + \ell$) mass & 21.04 / 20 & 0.395 & 33.20 / 20 & 0.032 & 41.95 / 20 & 0.003 \\
+        Selected ($b + W_{\text{had.}}$) mass & 24.22 / 10 & 0.007 & 26.74 / 10 & 0.003 & 50.13 / 10 & $<0.001$ \\
+        Selected ($W_{\text{had.}} + b_1 + b_2 + \ell$) mass & 4.08 / 9 & 0.906 & 4.01 / 9 & 0.911 & 5.08 / 9 & 0.827 \\
+        Modified minimax mass & 18.96 / 10 & 0.041 & 25.95 / 10 & 0.004 & 45.30 / 10 & $<0.001$ \\
+        Hadronic-W $y$ & 14.95 / 12 & 0.244 & 15.26 / 12 & 0.228 & 14.24 / 12 & 0.285\\
+        $\Delta R(b, \ell)$ & 41.25 / 8 & $<0.001$ & 42.04 / 8 & $<0.001$ & 42.88 / 8 & $<0.001$\\
+        $\Delta R(b, W_{\text{had.}})$ & 103.0 / 8 & $<0.001$ & 105.1 / 8 & $<0.001$ & 107.3 / 8 & $<0.001$\\
+        %\bottomrule
+    \end{tabular}%
+    }
+\end{table}
 
 %To do: Polish plots
 % - Remove ATLAS label
