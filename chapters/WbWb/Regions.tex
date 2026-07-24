@@ -42,7 +42,7 @@ A quantitative overview is provided in Table ... where the event yields for the 
 \begin{table}[htbp]
     \centering
     \begin{tabular}{l c c c}
-      \toprule
+      %\toprule
       Selection                             & Loose  & \Wboson-hadronic \\
       \midrule
       \( N_{lep} \)                         & \( = 1\)           & \( = 1\)           \\
@@ -54,7 +54,7 @@ A quantitative overview is provided in Table ... where the event yields for the 
       \( \met + \mtW \)                     & \( (60, \infty) \) & \( (60, \infty) \) \\
       \( m(\Whad) \)                        & ---                & \( (60, 100) \)    \\
       \( \pt(\Whad) \)                      & ---                & \( (80, \infty) \) \\
-      \bottomrule
+      bottomrule
     \end{tabular}
   \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
   The cuts are applied on detector and particle level.}%                                                                             
@@ -148,6 +148,54 @@ A quantitative overview is provided in Table ... where the event yields for the 
 \end{figure}
 
 \clearpage
+
+\section{Observables of interest}
+
+The measured final state comprises of the 4-vectors of the lepton, $b$ jets, the reconstructed hadronic \Wboson boson and additional jets, as well as the transverse components of the missing
+energy. The respective quantities can be combined in various ways to approximate candidates for
+leptonic or hadronically decaying top quarks, or a pseudo-\ttbar system.
+A brief description of all observables that are considered for the cross section measurement is provided in Table~\ref{tab:ObservableDefinitions}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{l | p{8cm}}
+      %\toprule
+      Observable                       & Description \\
+      \midrule
+      Lepton \pt                       & Transverse momentum of the single lepton \\
+      Lepton \(\eta\)                  & Pseudorapidity of the single lepton \\
+      Leading $b$ jet \pt              & Transverse momentum of the leading $b$ jet \\
+      Subleading $b$ jet \pt           & Transverse momentum of the subleading $b$ jet \\
+      Missing \(E_T\)                  & Missing transverse energy \\
+      Hadronic \Wboson \pt             & Transverse momentum of the hadronic \Wboson boson \\
+      Hadronic \Wboson \(y\)           & Rapidity of the hadronic \Wboson boson\\
+      Leading additional jet \pt       & Transverse momentum of the leading jet,
+                                         excluding the two leading $b$ jets and the
+                                         jets identified as the \Wboson candidate \\
+      Subleading additional jet \pt    & Transverse momentum of the subleading jet,
+                                         excluding the two leading $b$ jets and the
+                                         jets identified as the \Wboson candidate \\
+      \( m(bl) \)                      & Invariant mass of the lepton and a $b$ jet, assigned with the
+                                         minimax algorithm\\
+      \( \pt(bl) \)                    & Transverse momentum                \\
+      \( \Delta R(bl) \)               & ---                \\
+      \( m(b\Whad) \)                  & ---                \\
+      \( \pt(b\Whad) \)                & ---                \\
+      \( \Delta R(b\Whad) \)           & ---                \\
+      \(m^{minimax}(\Whad bbl)\)        & \\
+      \( m^\text{min}(bl) \)           & ---                \\
+      \( m(\Whad bbl) \)               & ---                \\
+      \( \pt(\Whad bbl) \)             & ---                \\
+      \( \pt(bl\nu) \)                 & ---                \\
+      \( \pt(\Whad bbl\nu) \)          & ---                \\
+      \(R_{bq}\)                       & \\
+      \(R_{bj}\)                       &
+      %\bottomrule
+    \end{tabular}
+  \caption{Definition of basic and constructed observables considered in the cross section measurement.}%                                                                             
+  \label{tab:ObservableDefinitions}
+\end{table}
+
 
 \section{Systematic uncertainties}
 
@@ -414,25 +462,25 @@ at reconstruction level.
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:migma:lep_pt}
+		\label{fig:whadpart:unfolding:migma:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=5]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:migma:bjet_pt}
+		\label{fig:whadpart:unfolding:migma:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=25]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:migma:w_pt}
+		\label{fig:whadpart:unfolding:migma:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=29]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:migma:lb_m}
+		\label{fig:whadpart:unfolding:migma:m_lb}
 	\end{subfigure}
 	\caption{Migration matrix. Fix plot selection later}
 	\label{fig:unfolding:migma}
@@ -489,25 +537,25 @@ After putting all ingredients together, the differential fiducial cross section 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:eff_acc:lep_pt}
+		\label{fig:whadpart:unfolding:eff_acc:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:eff_acc:bjet_pt}
+		\label{fig:whadpart:unfolding:eff_acc:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=27]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:eff_acc:w_pt}
+		\label{fig:whadpart:unfolding:eff_acc:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=31]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
+		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_NOSYS.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:eff_acc:lb_m}
+		\label{fig:whadpart:unfolding:eff_acc:m_lb}
 	\end{subfigure}
 	\caption{Migration matrix. Fix plot selection later}
 	\label{fig:unfolding:eff_acc}
@@ -553,25 +601,25 @@ The nominal data is unfolded with these varied corrections and the difference to
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyDetector.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_det:lep_pt}
+		\label{fig:whadpart:unfolding:sys_det:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyDetector.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_det:bjet_pt}
+		\label{fig:whadpart:unfolding:sys_det:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\includegraphics[width=1.\linewidth, page=13]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyDetector.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_det:w_pt}
+		\label{fig:whadpart:unfolding:sys_det:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=15]{figures/WbWb/WhadParticle/systematics/uncertainties_detector.pdf}
+		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyDetector.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_det:lb_m}
+		\label{fig:whadpart:unfolding:sys_det:m_lb}
 	\end{subfigure}
 	\caption{Detector uncertainties. Fix plot selection later}
 	\label{fig:unfolding:sys_det}
@@ -606,25 +654,25 @@ Uncertainties in the background modeling are propagated by varying the backgroun
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyTheory.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_theo:lep_pt}
+		\label{fig:whadpart:unfolding:sys_theo:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\includegraphics[width=1.\linewidth, page=7]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyTheory.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_theo:bjet_pt}
+		\label{fig:whadpart:unfolding:sys_theo:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=27]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\includegraphics[width=1.\linewidth, page=32]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyTheory.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_theo:w_pt}
+		\label{fig:whadpart:unfolding:sys_theo:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=37]{figures/WbWb/WhadParticle/systematics/uncertainties_theory.pdf}
+		\includegraphics[width=1.\linewidth, page=27]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyTheory.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_theo:lb_m}
+		\label{fig:whadpart:unfolding:sys_theo:m_lb}
 	\end{subfigure}
 	\caption{Detector uncertainties. Fix plot selection later}
 	\label{fig:unfolding:sys_theo}
@@ -650,25 +698,25 @@ to the yield and the uncertainty of the bin, respectively.
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyNominal.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_stat:lep_pt}
+		\label{fig:whadpart:unfolding:sys_stat:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyNominal.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_stat:bjet_pt}
+		\label{fig:whadpart:unfolding:sys_stat:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\includegraphics[width=1.\linewidth, page=13]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyNominal.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_stat:w_pt}
+		\label{fig:whadpart:unfolding:sys_stat:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=15]{figures/WbWb/WhadParticle/systematics/uncertainties_stat.pdf}
+		\includegraphics[width=1.\linewidth, page=11]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary_onlyNominal.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_stat:lb_m}
+		\label{fig:whadpart:unfolding:sys_stat:m_lb}
 	\end{subfigure}
 	\caption{Statistical uncertainties. Fix plot selection later}
 	\label{fig:unfolding:sys_stat}
@@ -713,25 +761,25 @@ While the bins are statistically independent prior to unfolding, the unfolding p
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma:lep_pt}
+		\label{fig:whadpart:unfolding:corrma:pt_lep}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma:bjet_pt}
+		\label{fig:whadpart:unfolding:corrma:pt_bjet}
 	\end{subfigure}
 	\\
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=21]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma:w_pt}
+		\label{fig:whadpart:unfolding:corrma:pt_w}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_STAT_DATA.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma:lb_m}
+		\label{fig:whadpart:unfolding:corrma:m_lb}
 	\end{subfigure}
 	\caption{Statistical correlation matrix. Fix plot selection later}
 	\label{fig:unfolding:corrma_stat}
@@ -754,31 +802,31 @@ over the full range of the spectra.
 This is expected, as all systematic uncertainties are assumed to be fully correlated between
 adjacent bins.
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma_full:lep_pt}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma_full:bjet_pt}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma_full:w_pt}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/unfodling/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:corrma_full:lb_m}
-	\end{subfigure}
-	\caption{Statistical correlation matrix. Fix plot selection later}
-	\label{fig:unfolding:corrma_full}
-\end{figure}
+%\begin{figure}[ht!]
+%	\centering
+%	\begin{subfigure}[b]{0.45\linewidth}
+%		\includegraphics[width=1.\linewidth, page=3]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:whadpart:unfolding:corrma_full:lep_pt}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.45\linewidth}
+%		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:whadpart:unfolding:corrma_full:bjet_pt}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.45\linewidth}
+%		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:whadpart:unfolding:corrma_full:w_pt}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.45\linewidth}
+%		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_TOTAL.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:whadpart:unfolding:corrma_full:lb_m}
+%	\end{subfigure}
+%	\caption{Full correlation matrix. Fix plot selection later}
+%	\label{fig:unfolding:corrma_full}
+%\end{figure}
 
 
