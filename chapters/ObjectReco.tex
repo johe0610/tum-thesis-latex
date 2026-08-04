@@ -170,8 +170,9 @@ The uncertainties assigned to the calibration are typically 0.05\% for electrons
 Table~\ref{tab:ObjReco:Electrons} summarizes the electron definition used for the analysis (tight),
 while the loose selection is used for the overlap removal, see Section~\ref{sec:ObjRec:OR}.
 \begin{table}[htbp]
-\begin{center}
-  \begin{tabular}{ c c c }
+    \centering
+    \caption{A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+    \begin{tabular}{ c c c }
     \toprule
       Requirement          & Signal electrons (tight)     & Background electrons (loose)        \\
       \midrule    
@@ -184,9 +185,7 @@ while the loose selection is used for the overlap removal, see Section~\ref{sec:
       \(|\zzsth|\) cut                 & \(|\zzsth| < \qty{0.5}{\mm}\)       & \(|\zzsth| < \qty{0.5}{\mm}\)        \\
       Bad cluster veto                 & yes                                 & yes             \\
       \bottomrule 
-    \end{tabular}
-  \end{center}
-  \caption{A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \end{tabular}
   \label{tab:ObjReco:Electrons}
 \end{table}
 
@@ -229,8 +228,9 @@ Systematic uncertainties are defined for variations in the SFs associated with
 decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or statistical uncertainties. The full list is given in~\cite{MUON-2022-01}.
 
 \begin{table}[htbp]
-  \begin{center}
-    \begin{tabular}{ c c c }
+  \centering
+  \caption{Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \begin{tabular}{ c c c }
       \toprule
       Requirement      & Signal muons (tight)        & Background muons (loose)      \\
       \midrule
@@ -242,9 +242,7 @@ decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or stat
       \(|\dzero|/\sigma_{\dzero}\) cut  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  & \( |\dzero|/\sigma_{\dzero} < 3.0 \)  \\
       \(|\zzsth|\) cut & \( |\zzsth| < \qty{0.5}{\mm} \)   & \( |\zzsth| < \qty{0.5}{\mm} \) \\
       \bottomrule
-    \end{tabular}
-  \end{center}
-  \caption{Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \end{tabular}
   \label{tab:ObjReco:Muons}
 \end{table}
 
@@ -324,7 +322,8 @@ ATLAS flavor taggers are trained on simulated MC samples.
 The calibration procedure is detailed in Chapter ...
 
 \begin{table}[htbp]
-  \begin{center}
+    \centering
+    \caption{Summary of the jet definitions in the analysis.}%
     \begin{tabular}{ c c c }
       \toprule
       Requirement        & Signal jets                 & Baseline jets                \\
@@ -335,10 +334,7 @@ The calibration procedure is detailed in Chapter ...
       \eta cut           & \( |\eta| < 2.5 \)          & \( |\eta| < 4.5 \)           \\
       \(b\)-tagging      & \texttt{DL1r} with \texttt{FixedCutBEff\_77}  &            \\
       \bottomrule
-    \end{tabular}
-  \end{center}
-
-  \caption{Summary of the jet definitions in the analysis.}%
+  \end{tabular}
   \label{tab:ObjReco:Jets}
 \end{table}
 
@@ -439,7 +435,7 @@ This section was copied from the int note and still needs to be modified.
 
 To mitigate double counting of energy deposits arising from objects that are reconstructed twice (e.g., an electron also forming a jet),
 ambiguous object are resolved using an overlap removal procedure~\cite{Adams:1700874}.
-Loose object definitions listed in Tables~\ref{} are applied for electrons, muons, and jets for this step.
+Loose object definitions listed in Tables~\ref{tab:ObjReco:Electrons} and~\ref{tab:ObjReco:Muons} are applied for electrons, muons, and jets for this step.
 The overlap removal algorithm resolves overlaps in the following order:
 \begin{itemize}
     \item Remove PFlow jets that are actually muons.

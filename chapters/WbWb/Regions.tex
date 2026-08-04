@@ -41,6 +41,8 @@ A quantitative overview is provided in Table ... where the event yields for the 
 
 \begin{table}[htbp]
     \centering
+    \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
+    The cuts are applied on detector and particle level.}%
     \begin{tabular}{l c c c}
       %\toprule
       Selection                             & Loose  & \Wboson-hadronic \\
@@ -54,11 +56,9 @@ A quantitative overview is provided in Table ... where the event yields for the 
       \( \met + \mtW \)                     & \( (60, \infty) \) & \( (60, \infty) \) \\
       \( m(\Whad) \)                        & ---                & \( (60, 100) \)    \\
       \( \pt(\Whad) \)                      & ---                & \( (80, \infty) \) \\
-      bottomrule
+      %\bottomrule
     \end{tabular}
-  \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
-  The cuts are applied on detector and particle level.}%                                                                             
-  \label{tab:RegionDefinitions}
+    \label{tab:RegionDefinitions}
 \end{table}
 %\begin{table}[htbp]
 %  \begin{center}
@@ -166,7 +166,7 @@ of basic kinematic quantities:
 \item \textbf{ Leading} and \textbf{subleading} $\bm{b}$ \textbf{jet}~\(\bm{p_T}\) are the transverse momentum of the leading and subleading $b$ jet, respectively.
 \item \textbf{ Missing}~\(\bm{E_T}\) denotes the missing transverse energy. Since the initial momentum of the partonic interaction is not known along the collision axis, only the transverse component can be measured. The quantity approximates the neutrino from the leptonic \Wboson decay.
 \item \textbf{ Hadronic}~\(\bm{W p_T}\) and $\bm{y}$ are the transverse momentum and rapidty of the hadronic \Wboson boson.
-\item \textbf{ Leading} and \textbf{subleading additional jet } \(\bm{p_T}\) denote the transverse momentum of the leading and subleading jets, excluding the two leading $b$ jets and the jets identified as the \Wboson candidate. They correspond to the hardest and second hardest gluon radiation and are thus suitable observables to study PS matching.
+\item \textbf{ Leading} and \textbf{subleading additional jet } \(\bm{p_T}\) denote the transverse momentum of the leading and subleading jets, excluding the two leading $b$ jets and the jets identified as the \Wboson candidate. They correspond to the hardest and second hardest gluon radiation and are thus valuable observables for PS matching studies.
 \end{itemize}
 
 \noindent
@@ -191,7 +191,7 @@ can be constructed.
 \begin{itemize}
 \item \( \bm{ m^{minimax}(W_{had.}bbl)} \) Minimax observable defined in equation ....
 \item \( \bm{ m^\text{min}(bl) } \) denotes the minimal invariant mass of the lepton combined with one of the $b$ jets min$(m(b_1l),m(b_2l))$.
-\item The transverse mass of the leptonically decaying \Wboson \(\bm{m_T(W_{lep.})}\) can be obtained by adding \ETmiss and the transverse 
+\item The transverse mass of the leptonically decaying \Wboson boson \(\bm{m_T(W_{lep.})}\) can be obtained by adding \ETmiss and the transverse 
 vector of the lepton.
 \end{itemize}
 
@@ -200,7 +200,7 @@ Lastly, two more observables are defined, measuring jet momenta ratios.
 By taking the ratio of $b$ tagged jets to non-$b$ tagged jets, uncertainties associated to
 $b$ tagging cancel. 
 \begin{itemize}
-\item \( \bm{R{bq} } \) is the transverse momentum ratio of the leading $b$ jet to the leading light jet, while
+\item \( \bm{R_{bq} } \) is the transverse momentum ratio of the leading $b$ jet to the leading light jet, while
 \item \( \bm{R_{bj} } \) denotes the scalar sum of the leading and subleading $b$ jet \pt divided by the \pt of the hadronic \Wboson.
 \end{itemize}
 
@@ -847,52 +847,6 @@ Uncertainties in the background modeling are propagated by varying the backgroun
 \end{equation}
 
 Uncertainties related to the background modeling only have minor contributions to the total uncertainty (see next section) and no dedicated breakdown is shown.
-
-
-\vspace{.5cm}
-\noindent
-\textbf{Uncertainty summary}
-\vspace{.5cm}
-
-\noindent
-
-The total uncertainty is obtained by summing individual contributions from the up- and down-variation quadratically. The final result is presented in figure~\ref{fig:unfolding:sys}.
-From this overview, it becomes clear, that detector uncertainties are the major contribution, with statistical uncertainties increasing in the tails of the distributions. Variations in the background modeling do not contribute significantly, while variations in the signal modeling become more important in the high \pt / mass range.
-
-Keeping the sign of the cross section shift when assessing uncertainties, allows a direct comparison of up and down variation.
-The uncertainties are symmetrical over the full observable ranges.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_all:pt_lep}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=4]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_all:pt_bjet}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=14]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_all:pt_w}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\linewidth}
-		\includegraphics[width=1.\linewidth, page=12]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
-		\caption{\mbox{}}
-		\label{fig:whadpart:unfolding:sys_all:m_lb}
-	\end{subfigure}
-	\caption{Complete breakdown of all uncertainties on the unfolded cross section as a function of 
-    \subref{fig:whadpart:unfolding:sys_all:pt_lep} lepton \pt, 
-    \subref{fig:whadpart:unfolding:sys_all:pt_bjet} \pt of the leading $b$ jet,
-    \subref{fig:whadpart:unfolding:sys_all:pt_w} \pt of the hadronic \Wboson and
-    \subref{fig:whadpart:unfolding:sys_all:m_lb} $m(bl)$. 
-    The histograms are obtained by quadratically summing the respective contributions.}
-	\label{fig:unfolding:sys}
-\end{figure}
 
 \vspace{.5cm}
 \noindent

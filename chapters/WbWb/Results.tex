@@ -1,27 +1,12 @@
 \section{Cross section results}
 
-This section presents the single differential particle level cross section results.
-An extesive set of observables is shown in Figures ... through ....
-The data points include statsitical uncertainties, as well as the full set of systematic uncertainties
-discussed in chapter....
-
-The data are compared to the MC event generators. 
-Powheg interfaced with the Pythia parton shower.is shown in the DR and DS schemes,
+This section presents the unfolded single differential particle level cross section results.
+An extensive set of observables which was defined in section~\ref{sec:observables}, is presented in Figures~~\ref{fig:whadpart:xsec:selected}, \ref{fig:whadpart:xsec:basic} and~\ref{fig:whadpart:xsec:combined}. 
+The data are compared to various predictions obtained from MC event generators. 
+Powheg interfaced with the Pythia parton shower is shown in the DR and DS schemes,
 alongside Powheg employing the alternative Herwig parton shower.
-For a quantative comparison, the $\chi^2$ values are provided in Table ... for every observable and theory prediction.
-
-
-
-\vspace{.5cm}
-\noindent
-\textbf{WWbb kinematics}
-\vspace{.5cm}
-
-\noindent
-Selected observables determining the kinematics of the $WWbb$ process are collected in Figure \dots
-The uncertainties are dominated by \dots
-Data MC agreement within uncertainties
-Trend to overestimate the data at large momenta in all three models.
+The data points show statistical uncertainties as black error bars, in addition to the total error as a gray band.
+The error breakdown is provided in figures~\ref{fig:unfolding:sys}, \ref{fig:whadpart:sys:basic} and~\ref{fig:whadpart:sys:combined}.
 
 \begin{figure}[ht!]
 	\centering
@@ -33,7 +18,7 @@ Trend to overestimate the data at large momenta in all three models.
 	\begin{subfigure}[b]{0.42\linewidth}
 		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/WhadParticle/paper_observables/final_unfolded_TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:xsec:pt_bjet1}
+		\label{fig:whadpart:xsec:pt_bjet}
 	\end{subfigure}
     \\
 	\begin{subfigure}[b]{0.42\linewidth}
@@ -44,19 +29,67 @@ Trend to overestimate the data at large momenta in all three models.
 	\begin{subfigure}[b]{0.42\linewidth}
 		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/paper_observables/final_unfolded_TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle.pdf}
 		\caption{\mbox{}}
-		\label{fig:whadpart:xsec:m_bl}
+		\label{fig:whadpart:xsec:m_lb}
 	\end{subfigure}
-	\caption{Cross sections.}
+	\caption{Single differential cross section results as a function of 
+    \subref{fig:whadpart:xsec:pt_lep} lepton \pt, 
+    \subref{fig:whadpart:xsec:pt_bjet} \pt of the leading $b$ jet,
+    \subref{fig:whadpart:xsec:pt_w} \pt of the hadronic \Wboson and
+    \subref{fig:whadpart:xsec:m_lb} $m(bl)$. 
+    The data are compared to predictions obtained with the nominal signal sample \texttt{Powheg+Pythia 8} with the DR description, as well as the complementary DS description. The \texttt{Powheg+Herwig 7} prediction employs an alternative parton shower.
+    The data points show statistical uncertainties as black error bars, as well as the total error as gray errorband.
+    The absolute cross section and the ratio of the predictions to the data are presented in the upper and lower panel, respectively.
+}
 	\label{fig:whadpart:xsec:selected}
 \end{figure}
 
-\vspace{.5cm}
-\noindent
-\textbf{Towards the top mass}
-\vspace{.5cm}
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_all:pt_lep}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=4]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_all:pt_bjet}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=14]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_all:pt_w}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=12]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:unfolding:sys_all:m_lb}
+	\end{subfigure}
+	\caption{Complete breakdown of all uncertainties on the unfolded cross section as a function of 
+    \subref{fig:whadpart:unfolding:sys_all:pt_lep} lepton \pt, 
+    \subref{fig:whadpart:unfolding:sys_all:pt_bjet} \pt of the leading $b$ jet,
+    \subref{fig:whadpart:unfolding:sys_all:pt_w} \pt of the hadronic \Wboson and
+    \subref{fig:whadpart:unfolding:sys_all:m_lb} $m(bl)$. 
+    The histograms are obtained by quadratically summing the respective contributions.}
+	\label{fig:unfolding:sys}
+\end{figure}
 
-\noindent
-Show selected quantities which are sensitive to the top quark mass or can be used to constrain systematic uncertainties
+The unfolding procedure was illustrated with the four observables lepton \pt, leading $b$ jet \pt, \pt of the hadronic \Wboson and $m(bl)$.
+The absolute cross sections and the error breakdown are displayed in figures~\ref{fig:whadpart:xsec:selected} and~\ref{fig:unfolding:sys}.
+
+The PH+H7 prediction provides the best description of the overall normalization,
+while PH+PY8 predictions overestimate the spectra by a few percent.
+The MC models predict a harder \pt spectrum , reflected by an overestimation of the data at large momenta. This can be traced back to missing higher-orders in the predictions. Predictions at NNLO in QCD relax the tension. (SOURCE)
+
+The ratio of the PH+PY8 predictions with respect to the data in the $m(bl)$ bulk region ($m(bl)<150\GeV$) is flat with an offset of $\approx 8\%$.
+Above the kinematic threshold, discrepancies between DR and DS descriptions can be observed. While the DR prediction agrees with the data within uncertainties, the DS scheme underestimates the data by $20\%$.
+PH+H7 provides the best description of the $m(bl)$ distribution, agreeing with the data over a large kinematic range.
+
+Figure~\ref{fig:unfolding:sys} demonstrates that detector uncertainties are the major error source, with statistical uncertainties increasing in the tails of the distributions. Variations in the background modeling do not contribute significantly, while variations in the signal modeling become more important in the high \pt / mass range.
+
+Keeping the sign of the cross section shift when assessing uncertainties, allows a direct comparison of up and down variation.
+The uncertainties are symmetrical over the full observable ranges.
 
 \begin{figure}[ht!]
 	\centering
@@ -102,11 +135,63 @@ Show selected quantities which are sensitive to the top quark mass or can be use
 		\caption{\mbox{}}
 		\label{fig:whadpart:xsec:rbj}
 	\end{subfigure}
-	\caption{Basic plots \pt and other stuff.}
-	\label{fig:whadpart:xsec:pt}
+	\caption{Absolute single differential cross section results as a function of kinematic observables. More information is given in the caption of figure~\ref{fig:whadpart:xsec:selected}. For a description of the observables of interest, refer to section~\ref{sec:observables}.
+    }
+	\label{fig:whadpart:xsec:basic}
+\end{figure}
+
+error breakdown basic
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_bjet2}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=8]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_owj1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=10]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_owj2}
+	\end{subfigure}
+    \\
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=4]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_met}
+	\end{subfigure}
+    	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:etal}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=16]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:yw}
+	\end{subfigure}
+    \\
+        \begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:rbq}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=26]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:rbj}
+	\end{subfigure}
+	\caption{Absolute single differential cross section results as a function of kinematic observables. More information is given in the caption of figure~\ref{fig:unfolding:sys}. For a description of the observables of interest, refer to section~\ref{sec:observables}.
+    }
+	\label{fig:whadpart:sys:basic}
 \end{figure}
 
 
+cross section combined
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -179,40 +264,142 @@ Show selected quantities which are sensitive to the top quark mass or can be use
 %	\end{subfigure}
 %	\caption{}
 %	\label{fig:whadpart:xsec:mass}
-	\caption{All other plots}
-	\label{fig:whadpart:xsec:angles}
+	\caption{Absolute single differential cross section results as a function of observables combined from lepton, jets and missing transverse energy. More information is given in the caption of figure~\ref{fig:whadpart:xsec:selected}.}
+	\label{fig:whadpart:xsec:combined}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_bw}
+	\end{subfigure}
+   	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=16]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:mbw}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=26]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:drbw}
+	\end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=14]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_bl}
+	\end{subfigure}
+    	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=24]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:drbl}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=18]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_blnu}
+	\end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=20]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_wbbl}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=20]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:mwbbl}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=22]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:pt_wbblnu}
+	\end{subfigure}
+    \\
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=22]{figures/WbWb/WhadParticle/paper_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:minimax}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=6]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:mtl}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\linewidth}
+		\includegraphics[width=1.\linewidth, page=8]{figures/WbWb/WhadParticle/more_observables/TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle_summary.pdf}
+		\caption{\mbox{}}
+		\label{fig:whadpart:sys:mblmi}
+	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=8]{figures/WbWb/WhadParticle/more_observables/final_unfolded_TUnfoldStandalone_OptionA_data_nonClosureAlternative_SR_Whad_Final_l_Whad_particle.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:whadpart:sys:mtblmin}
+%	\end{subfigure}
+%	\caption{}
+%	\label{fig:whadpart:sys:mass}
+	\caption{Absolute single differential cross section results as a function of observables combined from lepton, jets and missing transverse energy. More information is given in the caption of figure~\ref{fig:unfolding:sys}.}
+	\label{fig:whadpart:sys:combined}
 \end{figure}
 
 
+The agreement between measured cross sections $\sigma_\text{data}$ and theory predictions $\sigma_\text{theo}$ can be quantified with a $\chi^2$ test
+\begin{equation}
+    \chi^2 = (\sigma_\text{data}-\sigma_\text{theo})^T~\text{Cov}^{-1}~(\sigma_\text{data}-\sigma_\text{theo})
+\end{equation}
+where the uncertainties and correlations between bins after the unfolding is encapsulated by the inverse covariance matrix Cov$^{-1}$.
+Uncertainties in the predictions are not included in the calculation.
+The number of degrees of freedom NDF is given by the number of bins.
+
+The $p$-value gives the probability of observing a
+$\chi^2$ value at least as extreme as the one calculated, under the assumption that the null hypothesis is true (i.e., the theoretical model is consistent with the data).
+
+The $\chi^2/$NDF and the $p$-values are provided in Table~\ref{tab:chisq} for the three considered theory predictions and every measured observable.
 
 \begin{table}[htbp]
     \centering
     \caption{Comparison of Generator Performance. Chi square calculation outlined in the text.}
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{l|cccccccccccccccc}
+    \begin{tabular}{l|cc|cc|cc}
         %\toprule
         & \multicolumn{6}{c}{\textbf{Generator}} \\
         %\cmidrule(lr){2-7}
-        & \multicolumn{2}{c}{PH+ PYTHIA 8 (DR)} & \multicolumn{2}{c}{PH+ PYTHIA 8 (DS)} & \multicolumn{2}{c}{PH+ HERWIG 7.1 (DR)}\\
+        & \multicolumn{2}{c|}{PH+ PYTHIA 8 (DR)} & \multicolumn{2}{c|}{PH+ PYTHIA 8 (DS)} & \multicolumn{2}{c}{PH+ HERWIG 7.1 (DR)}\\
         %\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
         \textbf{Observable} & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$ & p-value\\
         \midrule
-        Lepton $p_T$ & 45.44 / 8 & $<0.001$ & 55.26 / 11 & $<0.001$ & 25.36 / 11 & 0.008 \\
-        Leading $b$-jet $p_T$ & 30.59 / 12 & 0.002 & 41.35 / 12 & $<0.001$ & 24.28 / 12 & 0.019 \\
-        Subleading $b$-jet $p_T$ & 32.76 / 9 & $<0.001$ & 36.88 / 9 & $<0.001$ & 27.33 / 9 & 0.001 \\
-        Leading light-jet $p_T$ & 15.22 / 10 & 0.124 & 20.25 / 10 & 0.027 & 9.21 / 10 & 0.512 \\
-        Hadronic-W $p_T$ & 17.87 / 11 & 0.085 & 22.70 / 11 & 0.019 & 12.03 / 11 & 0.362 \\
-        Selected ($b + \ell$) mass & 21.04 / 20 & 0.395 & 33.20 / 20 & 0.032 & 41.95 / 20 & 0.003 \\
-        Selected ($b + W_{\text{had.}}$) mass & 24.22 / 10 & 0.007 & 26.74 / 10 & 0.003 & 50.13 / 10 & $<0.001$ \\
-        Selected ($W_{\text{had.}} + b_1 + b_2 + \ell$) mass & 4.08 / 9 & 0.906 & 4.01 / 9 & 0.911 & 5.08 / 9 & 0.827 \\
-        Modified minimax mass & 18.96 / 10 & 0.041 & 25.95 / 10 & 0.004 & 45.30 / 10 & $<0.001$ \\
-        Hadronic-W $y$ & 14.95 / 12 & 0.244 & 15.26 / 12 & 0.228 & 14.24 / 12 & 0.285\\
-        $\Delta R(b, \ell)$ & 41.25 / 8 & $<0.001$ & 42.04 / 8 & $<0.001$ & 42.88 / 8 & $<0.001$\\
-        $\Delta R(b, W_{\text{had.}})$ & 103.0 / 8 & $<0.001$ & 105.1 / 8 & $<0.001$ & 107.3 / 8 & $<0.001$\\
-        %\bottomrule
+
+Leading $b$ jet \pt     & 25.78 / 9  & 0.002     & 20.53 / 9  & 0.015     & 10.15 / 9  & 0.339     \\
+Subleading $b$ jet \pt  & 29.26 / 6  & $<0.001$ & 23.80 / 6  & 0.001     & 10.81 / 6  & 0.094     \\
+$p_{T, \text{OWj1}}$   & 16.76 / 8  & 0.033     & 13.22 / 8  & 0.104     & 9.33 / 8   & 0.315     \\
+$p_{T, \text{OWj2}}$   & 41.13 / 5  & $<0.001$ & 36.28 / 5  & $<0.001$ & 26.89 / 5  & $<0.001$ \\
+Lepton \pt          & 43.89 / 9  & $<0.001$ & 24.89 / 9  & 0.003     & 20.70 / 9  & 0.014     \\
+$m(bl)$  & 24.52 / 17 & 0.106     & 43.18 / 17 & 0.000     & 10.84 / 17 & 0.865     \\
+\pt$(bl)$ & 42.78 / 12 & $<0.001$ & 32.73 / 12 & 0.001     & 17.69 / 12 & 0.126     \\
+$m(bW_{had.})$    & 18.65 / 11 & 0.068     & 40.88 / 11 & $<0.001$ & 13.72 / 11 & 0.248     \\
+\pt$(bW_{had.})$ & 67.68 / 7  & $<0.001$ & 57.14 / 7  & $<0.001$ & 37.86 / 7  & $<0.001$ \\
+$m(W_{had.}bbl)$ & 5.36 / 10  & 0.866     & 7.98 / 10   & 0.631     & 2.12 / 10  & 0.995     \\
+$m^{minimax}(W_{had.}bbl)$  & 23.73 / 11 & 0.014     & 49.97 / 11 & $<0.001$ & 13.06 / 11 & 0.289     \\
+$\Delta R(b,l)$    & 81.05 / 21 & $<0.001$ & 86.53 / 21 & $<0.001$ & 47.48 / 21 & 0.001     \\
+$\Delta R(b, W_{had.})$ & 108.37 / 12 & $<0.001$ & 108.52 / 12 & $<0.001$ & 74.61 / 12 & $<0.001$ \\
+$\eta(l)$          & 97.64 / 24 & $<0.001$ & 99.08 / 24 & $<0.001$ & 74.64 / 24 & $<0.001$ \\
+\ETmiss    & 25.25 / 6  & 0.000     & 16.12 / 6  & 0.013     & 15.86 / 6  & 0.015     \\
+$m_T(l)$          & 12.08 / 7  & 0.098     & 9.59 / 7   & 0.213     & 10.93 / 7  & 0.141     \\
+Hadronic \Wboson \pt & 23.81 / 11 & 0.014     & 16.65 / 11 & 0.118     & 12.43 / 11 & 0.332     \\
+$\text{rapidity}_{W_{\text{had}}}$ & 26.18 / 24 & 0.340     & 25.56 / 24 & 0.376     & 17.51 / 24 & 0.826     \\
+$m_{bl}^{min}$  & 10.29 / 9  & 0.327     & 23.27 / 9  & 0.006     & 2.79 / 9   & 0.972     \\
+\pt$(bl\nu)$ & 74.11 / 9  & $<0.001$ & 61.03 / 9  & $<0.001$ & 35.17 / 9  & $<0.001$ \\
+\pt$(W_{had.}bbl)$ & 16.36 / 10 & 0.090     & 11.11 / 10 & 0.349     & 6.55 / 10  & 0.767     \\
+\pt$(W_{had.}bbl\nu)$ & 9.03 / 8   & 0.340     & 8.47 / 8   & 0.388     & 9.34 / 8   & 0.314     \\
+$R^{bq}$                  & 14.56 / 7  & 0.042     & 11.98 / 7  & 0S 0.101     & 5.32 / 7   & 0.621     \\
+$R^{bj}$                  & 9.92 / 7   & 0.193     & 7.11 / 7   & 0.417     & 3.65 / 7   & 0.818     \\
     \end{tabular}%
+    \label{tab:chisq}
     }
 \end{table}
+
 
 %To do: Polish plots
 % - Remove ATLAS label (DONE)
