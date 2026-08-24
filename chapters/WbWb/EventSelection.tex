@@ -1,15 +1,54 @@
 \section{Background estimation}
 \label{sec:background}
+
+The analysis targets the
+$WbWb$ final state with one leptonically and one hadronically decaying
+W boson. However, background events from other processes
+can mimic the signal due to misreconstruction or misidentification of objects.
+These backgrounds are simulated with MC events, but their modeling is challenging. To improve reliability, data-driven methods are also used to estimate contributions to the signal region.
+
 \subsection{\Wboson + jets background}
 
 The dominant background for the analysis arises from events with a final state \Wboson boson in association with several jets,
 where light quark or gluon jets are misidentified as $b$ jets. 
 The misidentification rate for light jets is less than 1\% (see Fig~\ref{fig:ObjectReco:FtagPerf}),
-but when combined with the large cross-section of \Wboson+jets production, it results in a significant contribution to the $WWbb$ signal region.
-Careful modeling of the jet flavor composition, b-tagging efficiencies, and control regions is essential to accurately estimate and subtract the \Wboson+jets contribution in the analysis.
+but when combined with the large cross-section of \Wboson+jets production, it results in a significant contribution to the $WbWb$ signal region.
+Careful modeling of the jet flavor composition, b-tagging efficiencies, and control regions is essential to accurately estimate and subtract the $W$+jets contribution in the analysis.
 
-For that purpose, a dedicated control region is defined.
-Describe the fit
+A dedicated control region is defined to estimate and constrain the $W$+jets normalization. It is designed to be orthogonal to the signal region
+while preserving similar kinematic properties.
+Exactly three jets, at least one of which is $b$ tagged, are selected.
+To enhance the yield and purity of the $W$+jets background, while suppressing the \ttbar contribution, cuts on
+$m_T^W$ and $m_{bl}^\text{min}$ are applied. The overlap with the $W$-hadronic region is expected to be small, but the region is nevertheless vetoed explicitly.
+A summary of all cuts for the control region is provided in 
+table~\ref{tab:WjetsCRDefinitions}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Event selection $W$+jets control region.}%
+    \begin{tabular}{l c c c}
+      %\toprule
+      Selection                             & $W$+jets CR \\
+      \midrule
+      \( N \)(central jet)                  & \( = 3\)         \\
+      \( N_{\bjets}\)                       & \( \geq 1 \)        \\
+      \( \pt(\ell) \)                       & \( (30, \infty) \)  \\
+      \( \pt(j)\)                           & \( (25, \infty) \)  \\
+      \( \met + \mtW \)                     & \( (60, \infty) \)  \\
+      \( m_T^W \)                           & \( (40,100) \) \\
+      \(m_{bl}^\text{min}\)                 & \( (180, \infty)\) \\
+      SR veto                               & enabled
+      %\bottomrule
+    \end{tabular}
+    \label{tab:WjetsCRDefinitions}
+\end{table}
+
+The analysis employs a single-bin fit in the control region with the W+jets
+normalization as parameter of interest.
+Detector and modeling
+uncertainties of all processes are treated as nuisance parameters in the fit.
+The normalization factor is found to be $1.10\pm 0.10$ and is
+used to correct the $W$+jets process in the signal region.
 
 \subsection{Misidentified and non-prompt leptons}
 \label{ch:FakeLep}
@@ -26,6 +65,8 @@ can still contribute to the signal region if they satisfy tight isolation and im
 The fake-factor method~\cite{EGAM-2019-01} is employed to estimate misidentified leptons.
 This approach is data-driven as it is challenging to model these processes with high accuracy in simulation.
 This technique relies on a control region enriched in fake leptons, selected orthogonal to the signal regions.
+The \ETmiss$+m_T^W$ cut is inverted to be smaller than 60~\GeV and at least one
+$b$ jet is required.
 
 Fake factors are derived from fractions of leptons passing tight or loose reconstruction criteria, see Tables~\ref{tab:ObjReco:Electrons} and~\ref{tab:ObjReco:Muons}.
 Events containing fake leptons are then weighted by these factors to correct for misidentification in the analysis phase space.

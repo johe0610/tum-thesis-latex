@@ -1,154 +1,3 @@
-\section{Measurement Regions}%
-\label{sec:Regions}
-
-This section presents the final event selection that is applied to define the measurement phase space.
-Only events passing all selection criteria are considered in the definition of the fiducial cross section.
-Two analysis regions are defined and summarized in Table~\ref{tab:RegionDefinitions}.
-
-The selection is optimised using simulated MC event samples.
-All events are required to contain exactly one signal lepton as defined in ....
-Prompt leptonic \( \tau \) decays are considered signal in this analysis and therefore included.
-Events are selected with a single lepton trigger and a minimum \pt requirement of \qty{30}{\GeV} is placed on the lepton.
-At least three jets are expected in the signal process: two $b$ jets and at least one jet from the hadronic \Wboson decay.
-The neutrino from the leptonic \Wboson boson decay introduces \met.
-A cut is defined on \( \met + \mtW > \qty{60}{\GeV} \) to remove background from QCD events
-with a mis-identified or non-prompt lepton.
-The missing transverse mass \mtW is computed from
-the lepton and \met 4-vectors where the \(z\)-component is set to 0.
-
-The \textit{Loose} region defines the most general phase space constraining the interference
-effects between \ttbar and \tW processes and improve the modeling over a large kinematic region.
-The explicit reconstruction of the hadronic \Wboson boson introduced in the previous section is
-exploited to define the \Wboson-hadronic region.
-A mass window around the \Wboson mass is defined for the \Wboson candidate $(60~\GeV < m(\Whad) < 100~\GeV)$,
-as well as a minimum \pt requirement.
-These cuts suppress contributions from events with poorly reconstructed \Wboson candidates.
-The loss in data statistics is compensated by a significantly enhanced background suppression.
-This analysis region provides a clean data sample with small background suppression.
-The explicit reconstruction of the \Wboson candidates further allows the construction of
-pseudo-tops from \Wboson, lepton and the two leading $b$ jets in an event.
-The observables measured in this region are valuable for development and improvement of MC models.
-They will also be used to extract the mass of the top quark in Chapter....
-
-A direct comparison of the two measurement regions is shown for the lepton \pt spectrum in Figure~\ref{fig:Regions:Leppt}.
-
-A quantitative overview is provided in Table ... where the event yields for the two regions are listed.
-
-%The cutflow tables for these selections are available in \cref{app:cutflows}.
-
-
-
-
-\begin{table}[htbp]
-    \centering
-    \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
-    The cuts are applied on detector and particle level.}%
-    \begin{tabular}{l c c c}
-      %\toprule
-      Selection                             & Loose  & \Wboson-hadronic \\
-      \midrule
-      \( N_{lep} \)                         & \( = 1\)           & \( = 1\)           \\
-      \( N \)(central jet)                  & \( \geq 3\)        & \( \geq 3 \)       \\
-      \( N_{\bjets}\)                       & \( \geq 2 \)       & \( \geq 2 \)       \\
-      \( N_{l\text{-jets}}\)                & ---                & \( \geq 1 \)       \\
-      \( \pt(\ell) \)                       & \( (30, \infty) \) & \( (30, \infty) \) \\
-      \( \pt(j)\)                           & \( (25, \infty) \) & \( (25, \infty) \) \\
-      \( \met + \mtW \)                     & \( (60, \infty) \) & \( (60, \infty) \) \\
-      \( m(\Whad) \)                        & ---                & \( (60, 100) \)    \\
-      \( \pt(\Whad) \)                      & ---                & \( (80, \infty) \) \\
-      %\bottomrule
-    \end{tabular}
-    \label{tab:RegionDefinitions}
-\end{table}
-%\begin{table}[htbp]
-%  \begin{center}
-%    \input{tables/yields_SR_Whad_Final_l_Whad}
-%  \end{center}
-%  \caption{Yields of individual signal and background samples in the
-%    \Wboson-hadronic measurement region.
-%    The total expected yield is using the nominal \tW DR sample.
-%    Uncertainties are statistical only.}%                                                                                                                                           
-%  \label{tab:SR_Whad_Final:yields}
-%\end{table}
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:l_ptlep}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:l_ptlep}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:m_ptlep}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:m_ptlep}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:e_ptlep}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:e_ptlep}
-	\end{subfigure}
-	\caption{Add caption.}
-	\label{fig:Regions:Leppt}
-\end{figure}
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:l_mbl}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:l_mbl}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:m_mbl}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:m_mbl}
-	\end{subfigure}
-	\\
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
-		\caption{\mbox{}}
-		\label{fig:WhadLoose:e_mbl}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
-		\caption{\mbox{}}
-		\label{fig:Whad:e_mbl}
-	\end{subfigure}
-	\caption{Add caption.}
-	\label{fig:Regions:mbl}
-\end{figure}
-
-\clearpage
-
 \section{Observables of interest}
 \label{sec:observables}
 The measured final state comprises of the 4-vectors of the lepton, $b$ jets, the reconstructed hadronic \Wboson boson and additional jets, as well as the transverse components of the missing energy. 
@@ -203,6 +52,190 @@ $b$ tagging cancel.
 \item \( \bm{R_{bq} } \) is the transverse momentum ratio of the leading $b$ jet to the leading light jet, while
 \item \( \bm{R_{bj} } \) denotes the scalar sum of the leading and subleading $b$ jet \pt divided by the \pt of the hadronic \Wboson.
 \end{itemize}
+
+
+\section{Measurement Regions}%
+\label{sec:Regions}
+
+This section presents the final event selection that is applied to define the measurement phase space.
+Only events passing all selection criteria are considered in the definition of the fiducial cross section.
+                                                                                         
+%  \label{tab:SR_Whad_Final:yields}
+%\end{table}
+
+The selection is optimized using simulated MC event samples.
+All events are required to contain exactly one signal lepton as defined in section~\ref{sec:lep_defintion}.
+Prompt leptonic \( \tau \) decays are considered signal in this analysis and are therefore included.
+Events are selected with a single lepton trigger and a minimum \pt requirement of \qty{30}{\GeV} is placed on the lepton.
+At least three jets are expected in the signal process: two $b$ jets and at least one jet from the hadronic \Wboson decay.
+The neutrino from the leptonic \Wboson boson decay introduces \met.
+A cut is defined on \( \met + \mtW > \qty{60}{\GeV} \) to remove background from QCD events
+with a misidentified or non-prompt lepton.
+The missing transverse mass \mtW is computed from
+the lepton and \met 4-vectors where the \(z\)-component is set to zero.
+
+The \textit{Loose} region defines the most general phase space constraining the interference
+effects between \ttbar and \tW processes and improve the modeling over a large kinematic region.
+The explicit reconstruction of the hadronic \Wboson boson introduced in the previous section is
+exploited to define the \Wboson-hadronic region.
+A mass window around the \Wboson mass is defined for the \Wboson candidate $(60~\GeV < m(\Whad) < 100~\GeV)$,
+as well as a minimum \pt requirement.
+These cuts suppress contributions from events with poorly reconstructed \Wboson candidates.
+The loss in data statistics is compensated by a significantly enhanced background suppression.
+This analysis region provides a clean data sample with small background suppression.
+The explicit reconstruction of the \Wboson candidates further allows the construction of
+pseudo-tops from \Wboson, lepton and the two leading $b$ jets in an event.
+The observables measured in this region are valuable for development and improvement of MC models.
+The two analysis regions introduced above are summarized in Table~\ref{tab:RegionDefinitions}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
+    The cuts are applied on detector and particle level.}%
+    \begin{tabular}{l c c c}
+      %\toprule
+      Selection                             & Loose  & \Wboson-hadronic \\
+      \midrule
+      \( N_{lep} \)                         & \( = 1\)           & \( = 1\)           \\
+      \( N \)(central jet)                  & \( \geq 3\)        & \( \geq 3 \)       \\
+      \( N_{\bjets}\)                       & \( \geq 2 \)       & \( \geq 2 \)       \\
+      \( N_{l\text{-jets}}\)                & ---                & \( \geq 1 \)       \\
+      \( \pt(\ell) \)                       & \( (30, \infty) \) & \( (30, \infty) \) \\
+      \( \pt(j)\)                           & \( (25, \infty) \) & \( (25, \infty) \) \\
+      \( \met + \mtW \)                     & \( (60, \infty) \) & \( (60, \infty) \) \\
+      \( m(\Whad) \)                        & ---                & \( (60, 100) \)    \\
+      \( \pt(\Whad) \)                      & ---                & \( (80, \infty) \) \\
+      %\bottomrule
+    \end{tabular}
+    \label{tab:RegionDefinitions}
+\end{table}
+%\begin{table}[htbp]
+%  \begin{center}
+%    \input{tables/yields_SR_Whad_Final_l_Whad}
+%  \end{center}
+%  \caption{Yields of individual signal and background samples in the
+%    \Wboson-hadronic measurement region.
+%    The total expected yield is using the nominal \tW DR sample.
+%    Uncertainties are statistical only.}%                                                  
+
+A direct comparison of the two measurement regions is shown for the lepton \pt spectrum
+and $m_{bl}$ in Figure~\ref{fig:Regions:LooseHad}.
+The data is represented by black circles and the error bars illustrate the statistical uncertainty. The bin size is gradually increased to ensure sufficient statistics in each bin. The signal MC consists of \ttbar and $tW$ predictions.
+Two alternative signal hypotheses are tested for the $tW$ contribution employing the DR or DS scheme. Background contribution to the regions is also shown where most contamination arises from $W$+jets events.
+The hashed area indicates the MC statistical uncertainties of the samples.
+
+
+%A quantitative overview is provided in Table ... where the event yields for the two regions are listed.
+
+%The cutflow tables for these selections are available in \cref{app:cutflows}.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
+		\caption{\mbox{}}
+		\label{fig:WhadLoose:l_ptlep}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
+		\caption{\mbox{}}
+		\label{fig:Whad:l_ptlep}
+	\end{subfigure}
+	\\
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:WhadLoose:m_ptlep}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:Whad:m_ptlep}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:WhadLoose:e_ptlep}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=23]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:Whad:e_ptlep}
+%	\end{subfigure}
+%	\caption{Add caption.}
+%	\label{fig:Regions:Leppt}
+%\end{figure}
+%
+%\begin{figure}[ht!]
+%	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_l_Whad_loose.pdf}
+		\caption{\mbox{}}
+		\label{fig:WhadLoose:l_mbl}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_l_Whad_particle.pdf}
+		\caption{\mbox{}}
+		\label{fig:Whad:l_mbl}
+	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_m_Whad_loose.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:WhadLoose:m_mbl}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_m_Whad_particle.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:Whad:m_mbl}
+%	\end{subfigure}
+%	\\
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadLoose/SR_Whad_Final_e_Whad_loose.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:WhadLoose:e_mbl}
+%	\end{subfigure}
+%	\begin{subfigure}[b]{0.3\linewidth}
+%		\includegraphics[width=1.\linewidth, page=44]{figures/WbWb/WhadParticle/SR_Whad_Final_e_Whad_particle.pdf}
+%		\caption{\mbox{}}
+%		\label{fig:Whad:e_mbl}
+%	\end{subfigure}
+	\caption{Detector level distribution of lepton \pt and $m_{bl}$ in the loose region (\subref{fig:WhadLoose:l_ptlep}, \subref{fig:WhadLoose:l_mbl}) and in the $W$-hadronic region (\subref{fig:Whad:l_ptlep}, \subref{fig:Whad:l_mbl}).
+    The signal processes \ttbar and $tW$ are
+    simulated with \textsc{Powheg+Pythia} 8 with DR or DS scheme. Statistical
+    uncertainties of data and simulation are indicated by the error bar or hashed
+    area, respectively. While the absolute event count is shown in the upper
+    panel, the ratio to the data is presented in the lower panel.}
+	\label{fig:Regions:LooseHad}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
+    The cuts are applied on detector and particle level.}%
+    \begin{tabular}{l c c c}
+      %\toprule
+      Process       & Loose  & \Wboson-hadronic \\
+      \midrule
+        Mis-ID lep. & $40572.4 \pm 192.064     $ & $1856.96 \pm 62.9288 $ \\
+        Other $V$     & $53172.3 \pm 121.995     $ & $2206.55 \pm 14.6821 $ \\
+        Other $t$     & $206126  \pm 102.947     $ & $9266.62 \pm 24.148  $ \\
+        $W$+jets      & $243413  \pm 481.213     $ & $9430.65 \pm 61.1866 $ \\
+        \ttbar & $5.47005e+06 \pm 829.283 $ & $850431  \pm 323.886 $ \\
+        $tW$ (DR)     & $208730  \pm 171.951     $ & $34013.8 \pm 69.4585 $ \\
+        $tW$ (DS)     & $189232  \pm 165.157     $ & $28415.2 \pm 64.4021 $ \\
+        \midrule
+         Expected   & $ 6.22206e+06 \pm 1005.59 $ & $ 907206 \pm 343.845 $ \\
+         Data       & $ 6.14801e+06 \pm 2479.52 $ & $ 849115 \pm 921.474 $ \\
+    \end{tabular}
+    \label{tab:YieldRegions}
+\end{table}
+
+
+
+\clearpage
+
 
 
 										 %      %\bottomrule
@@ -389,15 +422,21 @@ by $\pm 2\sigma_W$.
 
 \subsubsection{$W$+jets}
 
-%The uncertainties assigned to the modeling of the $W+$jets background are conceptually
-%the same as for the signal samples, including the modeling uncertainties on PDF, scales
-%and electroweak corrections.
+The uncertainties assigned to the modeling of the $W+$jets background are conceptually
+similar the signal samples, including the modeling uncertainties on PDF, scales
+and electroweak corrections.
 
 %Similar to the signal modeling systematics, the uncertainty in the W+ jets background is evaluated by varying the normalization factor of the MC generation parameters. These variations
 %include modeling uncertainties on the cross-section, PDFs, scales and electroweak corrections.
 %Table 8.7 lists the NPs associated with the W+ jets background modeling.
 
 \subsubsection{Fake leptons}
+
+The MC normalization uncertainty is evaluated by 
+varying all samples simultaneously by $10\%$.
+The control region is defined to be orthogonal to the signal region.
+The effect of the exact cut values is estimated by varying the 
+\ETmiss$+m_T^W$ cut to 50 and 70~\GeV, as well as demanding either at least one or at least two $b$ jets.
 
 \subsubsection{Other background}
 
@@ -460,15 +499,11 @@ Distributions as functions of the other quantities introduced in section~\ref{se
 	\label{fig:unfolding:reco}
 \end{figure}
 
-The statistical uncertainties on the black data points is illustrated by the error bar.
-While it is mostly smaller than the marker size, it can increase up to $\approx 10\%$ in the tails of the distributions.
-The bin size is gradually increased to ensure sufficient statistics in each bin.
+The statistical uncertainty indicated by the black error bar is mostly smaller than the marker size, but it can increase up to $\approx 10\%$ in the tails of the distributions.
 
 The data are compared to theory predictions from Monte Carlo simulations.
 The background contamination is generally small with the largest contribution from $W+$jets events.
 The analysis region is dominated by the \ttbar signal process simulated with \verb|Powheg+Pythia 8|.
-Two alternative signal hypotheses are tested for the $tW$ contribution employing the DR or DS scheme.
-The hashed area indicates the MC statistical uncertainties of the samples.
 
 The \pt spectra of the lepton, leading $b$ jet and hadronic \Wboson are exponentially falling.
 The total event count is overestimated by $\approx 5\%$ by the predictions.
