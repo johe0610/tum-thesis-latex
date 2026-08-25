@@ -392,11 +392,12 @@ The $\chi^2/$NDF and the $p$-values are provided in Table~\ref{tab:chisq} for th
     \centering
     \caption{Comparison of Generator Performance. Chi square calculation outlined in the text.}
     \resizebox{\textwidth}{!}{%
-    \begin{tabular}{l|cc|cc|cc}
-        %\toprule
+    \begin{tabular}{lcccccc}
+        \hspace{1pt}\\
+        \toprule
         & \multicolumn{6}{c}{\textbf{Generator}} \\
-        %\cmidrule(lr){2-7}
-        & \multicolumn{2}{c|}{PH+ PYTHIA 8 (DR)} & \multicolumn{2}{c|}{PH+ PYTHIA 8 (DS)} & \multicolumn{2}{c}{PH+ HERWIG 7.1 (DR)}\\
+        \cmidrule(lr){2-7}
+        & \multicolumn{2}{c}{PH+ PYTHIA 8 (DR)} & \multicolumn{2}{c}{PH+ PYTHIA 8 (DS)} & \multicolumn{2}{c}{PH+ HERWIG 7.1 (DR)}\\
         %\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
         \textbf{Observable} & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$ & p-value & $\chi^2/\text{NDF}$ & p-value\\
         \midrule
@@ -425,6 +426,7 @@ $m_{bl}^{min}$  & 10.29 / 9  & 0.327     & 23.27 / 9  & 0.006     & 2.79 / 9   &
 \pt$(W_{had.}bbl\nu)$ & 9.03 / 8   & 0.340     & 8.47 / 8   & 0.388     & 9.34 / 8   & 0.314     \\
 $R^{bq}$                  & 14.56 / 7  & 0.042     & 11.98 / 7  & 0S 0.101     & 5.32 / 7   & 0.621     \\
 $R^{bj}$                  & 9.92 / 7   & 0.193     & 7.11 / 7   & 0.417     & 3.65 / 7   & 0.818     \\
+    \bottomrule
     \end{tabular}%
     \label{tab:chisq}
     }

@@ -92,9 +92,12 @@ The two analysis regions introduced above are summarized in Table~\ref{tab:Regio
     \centering
     \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
     The cuts are applied on detector and particle level.}%
+    \hspace{1pt}\\
     \begin{tabular}{l c c c}
-      %\toprule
-      Selection                             & Loose  & \Wboson-hadronic \\
+      \toprule
+      & \multicolumn{2}{c}{\textbf{Cut value}} \\
+      \cmidrule(lr){2-3}
+      \textbf{Selection}                    & Loose              & \Wboson-hadronic \\
       \midrule
       \( N_{lep} \)                         & \( = 1\)           & \( = 1\)           \\
       \( N \)(central jet)                  & \( \geq 3\)        & \( \geq 3 \)       \\
@@ -105,7 +108,7 @@ The two analysis regions introduced above are summarized in Table~\ref{tab:Regio
       \( \met + \mtW \)                     & \( (60, \infty) \) & \( (60, \infty) \) \\
       \( m(\Whad) \)                        & ---                & \( (60, 100) \)    \\
       \( \pt(\Whad) \)                      & ---                & \( (80, \infty) \) \\
-      %\bottomrule
+      \bottomrule
     \end{tabular}
     \label{tab:RegionDefinitions}
 \end{table}
@@ -214,24 +217,37 @@ The hashed area indicates the MC statistical uncertainties of the samples.
     \centering
     \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
     The cuts are applied on detector and particle level.}%
-    \begin{tabular}{l c c c}
-      %\toprule
-      Process       & Loose  & \Wboson-hadronic \\
-      \midrule
-        Mis-ID lep. & $40572.4 \pm 192.064     $ & $1856.96 \pm 62.9288 $ \\
-        Other $V$     & $53172.3 \pm 121.995     $ & $2206.55 \pm 14.6821 $ \\
-        Other $t$     & $206126  \pm 102.947     $ & $9266.62 \pm 24.148  $ \\
-        $W$+jets      & $243413  \pm 481.213     $ & $9430.65 \pm 61.1866 $ \\
-        \ttbar & $5.47005e+06 \pm 829.283 $ & $850431  \pm 323.886 $ \\
-        $tW$ (DR)     & $208730  \pm 171.951     $ & $34013.8 \pm 69.4585 $ \\
-        $tW$ (DS)     & $189232  \pm 165.157     $ & $28415.2 \pm 64.4021 $ \\
+    \hspace{1pt} \\
+    \begin{tabular}{l r r}
+        \toprule
+        & \multicolumn{2}{c}{\textbf{Yield}}\\
+        \cmidrule(lr){2-3}
+        \textbf{Process} & \multicolumn{1}{c}{Loose} & \multicolumn{1}{c}{$W$-hadronic}\\
         \midrule
-         Expected   & $ 6.22206e+06 \pm 1005.59 $ & $ 907206 \pm 343.845 $ \\
-         Data       & $ 6.14801e+06 \pm 2479.52 $ & $ 849115 \pm 921.474 $ \\
+        Mis-ID lep.   &   $40~570 \pm ~192     $ &   $1~857 \pm  ~63 $ \\
+        Other $V$     &   $53~170 \pm ~122     $ &   $2~207 \pm  ~15 $ \\
+        Other $t$     &  $206~130 \pm ~103     $ &   $9~267 \pm  ~24 $ \\
+        $W$+jets      &  $243~000 \pm ~481     $ &   $9~431 \pm  ~61 $ \\
+        \ttbar        &$5~470~000 \pm ~829     $ & $850~400 \pm 324 $ \\
+        $tW$ (DR)     &  $208~700 \pm ~172     $ &  $34~010 \pm  ~69 $ \\
+        $tW$ (DS)     &  $189~200 \pm ~165     $ &  $28~420 \pm  ~64 $ \\
+        \midrule
+        Expected      & $ 6~222~000 \pm 1006  $ & $ 907200 \pm 344 $ \\
+        Data          & $ 6~148~000 \pm 2480  $ & $ 849100 \pm 921 $ \\
+        \bottomrule
+%        Mis-ID lep. & $40572.4 \pm 192.064     $ & $1856.96 \pm 62.9288 $ \\
+%        Other $V$     & $53172.3 \pm 121.995     $ & $2206.55 \pm 14.6821 $ \\
+%        Other $t$     & $206126  \pm 102.947     $ & $9266.62 \pm 24.148  $ \\
+%        $W$+jets      & $243413  \pm 481.213     $ & $9430.65 \pm 61.1866 $ \\
+%        \ttbar & $5.47005e+06 \pm 829.283 $ & $850431  \pm 323.886 $ \\
+%        $tW$ (DR)     & $208730  \pm 171.951     $ & $34013.8 \pm 69.4585 $ \\
+%        $tW$ (DS)     & $189232  \pm 165.157     $ & $28415.2 \pm 64.4021 $ \\
+%        \midrule
+%        Expected   & $ 6.22206e+06 \pm 1005.59 $ & $ 907206 \pm 343.845 $ \\
+%        Data       & $ 6.14801e+06 \pm 2479.52 $ & $ 849115 \pm 921.474 $ \\
     \end{tabular}
     \label{tab:YieldRegions}
 \end{table}
-
 
 
 \clearpage

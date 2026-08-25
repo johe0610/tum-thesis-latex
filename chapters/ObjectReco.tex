@@ -166,11 +166,13 @@ while the loose selection is used for the overlap removal, see Section~\ref{sec:
     \centering
     \caption{A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
     \begin{tabular}{ c c c }
-    \toprule
-      Requirement          & Signal electrons (tight)     & Background electrons (loose)        \\
-      \midrule    
+        \hspace{1pt}\\
+        \toprule
+          \textbf{Requirement} & \textbf{Signal electrons (tight)} & \textbf{Background electrons (loose)} \\
+        \midrule    
       Identification       & \texttt{LHTight}             & \texttt{LHLoose}                    \\
-      Isolation            & \texttt{PLImprovedTight}     & fail \texttt{PLImprovedTight} or fail tight selection  \\
+      Isolation            & \texttt{PLImprovedTight}     & fail \texttt{PLImprovedTight} or \\
+      & & fail tight selection  \\
       \pt cut              & \( \pt > \qty{10}{\GeV} \)   & \( \pt > \qty{10}{\GeV} \)           \\
       \eta cut             & \( |\eta| < 2.47 \)          & \( |\eta| < 2.47 \)                 \\
       Crack veto           & veto \( 1.37 < |\eta| < 1.52 \)   & veto \( 1.37 < |\eta| < 1.52 \)     \\
@@ -224,8 +226,9 @@ decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or stat
   \centering
   \caption{Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
   \begin{tabular}{ c c c }
+      \hspace{1pt}\\
       \toprule
-      Requirement      & Signal muons (tight)        & Background muons (loose)      \\
+      \textbf{Requirement} & \textbf{Signal muons (tight)} & \textbf{Background muons (loose)} \\
       \midrule
       Quality          & \texttt{Medium}             & \texttt{Medium}               \\
       Bad muon veto    & yes                         & yes                           \\
@@ -318,8 +321,9 @@ The calibration procedure is detailed in Chapter ...
     \centering
     \caption{Summary of the jet definitions in the analysis.}%
     \begin{tabular}{ c c c }
+      \hspace{1pt}\\
       \toprule
-      Requirement        & Signal jets                 & Baseline jets                \\
+      \textbf{Requirement} & \textbf{Signal jets} & \textbf{Baseline jets} \\
       \midrule
       Jet type           & \texttt{AntiKt4EMPFlowJets} & \texttt{AntiKt4EMPFlowJets}  \\
       JVT working point  & \texttt{Tight}              & \texttt{Tight}               \\
