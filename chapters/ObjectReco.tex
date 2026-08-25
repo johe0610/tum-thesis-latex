@@ -305,7 +305,7 @@ Further improvements are obtained by exploiting a recurrent neural network in th
 Several WPs are defined to balance $b$ jet tagging efficiency against $c$ jet and light flavor rejection. 
 For this analysis, the DL1r tagger at WP $77\%$ is employed.
 The performance of the low level taggers compared to the combined DL1r tagger is highlighted in Figure~\ref{fig:ObjectReco:FtagPerf}.
-
+The calibration of ATLAS flavor taggers is detailed in section~\ref{sec:calib:ftag}.
 
 \begin{figure}[ht!]
     \centering
@@ -313,9 +313,6 @@ The performance of the low level taggers compared to the combined DL1r tagger is
     \caption{The light flavor jet and $c$ jet rejection factors as a function of the $b$ tagging efficiency for DL1r as well as the low-level taggers  RNNIP, SVKine, and JFKine. The ratio of light and $c$ jet rejection rates are shown in the two lower panels. $f_c$ denotes the effective $c$ jet fraction in the background hypothesis~\cite{FTAG-2019-07}.}
     \label{fig:ObjectReco:FtagPerf}
 \end{figure}
-
-ATLAS flavor taggers are trained on simulated MC samples.
-The calibration procedure is detailed in Chapter ...
 
 \begin{table}[htbp]
     \centering
@@ -405,6 +402,87 @@ across the calorimeter and and energy depositions in the passive material.
 %The relative jet energy resolution ranges from $(24\pm 1.5)~\%$ at 20~\GeV to $(6\pm 0.5)~\%$ at 300~\GeV.
 A smearing procedure is introduced to ensure that the resolution of the jet energy scale in simulation matches that in data~\cite{JETM-2018-05}.
 The uncertainty in the jet energy resolution is assessed using the \verb|FullJER| scheme~\cite{web:JetSystematics} providing 13 independent variations.
+
+\section{Calibration of ATLAS flavor taggers}
+\label{sec:calib:ftag}
+
+This section presents the calibration of the GN2 flavor tagger, the successor to the DL1 series.
+It combines a transformer-based architecture with an optimized feature set for significantly enhanced performance and a single discriminant as output.
+Using data from 2022 and 2023 corresponding to an integrated luminosity of $56~\text{fb}^{-1}$
+at $\sqrt{s} = 13.6~\text{TeV}$, the calibration determines scale factors (SFs) to correct tagger performance in MC simulations to match those in data.
+Although GN2 was not used in the $WbWb$ cross-section analysis, it was the key component of my ATLAS qualification project,
+and the calibration results are presented here to support future analyses.
+
+The corrections are threefold and are applied for the tagging efficiency of $b$ jets and the mis-tag rates
+of $c$ and light jets in bins of jet \pt and pseudo-continuous $b$ tagging efficiency intervals.
+The light SFs are derived from $Z$+jet events~\cite{FTAG-2019-02} while the
+$b$ SFs are usually determined in dileptonic \ttbar events~\cite{bjetcalib}.
+I will focus on the first simultaneous efficiency measurement of $b$ and $c$ jet efficiencies in semi-leptonic \ttbar events~\cite{cbjetcalib}.
+
+The baseline event selection requires exactly one central electron or muon with $\pt > 27 \GeV$, missing transverse energy
+and exactly four jets with $\pt > 25 \GeV$.
+Two additional regions are defined to increase statistics at low and high jet \pt, respectively:
+\begin{itemize}
+    \item at least three jets with $\pt > 25 \GeV$ and one jet with $20<\pt<25\GeV$
+    \item at least five jets with $\pt > 25 \GeV$ at least one of which exceeding $\pt > 70 \GeV$
+\end{itemize}
+A likelihood based reconstruction algorithm~\cite{ERDMANN201418} reconstructs a \ttbar pair from the four leading jets, the lepton and the missing transverse energy.
+
+Truth jets are labeled as $b$ jets if it is matched to a $b$ hadron with $\pt > 5 \GeV$ within a cone of size $\Delta R = 0.3$.
+Remaining jets containing a $c$ hadron with the same properties is called $c$ jet.
+All remaining jets are labeled as light flavor jets.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_01a.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:prefit}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_01b.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:postfit}
+	\end{subfigure}
+	\caption{Prefit  \subref{fig:ccalib:prefit} and postfit \subref{fig:ccalib:postfit} distribution.
+    While the absolute event count is shown in the upper panel, the ratio to the data is presented in the lower panel.~\cite{cbjetcalib}}
+	\label{fig:ccalib:fit}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05a.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:bjet1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05b.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:bjet2}
+	\end{subfigure}
+	\caption{Prefit  \subref{fig:ccalib:bjet1} and postfit \subref{fig:ccalib:bjet2} distribution.
+    While the absolute event count is shown in the upper panel, the ratio to the data is presented in the lower panel.~\cite{cbjetcalib}}
+	\label{fig:ccalib:fit}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06a.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:cjet1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06b.pdf}
+		\caption{\mbox{}}
+		\label{fig:ccalib:cjet2}
+	\end{subfigure}
+	\caption{Prefit  \subref{fig:ccalib:cjet1} and postfit \subref{fig:ccalib:cjet2} distribution.
+    While the absolute event count is shown in the upper panel, the ratio to the data is presented in the lower panel.~\cite{cbjetcalib}}
+	\label{fig:ccalib:fit}
+\end{figure}
+
 
 \section{MET Reconstruction}
 \label{sec:reco:met}
