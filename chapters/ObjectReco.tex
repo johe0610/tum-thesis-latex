@@ -161,10 +161,10 @@ and radiative $Z$ processes.
 The uncertainties assigned to the calibration are typically 0.05\% for electrons from resonant $Z$ decays~\cite{EGAM-2021-02}.
 
 Table~\ref{tab:ObjReco:Electrons} summarizes the electron definition used for the analysis (tight),
-while the loose selection is used for the overlap removal, see Section~\ref{sec:ObjRec:OR}.
+while the loose selection is used for the overlap removal (see sec.~\ref{sec:ObjRec:OR}) and fake estimation (see sec.~\ref{ch:FakeLep}).
 \begin{table}[htbp]
     \centering
-    \caption{A summary of the electron definitions used in the analysis. Signal electrons are used for the cross section measurement, while background electrons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+    \caption{A summary of the electron definitions used in the analysis. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in section~\ref{sec:ObjRecl:Tracks}}%
     \begin{tabular}{ c c c }
         \hspace{1pt}\\
         \toprule
@@ -224,7 +224,7 @@ decay and final state radiation modeling, $J/\psi$ only and $Z$ only fit or stat
 
 \begin{table}[htbp]
   \centering
-  \caption{Summary of the muon definitions in the analysis. Signal muons are used for the cross section measurement, while background muons are used in the overlap removal and fake estimation (see Sec.~\ref{ch:FakeLep}. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
+  \caption{Summary of the muon definitions in the analysis. $d_0$ and $z_0$ are the transverse and longitudinal impact parameters introduced in Section~\ref{sec:ObjRecl:Tracks}}%
   \begin{tabular}{ c c c }
       \hspace{1pt}\\
       \toprule
@@ -419,6 +419,7 @@ The light SFs are derived from $Z$+jet events~\cite{FTAG-2019-02} while the
 $b$ SFs are usually determined in dileptonic \ttbar events~\cite{bjetcalib}.
 I will focus on the first simultaneous efficiency measurement of $b$ and $c$ jet efficiencies in semi-leptonic \ttbar events~\cite{cbjetcalib}.
 
+
 The baseline event selection requires exactly one central electron or muon with $\pt > 27 \GeV$, missing transverse energy
 and exactly four jets with $\pt > 25 \GeV$.
 Two additional regions are defined to increase statistics at low and high jet \pt, respectively:
@@ -427,10 +428,70 @@ Two additional regions are defined to increase statistics at low and high jet \p
     \item at least five jets with $\pt > 25 \GeV$ at least one of which exceeding $\pt > 70 \GeV$
 \end{itemize}
 A likelihood based reconstruction algorithm~\cite{ERDMANN201418} reconstructs a \ttbar pair from the four leading jets, the lepton and the missing transverse energy.
+The permutation with the highest likelihood is selected.
+The jets are assigned to be the jet originating from the leptonic and hadronic top decays ("leptonic top jet" and "hadronic top jet") or from the subsequent \Wboson decay ("\Wboson jet"). The hadronic top jet is required to be tagged in the tightest interval, while the leptonic top jet is used for the calibration.
 
 Truth jets are labeled as $b$ jets if it is matched to a $b$ hadron with $\pt > 5 \GeV$ within a cone of size $\Delta R = 0.3$.
 Remaining jets containing a $c$ hadron with the same properties is called $c$ jet.
 All remaining jets are labeled as light flavor jets.
+
+%From paper
+The $b$ jet efficiency SFs $b^t (i)$ and $c$ jet mistagging efficiency SFs $c^t (i)$ are determined in jet \pt intervals $i$,
+with boundaries at 20, 40, 65, 140 and 250 GeV
+and tagging intervals $t$, where $t=0$ is the untagged bin
+(90-100\% interval), $t = 1$ is the 85-90\% interval and so on until $t = 5$, which corresponds to the 0-65\%
+interval.
+
+jet \pt in the range 20–250 GeV, with
+boundaries corresponding to 65%, 70%, 77%, 85% and 90%
+
+
+%from paper
+The calibration method is for the ‘pseudo-continuous’ calibration where the efficiency is defined as the fraction of jets that
+have a GN2 discriminant value that lies between the boundaries of each tagging interval
+
+
+Two different event
+selections targeting $b^t(i)$ and $c^t(i)$ are employed, with some events common to both, as described below.
+All parameters of interest are determined in a single fit by minimizing a total $\chi^2$.
+The full expression is rather lengthy and can be found in .....
+
+The $b^t (i)$ SFs are mainly constrained by comparing the fraction of events where the leptonic top-jet lies
+within each of the GN2 discriminant intervals with the expectation from MC simulation. Both \Wboson jets are
+required to be untagged to reduce the rate of top-quark decay-product misidentification
+
+The $c^t(i)$ SFs are mainly constrained by comparing the fraction of events where one of the \Wboson jets lies
+within each of the GN2 discriminant intervals with the expectation from MC simulation. To simplify the fit,
+events where both \Wboson jets are tagged, making up 0.7\% of the total number of events, are discarded. In order
+to reduce the number of wrongly assigned \Wboson jets, both top-jets must be tagged with the tightest (0–65\%)
+requirement.
+
+The overlap between the two selections is small and statistical correlations between
+$b^t(i)$ and $c^t(i)$ are expected to much smaller than the systematic correlations.
+
+The SFs $b^t(i)$ and $c^t(i)$ are free parameters in the fit, as well as normalization parameters.
+
+The $b^t(i)$ determined in \ttbar dilepton events are taken account in the fit by
+adding a an additional term to the $\chi^2$ with $b^t_\text{DL} (i)$ as a prior.
+
+Several sources of experimental and MC modeling systematic uncertainty affecting the efficiency SFs
+are considered. The uncertainty from each source is evaluated by and repeating the fit after making
+the corresponding change to the MC model to produce new templates for the semileptonic or shifting
+the dileptonic data points for the combined fit. Each systematic error source is thus correlated between
+the tagging and jet \pt intervals, between bottom tagging and charm mistagging SFs and between the
+semileptonic and dileptonic analyses. The total systematic uncertainty for each interval is evaluated by
+adding the individual uncertainties in quadrature
+
+The uncertainty due to the choice of parton shower and hadronization model is estimated by
+replacing the standard Pythia 8 model with Herwig and is
+The largest source of uncertainty in this analysis, leading to changes of up to 26\%
+(13\%) in the $b$ jet ($c$ jet) SFs
+
+The SFs do not
+have a strong jet \pt dependence. The total uncertainty varies from 2\% to 44\% and is dominated by the
+systematic uncertainty except in the highest \pt bin.
+Good agreement is observed between the measured $b$ jet efficiencies and those obtained with an independent
+measurement using dileptonic \ttbar events. A combination of the two measurements is also presented.
 
 \begin{figure}[ht!]
 	\centering
