@@ -405,7 +405,7 @@ The uncertainty in the jet energy resolution is assessed using the \verb|FullJER
 
 
 
-\section{Calibration of the GN2 flavor tagger}
+\section{Calibration of the flavor taggers}
 \label{sec:calib:ftag}
 
 This section presents the calibration of the GN2 flavor tagger, the successor to the DL1 series.
@@ -427,14 +427,19 @@ and $t=1$ to $t=5$ cover the tagged regions with boundaries at
 These efficiencies are defined such that they correspond to the fraction of jets that
 have a GN2 discriminant value that lies between the boundaries of each tagging interval.
 
+Truth jets are labeled as $b$ jets if it is matched to a $b$ hadron with $\pt > 5 \GeV$ within a cone of size $\Delta R = 0.3$.
+Remaining jets containing a $c$ hadron with the same properties is called $c$ jet.
+All remaining jets are labeled as light flavor jets.
+
 The light SFs are derived from $Z$+jet events~\cite{FTAG-2019-02} while the
 $b$ SFs are usually determined in dileptonic \ttbar events~\cite{bjetcalib}.
 I will focus on the first simultaneous efficiency measurement of $b$ and $c$ jet efficiencies in semi-leptonic \ttbar events~\cite{cbjetcalib}.
 
 The baseline event selection requires exactly one central electron or muon with $\pt > 27 \GeV$, missing transverse energy
 and exactly four jets with $\pt > 25 \GeV$.
-Two additional regions are defined to increase statistics at low and high jet \pt, respectively: (1) at least three jets with $\pt > 25 \GeV$ and one jet in the $20<\pt<25\GeV$ range,
-and (2) at least five jets with $\pt > 25 \GeV$ including at least one of which with $\pt > 70 \GeV$.
+Additional regions are defined to increase statistics at low and high jet \pt.
+For the low \pt selection at least three jets with $\pt > 25 \GeV$ and one jet in the $20<\pt<25\GeV$ range is required.
+At least five jets with $\pt > 25 \GeV$ including at least one of which with $\pt > 70 \GeV$ are selected to increase statistics at large jet momenta.
 
 A likelihood based reconstruction algorithm~\cite{ERDMANN201418} reconstructs a \ttbar pair from the four leading jets, the lepton and the missing transverse energy, selecting
 the permutation with the highest likelihood.
@@ -442,10 +447,6 @@ The jets are assigned to be the jet originating from the leptonic or hadronic to
 The hadronic top jet must to be tagged in the tightest working point, while the leptonic top jet and the \Wboson jets are used for the $b$ and $c$ calibration, respectively.
 This employs the known branching fraction of
 the \Wboson boson to a final state with a $c$ quark of approximately 33\%~\cite{PDG}.
-
-%Truth jets are labeled as $b$ jets if it is matched to a $b$ hadron with $\pt > 5 \GeV$ within a cone of size $\Delta R = 0.3$.
-%Remaining jets containing a $c$ hadron with the same properties is called $c$ jet.
-%All remaining jets are labeled as light flavor jets.
 
 The fraction of events where the leptonic top jet lies
 within each of the GN2 discriminant intervals is compared between data and MC prediction
@@ -501,16 +502,39 @@ After reweighting the model with the $b$ and $c$ scale factors and normalization
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05a.pdf}
-		\caption{\mbox{}}
-		\label{fig:ccalib:bjet1}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjeta}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05b.pdf}
-		\caption{\mbox{}}
-		\label{fig:ccalib:bjet2}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjetb}
 	\end{subfigure}
-	\caption{Prefit  \subref{fig:ccalib:bjet1} and postfit \subref{fig:ccalib:bjet2} distribution.
-    While the absolute event count is shown in the upper panel, the ratio to the data is presented in the lower panel.~\cite{cbjetcalib}}
+    \\
+    \begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05c.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjetc}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05d.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjetd}
+	\end{subfigure}
+    \\
+  	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05e.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjete}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_05f.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:bjetf}
+	\end{subfigure}
+	\caption{The $b$ jet pseudo-continuous tagging efficiency scale factors measured in semi-leptonic (1 lep) \ttbar events are shown as a function of jet
+    \pt across the six tagging intervals. Statistical uncertainties are shown as error bars, while the shaded bands represent the total uncertainty.
+    Also displayed are the results from dileptonic (2 lep) \ttbar events and the combined measurement (1+2 lep), illustrating good agreement between the different channels and improved precision from the combination.~\cite{cbjetcalib}}
 	\label{fig:ccalib:sfb}
 \end{figure}
 
@@ -518,31 +542,52 @@ After reweighting the model with the $b$ and $c$ scale factors and normalization
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06a.pdf}
-		\caption{\mbox{}}
-		\label{fig:ccalib:cjet1}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjeta}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.45\linewidth}
 		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06b.pdf}
-		\caption{\mbox{}}
-		\label{fig:ccalib:cjet2}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjetb}
 	\end{subfigure}
-	\caption{Prefit  \subref{fig:ccalib:cjet1} and postfit \subref{fig:ccalib:cjet2} distribution.
-    While the absolute event count is shown in the upper panel, the ratio to the data is presented in the lower panel.~\cite{cbjetcalib}}
+    \\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06c.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjetc}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06d.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjetd}
+	\end{subfigure}
+    \\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06e.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjete}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\includegraphics[width=1.\linewidth]{figures/ATLAS/calib_fig/fig_06f.pdf}
+		%\caption{\mbox{}}
+		\label{fig:ccalib:cjetf}
+	\end{subfigure}
+	\caption{The $c$ jet pseudo-continuous mistagging efficiency scale factors measured in semi-leptonic \ttbar events are shown as a function of jet
+    \pt across the six tagging intervals. Statistical uncertainties are shown as error bars, while the shaded bands represent the total uncertainty.~\cite{cbjetcalib}}
 	\label{fig:ccalib:sfc}
 \end{figure}
 
 The derived $b$ and $c$ scale factors are presented in figure~\ref{fig:ccalib:sfb} and~\ref{fig:ccalib:sfc}, respectively as a function of jet \pt for selected tagging intervals.
 
+The $b$ SFs presented in figure~\ref{fig:ccalib:sfb} show a weak dependence on jet \pt. The total uncertainty ranges from 2\% to 44\%, dominated by systematic effects except in the highest \pt bin. 
+The largest uncertainty source in this analysis arises from the choice of parton shower and hadronization models. It is evaluated by replacing the default \textsc{Pythia} 8 simulating with \textsc{Herwig}.
+Good agreement is observed between the measured
+b-jet tagging efficiencies and those from the alternative determination using dileptonic
+\ttbar events. A combination of the two measurements is also presented, improving the overall precision.
 
-The SFs do not
-have a strong jet \pt dependence. The total uncertainty varies from 2\% to 44\% and is dominated by the
-systematic uncertainty except in the highest \pt bin.
-Good agreement is observed between the measured $b$ jet efficiencies and those obtained with an independent
-measurement using dileptonic \ttbar events. A combination of the two measurements is also presented.
+The $c$ jet mistagging SFs obtained from the simultaneous fit are summarized in figure~\ref{fig:ccalib:sfc}. No significant jet \pt dependence is observed. The uncertainties are primarily statistical, highlighting a key challenge for future tagger developments. As models become more powerful and achieve better background rejection, the number of mistagged jets available for calibration decreases, making precise calibration increasingly difficult.
 
-The dominant uncertainty in this analysis arises from the choice of parton shower and hadronization models. It is evaluated by replacing the default \textsc{Pythia} 8 simulating with \textsc{Herwig}. This variation leads to changes of up to 26\% (13\%) in the $b$ jet ($c$ jet) SFs.
-
-
+\clearpage
 
 \section{MET Reconstruction}
 \label{sec:reco:met}
