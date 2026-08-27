@@ -4,7 +4,7 @@
 The methods and techniques in experimental particle physics have undergone a remarkable transformation. From the discovery of the positron~\cite{DiscoveryPositron} and the muon~\cite{DiscoveryMuon} in cloud chambers in the 1930s, over the discovery of neutral weak currents at the Gargamelle bubble chamber~\cite{DiscoveryWeakCurrent} to the discovery of the Top quark at Fermilab~\cite{TOP-CDF, TOP-D0} and the Higgs Boson at the Large Hadron Collider (LHC)~\cite{HIGG-2012-27, CMS-CMS-00-002}.
 
 The LHC is the largest and most powerful accelerator built to this day. It is hosted by the European Organization for Nuclear Research (CERN) in Geneva, Switzerland.
-This chapter gives an introduction to the CERN accelerator complex, including the LHC, before discussing one of its major experiments, \textbf{A T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{S}, better known as ATLAS.
+This chapter gives an introduction to the CERN accelerator complex, including the LHC, before discussing the experiment relevant for my analysis, \textbf{A T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{S}, better known as ATLAS.
 
 
 %Cheat sheet https://atlas-public.web.cern.ch/taxonomy/term/1179
@@ -15,7 +15,7 @@ This chapter gives an introduction to the CERN accelerator complex, including th
 
 \subsection{The CERN accelerator complex}
 
-The accelerator complex at CERN is a succession of machines that accelerate protons to increasingly higher energies. Each machine boosts the energy of a beam of particles before injecting it into the next machine in the sequence. The layout of the complex is shown in Figure~\ref{fig:ALTAS:CernPreAcc}.
+The accelerator complex at CERN is a succession of machines that accelerate protons or heavier ions to increasingly higher energies. Each machine increases the energy of a beam of particles before injecting it into the next machine in the sequence. The layout of the complex is shown in Figure~\ref{fig:ALTAS:CernPreAcc}.
 
 \begin{figure}[ht!]
     \centering
@@ -54,7 +54,7 @@ Afterwards they follow the same route as the protons, reaching their maximum ene
 The two beams are brought into collision at four designated locations along the ring, the Interaction Points (IP).
 Four major experiments are positioned at these locations.
 ATLAS~\cite{PERF-2007-01} and CMS~\cite{CMS-CMS-00-001} are two general purpose detectors which
-study a broad range of physics topics from precise measurements of the SM, including top quark and Higgs boson,
+study a broad range of physics topics from precise measurements of the SM, including the top quark and Higgs boson,
 to searches for BSM physics.
 %They use different technical solutions in the detector design.
 They are complemented by two more specialized detectors.
@@ -87,7 +87,7 @@ It depends on the beam parameters and is given by
 with the number of protons per bunch $N_1, N_2$, the frequency of collisions $f$ determined by the revolution frequency of the LHC, the number of bunches in each beam $N_b$ and the horizontal and vertical bunch dimensions $\sigma_x$ and $\sigma_y$. The LHC was designed for a peak instantaneous luminosity of $10^{-34}\text{cm}^{-2}\text{s}^{-1}$ for $pp$ collisions~\cite{CERN-2004-003-V-1}.
 This goal was superseded during Run 2 by almost a factor of two~\cite{DAPR-2021-01}.
 
-A measure for the number of events $N$ is related to the integrated luminosity $L$ which can be obtained by integrating $\mathcal{L_\text{inst}}$ over a given period
+The number of events $N$ is related to the integrated luminosity $L$ which can be obtained by integrating $\mathcal{L_\text{inst}}$ over a given period
 \begin{equation}
     N = \sigma \cdot L = \sigma \int \mathcal{L}_\text{inst}(t)~dt.
 \end{equation}
@@ -106,7 +106,7 @@ A measure for the number of events $N$ is related to the integrated luminosity $
 The number of protons per bunch is of the order $10^{11}$. 
 The collision frequency is $40$~MHz during normal operation.
 Therefore, it is common that multiple $pp$ collision occur at the same time in a single bunch crossing (\textit{in-time}) as well as over bunch crossings (\textit{out-of-time}).
-This leads to overlapping detector signals in addition to the primary collision of interest. This phenomenon is usually referred to as \textit{pile-up} $\mu$. 
+This leads to overlapping detector signals in addition to the primary collision of interest. This phenomenon is referred to as \textit{pile-up} $\mu$. 
 %In-time pile up: multiple pp collisions occuring in the same bunch crossing
 %Out-of-time pile-up: Additional pp collisions appearing in bunch crossings before or after the collision of interest.
 The $\mu$ distribution is shown in Figure~\ref{fig:ATLAS:PileUp} for the four years of data taking in Run 2. 
@@ -127,7 +127,7 @@ The mean pile-up for each year of data taking ranges from $13.4$ to $37.8$.
     \caption{Plots summarizing luminosity and data quality reported by the LHC and ATLAS during Run 2 from 2015 to 2018.
     \ref{fig:ATLAS:PileUp}~Distribution of the mean number of interactions per bunch crossing, $\mu$, weighted by the luminosity. 
     The individual distributions for each year of $pp$ collision data taking during Run 2 are shown.
-    The mean $\mu$ value for each year are given in the legend.
+    The mean $\mu$ value for each year is given in the legend.
     \ref{fig:ATLAS:IntLumi}~Cumulative integrated luminosity delivered to and recorded by the ATLAS experiment during Run 2.
     Data recorded at $\sqrt{s}=13\TeV$ during stable beam $pp$ collisions is considered, including special runs for detector calibration.
     The data sample certified for physics analysis usage is shown in light blue with the \textit{Good for Physics} label.
@@ -214,7 +214,7 @@ A right-handed Cartesian coordinate system centered at the IP is employed in ATL
 \end{figure}
 The $z$-axis aligns with the beam line,
 the $x$-axis points towards the center of the LHC ring and the $y$-axis is oriented vertically upwards.
-Since the LHC collides partons from the protons, the initial momentum along the $z$-axis is unknown.
+Since the LHC collides partons from the protons, the initial momentum along the $z$-axis is unknown. Thus, it collides protons, but it is the partons that enter the hard interaction.
 Observables are often defined in the transverse plane, spanned by the $x$- and $y$-axes.
 An example is the transverse momentum
 \begin{equation}
@@ -260,14 +260,13 @@ of $0.5~\text{T}$ and $1.0~\text{T}$ for the central and end-cap muon detectors,
 A complementary solenoid is embedded inside the Liquid Argon (LAr) Calorimeter.
 %The single-layer coil is wound with a high-strength Al-stabilised NbTi conductor,
 It is aligned with the beam axis and provides a $2~\text{T}$ magnetic field immersing the inner detector.
-The solenoid is designed to minimize the radiative thickness in front of the
+The solenoid is designed to minimize the material budget in front of the
 barrel calorimeter by sharing a common vacuum vessel with the LAr calorimeter.
 
 \subsection{Inner detector}
 
 Closest to the beam line is the ATLAS Inner Detector (ID)~\cite{ATLAS-TDR-04, ATLAS-TDR-05}, consisting of three independent but complementary subdetectors.
-It measures the electrical charge and momentum of charged particles within $|\eta|<2.5$.
-It provides excellent momentum resolution for the reconstruction of primary and secondary vertices.
+It measures the electrical charge and momentum of charged particles within $|\eta|<2.5$ and provides excellent momentum resolution for the reconstruction of primary and secondary vertices.
 A schematic labeled drawings of the ID layout is shown in Figure~\ref{fig:ATLAS:SubDetID}.
 It shows the silicon based Pixel and Semiconductor Tracker (SCT), surrounded by the gas based Transition Radiation Tracker (TRT).
 
@@ -321,8 +320,8 @@ The amount of collected charge is related to the energy the particle lost, while
 
 \noindent
 The SCT~\cite{IDET-2013-01} also employs silicon as active detector material with the same working principle as in the pixel detector.
-However, instead of pixels, strips with a width of $80~\mu$m and length of 6 cm are used (12 cm for the two outermost strips).
-The SCT consists of 4088 silicon strips, extending the tracking system to a radial distance of $299<r<560$~mm.
+However, instead of pixels, strips with a width of $80~\mu$m and length of 6 cm are used with the exception of the two outermost strips whose length is 12~cm.
+The SCT consists of 4088 silicon strips, covering a radial distance of $299<r<560$~mm.
 The strips are arranged in four layers in the barrel
 and nine disks in each of the endcaps.
 
@@ -383,7 +382,7 @@ Constant gaps between the layers are ensured by varying the amplitude and foldin
 
 The barrel calorimeter $|\eta|<1.4$ consists of two identical, independent half-barrels.
 A 1~cm active liquid layer is added on the inner side of the barrel calorimeter.
-This presampler has the purpose to correct for energy lost in the coil and cryostat walls.
+This presampler can be used to correct for energy lost in the coil and cryostat walls by measuring early shower activity.
 The end-cap ECal consists of two concentric wheels, spanning the pseudorapidity interval $1.4<|\eta|<2.5$ and $2.5 <|\eta|< 3.2$, respectively.
 
 \vspace{.5cm}
@@ -421,14 +420,14 @@ The Forward Calorimeter (FCal)~\cite{ATLAS-TDR-02} extends the ATLAS calorimeter
 It is installed in a particularly hostile region, due to the high level of radiation.
 The FCal also uses liquid argon as the active material and consists of three modules.
 Each module consists of a single absorber matrix carrying an array of tube electrodes in holes.
-Copper, sensitive to electromagnetic showers, is used as absorption material in the first module,
+Copper, sensitive to electromagnetic showers, is used as absorption material in the first module.
 The second and third module use tungsten, more suitable for hadronic showers.
 
 
 \subsection{Muon spectrometer}
 
 Muons are the only charged particles that do not lose a significant fraction of their energy when they traverse the detector.
-They penetrate ID and calorimeters to be detected in the outermost part of ATLAS, the Muon Spectrometer (MS)~\cite{ATLAS-TDR-10}.
+They penetrate the ID and calorimeters to be detected in the outermost part of ATLAS, the Muon Spectrometer (MS)~\cite{ATLAS-TDR-10}.
 It is designed to provide precise measurements of muon tracks and momenta, independently of the ID.
 Similar to the ID, the momentum reconstruction is based on the
 magnetic deflection of muon tracks in a system of three large superconducting air-core toroid magnets.
@@ -473,7 +472,7 @@ correct for deformations.
 The basic detection element of the MDTs are cylindrical
 aluminum drift tubes with 30~mm outer radius and 400~$\mu$m wall thickness.
 A sense wire is positioned in the center of each tube with an accuracy of 20~$\mu$m.
-The MDTs operate with a Ar/CO$_2$ (93\%/7\%) gas mixture at a pressure of three bar.
+The MDTs operate with a gas mixture of Ar/CO$_2$ (93\%/7\%) at a pressure of three bar.
 A muon passing a tube ionizes the gas mixture. 
 The resulting electrons start drifting towards the anode wire producing secondary electrons in the process.
 %The gas gain of $2\times 10^4$
@@ -623,7 +622,7 @@ The physics output rate of the HLT is on average 1.2 kHz corresponding to an ave
 \subsection{A particle's journey through ATLAS}
 
 To summarize this chapter on the ATLAS experiment, an illustrative cutview of the detector is shown in Figure~\ref{fig:ATLAS:DiagramParticles}.
-The traces that several particle species leave in sub-components of the machine are 
+The traces that different particle species leave in sub-components of the machine are:
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/ATLAS/ATLAS_Detector_Schematic_white_particles.png}
