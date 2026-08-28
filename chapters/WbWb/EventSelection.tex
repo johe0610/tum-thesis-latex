@@ -1,122 +1,59 @@
-\section{Background estimation}
-\label{sec:background}
-
-The analysis targets the
-$WbWb$ final state with one leptonically and one hadronically decaying
-W boson. However, background events from other processes
-can mimic the signal due to misreconstruction or misidentification of objects.
-These backgrounds are simulated with MC events, but their modeling is challenging. To improve reliability, data-driven methods are also used to estimate contributions to the signal region.
-
-\subsection{\Wboson + jets background}
-
-The dominant background for the analysis arises from events with a final state \Wboson boson in association with several jets,
-where light quark or gluon jets are misidentified as $b$ jets. 
-The misidentification rate for light jets is less than 1\% (see Fig~\ref{fig:ObjectReco:FtagPerf}),
-but when combined with the large cross-section of \Wboson+jets production, it results in a significant contribution to the $WbWb$ signal region.
-Careful modeling of the jet flavor composition, b-tagging efficiencies, and control regions is essential to accurately estimate and subtract the $W$+jets contribution in the analysis.
-
-A dedicated control region is defined to estimate and constrain the $W$+jets normalization. It is designed to be orthogonal to the signal region
-while preserving similar kinematic properties.
-Exactly three jets, at least one of which is $b$ tagged, are selected.
-To enhance the yield and purity of the $W$+jets background, while suppressing the \ttbar contribution, cuts on
-$m_T^W$ and $m_{bl}^\text{min}$ are applied. The overlap with the $W$-hadronic region is expected to be small, but the region is nevertheless vetoed explicitly.
-A summary of all cuts for the control region is provided in 
-table~\ref{tab:WjetsCRDefinitions}.
-
-\begin{table}[htbp]
-    \centering
-    \caption{List of cuts applied to select events for the $W$+jets control region.}%
-    \begin{tabular}{l c}
-      \hspace{1pt}\\
-      \toprule
-      \textbf{Selection}                    & $\bm{W+}$\textbf{jets CR} \\
-      \midrule
-      \( N \)(central jet)                  & \( = 3\)         \\
-      \( N_{\bjets}\)                       & \( \geq 1 \)        \\
-      \( \pt(\ell) \)                       & \( (30, \infty) \)  \\
-      \( \pt(j)\)                           & \( (25, \infty) \)  \\
-      \( \met + \mtW \)                     & \( (60, \infty) \)  \\
-      \( m_T^W \)                           & \( (40,100) \) \\
-      \(m_{bl}^\text{min}\)                 & \( (180, \infty)\) \\
-      SR veto                               & enabled \\
-      \bottomrule
-    \end{tabular}
-    \label{tab:WjetsCRDefinitions}
-\end{table}
-
-The analysis employs a single-bin fit in the control region with the W+jets
-normalization as parameter of interest.
-Detector and modeling
-uncertainties of all processes are treated as nuisance parameters in the fit.
-The normalization factor is found to be $1.10\pm 0.10$ and is
-used to correct the $W$+jets process in the signal region.
-
-\subsection{Misidentified and non-prompt leptons}
-\label{ch:FakeLep}
-
-In the reconstruction step, it may happen that an object is identified as a lepton even though it was not a lepton to begin with.
-These are referred to as "fake leptons" and their contribution is considered as a background in the analysis.
-
-Fake electrons primarily originate from photon conversions, electrons from secondary meson decays within jets or misreconstructed jets (from light quark/gluon fragmentation).
-Compared to prompt electrons, fake electrons typically exhibit poorer isolation and lower efficiency in passing tighter identification criteria.
-Fake muons mainly arise from in-flight decays of mesons within jets.
-While such muons are generally less isolated, they
-can still contribute to the signal region if they satisfy tight isolation and impact parameter requirements.
-
-The fake-factor method~\cite{EGAM-2019-01} is employed to estimate misidentified leptons.
-This approach is data-driven as it is challenging to model these processes with high accuracy in simulation.
-This technique relies on a control region enriched in fake leptons, selected orthogonal to the signal regions.
-The \ETmiss$+m_T^W$ cut is inverted to be smaller than 60~\GeV and at least one
-$b$ jet is required.
-
-Fake factors are derived from fractions of leptons passing tight or loose reconstruction criteria, see Tables~\ref{tab:ObjReco:Electrons} and~\ref{tab:ObjReco:Muons}.
-Events containing fake leptons are then weighted by these factors to correct for misidentification in the analysis phase space.
-In the analysis presented in this thesis, the fake and non-prompt backgrounds are found to be small compared to other backgrounds,
-reducing the need for detailed fake-factor corrections.
-
-
 \section{Baseline Event selection}%
 \label{sec:EventSelection}
 
 The phase space regions of interest, also known as signal regions, are defined by the complex final state topology of the \WbWb process.
-The signal consists of all processes resulting in a \WbWb final state.
-However, contributions from diboson production in association with a $b$ quark are considered negligible.
-Exemplary diagrams of the two dominant process, \ttbar and \tW production are depicted in Figure ...
+The signal includes all processes yielding a \WbWb final state, with dominant contributions
+from \ttbar and \tW production.
+Representative Feynman diagrams of the two dominant process are depicted in Figure~\ref{fig:wbwb:feynman}.
+Contributions from diboson production in association with a $b$ quark are found to be negligible.
 
-The semileptonic final state is considered in this thesis, where one \Wboson boson decays leptonically, while the other decays hadronically.
-The \WbWb final state is therefore defined by
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=1.\linewidth, page=1]{figures/WbWb/feynman_WbWb-1.pdf}
+		\caption{Feynman diagram of \ttbar production at LO}
+		\label{fig:wbwb:feynman_ttbar}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=1.\linewidth, page=2]{figures/WbWb/feynman_WbWb-1.pdf}
+		\caption{Feynman diagram of \tW at NLO}
+		\label{fig:wbwb:feynman_tW}
+	\end{subfigure}
+	\caption{Representative diagrams of the dominant contributions to the $WbWb$ process:
+    \subref{fig:wbwb:feynman_ttbar} production of a top quark pair in LO, \subref{fig:wbwb:feynman_tW} a top quark produced in association with a \Wboson boson, an additional $b$ quark can be produced at NLO, resulting in the $WbWb$ final state.}
+	\label{fig:wbwb:feynman}
+\end{figure}
+
+This analysis measures the semi-leptonic final state, in which one \Wboson boson decays leptonically and the other decays hadronically.
+The final state is therefore defined by:
 \begin{equation*}
     pp \rightarrow WbWb \rightarrow \ell\nu q \bar{q}' b \bar{b}
 \end{equation*}
-The lepton is either an electron or a muon and can also originate from a subsequent $W\rightarrow\tau\rightarrow l$ decay.
-In order to enhance the signal process and reduce background contamination, a variety of initial requirements (cuts) are applied.
+The lepton is either an electron or a muon and may also originate from a subsequent $W\rightarrow\tau\nu_\tau\rightarrow l\nu_l\nu_\tau$ decay.
+In order to enhance the signal process and reduce background contamination, a variety of kinematic requirements (cuts) are applied.
 The event selection is optimized using simulated MC event samples.
 
-When not explicitly stated otherwise, the same cuts are applied on particle and detector level.
-Extrapolation into phase spaces that cannot be measured kept to a minimum.
-
-\begin{itemize}
-    \item Exactly one detector level signal lepton, as defined in Table~\ref{tab:ObjReco:Electrons} (electrons) or Table~\ref{tab:ObjReco:Muons} (muons) is required.
-    Events are selected with a single lepton trigger. An additional $30~\GeV$ cut on \pt is applied on the identified lepton.
-    While the detector level electrons need to fulfill $|\eta|<1.37$ and $1.52<|\eta|<2.47$, the full range $|\eta| < 2.5$ is employed on particle level.
-    \item Since the neutrino cannot be detected, significant \ETmiss is expected in the event.
-    It is combined with the transverse mass of leptonically decaying \Wboson boson $m_T^W$ computed from the signal lepton and
-    \ETmiss 4-vectors where the z-component is set to 0.
-    The final cut at $\ETmiss + m_T^W > 60 \GeV$ aims to suppress QCD background.
-    \item At least three jets are required, reconstructed with the anti-$k_t$ clustering and a jet radius parameter of $R=0.4$, as defined in Table~\ref{tab:ObjReco:Jets},
-    They need to pass $p_T > 25 \GeV$ and $|\eta|<2.5$. At least two of them have to be identified as originating from a $b$ quark ($b$ tag at WP $77\%$).
-\end{itemize}
-
-This baseline selection defines the \textit{loose signal region} and is applied to all events.
-
-The data will be corrected for detector resolution and acceptance effects in the \textit{unfolding} step.
+The data will be corrected for detector resolution and acceptance effects in the \textit{unfolding} step (see Section~\ref{sec:unfolding}).
 This step requires the definition of an unfolding target.
 The unfolding target corresponds to the phase space definition on particle level.
 In order to keep acceptance and efficiency corrections as small as possible, the particle level phase space is defined as close to the detector level phase space
-as possible. 
-The object definition can be found in Section~\ref{sec:ObjReco:Part}.
+as possible. This means, that whenever possible, the same cuts are applied on particle and detector level, keeping
+extrapolation into phase spaces that cannot be measured to a minimum.
 
+\begin{itemize}
+    \item Exactly one detector level signal lepton, as defined in Table~\ref{tab:ObjReco:Electrons} (electrons) or Table~\ref{tab:ObjReco:Muons} (muons) is required.
+    Events are selected with a single lepton trigger. An additional $\pt > 30~\GeV$ cut is applied on the identified lepton.
+    While the detector level electrons need to fulfill $|\eta|<1.37$ and $1.52<|\eta|<2.47$, the full range $|\eta| < 2.5$ is employed on particle level.
+    \item Since the neutrino is undetected, significant \ETmiss is expected in the event.
+    This is combined with the transverse mass of leptonically decaying \Wboson boson $m_T^W$ computed from the signal lepton and
+    \ETmiss 4-vectors where the $z$-component is set to zero.
+    The final cut at $\ETmiss + m_T^W > 60 \GeV$ aims to suppress multi-jet background with a misidentified or non-prompt lepton.
+    \item At least three jets are required, reconstructed with the anti-$k_t$ clustering and a jet radius parameter of $R=0.4$, as defined in Table~\ref{tab:ObjReco:Jets}.
+    They need to fulfill $p_T > 25 \GeV$ and $|\eta|<2.5$. At least two of them have to be identified as originating from a $b$ quark, corresponding to a $b$ tag at WP $77\%$ on detector level and cone matching, as described in Section~\ref{sec:ObjReco:Part}, on particle level.
+\end{itemize}
 
-The properties of the hadronically decaying \Wboson boson have not been exploited so far.
-In the next section, a procedure is derived for the explicit reconstruction of a \Whad candidate.
+\noindent
+This baseline selection defines the \textit{loose signal region} and is applied to all events.
+The properties of the hadronically decaying \Wboson boson have not been exploited so far in the event selection.
+In the next section, a procedure is derived for the explicit reconstruction of a \Whad candidate from jets.
 

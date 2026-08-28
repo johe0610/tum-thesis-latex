@@ -1,92 +1,21 @@
-\section{Observables of interest}
-\label{sec:observables}
-The measured final state comprises of the 4-vectors of the lepton, $b$ jets, the reconstructed hadronic \Wboson boson and additional jets, as well as the transverse components of the missing energy. 
-An extensive set of observables can be defined and measured from the final state particles, starting with a list
-of basic kinematic quantities:
-
-%\begin{table}[htbp]
-%    \centering
-%    \begin{tabular}{l | p{8cm}}
-%      %\toprule
-%      Observable                       & Description \\
-%      \midrule
-\begin{itemize}
-\item \textbf{ Lepton}~\( \bm{p_T}\) and \(\bm{\eta~}\)are the transverse momentum and pseudorapidity of the single lepton, either an electron or a muon. Since the lepton rest mass is much smaller than the momentum, $\eta$ coincides with the rapidity.
-\item \textbf{ Leading} and \textbf{subleading} $\bm{b}$ \textbf{jet}~\(\bm{p_T}\) are the transverse momentum of the leading and subleading $b$ jet, respectively.
-\item \textbf{ Missing}~\(\bm{E_T}\) denotes the missing transverse energy. Since the initial momentum of the partonic interaction is not known along the collision axis, only the transverse component can be measured. The quantity approximates the neutrino from the leptonic \Wboson decay.
-\item \textbf{ Hadronic}~\(\bm{W p_T}\) and $\bm{y}$ are the transverse momentum and rapidty of the hadronic \Wboson boson.
-\item \textbf{ Leading} and \textbf{subleading additional jet } \(\bm{p_T}\) denote the transverse momentum of the leading and subleading jets, excluding the two leading $b$ jets and the jets identified as the \Wboson candidate. They correspond to the hardest and second hardest gluon radiation and are thus valuable observables for PS matching studies.
-\end{itemize}
-
-\noindent
-The final state objects can be combined in various ways to approximate candidates for
-leptonic or hadronically decaying top quarks, or a pseudo-\ttbar system.
-Section ... describes the assignment of the two $b$ jets to either the lepton or the hadronic \Wboson boson.
-
-\begin{itemize}
-\item \( \bm{ m(bl)} \) and \( \bm{ p_T(bl) } \)
-are the invariant mass and transverse momentum of the lepton and the assigned $b$ jet, while \(\bm{ \Delta R(bl)} \)
-is the angular distance between the two four-vectors. The $m(bl)$ distribution is expected to be sensitive to the top quark mass below the threshold $\approx 150\GeV$. Off-shell contributions become more important in the high mass tail,
-with increased sensitivity to modeling effects.
-\item \( \bm{ m(bW_{had.}) } \), \( \bm{ p_T(bW_{had.}) } \) and \( \bm{ \Delta R(bW_{had.}) } \) are the equivalent observables approximating the hadronically decaying \Wboson.
-\item \( \bm{ m(W_{had.}bbl) } \) and \( \bm{ p_T(W_{had.}bbl) } \) are obtained by adding the four-momenta of the hadronic \Wboson, two leading $b$ jets and the lepton.
-\item When including \ETmiss in the observable definition, the quantities \( \bm{ p_T(bl\nu) } \) and
-\( \bm{ p_T(W_{had.}bbl\nu) } \) can be derived to reconstruct a leptonic pseudo-top or a \ttbar system. The latter is sensitive to the strong coupling, since a non-vanishing momentum indicates a jet recoiling against the \ttbar system.
-\end{itemize}
-
-\noindent
-Additional observables defined to be sensitive to modeling effects, in particular to the DR/DS modeling, 
-can be constructed. 
-\begin{itemize}
-\item \( \bm{ m^{minimax}(W_{had.}bbl)} \) Minimax observable defined in equation ....
-\item \( \bm{ m^\text{min}(bl) } \) denotes the minimal invariant mass of the lepton combined with one of the $b$ jets min$(m(b_1l),m(b_2l))$.
-\item The transverse mass of the leptonically decaying \Wboson boson \(\bm{m_T(W_{lep.})}\) can be obtained by adding \ETmiss and the transverse 
-vector of the lepton.
-\end{itemize}
-
-\noindent
-Lastly, two more observables are defined, measuring jet momenta ratios.
-By taking the ratio of $b$ tagged jets to non-$b$ tagged jets, uncertainties associated to
-$b$ tagging cancel. 
-\begin{itemize}
-\item \( \bm{R_{bq} } \) is the transverse momentum ratio of the leading $b$ jet to the leading light jet, while
-\item \( \bm{R_{bj} } \) denotes the scalar sum of the leading and subleading $b$ jet \pt divided by the \pt of the hadronic \Wboson.
-\end{itemize}
-
-
 \section{Measurement Regions}%
 \label{sec:Regions}
 
-This section presents the final event selection that is applied to define the measurement phase space.
-Only events passing all selection criteria are considered in the definition of the fiducial cross section.
-                                                                                         
-%  \label{tab:SR_Whad_Final:yields}
-%\end{table}
+Combining the loose event selection from Section~\ref{sec:EventSelection} with the reconstruction of the hadronic \Wboson from the previous section, allows the definition of the final measurement phase space used in the the analysis, referred to as the \textit{W-hadronic} region.
 
-The selection is optimized using simulated MC event samples.
-All events are required to contain exactly one signal lepton as defined in section~\ref{sec:lep_defintion}.
-Prompt leptonic \( \tau \) decays are considered signal in this analysis and are therefore included.
-Events are selected with a single lepton trigger and a minimum \pt requirement of \qty{30}{\GeV} is placed on the lepton.
-At least three jets are expected in the signal process: two $b$ jets and at least one jet from the hadronic \Wboson decay.
-The neutrino from the leptonic \Wboson boson decay introduces \met.
-A cut is defined on \( \met + \mtW > \qty{60}{\GeV} \) to remove background from QCD events
-with a misidentified or non-prompt lepton.
-The missing transverse mass \mtW is computed from
-the lepton and \met 4-vectors where the \(z\)-component is set to zero.
+The \textit{Loose} region defines the most general phase space designed to constrain the interference
+effects between \ttbar and \tW processes and improve the modeling across a broad kinematic range.
+The explicit reconstruction of the hadronic \Wboson boson allows 
+direct cuts on the \Wboson candidate.
+A mass window is applied around the \Wboson mass $(60~\GeV < m(\Whad) < 100~\GeV)$,
+and a minimum \pt requirement of $\pt > 80 \GeV$ is imposed.
+The same \Wboson-reconstruction algorithm is applied on detector and particle level, allowing for the cuts to be applied on both levels.
+These cuts suppress contributions from events with poorly reconstructed \Wboson candidates and from background processes.
 
-The \textit{Loose} region defines the most general phase space constraining the interference
-effects between \ttbar and \tW processes and improve the modeling over a large kinematic region.
-The explicit reconstruction of the hadronic \Wboson boson introduced in the previous section is
-exploited to define the \Wboson-hadronic region.
-A mass window around the \Wboson mass is defined for the \Wboson candidate $(60~\GeV < m(\Whad) < 100~\GeV)$,
-as well as a minimum \pt requirement.
-These cuts suppress contributions from events with poorly reconstructed \Wboson candidates.
-The loss in data statistics is compensated by a significantly enhanced background suppression.
-This analysis region provides a clean data sample with small background suppression.
-The explicit reconstruction of the \Wboson candidates further allows the construction of
-pseudo-tops from \Wboson, lepton and the two leading $b$ jets in an event.
-The observables measured in this region are valuable for development and improvement of MC models.
-The two analysis regions introduced above are summarized in Table~\ref{tab:RegionDefinitions}.
+An overview of the selection cuts for the two signal regions is provided in Table~\ref{tab:RegionDefinitions}, and the event yields are summarized in Table~\ref{tab:YieldRegions}. The total number of signal events is reduced by a factor of approximately 6, while background contributions are suppressed by more than a factor of 20. The \Wboson-hadronic region thus yields a clean data sample with a small background contamination.
+
+The MC simulation overestimates the overall normalization of the data by $1.2\%$.
+Applying the additional cuts on the hadronic \Wboson increases this discrepancy to $6.8\%$.
 
 \begin{table}[htbp]
     \centering
@@ -120,17 +49,49 @@ The two analysis regions introduced above are summarized in Table~\ref{tab:Regio
 %    \Wboson-hadronic measurement region.
 %    The total expected yield is using the nominal \tW DR sample.
 %    Uncertainties are statistical only.}%                                                  
+\begin{table}[htbp]
+    \centering
+    \caption{Yield tables including statistical uncertainties for the loose and \Wboson-hadronic region. The expected event counts in the simulation are calculated under the assumption of the DR model.}%
+    \hspace{1pt} \\
+    \begin{tabular}{l r r}
+        \toprule
+        & \multicolumn{2}{c}{\textbf{Yield}}\\
+        \cmidrule(lr){2-3}
+        \textbf{Process} & \multicolumn{1}{c}{Loose} & \multicolumn{1}{c}{$W$-hadronic}\\
+        \midrule
+        Mis-ID lep.   &   $40~570 \pm ~192     $ &   $1~857 \pm  ~63 $ \\
+        Other $V$     &   $53~170 \pm ~122     $ &   $2~207 \pm  ~15 $ \\
+        Other $t$     &  $206~130 \pm ~103     $ &   $9~267 \pm  ~24 $ \\
+        $W$+jets      &  $243~000 \pm ~481     $ &   $9~431 \pm  ~61 $ \\
+        \ttbar        &$5~470~000 \pm ~829     $ & $850~400 \pm 324 $ \\
+        $tW$ (DR)     &  $208~700 \pm ~172     $ &  $34~010 \pm  ~69 $ \\
+        $tW$ (DS)     &  $189~200 \pm ~165     $ &  $28~420 \pm  ~64 $ \\
+        \midrule
+        Expected      & $ 6~222~000 \pm 1006  $ & $ 907200 \pm 344 $ \\
+        Data          & $ 6~148~000 \pm 2480  $ & $ 849100 \pm 921 $ \\
+        \bottomrule
+%        Mis-ID lep. & $40572.4 \pm 192.064     $ & $1856.96 \pm 62.9288 $ \\
+%        Other $V$     & $53172.3 \pm 121.995     $ & $2206.55 \pm 14.6821 $ \\
+%        Other $t$     & $206126  \pm 102.947     $ & $9266.62 \pm 24.148  $ \\
+%        $W$+jets      & $243413  \pm 481.213     $ & $9430.65 \pm 61.1866 $ \\
+%        \ttbar & $5.47005e+06 \pm 829.283 $ & $850431  \pm 323.886 $ \\
+%        $tW$ (DR)     & $208730  \pm 171.951     $ & $34013.8 \pm 69.4585 $ \\
+%        $tW$ (DS)     & $189232  \pm 165.157     $ & $28415.2 \pm 64.4021 $ \\
+%        \midrule
+%        Expected   & $ 6.22206e+06 \pm 1005.59 $ & $ 907206 \pm 343.845 $ \\
+%        Data       & $ 6.14801e+06 \pm 2479.52 $ & $ 849115 \pm 921.474 $ \\
+    \end{tabular}
+    \label{tab:YieldRegions}
+\end{table}
 
-A direct comparison of the two measurement regions is shown for the lepton \pt spectrum
-and $m_{bl}$ in Figure~\ref{fig:Regions:LooseHad}.
-The data is represented by black circles and the error bars illustrate the statistical uncertainty. The bin size is gradually increased to ensure sufficient statistics in each bin. The signal MC consists of \ttbar and $tW$ predictions.
-Two alternative signal hypotheses are tested for the $tW$ contribution employing the DR or DS scheme. Background contribution to the regions is also shown where most contamination arises from $W$+jets events.
-The hashed area indicates the MC statistical uncertainties of the samples.
+A graphical comparison of the two measurement regions is shown in Figure~\ref{fig:Regions:LooseHad} for the lepton \pt spectrum and $m_{bl}$.
+The data are shown as black circles with statistical uncertainty represented by error bars. The bin size is gradually increased to ensure sufficient statistics in each bin. The signal MC is based on the nominal \textsc{Powheg+Pythia} 8 predictions for \ttbar and $tW$ processes.
+Two alternative \tW signal hypotheses are tested using the DR or DS scheme. Background contributions are included with the dominant source being $W$+jets events.
+The hashed area indicates the MC statistical uncertainties of the MC samples.
+Systematical uncertainties are not shown in this plot.
 
-
-%A quantitative overview is provided in Table ... where the event yields for the two regions are listed.
-
-%The cutflow tables for these selections are available in \cref{app:cutflows}.
+The plots show that background contamination is strongly suppressed in the \Wboson-hadronic region, resulting in a signal-to-background ratio of 39. Neither the DR nor the DS model provides a perfect description of the data across the differential distributions. The DR model overestimates the lepton
+\pt tail, while the DS model gives a reasonable description in this region. Conversely, the $m_{bl}$ tail is well described by the DR model, whereas the DS model underestimates the data.
 
 \begin{figure}[ht!]
 	\centering
@@ -213,61 +174,139 @@ The hashed area indicates the MC statistical uncertainties of the samples.
 	\label{fig:Regions:LooseHad}
 \end{figure}
 
+
+\section{Observables of interest}
+\label{sec:observables}
+The measured final state includes the 4-vectors of the lepton, $b$ jets, the reconstructed hadronic \Wboson boson, additional jets and the transverse components of the missing energy. 
+An extensive set of observables can be constructed from these final state particles, beginning with basic kinematic quantities:
+
+%\begin{table}[htbp]
+%    \centering
+%    \begin{tabular}{l | p{8cm}}
+%      %\toprule
+%      Observable                       & Description \\
+%      \midrule
+\begin{itemize}
+\item \textbf{ Lepton}~\( \bm{p_T}\) and \(\bm{\eta~}\) measure the transverse momentum and pseudo-rapidity of the single lepton. Since the lepton rest mass is much smaller than its momentum, $\eta$ coincides with the rapidity.
+\item \textbf{ Leading} and \textbf{sub-leading} $\bm{b}$ \textbf{jet}~\(\bm{p_T}\) are the transverse momentum of the leading and sub-leading $b$ jet, respectively.
+\item \textbf{ Missing}~\(\bm{E_T}\) denotes the missing transverse energy. Since the initial momentum of the partonic interaction is not known along the collision axis, only the transverse component can be measured. The quantity approximates the neutrino from the leptonic \Wboson decay.
+\item \textbf{ Hadronic}~\(\bm{W p_T}\) and $\bm{y}$ are the transverse momentum and rapidity of the reconstructed hadronic \Wboson boson.
+\item \textbf{ Leading} and \textbf{sub-leading additional jet } \(\bm{p_T}\) denote the transverse momentum of the hardest and second-hardest jets, excluding the two leading $b$ jets and the jets identified as the \Wboson candidate. They correspond to the hardest and second hardest gluon radiation and are valuable observables for PS matching studies.
+\end{itemize}
+
+\noindent
+The final state objects can be combined in various ways to approximate candidates for
+leptonic or hadronically decaying top quarks, or a pseudo-\ttbar system.
+Section ... describes the assignment of the two $b$ jets to either the lepton or the hadronic \Wboson boson.
+
+\begin{itemize}
+\item \( \bm{ m(bl)} \) and \( \bm{ p_T(bl) } \)
+are the invariant mass and transverse momentum of the lepton and the assigned $b$ jet, while \(\bm{ \Delta R(bl)} \)
+is the angular distance between the two four-vectors. The $m(bl)$ distribution is expected to be sensitive to the top quark mass below the threshold $\approx 150\GeV$. Off-shell contributions become more important in the high mass tail,
+with increased sensitivity to modeling effects.
+\item \( \bm{ m(bW_{had.}) } \), \( \bm{ p_T(bW_{had.}) } \) and \( \bm{ \Delta R(bW_{had.}) } \) are the equivalent observables approximating the hadronically decaying \Wboson.
+\item \( \bm{ m(W_{had.}bbl) } \) and \( \bm{ p_T(W_{had.}bbl) } \) are obtained by adding the four-momenta of the hadronic \Wboson, the two leading $b$ jets and the lepton.
+\item When including \ETmiss in the observable definition, the quantities \( \bm{ p_T(bl\nu) } \) and
+\( \bm{ p_T(W_{had.}bbl\nu) } \) can be derived to reconstruct a leptonic pseudo-top or a full \ttbar system. The latter is sensitive to the strong coupling constant, since a non-vanishing momentum indicates a jet recoiling against the \ttbar system.
+\end{itemize}
+
+\noindent
+Additional observables defined to be sensitive to modeling effects, in particular to the DR/DS modeling, 
+can be constructed. 
+\begin{itemize}
+\item \( \bm{ m^{minimax}(W_{had.}bbl)} \) is the \textit{minimax} observable defined in Eq .... that was used to assign $b$ jets, lepton and \Wboson to the leptonic and hadronic pseudo-top quark. The observable is sensitive to the top quark mass below the kinematic threshold at $\approx 150\GeV$ and probes modeling effects for larger masses.
+\item \( \bm{ m^\text{min}(bl) } \) denotes the minimal invariant mass of the lepton combined with one of the $b$ jets min$(m(b_1l),m(b_2l))$.
+\item The transverse mass of the leptonically decaying \Wboson boson \(\bm{m_T(W_{lep.})}\) can be obtained by adding \ETmiss and the transverse 
+vector of the lepton.
+\end{itemize}
+
+\noindent
+Lastly, two additional observables are defined to measure jet momenta ratios.
+By taking the ratio of
+$b$ tagged jet transverse momenta to those of non-$b$ tagged jets, uncertainties associated with
+$b$ tagging efficiency are partially canceled\begin{itemize}
+\item \( \bm{R_{bq} } \) is the ratio of the leading $b$ jet transverse momentum to the leading light jet \pt, while
+\item \( \bm{R_{bj} } \) denotes the scalar sum of the leading and sub-leading $b$ jet \pt divided by the \pt of the hadronic \Wboson.
+\end{itemize}
+
+
+\section{Background estimation}
+\label{sec:background}
+
+The analysis targets the
+$WbWb$ final state with one leptonically and one hadronically decaying
+$W$ boson. Background events from other processes
+can mimic the signal due to inaccurate reconstruction or misidentification of objects.
+These backgrounds are simulated using MC event generators, but their modeling is challenging. To improve reliability, data-driven methods are used to estimate contributions from $W$+jets and fake lepton background to the signal region.
+All other backgrounds are taken from the simulation without further corrections.
+
+\subsection{\textit{W}+jets background}
+
+The dominant background in the analysis arises from events with a final state \Wboson boson in association with several jets,
+where light quark or gluon jets are misidentified as $b$ jets. 
+The misidentification rate for light jets is less than 1\% (see Figure~\ref{fig:ObjectReco:FtagPerf}),
+but when combined with the large cross-section of \Wboson+jets production, it results in a significant contribution to the $WbWb$ signal region.
+Careful modeling of the jet flavor composition, $b$ tagging efficiencies, and control regions is essential to accurately estimate and subtract the $W$+jets contribution in the analysis.
+
+A dedicated control region is defined to estimate and constrain the $W$+jets normalization. It is designed to be orthogonal to the signal region
+while preserving similar kinematic properties.
+Exactly three jets, at least one of which is $b$ tagged, are selected.
+To enhance the yield and purity of the $W$+jets background, while suppressing the \ttbar contribution, cuts on
+$m_T^W$ and $m_{bl}^\text{min}$ are applied, as listen in Table~\ref{tab:WjetsCRDefinitions}. The overlap with the $W$-hadronic region is expected to be small, but the region is nevertheless vetoed explicitly.
+
 \begin{table}[htbp]
     \centering
-    \caption{A summary of the event selection for the loose and the \Wboson-hadronic measurement regions.
-    The cuts are applied on detector and particle level.}%
-    \hspace{1pt} \\
-    \begin{tabular}{l r r}
-        \toprule
-        & \multicolumn{2}{c}{\textbf{Yield}}\\
-        \cmidrule(lr){2-3}
-        \textbf{Process} & \multicolumn{1}{c}{Loose} & \multicolumn{1}{c}{$W$-hadronic}\\
-        \midrule
-        Mis-ID lep.   &   $40~570 \pm ~192     $ &   $1~857 \pm  ~63 $ \\
-        Other $V$     &   $53~170 \pm ~122     $ &   $2~207 \pm  ~15 $ \\
-        Other $t$     &  $206~130 \pm ~103     $ &   $9~267 \pm  ~24 $ \\
-        $W$+jets      &  $243~000 \pm ~481     $ &   $9~431 \pm  ~61 $ \\
-        \ttbar        &$5~470~000 \pm ~829     $ & $850~400 \pm 324 $ \\
-        $tW$ (DR)     &  $208~700 \pm ~172     $ &  $34~010 \pm  ~69 $ \\
-        $tW$ (DS)     &  $189~200 \pm ~165     $ &  $28~420 \pm  ~64 $ \\
-        \midrule
-        Expected      & $ 6~222~000 \pm 1006  $ & $ 907200 \pm 344 $ \\
-        Data          & $ 6~148~000 \pm 2480  $ & $ 849100 \pm 921 $ \\
-        \bottomrule
-%        Mis-ID lep. & $40572.4 \pm 192.064     $ & $1856.96 \pm 62.9288 $ \\
-%        Other $V$     & $53172.3 \pm 121.995     $ & $2206.55 \pm 14.6821 $ \\
-%        Other $t$     & $206126  \pm 102.947     $ & $9266.62 \pm 24.148  $ \\
-%        $W$+jets      & $243413  \pm 481.213     $ & $9430.65 \pm 61.1866 $ \\
-%        \ttbar & $5.47005e+06 \pm 829.283 $ & $850431  \pm 323.886 $ \\
-%        $tW$ (DR)     & $208730  \pm 171.951     $ & $34013.8 \pm 69.4585 $ \\
-%        $tW$ (DS)     & $189232  \pm 165.157     $ & $28415.2 \pm 64.4021 $ \\
-%        \midrule
-%        Expected   & $ 6.22206e+06 \pm 1005.59 $ & $ 907206 \pm 343.845 $ \\
-%        Data       & $ 6.14801e+06 \pm 2479.52 $ & $ 849115 \pm 921.474 $ \\
+    \caption{List of cuts applied to select events for the $W$+jets control region.}%
+    \begin{tabular}{l c}
+      \hspace{1pt}\\
+      \toprule
+      \textbf{Selection}                    & $\bm{W+}$\textbf{jets CR} \\
+      \midrule
+      \( N \)(central jet)                  & \( = 3\)         \\
+      \( N_{\bjets}\)                       & \( \geq 1 \)        \\
+      \( \pt(\ell) \)                       & \( (30, \infty) \)  \\
+      \( \pt(j)\)                           & \( (25, \infty) \)  \\
+      \( \met + \mtW \)                     & \( (60, \infty) \)  \\
+      \( m_T^W \)                           & \( (40,100) \) \\
+      \(m_{bl}^\text{min}\)                 & \( (180, \infty)\) \\
+      SR veto                               & enabled \\
+      \bottomrule
     \end{tabular}
-    \label{tab:YieldRegions}
+    \label{tab:WjetsCRDefinitions}
 \end{table}
 
+The background estimation employs a single-bin fit in the control region with the $W$+jets
+normalization as parameter of interest.
+Detector and modeling
+uncertainties of all processes are treated as nuisance parameters in the fit.
+The normalization factor is found to be $1.10\pm 0.10$ and is
+used to correct the $W$+jets process in the signal region.
 
-\clearpage
+\subsection{Misidentified and non-prompt leptons}
+\label{ch:FakeLep}
 
+During the reconstruction step, non-leptonic objects may be misidentified as leptons, resulting in so-called "fake leptons." These contribute to the background and are accounted for in the analysis.
 
+Fake electrons primarily originate from photon conversions, electrons from secondary meson decays within jets or misidentified jets (from light quark/gluon fragmentation).
+Compared to prompt electrons, fake electrons typically exhibit poorer isolation and lower efficiency in passing tighter identification criteria.
+Fake muons mainly arise from in-flight meson decays within jets.
+While such muons are generally less isolated, they
+can still contribute to the signal region if they satisfy tight isolation and impact parameter requirements.
 
-										 %      %\bottomrule
-%    \end{tabular}
-%  \caption{Definition of basic and constructed observables considered in the cross section measurement.}%                                                                             
-%  \label{tab:ObservableDefinitions}
-%\end{table}
+The fake-factor method~\cite{EGAM-2019-01} is employed to estimate the effect of misidentified leptons.
+This approach is data-driven as it is challenging to model these processes with high accuracy in the detector simulation.
+This technique relies on a control region enriched in fake leptons, selected orthogonal to the signal regions.
+The \ETmiss$+m_T^W$ cut is inverted to be smaller than 60~\GeV and at least one
+$b$ jet is required.
+
+Fake factors are determined from the fractions of non-prompt and misidentified leptons that pass tight or loose reconstruction criteria, as listed in Tables~\ref{tab:ObjReco:Electrons} and~\ref{tab:ObjReco:Muons}. Events containing fake leptons are weighted accordingly to correct for misidentification in the analysis phase space. In the analysis presented in this thesis, the fake and non-prompt backgrounds are found to be small compared to other dominant backgrounds, reducing the need for detailed fake-factor corrections.
 
 
 \section{Systematic uncertainties}
 
-This section presents a comprehensive assessment of the systematic uncertainties that impact the 
-precision of the cross-section measurement. The analysis accounts for sources of experimental uncertainty
-originating from detector response, calibration and reconstruction procedure, as well as those arising
-from variations in the signal and background modeling. All systematic effects are evaluated at the reconstruction
-level and one-sided uncertainties are symmetrized.
+This section presents a full assessment of the systematic uncertainties that impact the  precision of the cross-section measurement. The analysis accounts for sources of experimental uncertainty originating from detector response, calibration and reconstruction procedure, as well as those arising
+from variations in the signal and background modeling. All systematic effects are evaluated at the reconstruction level and one-sided uncertainties are symmetrized.
+
 
 \subsection{Experimental systematics uncertainties}
 
@@ -275,30 +314,26 @@ The reconstruction and calibration methods used in the analysis were introduced 
 
 \subsubsection{Leptons}
 
-Scale factors for identification, isolation, and reconstruction that improve the agreement
-between data and simulation are varied to account for uncertainties from the
-calibration procedure. The same concept is applied to vary scale factors for the 
+Scale factors for identification, isolation, and reconstruction that improve the agreement between data and simulation are varied to account for uncertainties from the calibration procedure. The same concept is applied to vary scale factors for the 
 lepton trigger efficiencies.
 
-Uncertainties associated to the understanding of energy scale and resolution as outlined in 
-Section~\ref{sec:reco:el} and~\ref{sec:reco:mu} for electrons and muons respectively,
-are estimated by modifying the lepton momenta. 
+Uncertainties associated to the understanding of energy scale and resolution as outlined in  Section~\ref{sec:reco:el} and~\ref{sec:reco:mu} for electrons and muons respectively, are estimated by modifying the lepton momenta. 
 
 \subsubsection{Jets}
 
 The comprehensive \verb|CategoryReduction| uncertainty model~\cite{web:JetSystematics},
-which parametrizes the energy scale and resolution of jets is employed.
+which parametrizes jet energy scale and resolution is employed.
 The jet energies are shifted according to the uncertainties derived
 from simulation and in-situ calibration measurements.
-The model includes corrections for different detector responses depending on jet momenta,
-position and flavor, as well as pile-up conditions or the JVT efficiency.
+The model includes corrections for detector responses that depend on jet momenta,
+position and flavor, as well as pile-up conditions and the JVT efficiency.
 
 \subsubsection{$b$ tagging}
 
-The DL1r algorithm introduced in Section~\ref{sec:reco:jets} was used to identify $b$ jets.
-Uncertainties related to $b$ tagging are derived and evaluated separately for 
+The DL1r algorithm  was used to identify $b$ jets.
+Uncertainties related to the $b$ tagging are derived and evaluated separately for 
 for the $b$ tagging efficiency, as well as $c$ and light jet mis-tagging rates.
-The largest contributions originate from limited statistics and modeling uncertainties in the samples used
+The largest contributions stem from limited statistics and modeling uncertainties in the samples used
 for the calibration, as well as jet uncertainties.
 
 \subsubsection{MET}
@@ -314,34 +349,32 @@ However, this is expected to be a small effect in the analysis, since the
 \subsubsection{Luminosity and pile-up}
 
 Further sources of experimental uncertainties arise from the measurement of
-the integrated luminosity and the correction of the number of pile-up
-collisions to data in simulated events. 
+the integrated luminosity and the correction of the number of pile-up interactions in simulated events to match those in data.
 The integrated luminosity of the full Run 2 data sample after standard data-quality selection was
 measured to be $140\pm 1.2~\text{fb}^{-1}$, corresponding to an uncertainty of 0.83\%~\cite{DAPR-2021-01}.
 
-To account for pile-up mismodeling, the MC profile is reweighted to match the data. The resulting systematic uncertainty is evaluated by varying the reweighting scale factors (
-
-possibly cite twiki: https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/ExtendedPileupReweighting?extralog=-%20caching%20topic)
+To account for pile-up mis-modeling, the MC profile is reweighted to match the data. The resulting systematic uncertainty is evaluated by varying the reweighting scale factors~\cite{Buttinger:2014726}.
 
 \subsection{Theory modeling uncertainties}
 
 Theory systematics quantify uncertainties associated with the choice of event generators 
-and the specific parameters employed during the simulation of the physics processes.
+and the specific parameters settings during the simulation of the physics processes.
 These uncertainties typically arise from limited theoretical accuracy in the prediction.
 %These uncertainties are typically evaluated by varying the simulation parameters and
 %comparing the resulting distributions to the nominal simulation. 
 
-For the purposes of this analysis, these effects are evaluated separately for
+These effects are evaluated separately for
 the signal processes \ttbar and $tW$
 and the modeling of the various background contributions.
+As mentioned earlier, one-sided uncertainties are symmetrized on detector level.
 
 \subsubsection{Cross section}
 
 The signal consists of the independent $\ttbar$ and $tW$ samples with
 normalizations to the respective absolute cross sections.
 Normalization effects of the signal samples do not cancel in the
-construction of the migration matrix (see Section~\ref{sec:unfolding:def})
-due to the relative contributions.
+construction of the \textit{migration matrix} (see Section~\ref{sec:unfolding:def})
+due to the combination of relative contributions.
 An uncertainty anti-correlating the cross sections is applied
 to account for possible fraction differences due to cross section uncertainties.
 
@@ -355,7 +388,7 @@ definition of the vetoed region in the parton showering.
 Varying this setting assesses the uncertainty associated with matching the
 ME to the shower.
 
-\subsubsection{$h_\text{damp}$}
+\subsubsection{\textit{h}$_\text{damp}$}
 
 The $h_\text{damp}$ parameter is one of the parameters controlling the ME/PS
 matching in \textsc{Powheg}, effectively regulating the high-\pt radiation.
@@ -364,9 +397,9 @@ by a factor of 2~\cite{ATL-PHYS-PUB-2016-020}.
 
 \subsubsection{Hadronization model}
 
-In order to estimate the effect of the non-perturbative aspects of the parton shower and the hadronization,
-the difference between the nominal sample to the alternative sample produced with \textsc{Powheg+Herwig} 7.1 
-is defined as a systematic uncertainty. The uncertainty is symmetrized on detector level.
+In order to estimate the effect of the non-perturbative aspects of PS and 
+hadronization, the difference between the nominal sample to the alternative sample produced with \textsc{Powheg+Herwig} 7.1 
+is defined as a systematic uncertainty. 
 
 \subsubsection{Scales}
 
@@ -377,15 +410,15 @@ The effect of missing higher order predictions is estimated by varying the scale
 by factors of 0.5 or 2.0 in the matrix element as up and down variations.
 
 To estimate the uncertainty associated to the final state radiation (FSR),
-scales variations are also applied in the shower.
+scale variations are also applied in the parton shower.
 Initial state radiation (ISR) effects are assessed by varying $\alpha_S$
-with the alternative Var3c A14 tune~\cite{ATL-PHYS-PUB-2017-007}. 
+with the alternative \verb|Var3c| variation of the A14 tune~\cite{ATL-PHYS-PUB-2017-007}. 
 
 \subsubsection{PDF}
 
 The PDF4LHC recommendations~\cite{Butterworth:2015oua} are followed to evaluate
 the effect of different PDF sets on the cross section.
-An event-by-event reweighting procedure is applied to the nominal Powheg+Pythia8 signal samples,
+An event-by-event reweighting procedure is applied to the nominal \textsc{Powheg+Pythia}~8 signal samples,
 separately for PDF and $\alpha_S$ variations.
 The variations are processed with the LHAPDF library~\cite{Buckley:2014ana} 
 which obtains a combined PDF+$\alpha_S$ uncertainty.
@@ -393,15 +426,15 @@ which obtains a combined PDF+$\alpha_S$ uncertainty.
 \subsubsection{Top recoil scheme}
 
 The radiation pattern in the PS is influenced by the gluon radiation
-scheme. The nominal \textsc{Powheg+Pythia} 8 generator employs the
+scheme. The nominal \textsc{Powheg+Pythia}~8 generator employs the
 \verb|recoilToColor| scheme, where the second and all subsequent
 gluons recoil against the $b$ quark.
 This has direct implications on the $b$ jet shape, suppressing
 hard out-of-cone radiation~\cite{Brooks_2019}.
-Alternatively, in the \verb|recoilToTop| scheme,
+Alternatively, in the \verb|recoilToTop| scheme, the
 top-quark itself works as recoiling object for the second and
 subsequent emissions.
-This option gives rise to wider-angle gluon radiation, resulting in energy deposits that do not get clustered into the b-jet.
+This option gives rise to wider-angle gluon radiation, resulting in energy deposits that do not get clustered into the $b$ jet.
 Thus, potentially reducing the reconstructed momentum and invariant mass.
 
 The two complementary recoil schemes introduce an additional modeling uncertainty,
@@ -410,80 +443,65 @@ the descriptions as an uncertainty and symmetrizing it.
 
 \subsubsection{Top quark mass}
 
-The exact value of the top quark mass directly impacts the kinematics of the 
-decay products. Thus, a variation is the mass affects the number of events
-passing the event selection.
-Signal samples with nominal parameters, but a top quark mass of 169\GeV and 176\GeV
-are employed to estimate the uncertainty. The final shift is scaled by 1/7 to
-reflect the known precision of the top quark mass of 0.5\GeV~\cite{TOPQ-2017-03}.
+The exact value of the top quark mass directly influences the kinematics of the decay products, thereby affecting the number of events passing the selection criteria. To estimate the corresponding uncertainty, signal samples are generated with nominal parameters but using top quark masses of 169\GeV and 176\GeV. The resulting shift is scaled by a factor of 1/7
+to reflect the known experimental precision of the top quark mass $\Delta m_t = 0.5~\GeV$~\cite{TOPQ-2017-03}.
 
 \subsubsection{Diagram removal vs. diagram subtraction}
 
 Special care has to be taken when merging \ttbar and $tW$ signal samples to
 remove the overlap between the samples. 
 The nominal \ttbar sample is combined with $tW$ samples implemented with
-either the diagram removal or diagram subtraction scheme.
+either the diagram removal (DR) or diagram subtraction (DS) scheme.
 The uncertainty is defined as the difference between the descriptions.
 
-\subsubsection{W mass in the reconstruction}
+\subsubsection{\textit{W} mass in the reconstruction}
 
-The reconstruction of the hadronic \Whad candidate introduced in Section...
+The reconstruction of the hadronic \Whad candidate
 makes explicit use of a hard-coded value for the \Wboson mass.
 Using a fixed value may lead to a bias in the reconstruction due to the 
-natural width of the \Wboson of $\sigma_W = 2.085\GeV$~\cite{PDG}.
+natural width of the \Wboson of $\Gamma_W = 2.085\GeV$~\cite{PDG}.
 An uncertainty is defined, varying the value used in the reconstruction
-by $\pm 2\sigma_W$.
+by $\pm 2\Gamma_W$.
 
 \subsection{Background modeling}
 
-\subsubsection{$W$+jets}
+\subsubsection{\textit{W}+jets}
 
 The uncertainties assigned to the modeling of the $W+$jets background are conceptually
 similar the signal samples, including the modeling uncertainties on PDF, scales
 and electroweak corrections.
 
-%Similar to the signal modeling systematics, the uncertainty in the W+ jets background is evaluated by varying the normalization factor of the MC generation parameters. These variations
-%include modeling uncertainties on the cross-section, PDFs, scales and electroweak corrections.
-%Table 8.7 lists the NPs associated with the W+ jets background modeling.
-
 \subsubsection{Fake leptons}
 
-The MC normalization uncertainty is evaluated by 
-varying all samples simultaneously by $10\%$.
-The control region is defined to be orthogonal to the signal region.
-The effect of the exact cut values is estimated by varying the 
-\ETmiss$+m_T^W$ cut to 50 and 70~\GeV, as well as demanding either at least one or at least two $b$ jets.
+The MC normalization uncertainty in the fake-enriched control region is evaluated by varying all contributing samples simultaneously by
+$\pm 10\%$. The fake factors are recomputed to assess the impact of changes in the control region definition. The
+\ETmiss~+~$m_T^W$ selection cut is varied to 50~\GeV and 70~\GeV, and alternative requirements of at least one or at least two $b$ jets are tested.
 
 \subsubsection{Other background}
 
 The “Other V” samples have scale, PDF and electroweak
 uncertainties applied, while the “Other t” samples only apply a conservative 25\% normalization uncertainty.
-Since the contributions from these background processes are small in the selected phase space,
-the impact of the related uncertainties is expected to be negligible.
+Since the contributions from these background processes are small in the selected phase space, the impact of the related uncertainties is expected to be negligible.
 
 
 \section{Unfolding}
+\label{sec:unfolding}
 
-The distributions measured at the detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, as well as reconstruction errors and misidentification of particles. 
+The distributions measured at detector level are distorted by a variety of experimental effects, including detector acceptance, reconstruction efficiency, energy and momentum resolution, or reconstruction errors and misidentification of particles. 
 
 In the \textit{unfolding} step, these detector-induced distortions are corrected to recover the underlying physical spectra from the observed data.
 The differential particle-level cross sections that are obtained can be compared to test theoretical predictions probing the SM. All detector specific effects are removed, allowing the comparison of the results across measurements and experiments, as well as to future predictions which may not be available at the time of the analysis.
 
-While the procedure of unfolding is conceptually straightforward, its practical implementation presents significant challenges. Various unfolding algorithms and software packages are available, but in this analysis, the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
+Although the procedure of unfolding is conceptually straightforward, its practical implementation poses significant challenges. Several unfolding algorithms and software packages are available and in this analysis the TUnfold framework~\cite{Schmitt:2012kp} is employed due to its robustness and flexibility in handling complex detector responses.
 
 A \textit{migration matrix} is constructed, which describes how events are redistributed across bins due to detector effects. This matrix is then inverted, adding a regularization term to stabilize the inversion process while avoiding overfitting. Every component of the systematic uncertainties is propagated individually through the unfolding procedure.
 
-This chapter provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix, the choice of regularization and the propagation of uncertainties. 
-
-%Finally, the unfolded differential cross-sections are presented, along with their associated uncertainties, and compared to theoretical predictions to assess the validity of the underlying models.
+This section provides a comprehensive introduction to the unfolding methodology, detailing the theoretical foundations, the required input ingredients, and the practical challenges involved. It then outlines the specific unfolding strategy applied in this analysis, including the construction of the migration matrix, the choice of regularization and the propagation of uncertainties. 
 
 \subsection{Unfolding procedure and cross section definition}
 \label{sec:unfolding:def}
-The measurement is performed as a counting experiment, where events are grouped into certain regions of phase-space, also called bins.
-The starting point of the unfolding are differential dectetor level distributions counting the number of events as a function of 
-a physical observable. A selection of the four observables lepton \pt, leading $b$ jet \pt, hadronic \Wboson \pt and $m(bl)$ is presented in figure~\ref{fig:unfolding:reco}.
-The unfolding procedure will be explained at the example of those observables.
-Distributions as functions of the other quantities introduced in section~\ref{sec:observables} are included in appendix ...
+The measurement is performed as a counting experiment, with events grouped into discrete regions of phase space, referred to as bins. The unfolding procedure begins with differential detector-level distributions, which count the number of events as a function of a physical observable. 
+The unfolding procedure is illustrated using the four observables lepton \pt, leading $b$ jet \pt, hadronic \Wboson \pt and $m(bl)$. The detector level distributions, showing the number of events as a function of each observable, are presented in Figure~\ref{fig:unfolding:reco}.
 
 \begin{figure}[ht!]
 	\centering
@@ -515,27 +533,26 @@ Distributions as functions of the other quantities introduced in section~\ref{se
 	\label{fig:unfolding:reco}
 \end{figure}
 
-The statistical uncertainty indicated by the black error bar is mostly smaller than the marker size, but it can increase up to $\approx 10\%$ in the tails of the distributions.
+The statistical uncertainty indicated by the black error bar is mostly smaller than the marker size, but it can increase up to $\approx 10\%$ in the tails of the distributions where the cross-section decreases.
 
 The data are compared to theory predictions from Monte Carlo simulations.
+The analysis region is dominated by the \ttbar signal process simulated with \verb|Powheg+Pythia|~8.
 The background contamination is generally small with the largest contribution from $W+$jets events.
-The analysis region is dominated by the \ttbar signal process simulated with \verb|Powheg+Pythia 8|.
 
 The \pt spectra of the lepton, leading $b$ jet and hadronic \Wboson are exponentially falling.
-The total event count is overestimated by $\approx 5\%$ by the predictions.
+The total event count is overestimated by $\approx 6\%$ by the predictions.
 The disagreement is enhanced in the tails of the distributions.
 %Contributions from $tW$ become more important and a difference between the two models can be 
 %observed on detector level.
-The $m(bl)$ distribution in figure~\ref{fig:whadpart:unfolding:reco:m_lb}
-exhibits a peak around 120~\GeV and falls off steeply at around 150~\GeV, when approaching the kinematic
-threshold from the top mass. Contributions from $tW$ become more important in the tail region and
-discrepancies between DR and DS become enhanced.
+The $m(bl)$ distribution
+exhibits a peak around 120~\GeV and falls off steeply after around 150~\GeV, when approaching the kinematic threshold from the top mass. Contributions from $tW$ become more important in the tail region and
+discrepancies between DR and DS are enhanced.
 Overall, the data are reasonably well described by the predictions.
 
-The first step of the unfolding procedure subtracts the background from the data.
+The first step in the unfolidng it the subtraction of the background from the data.
 The number of background events in a single bin $j$ is $N_{b,j}$.
-It can be obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:background}.
-The remaining events are considered as signal consisting of \ttbar and $tWb$ events.
+It is obtained from data driven methods or MC simulations, as explained in Section~\ref{sec:background}.
+The remaining events after the subtraction are considered to be signal events from \ttbar and $tWb$ processes.
 
 The response matrix $M_R$ encapsulates the detector response
 by keeping track of event migration.
@@ -550,7 +567,7 @@ The migration matrix $M_{ij}$ is obtained when normalizing the response matrix
     M_{ij} = \frac{M_{R,ij}}{N_{t,i}},
 \end{equation}
 where $N_{t,i}$ is the number of particle level (true) events in bin $i$.
-Thus, $M_{ij}$ can be interpreted as the probability of a particle level event generated in bin $i$ to be reconstructed in bin $j$.
+Thus, $M_{ij}$ can be interpreted as the probability of a particle level event generated in bin $i$ to be reconstructed in bin $j$ after the detector simulation.
 The choice of the bin boundaries for each observable is such that the diagonal elements of the matrix contain at least 60\% of particle level events per row.
 
 In practice, the number of bins on reconstructed level is chosen to be twice as large, compared to the particle level.
@@ -587,27 +604,24 @@ at reconstruction level.
 	\label{fig:unfolding:migma}
 \end{figure}
 
-Figure~\ref{fig:unfolding:migma} presents examples for the migration matrix.
-Lepton \pt can be measured with high precision, leading to a matrix dominated by the diagonal elements.
-The spectrum is exponentially falling, resulting in the structure of the matrix with values on the 
-left of the diagonal being slightly larger.%Johannes reformulate this!
-The same is true for the hadronic \Wboson \pt in figure~\ref{fig:whadpart:unfolding:migma:pt_w}.
-Resolving the $b$ jet \pt is experimentally more challenging, leading to a degraded resolution
-and therefore entries in the off-diagonal elements.
-Entries in the upper triangle of the matrix indicates a slight bias towards harder detector level jets.
+Figure~\ref{fig:unfolding:migma} presents the migration matrix of the four selected quantities.
+Lepton \pt can be measured with high precision, leading to a matrix dominated by the left diagonal elements.
+The spectrum is exponentially falling, therefore the left part of the diagonal has more entries than the right. The same observations hold for the hadronic \Wboson \pt.
+Resolving the $b$ jet \pt is experimentally more challenging, leading to a degraded resolution and therefore entries in the off-diagonal elements.
+Entries in the upper triangle of the matrix indicates a slight bias towards harder detector particle jets.
 
 %However, the migration effects are well understood and the matrix is dominated by the diagonal.
 The $m(bl)$ observable is more complex and has more structure compared to \pt.
 The fine binning in combination with the drop-of of the cross section around 150\GeV leads to
-more migrations in that region. The effect is unavoidable and well under
+more migrations in that region. This pattern is unavoidable and well under
 control with the chosen binning.
 
-A simple inversion of $M$ in order to obtain the true particle level distribution is
-not sufficient, as it can enhance statistical fluctuations in the data.
+A simple inversion of $M$ is
+not sufficient to obtain the particle level distribution, as an inversion can enhance statistical fluctuations in the data.
 Therefore, a regularization term is added which ensures a dampening of this effect
 and therefore a smooth unfolded distribution.
 This analysis employs the Tikhonov regularization scheme~\cite{Tikhonov1995}
-as implemented in the TUnfold package~\cite{Schmitt:2019um}.
+as implemented in TUnfold~\cite{Schmitt:2019um}.
 
 %\begin{figure}[ht!]
 %	\centering
@@ -653,7 +667,7 @@ The complementary efficiency
 \end{equation}
 is defined as the fraction of matched events out of all events passing the particle-level 
 selection $N_{t,i}$. It corrects for events that fail to be reconstructed or selected at the detector
-level. This can result from limitations in detector coverage, insufficient resolution,
+level, as a result from limitations in detector coverage, insufficient resolution,
 trigger thresholds or reconstruction algorithms.
 
 
@@ -685,7 +699,7 @@ trigger thresholds or reconstruction algorithms.
 \end{figure}
 
 The acceptance and efficiency corrections will be applied multiplicatively to the data.
-The distributions for the four observables are shown in Figure~\ref{fig:unfolding:eff_acc}.
+The respective distributions for the four observables are shown in Figure~\ref{fig:unfolding:eff_acc}.
 Mostly flat curves are obtained for the \pt distributions with $f_{acc}\approx 70\%$ and 
 $\epsilon\approx 25\%$.
 The acceptance for $m(bl)>150\GeV$ drops from $70\%$ to $50\%$.
@@ -695,10 +709,9 @@ These are the events populating the bins above the diagonal.
 This mis-reconstruction leads to a drop in the acceptance.
 
 
-Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width
-to obtain the differential cross section.
+Lastly, the unfolded distribution is normalized by the integrated luminosity and the bin width to obtain the differential cross section.
 
-After putting all ingredients together, the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ can be defined as
+When putting all ingredients together, the differential fiducial cross section as a function of an observable $X$ in a given bin $i$ can be defined as
 \begin{equation}
     \frac{d\sigma_\text{fid}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i} \cdot \sum_j f_{\text{acc}}^j M_{ij}^{-1} (N_{d,j}-N_{b,j}).
     \label{eq:Unfolding}
@@ -715,9 +728,7 @@ After putting all ingredients together, the differential fiducial cross section 
 Uncertainty components associated with the cross section measurement are
 propagated from detector level through the unfolding pipeline to unfolded cross
 section level. Deviations from the nominal results are evaluated separately for
-the upward and downward variation. 
-The single uncertainties are assumed to be uncorrelated.
-The propagated uncertainties are therefore summed up in quadrature
+the upward and downward variations of each systematic source. Assuming uncorrelated uncertainties, the individual contributions are combined in quadrature to obtain the total uncertainty
 \begin{equation}
 	\sigma_\text{tot}^\text{up/down} = \sqrt{\sum_\text{sys} (\sigma_\text{sys}^\text{up/down})^2}
 \end{equation}
@@ -730,7 +741,6 @@ where the nominal result is taken from Equation~\eqref{eq:Unfolding}
 \end{equation}
 The signs of the cross section shifts are kept.
 Up and down variations are expected to be symmetrical around the nominal result.
-One-sided uncertainties are symmetrized on detector level.
 
 \vspace{.5cm}
 \noindent
@@ -783,7 +793,7 @@ The unfolding is then performed with the nominal corrections.
 \end{figure}
 
 The statistical uncertainties from limited data and MC sample size, including that on the luminosity are shown in Figure~\ref{fig:unfolding:sys_stat}.
-The data statistical uncertainty is negligible in the low \pt / mass range. It is gradually increasing, exceeding 5\% in the last bin of the \pt distributions. The MC statistical uncertainty quadratically combined with the luminosity uncertainty is typically smaller than 1\% for the four presented observables lepton, leading $b$ jet and hadronic \Wboson \pt and $m(bl)$.
+The data statistical uncertainty is negligible in the low momentum / mass range. It is gradually increasing, exceeding 5\% in the last bin of the \pt distributions. The MC statistical uncertainty quadratically combined with the luminosity uncertainty is typically smaller than 1\% for the four presented observables lepton, leading $b$ jet and hadronic \Wboson \pt and $m(bl)$.
 
 \vspace{.5cm}
 \noindent
@@ -791,7 +801,7 @@ The data statistical uncertainty is negligible in the low \pt / mass range. It i
 \vspace{.5cm}
 
 \noindent
-Detector systematics are propagated from detector to particle level by calculating varied unfolding corrections, i.e. acceptance, efficiency, migration matrix and background predictions
+Detector systematics are propagated from detector to particle level by calculating varied unfolding corrections, in detail acceptance and efficiency corrections, migration matrix and background predictions
 \begin{equation}
     \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
     {f_{\text{acc}}^{j}}'(N_{d,j}-N_{b,j}').
@@ -799,7 +809,7 @@ Detector systematics are propagated from detector to particle level by calculati
 Dashed quantities indicate the systematic variation.
 The nominal data is unfolded with these varied corrections and the difference to the nominal cross section defines the uncertainty.
 
-The systematical uncertainties on the unfolded cross section arising from detector effects are summarized in figure~\ref{fig:unfolding:sys_det}. The figures also include the statistical errors to enable a better assessment of the uncertainty contributions.
+The systematical uncertainties on the unfolded cross section arising from detector effects are summarized in Figure~\ref{fig:unfolding:sys_det}. The breakdown also includes the statistical errors to enable a better assessment of the uncertainty contributions.
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.45\linewidth}
@@ -830,12 +840,16 @@ The systematical uncertainties on the unfolded cross section arising from detect
 \end{figure}
 
 At low momenta, the lepton \pt uncertainties are dominated by jet uncertainties on the energy scale and $b$ tagging. While these error sources do not affect the actual \pt measurement, they cause events to migrate in and out of the phase space, leading to shifts in the cross section.
-The detector induced and uncertainties are in the order of 5\%, growing smaller towards large momenta, where the phase space migrations are reduced.
-Identification of $b$ tagged jets is exceptionally challenging at low (\pt < 50~\GeV) or high (\pt > 300~\GeV) momenta, as explained in chapter (ftag calib).
+The detector induced uncertainties are in the order of 5\%, growing smaller towards large momenta, where the phase space migrations are reduced.
+Identification of $b$ tagged jets is exceptionally challenging at low (\pt < 50~\GeV) or high (\pt > 300~\GeV) momenta.
 This manifests itself in increased uncertainties in the respective bins of the leading $b$ jet distribution.
 In the intermediate range, the JES uncertainty becomes dominant, while the other uncertainties are negligible in comparison.
 The jet uncertainties also drive the detector systematics of the hadronic \Wboson \pt.
-While the relative uncertainties are moderately flat for the \pt distributions, the uncertainty as a function of $m(bl)$ has a peak structure at $m(bl)\approx 150~\GeV$. This is precisely the region where we could observe non-trivial patterns in the migration matrix. This structure is therefore understood and could not be resolved by varying the binning.
+
+While the relative uncertainties are moderately flat across the
+\pt distributions, the uncertainty as a function of
+$m(bl)$ exhibits a distinct peak around
+$m(bl)\approx 150 \GeV$. This feature coincides with regions of non-trivial structure in the migration matrix, where significant off-diagonal contributions arise due to kinematic correlations and resolution effects. The observed peak indicates an intrinsic property of the unfolding response rather than a binning artifact.
 
 \vspace{.5cm}
 \noindent
@@ -843,7 +857,7 @@ While the relative uncertainties are moderately flat for the \pt distributions, 
 \vspace{.5cm}
 
 \noindent
-Uncertainties in the signal modeling are implemented employing pseudo-data obtained from MC simulations. They incorporate signal and background processes $N_{pd} = N_s + N_b$.
+Uncertainties in the signal modeling are assessed using pseudo-data generated from Monte Carlo simulations, which include both signal and background contributions $N_{pd} = N_s + N_b$.
 Varying migration matrix and correction factors in the unfolding of the pseudo data returns the systematically shifted cross section
 \begin{equation}
     \frac{d\sigma_\text{sys}}{dX_i} = \frac{1}{L\cdot \Delta X_i} \cdot \frac{1}{\epsilon_i'} \cdot \sum_j {M_{ij}^{-1}}'
@@ -881,7 +895,7 @@ which is then compared to the nominal result.
 	\label{fig:unfolding:sys_theo}
 \end{figure}
 
-The uncertainties arising from variations in the signal modeling are displayed in figure~\ref{fig:unfolding:sys_theo}. They are mostly flat at $\approx 2\%$ for the \pt distributions, gradually increasing towards the high \pt region.
+The uncertainties arising from variations in the signal modeling are displayed in figure~\ref{fig:unfolding:sys_theo}. They are mostly flat at $\approx 2\%$ for the \pt distributions, gradually increasing up to $\approx 5\%$ towards the high \pt region.
 Slight fluctuations between neighboring bins appear in the hadronic \Wboson \pt distribution. It was checked that this effect is not introduced by the unfolding.
 The parton shower uncertainty plays a dominant role in the composition of the $m(bl)$ error, with DR/DS taking over at larger values $m(bl) > 400~\GeV$,
 where the $tW$ contribution becomes more important.
@@ -898,7 +912,7 @@ Uncertainties in the background modeling are propagated by varying the backgroun
     f_{\text{acc}}^{j}(N_{d,j}-N_{b,j}').
 \end{equation}
 
-Uncertainties related to the background modeling only have minor contributions to the total uncertainty (see next section) and no dedicated breakdown is shown.
+Uncertainties related to the background modeling only have minor contributions to the total uncertainty and no dedicated breakdown is shown.
 
 \vspace{.5cm}
 \noindent
@@ -920,7 +934,8 @@ where $c_{ij} = \rho_{ij} \cdot \sigma_i \cdot \sigma_j$ with the correlation co
 \begin{equation*}
 \sigma_i = \frac{\sigma_i^{\text{up}} + \sigma_i^{\text{down}}}{2}.
 \end{equation*}
-$\sigma_i^\text{up/down}$ represents the up and down variations in bin $i$. 
+$\sigma_i^\text{up/down}$ represents the error from up and down variations in bin $i$.
+The $\sigma$ are chosen to be larger than zero, and the $\rho$ can take values between minus one and plus one.
 The correlation matrix can be calculated by normalizing the covariance matrix
 \begin{equation}
     \text{Corr}_{ij} = \frac{\text{Cov}_{ij}}{\sqrt{\text{Cov}_{ii} \times \text{Cov}_{jj}}}
@@ -959,7 +974,7 @@ While the bins are statistically independent prior to unfolding, the unfolding p
 \end{figure}
 
 A "checkerboard pattern", characterized by strong negative correlations between adjacent bins
-in combination with strong positive combinations in next to neighboring bins
+in combination with strong positive combinations in next-to-neighboring bins
 indicates an over-fitting of statistical fluctuations.
 The regularization is too weak, resulting in an oscillating, physically unrealistic spectrum.
 
@@ -971,7 +986,7 @@ A coarser binning would be more appropriate in that region.
 
 The quadratic statistical correlation matrices for the four selected quantities are shown in Figure~\ref{fig:unfolding:corrma_stat}.
 The self-correlation on the diagonal is by construction $1.0$.
-It was taken care, that the negative correlation between neighboring bins is 
+It was taken care in the binning optimization, that the negative correlation between neighboring bins is 
 less than $0.6$. Correlations between bins rapidly decrease in the off-diagonal elements of the matrix, demonstrating a stable unfolding with appropriate choice of the regularization parameter.
 
 The total covariance matrix can be calculated as the sum of all systematic and statistical contributions. 
