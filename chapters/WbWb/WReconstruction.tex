@@ -111,42 +111,19 @@ The statistical uncertainties in that region are significantly smaller, compared
 		\label{fig:Whadreco:combinedrecomasscut}
 	\end{subfigure}
 	\caption{Comparison of the particle (left) and detector level (right) reconstruction of the hadronically decaying \Wboson from light jets. 
-        Different combinations of jets are pre-selected as the \Wboson candidate. The candidate that minimizes \(|m(\Wboson)-m(\Wcand)|\) is selected as pseudo-\Wboson.
-        Only events passing the $60<m(\Wcand)<100$ GeV cut are considered in the lower row.
-        The results are compared to the purities obtained from a DNN. More information is given in the text.}
+        The performance of the "1-,2-,3-jet" and the "1-,2-jet" algorithms are compared to a deep neural network (DNN).
+        Only events passing the $60<m(\Wcand)<100$ GeV cut are considered for the purity calculation in the lower row.
+        }
 	\label{fig:Whadreco:combined}
 \end{figure}
 
 It becomes evident, that one should preselect different jet combinations as preliminary candidates to account for the different topologies from resolved and boosted events.
-Two combinations are compared in Figure~\ref{fig:Whadreco:combined}.
-The blue curve labelled "1-,2-,3-jet" preselects a total of five objects: the leading jet, the sub-leading jet, the four-vector sum of the two, the leading dijet and the leading three-jet combination. The "1-,2-jet" algorithm displayed in red drops the last two candidates from the list.
-Both options produce high purities, but the best result is obtained with the latter algorithm.
+The "1-,2-,3-jet" algorithm preselects a total of five objects: the leading jet, the sub-leading jet, the four-vector sum of the two, the leading dijet and the leading three-jet combination. "1-,2-jet" drops the last two candidates from the list.
+Finally, the candidate that minimizes $|m(W) - m(\Wcand)|$ is selected.
 
-The "1-,2-jet" algorithm was chosen as the final algorithm for the analysis event selection and observable definitions.
-The purity exceeds $90\%$ for \Wboson momenta larger than 120\GeV.
-A pseudo-\Wboson can be found for each event.
-Selection cuts can be applied on \Wcand. The mass cut $60<m(\Wcand)<100$ GeV is motivated by the purity studies.
-An additional cut on \pT(\Whad) will be applied to ensure a good quality of the reconstruction for each event.
-A \(\pT > 80\GeV\) cut-off was chosen to ensure, that the purity exceeds \(60\%\) for the particle and detector level reconstruction.
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.49\linewidth}
-		\includegraphics[trim={2cm 0cm 5cm 0cm}, clip, width=1.\linewidth, page=25]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Mass distribution of the detector level \Whad candidate.}
-		\label{fig:Whadreco:partmass}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.49\linewidth}
-		\includegraphics[trim={2cm 0cm 5cm 0cm}, clip, width=1.\linewidth, page=24]{figures/WbWb/WhadReconstruction/purity.pdf}
-		\caption{Mass distribution of the detector level \Whad candidate.}
-		\label{fig:Whadreco:recomass}
-	\end{subfigure}
-	\caption{Comparison of the particle and detector level mass distributions.}
-	\label{fig:Whadreco:masscut}
-\end{figure}
-
-The results obtained from the combinatorics-based reconstruction approach are compared to a Machine-Learning-based reconstruction.
-A fully-connected classification neural network is designed and trained for that purpose.
+The results obtained from the combinatorics-based reconstruction approach are compared to a machine-learning-based reconstruction.
+A fully-connected classification deep neural network (DNN) is designed and trained for that purpose.
 The network consists of five layers with 8, 16, 32, 16, 8 nodes, respectively.
 This results in a total of 1401 trainable parameters.
 
@@ -155,7 +132,51 @@ every 1-, 2- and 3-jet combination built from the input jets is considered as a 
 This results in a total of $5+10+10=25$ combinations.
 The four-vectors of the jet combinations are passed as input to the network.
 The jet combination with the smallest distance to \Wtruth in \(\Delta R\) is labeled with "1", while "0" is assigned to all other combinations as training label.
+The classification network assigns a probability to each of the jet combinations.
+The combination with the highest score is selected as \Wboson candidate.
 
-The study is performed on the same \ttbar subsamples used earlier.
-The data is split equally into training and validation samples and the purities are calculated on the validation sample.
-The statistical uncertainties are thus not comparable to the ones obtained in the classical method.
+The DNN is trained on the same \ttbar subsample used in the "classical" study.
+The data is split equally into training and validation sample.
+Purities and statistical uncertainties on the purity are calculated from the validation sample.
+
+The purity obtained with the "1-,2-,3-jet" and "1-,2-jet" algorithms and the NN are compared
+in Figure~\ref{fig:Whadreco:combined}, where the lower row includes the mass cut
+$60 < m(\Wcand) < 100\GeV$.
+When no mass cut is applied, the DNN outperforms the combinatorics-based algorithms in the range $100 < \pt(\Wcand) < 400\GeV$, achieving purities of approximately 80\%. However, the performance ranking reverses when the mass cut is applied. The "1-,2-jet" algorithm delivers the best overall performance across the entire kinematic range. It successfully reconstructs \Wboson candidates in both the resolved and boosted regimes with high purity, exceeding 90\% for \Wboson momenta above 120\GeV.
+The DNN does not perform equally well in both regions, with a slight degradation in purity in the boosted regime.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[trim={2cm 0cm 5cm 0cm}, clip, width=1.\linewidth, page=25]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Mass distribution of the detector level \Whad candidate.}
+		\label{fig:Whadreco:partmassdistribution}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.49\linewidth}
+		\includegraphics[trim={2cm 0cm 5cm 0cm}, clip, width=1.\linewidth, page=24]{figures/WbWb/WhadReconstruction/purity.pdf}
+		\caption{Mass distribution of the detector level \Whad candidate.}
+		\label{fig:Whadreco:recomassdistribution}
+	\end{subfigure}
+	\caption{Comparison of the particle and detector level mass distributions.}
+	\label{fig:Whadreco:massdistribution}
+\end{figure}
+
+The invariant mass distributions of particle-level and reconstruction-level \Wboson candidates are shown in Figure~\ref{fig:Whadreco:massdistribution}.
+A structure with two distinct peaks is visible.
+One peak is located at the expected mass around the \Wboson mass.
+The second peak appears at low invariant mass values and corresponds to events where the reconstructed \Wboson candidate consists of a single jet.
+These events are not predominantly boosted \Wboson decays, but rather low-\pt \Wboson events in which one 
+of the decay jets fails to satisfy the jet selection criteria.
+As a result, the \Wboson cannot be reliably reconstructed in these cases,
+motivating the application of a mass cut on the \Wboson candidate.
+
+The "1-,2-jet" algorithm was selected as the final algorithm for event selection and observable definitions in the analysis
+as it achieves the highest purity over a wide kinematic range.
+A \Wboson candidate is found for every event and
+selection cuts are applied on \Wcand at particle and reconstruction levels.
+
+The mass cut $60 < m(\Wcand) < 100\GeV$
+is applied to suppress events with low-\pt(\Wboson) that cannot be reliably reconstructed. It has been shown that 
+this cut significantly improves reconstruction purity. An additional cut on \pT(\Whad)
+is imposed to ensure good reconstruction quality. A $\pT > 80\GeV$ threshold is enforced to guarantee that 
+the purity exceeds 60\% at both particle and detector levels.
