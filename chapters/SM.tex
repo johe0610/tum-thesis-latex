@@ -11,8 +11,17 @@ Describe the SM.
 \subsection{Top quark physics}
 
 
-The top quark is the heaviest known elementary particle in the Standard Model, with a mass of approximately 173\GeV. This exceptional mass imparts unique properties to the top quark, making its study a cornerstone of the physics program at the LHC, providing a critical testing ground for the SM. 
+In 1973, Kobayashi and Maskawa proposed the existence of a third generation of quarks to account for CP violation observed in kaon decays as a necessary component of the Standard Model's quark mixing structure~\cite{Kobayashi:1973fv}. 
+The third generation up-type quark, the top quark,
+was finally discovered by the CDF and D0 collaborations at Fermilab in 1995~\cite{TOP-CDF,TOP-D0}.
+Thus completing the third generation of quarks.
 
+The top quark is the heaviest known elementary particle in the Standard Model, with a mass of approximately 173\GeV. 
+This exceptional mass imparts unique properties to the top quark, making its study a cornerstone of the LHC physics program. 
+Being heavier than a \Wboson boson, it is the only quark that
+decays into a real \Wboson boson and a $b$ quark. This
+results in a lifetime of about $0.5 \times 10^{-24}$~s~\cite{PDG},
+shorter than the typical hadronization time.
 
 \begin{figure}[ht!]
     \centering
@@ -23,46 +32,95 @@ The top quark is the heaviest known elementary particle in the Standard Model, w
     \label{fig:tt_xsec_summary}
 \end{figure}
 
-\begin{figure}[ht!]
-    \centering
-    \includegraphics[width=0.75\linewidth]{figures/ATLAS/single_t_xsec_atlas_cms.pdf}
-    \caption{Comparison of single-top production cross-sections measured by ATLAS and CMS with theoretical predictions at NNLO QCD and aNNLO QCD + aN3LL. Results are shown for various production channels as a function of the center-of-mass energy.~\cite{ATL-PHYS-PUB-2026-009}}
-    \label{fig:tt_xsec_summary}
-\end{figure}
+Figure~\ref{fig:tt_xsec_summary} summarizes the measured top quark pair production cross-sections $\sigma_{t\bar{t}}$
+from Tevatron and LHC as a function of center-of-mass energy. The data are compared to NNLO QCD 
+calculations supplemented with NNLL resummation. 
+
+In proton–proton collisions at
+$\sqrt{s}=13 \TeV$ using 140~fb$^{-1}$ of data collected by the ATLAS experiment (the relevant data set for this thesis), it was measured to be~\cite{ttbar_prod_xsec_dil}
+\begin{equation}
+    \sigma_{t\bar{t}} = 829.3 \pm 1.3 \text{(stat)} \pm 8.0 \text{(syst)} \pm 7.3 \text{(lumi)} \pm 1.9 \text{(beam) pb}.
+\end{equation}
 
 
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.5\linewidth]{figures/ATLAS/tt_decay_piechart.png}
     \caption{Relative fractions of \ttbar decay modes categorized by the \Wboson decay channels.~\cite{TikZ_decaymodes}}
-    \label{fig:tt_xsec_summary}
+    \label{fig:tt_decay_summary}
 \end{figure}
 
-Due to the strong suppression of other decay modes by the CKM matrix elements, the top quark decays almost exclusively into a
+The top quark decays almost exclusively into a
 \Wboson boson and a
-$b$ quark. Consequently,
-\ttbar final states are categorized by the decay modes of the two
-\Wboson bosons. The all-hadronic channel, in which both
-W bosons decay into quarks, possesses the largest branching fraction at approximately 46\%. This is followed closely by the single-lepton (or lepton+jets) channel at 45\%, and finally the dilepton channel, which has the smallest contribution.
-The relative contributions of the \ttbar
-final states are summarized in Figure~\ref{fig:tt_xsec_summary}.
+$b$ quark
+The CKM matrix element is $|V_{tb}| = 1.014 \pm 0.029$~\cite{PDG}.
+Other decay modes are thus heavily suppressed.
+Consequently, \ttbar final states can be categorized by the decay modes of the two
+\Wboson bosons, as illustrated in Figure~\ref{fig:tt_decay_summary}. 
+The all-hadronic channel, in which both
+W bosons decay into quarks, possesses the largest branching fraction at approximately 46\%. 
+This is followed closely by the single-lepton (or lepton+jets) channel at 44\%, and finally the dilepton channel, 
+which has the smallest contribution of 11\%~\cite{PDG}.
+
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/ATLAS/single_t_xsec_atlas_cms.pdf}
+    \caption{Comparison of single-top production cross-sections measured by ATLAS and CMS with theoretical predictions at NNLO QCD and aNNLO QCD + aN3LL. Results are shown for various production channels as a function of the center-of-mass energy.~\cite{ATL-PHYS-PUB-2026-009}}
+    \label{fig:singlet_xsec_summary}
+\end{figure}
+
+Single top quark production cross sections have been measured by both the ATLAS and CMS collaborations across multiple production channels
+at various center of mass energies.
+As shown in Figure~\ref{fig:singlet_xsec_summary}, the measurements exhibit excellent agreement with theoretical predictions at NNLO in QCD, as well as with approximate NNLO QCD calculations supplemented by approximate N$^3$LL resummation.
+Of particular interest to this thesis, is the $tW$ production.
+The cross section has been reported by the CMS collaboration at $\sqrt{s}=13 \TeV$~\cite{CMS-TOP-21-010}
+\begin{equation}
+    \sigma_{tW} = 79.2 \pm 0.9~\text{(stat)}~^{+7.7}_{-8.0}~\text{(syst)}~\pm 1.2~\text{(lumi) pb}.
+\end{equation}
 
 
 
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figures/ATLAS/mtop_summary.pdf}
+    \caption{Summary of the ATLAS and CMS measurements from top quark decay (“direct”). The results are compared
+with the LHC and Tevatron+LHC $m_t$ combinations.~\cite{ATL-PHYS-PUB-2026-007}}
+    \label{fig:topmass_summary}
+\end{figure}
 
-
-
-
-
-While the ATLAS and CMS collaborations have already measured single and double top-quark production cross-sections in good agreement with theoretical predictions, further precision measurements are essential to probe the nature of the electroweak sector.
-
-
+Write something about top quark mass.
+Yukawa coupling
+Implications on stable or meta-stable
 
 
 \subsection{The WbWb process in the Standard Model}
 
-Representative Feynman diagrams of the two dominant process are depicted in Figure~\ref{fig:wbwb_tt:feynman}.
-Contributions from diboson production in association with a $b$ quark are found to be negligible.
+Many cross section measurements by ATLAS and CMS have measured the \ttbar and single top processes
+separately. 
+While the ATLAS and CMS collaborations have already measured single and double top-quark production cross-sections in good agreement with theoretical predictions, further precision measurements are essential to probe the nature of the electroweak sector.
+This thesis aims at a more inclusive approach by defining the final state as two $b$ quarks and two \Wboson bosons.
+Exemplary diagrams of the $WbWb$ production from a resonant top quark pair are shown in Figure~\ref{fig:wbwb_tt:feynman}.
+where gluon fusion is the dominant production mode with a relative contribution of 90\% at $\sqrt{s}=13\TeV$~\cite{PDG}.
+
+At NLO QCD, an additional $b$ quark extends the $tW$ process to produce the same $WbWb$ final state,
+as illustrated in the diagrams shown in Figure~\ref{fig:wbwb_tW:feynman}.
+
+Contributions from processes with no resonant top quark or no top quark at all
+are found to be negligible
+The non-resonant $WbWb$ production is not explicitly enhanced in the event selection
+and has therefore a negligible contribution to the analysis selections. 
+
+In comparison with measurements
+requiring two light charged leptons in the final state, the single-lepton channel provides the opportunity to
+measure the \Wboson boson kinematic properties directly, since the hadronically decaying \Wboson boson can be fully
+reconstructed. In addition, the larger branching ratio gives access to kinematic regions of the phase space
+characterised by more extreme momenta.
+
+
+
+
+Write something about the interference term.
 
 \begin{figure}[ht!]
 	\centering
