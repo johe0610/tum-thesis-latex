@@ -5,8 +5,63 @@ Some theoretical basics.
 \section{The Standard Model of Particle Physics}
 \label{sec:SM}
 
-Describe the SM.
+List of aspects to discuss in this section:
 
+Fundamental Constituents
+
+Quarks (6 flavours, 3 generations) and leptons (6, 3 generations), each with an antiparticle
+Quarks carry colour charge; leptons do not
+
+Gauge Symmetry and the Lagrangian
+
+The SM is a quantum field theory based on the gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$
+Each symmetry gives rise to a force via its gauge bosons
+
+The Three Forces
+
+Strong (QCD): SU(3)$_C$, mediated by 8 massless gluons; confinement and asymptotic freedom
+Electroweak (EW): Unification of EM and weak under $SU(2)_L \times U(1)_Y$; $W^{\pm}, Z^0$, and $\gamma$ as mediators
+Note: Gravity is not included in the SM
+
+The Higgs Mechanism
+
+Spontaneous electroweak symmetry breaking (EWSB) via a complex scalar doublet
+Gives mass to $W^{\pm}, Z^0$ (and fermions via Yukawa couplings)
+Predicts the physical Higgs boson H — discovered at CERN in 2012
+
+Fermion Masses and Mixing
+
+Fermion masses arise from Yukawa couplings after EWSB
+Quark mixing described by the CKM matrix; lepton mixing by the PMNS matrix (if neutrinos are massive)
+Neutrino masses are not explained by the minimal SM
+
+Key Properties of QCD
+
+Confinement: quarks/gluons not observed freely; only colour-neutral hadrons
+Asymptotic freedom: coupling $\alpha_s$ decreases at high energy → perturbative QCD valid at LHC scales
+Parton distribution functions (PDFs) needed to describe proton structure
+
+Electroweak Precision and Renormalisability
+
+The SM is renormalisable — divergences can be absorbed order by order in perturbation theory
+EW precision observables ($sin^2\theta_W, \rho$-parameter, etc.) have been tested to high accuracy
+
+While the SM has been extremely successful in describing a wide range of phenomena, it is not a complete theory of fundamental interactions.
+Known limitations of the SM are:
+\begin{itemize}
+	\item Gravity cannot be incorporated into the SM framework, and a quantum theory of gravity is still lacking.
+	\item The SM describes only $5\%$ of the known universe. The other $95\%$ are composed of dark matter and dark energy,
+	which are from astrophysical observations, but not accounted for in the SM. No dark matter candidate 
+	has been identified up to now.
+	\item The SM does not explain the observed matter-antimatter asymmetry in the universe.
+	Additional sources of CP violation beyond the SM are required to account for this asymmetry.
+	\item The hierarchy problem: the Higgs boson mass is sensitive to quantum corrections, 
+	which can drive it to very high values unless fine-tuned cancellations occur. 
+	This is considered unnatural and suggests the existence of new physics beyond the SM.
+	\item Neutrino masses are not naturally accommodated in the SM. 
+	The discovery of neutrino oscillations implies that neutrinos have mass, 
+	which requires an extension of the SM, such as the inclusion of right-handed neutrinos or other mechanisms.
+\end{itemize}
 
 \subsection{Top quark physics}
 
@@ -117,11 +172,6 @@ measure the \Wboson boson kinematic properties directly, since the hadronically 
 reconstructed. In addition, the larger branching ratio gives access to kinematic regions of the phase space
 characterised by more extreme momenta.
 
-
-
-
-Write something about the interference term.
-
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -193,6 +243,141 @@ Write something about the interference term.
     Representative diagrams of the $WbWb$ process without resonant top quark, \subref{fig:wbwb:feynman_nonrestop}~with non-resonant (off-shell) top quark or \subref{fig:wbwb:feynman_notop_gg}, \subref{fig:wbwb:feynman_notop_qq} without any top quark involvement.}
 	\label{fig:wbwb_nonres:feynman}
 \end{figure}
+
+
+
+
+The Born level $tW$ production is given by 
+\begin{equation}
+	b g \rightarrow t W^-
+\end{equation}
+However, a theoretical defintion of the channel is not straight-forward,
+as the $tW$ channel is not well defined beyond LO.
+Some Feynman diagram contributing to $tW$ beyond LO can be interpreted as 
+\ttbar production in LO. This can be interpreted as an interference between
+$tW$ and \ttbar production. The contribution from doubly-resonant diagrams
+can become large for $m_{bW}\approx m_t$, the interference must not be neglected.
+A possible approach to separate the two processes is presented in~\cite{tWpaper}.
+
+Two alternative schemes are proposed.
+The Diagram Removal (DR) removes doubly-resonant diagrams from the calculation of the
+$tW$ amplitude. It was shown that the gauge invariance violation does not cause
+problems in practical applications.
+
+The Diagram Subtraction (DS) scheme introduces a gauge invariant subtraction term,
+modifying the naive $tW$ cross section. Doubly-resonant contributions are removed locally.
+
+
+% Equation 4.1
+\begin{equation}
+|M_{\bar{b}W} - m_t| > \kappa \Gamma_t
+\tag{4.1}
+\end{equation}
+
+% Equation 4.2
+\begin{equation}
+p_{\mathrm{T}}^b < p_{\mathrm{T}}^{(\mathrm{veto})}
+\tag{4.2}
+\end{equation}
+
+% Equation 4.3
+\begin{equation}
+\alpha(p_1) + \beta(p_2) \longrightarrow t(k_1) + W(k_2) + \delta(k)
+\tag{4.3}
+\end{equation}
+
+% Equation 4.4
+\begin{equation}
+\mathcal{A}_{\alpha\beta} = \mathcal{A}_{\alpha\beta}^{(Wt)} + \mathcal{A}_{\alpha\beta}^{(t\bar{t})}
+\tag{4.4}
+\end{equation}
+
+% Equation 4.5
+\begin{equation}
+\left|\mathcal{A}_{\alpha\beta}\right|^{2}
+= \left|\mathcal{A}_{\alpha\beta}^{(Wt)}\right|^{2}
++ 2\,\Re\left\{\mathcal{A}_{\alpha\beta}^{(Wt)}\mathcal{A}_{\alpha\beta}^{(t\bar{t})\star}\right\}
++ \left|\mathcal{A}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
+\tag{4.5}
+\end{equation}
+
+% Equation 4.6
+\begin{equation}
+\equiv \mathcal{S}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}
+\tag{4.6}
+\end{equation}
+
+% Equation 4.7
+\begin{equation}
+d\hat{\sigma}_{\alpha\beta}
+= \frac{1}{2s}\left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
+\tag{4.7}
+\end{equation}
+
+% Equation 4.8
+\begin{equation}
+d\sigma
+= d\sigma^{(2)} + \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\hat{\sigma}_{\alpha\beta}
+= d\sigma^{(2)} + \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+  \mathcal{L}_{\alpha\beta}
+  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
+\tag{4.8}
+\end{equation}
+
+% Equation 4.9
+\begin{equation}
+d\sigma^{(\mathrm{DR})}
+= d\sigma^{(2)}
++ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+  \mathcal{L}_{\alpha\beta}\,\hat{\mathcal{S}}_{\alpha\beta}\,d\phi_3
+\tag{4.9}
+\end{equation}
+
+% Equation 4.10
+\begin{equation}
+d\sigma^{(\mathrm{DS})} = d\sigma - d\sigma^{\mathrm{subt}}
+\tag{4.10}
+\end{equation}
+
+% Equation 4.11
+\begin{equation}
+d\sigma^{\mathrm{subt}}
+= \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\sigma^{\mathrm{subt}}_{\alpha\beta}
+\tag{4.11}
+\end{equation}
+
+% Equation 4.12
+\begin{equation}
+d\sigma_{\alpha\beta}^{\mathrm{subt}}
+= \frac{1}{2s}\,\widetilde{\mathcal{D}}_{\alpha\beta}\,d\phi_3
+\tag{4.12}
+\end{equation}
+
+% Equation 4.13
+\begin{equation}
+\mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}
+\tag{4.13}
+\end{equation}
+
+% Equation 4.14
+\begin{equation}
+d\sigma^{(\mathrm{DS})}
+= d\sigma^{(2)}
++ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+  \mathcal{L}_{\alpha\beta}
+  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta}
+        + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
+\tag{4.14}
+\end{equation}
+
+% Equation 4.15
+\begin{equation}
+d\sigma^{(\mathrm{DS})} - d\sigma^{(\mathrm{DR})}
+= \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+  \mathcal{L}_{\alpha\beta}
+  \left(\mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
+\tag{4.15}
+\end{equation}
 
 
 \section{Monte Carlo Event Generators}
