@@ -5,53 +5,85 @@ Some theoretical basics.
 \section{The Standard Model of Particle Physics}
 \label{sec:SM}
 
-List of aspects to discuss in this section:
+This section provides a brief introduction to the theoretical framework.
+It is by no means meant as a complete comprehensive summary.
+It rather gives an overview of the most important concepts.
 
-Fundamental Constituents
+The Standard Model (SM) of particle physics 
+is a Quantum Field Theory that unifies special relativity and quantum mechanics.
+It is currently the most comprehensive theory describing matter and anti matter in the universe.
+It classifies all known elementary particles into fermions and bosons.
+Fermions, which carry half-integer spin, are the basic building blocks of matter,
+while bosons, which carry integer spin, act as force carriers to mediate interactions between particles.
+It incorporates three fundamental forces: the electromagnetic force, the weak and strong nuclear force.
 
-Quarks (6 flavours, 3 generations) and leptons (6, 3 generations), each with an antiparticle
-Quarks carry colour charge; leptons do not
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/ATLAS/SM_particles.png}
+    \caption{Caption~\cite{sm_particles_tikz}}
+    \label{fig:SM:particles}
+\end{figure}
 
-Gauge Symmetry and the Lagrangian
+Six flavors of quarks can be arranged in three generations.
+Depending on their electrical charge, they are classified as up-type or down-type quarks. In addition to the electrical charge, quarks also carry the color charge $C$ of the strong interaction.
+The second category of fermions are the leptons, which are again arranged in 
+three generations.
+The three electrically charged leptons and the corresponding neutral neutrinos are arranged in three generations as well.
+The neutrinos are assumed to be massless in the SM, although the observation of neutrino oscillations implies they must have a small but non-zero mass, requiring an extension of the SM. 
+All stable matter surrounding us is made from three fermions: the up- and down-quark and the electron.
+An anti-particle exists for every one of the fermions.
 
-The SM is a quantum field theory based on the gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$
-Each symmetry gives rise to a force via its gauge bosons
+The interaction between fermions is described by gauge bosons. The gluon is the mediator of the strong force, described by Quantum Chromo Dynamics (QCD). The associated charge is called color charge in the three kinds red, green and blue.
+A crucial property of the strong force is confinement 
+which means that there is no free color charge and quarks can only be measured in bound states.
+This property forces quarks to ``hadronize'' and to be observed only in color-neutral compound particles.
+The strength of the interaction, described by the interaction parameter
+$\alpha_S$ decreases when going to higher energies.
+This so-called asymptotic freedom justifies the approach of perturbation theory at high energies, which are present at collisions at the Large Hadron Collider.
+The SM is renormalizable, which ensures that divergences arising in perturbative calculations are systematically absorbed order by order.
+Since the gluon itself carries color charge, self-interaction is allowed, either in a three- or four-gluon vertex. Overall, eight gluons exist.
 
-The Three Forces
+Electromagnetic and weak interaction can be unified to the electroweak force
+with the weak hypercharge ($Y_W$) and the third component of the weak isospin ($T_3$) as associated charges.
+The electrical charge can be obtained from a linear combination of the two ($Q=T_3+1/2~Y_W$).
+The associated gauge bosons are the charged $W^+$ and $W^-$ bosons, the neutral massive $Z^0$ boson, and the massless photon $\gamma$.
+The photon is the mediator of the electromagnetic force, while the $W$ and $Z$ bosons mediate the weak force.
+The mixing between the $Z^0$ and $\gamma$ arising from electroweak unification is described by the weak mixing angle $\theta_W$ and is governed by the mechanism of spontaneous symmetry breaking.
+The weak force is the only force in the SM that can mediate flavor changing 
+process, such as $\beta$ decays.
+The mixing of quarks which relates to the transition probability is given by the
+Cabibbo - Kobayashi - Maskawa (CKM) matrix.
+In addition, the weak force was found to be maximally parity (P) violating.
+As a consequence it only couples to left handed particles (and right-handed antiparticles). The combined Charge - Parity (CP) symmetry is not conserved
+by the weak interaction.
 
-Strong (QCD): SU(3)$_C$, mediated by 8 massless gluons; confinement and asymptotic freedom
-Electroweak (EW): Unification of EM and weak under $SU(2)_L \times U(1)_Y$; $W^{\pm}, Z^0$, and $\gamma$ as mediators
-Note: Gravity is not included in the SM
+Putting the pieces together, the SM is a quantum field theory which can be based on the gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$. Each of the symmetries gives rise to a force via its gauge bosons.
 
-The Higgs Mechanism
+The last missing piece of the SM is the scalar Higgs boson with spin 0.
+The Higgs Mechanism was introduced by Higgs and Englert and 
+explains how particles obtain their mass.
+They interact with a scalar Higgs field via Yukawa coupling, where the coupling strength is directly proportional to the particle mass: heavier particles interact more strongly with the Higgs boson.
+The vacuum expectation value of the Higgs field is measured to be $246~\GeV$,
+and the masses themselves are free parameters of the SM that must be determined experimentally.
+The Higgs boson was discovered at the LHC in 2012, more than 50 years after
+it was theorized, with a mass of approximately $125~\GeV$.
+A huge success of the SM and precision physics.
 
-Spontaneous electroweak symmetry breaking (EWSB) via a complex scalar doublet
-Gives mass to $W^{\pm}, Z^0$ (and fermions via Yukawa couplings)
-Predicts the physical Higgs boson H — discovered at CERN in 2012
-
-Fermion Masses and Mixing
-
-Fermion masses arise from Yukawa couplings after EWSB
-Quark mixing described by the CKM matrix; lepton mixing by the PMNS matrix (if neutrinos are massive)
-Neutrino masses are not explained by the minimal SM
-
-Key Properties of QCD
-
-Confinement: quarks/gluons not observed freely; only colour-neutral hadrons
-Asymptotic freedom: coupling $\alpha_s$ decreases at high energy → perturbative QCD valid at LHC scales
-Parton distribution functions (PDFs) needed to describe proton structure
-
-Electroweak Precision and Renormalisability
-
-The SM is renormalisable — divergences can be absorbed order by order in perturbation theory
-EW precision observables ($sin^2\theta_W, \rho$-parameter, etc.) have been tested to high accuracy
+The Large Hadron Collider at CERN, which will be introduced in detail in the next
+chapter, collides bunches of protons.
+The quark content of the proton is in the simplified picture two up quarks and
+one down quark, held together by the strong interaction.
+Interestingly, the masses of these quarks account for only a small fraction of the proton mass; the remainder arises from the kinetic and binding energy of the quarks and gluons inside. % ADDED: striking mass fact
+Quantum fluctuations also allow the existence of additional quark-antiquark pairs for short timescales.
+Gluons, which do not carry mass, can be produced in abundance.
+The distribution describing the momentum fraction carried by the partons in the proton is given by Parton Distribution Functions (PDFs).
 
 While the SM has been extremely successful in describing a wide range of phenomena, it is not a complete theory of fundamental interactions.
 Known limitations of the SM are:
 \begin{itemize}
 	\item Gravity cannot be incorporated into the SM framework, and a quantum theory of gravity is still lacking.
 	\item The SM describes only $5\%$ of the known universe. The other $95\%$ are composed of dark matter and dark energy,
-	which are from astrophysical observations, but not accounted for in the SM. No dark matter candidate 
+	evidenced by astrophysical observations, but not accounted for in the SM. No dark matter candidate 
 	has been identified up to now.
 	\item The SM does not explain the observed matter-antimatter asymmetry in the universe.
 	Additional sources of CP violation beyond the SM are required to account for this asymmetry.
@@ -62,6 +94,14 @@ Known limitations of the SM are:
 	The discovery of neutrino oscillations implies that neutrinos have mass, 
 	which requires an extension of the SM, such as the inclusion of right-handed neutrinos or other mechanisms.
 \end{itemize}
+
+
+
+
+
+
+
+
 
 \subsection{Top quark physics}
 
