@@ -148,62 +148,90 @@ Write something about top quark mass.
 Yukawa coupling
 Implications on stable or meta-stable
 
-
 \subsection{The WbWb process in the Standard Model}
+ 
+The ATLAS and CMS collaborations have measured single and double top-quark production
+cross-sections in good agreement with theoretical predictions.
+As will be outlined in this section, the two processes cannot be disentangled in a theoretically safe manner
+at the amplitude level.
 
-Many cross section measurements by ATLAS and CMS have measured the \ttbar and single top processes
-separately. 
-While the ATLAS and CMS collaborations have already measured single and double top-quark production cross-sections in good agreement with theoretical predictions, further precision measurements are essential to probe the nature of the electroweak sector.
-This thesis aims at a more inclusive approach by defining the final state as two $b$ quarks and two \Wboson bosons.
-Exemplary diagrams of the $WbWb$ production from a resonant top quark pair are shown in Figure~\ref{fig:wbwb_tt:feynman}.
-where gluon fusion is the dominant production mode with a relative contribution of 90\% at $\sqrt{s}=13\TeV$~\cite{PDG}.
-
-At NLO QCD, an additional $b$ quark extends the $tW$ process to produce the same $WbWb$ final state,
-as illustrated in the diagrams shown in Figure~\ref{fig:wbwb_tW:feynman}.
-
-Contributions from processes with no resonant top quark or no top quark at all
-are found to be negligible
-The non-resonant $WbWb$ production is not explicitly enhanced in the event selection
-and has therefore a negligible contribution to the analysis selections. 
-
-In comparison with measurements
-requiring two light charged leptons in the final state, the single-lepton channel provides the opportunity to
-measure the \Wboson boson kinematic properties directly, since the hadronically decaying \Wboson boson can be fully
-reconstructed. In addition, the larger branching ratio gives access to kinematic regions of the phase space
-characterised by more extreme momenta.
-
-
-As is well known, the inclusion of higher order corrections for the W t channel has
-challenging peculiarities due to interference with the t¯t process. This interference becomes
-extremely large in certain phase-space regions
-
-two options that can be used in the context of an NLO calculation interfaced
-with parton showers. Although these two options are well defined even in the absence of
-kinematic cuts, we will in addition consider final-state cuts that will further help the sepa-
-ration of the W t and t¯t processes.
-
-the implementation
-of two definitions of the W t channel in the same framework will allow us to estimate the
-theoretical systematics potentially affecting the extraction of the W t signal from data
-
-
-Beyond LO, some of the
-Feynman graphs that contribute to the W t channel and that are dominant in the region
-of eq. (2.4) are shown in figure 2. These diagrams can be interpreted as the production of
-a t¯t pair at LO, with subsequent decay of the ¯t into a ¯bW pair. I
-
-The problem discussed in section 2 can be formulated
-in terms of the interference between these two subsets of graphs, and physically interpreted
-as the interference between W t and t¯t production
-
-he interference would not cause any problem if the contribution from
-the doubly-resonant diagrams was small
-However, a large increase of the cross section
-occurs when the ¯t propagator becomes resonan
-In this section, we will discuss how it is possible to
-separate out W t and t¯t production, and recover a workable definition of the W t channel
-
-
+This thesis takes a more inclusive approach by defining the final state as two $b$ quarks
+and two \Wboson bosons. This constitutes a final state that is well-defined in QCD at fixed order without requiring a
+process-level separation of \ttbar and $tW$.
+Representative diagrams of $WbWb$ production from a resonant top quark pair are shown in
+Figure~\ref{fig:wbwb_tt:feynman}.
+For this \textit{doubly-resonant} production, gluon fusion is the dominant mode with a
+relative contribution of 90\% at $\sqrt{s}=13\TeV$~\cite{PDG}.
+ 
+At NLO QCD, the $tW$ process receives real-emission corrections in which an additional
+$b$ quark appears in the final state
+%(four-flavour scheme, where $b$ quarks are
+%treated as massive and excluded from the proton PDF)
+, yielding the same $WbWb$ final
+state, as illustrated in Figure~\ref{fig:wbwb_tW:feynman}.
+The presence of one on-shell top quark gives this \textit{singly-resonant} process its name.
+ 
+Contributions from processes with no resonant top quark, or no top quark at all, are
+illustrated in Figure~\ref{fig:wbwb:feynman_nonrestop}.
+They are negligible in the studied
+phase space, as the non-resonant $WbWb$ production is not enhanced by the event selection.
+These contributions are not considered further.
+ 
+%Compared to measurements requiring two light charged leptons, the single-lepton channel
+%allows the \Wboson boson kinematic properties to be measured directly, since the
+%hadronically decaying \Wboson boson can be fully reconstructed.
+%The larger branching ratio additionally gives access to phase-space regions with more
+%extreme momenta.
+ 
+The interplay of doubly-resonant and singly-resonant diagrams in the $tW$ process can be $tW$ production where \ttbar contributions can be viewed as an NLO correction. The $tW$ channel is not well-defined
+beyond LO. Writing the process as
+\begin{equation}
+    \alpha + \beta \longrightarrow t + W + \delta
+    \label{eq:tW_process}
+\end{equation}
+where $\alpha$, $\beta$ are the initial-state partons and $\delta$ is a $b$ quark, the
+amplitude is written as the sum of the individual contributions
+\begin{equation}
+    \mathcal{A}_{\alpha\beta} = \mathcal{A}_{\alpha\beta}^{(Wt)} + \mathcal{A}_{\alpha\beta}^{(t\bar{t})}
+    \label{eq:tW_amplitude}
+\end{equation}
+The squared amplitude is then
+\begin{equation}
+    \left|\mathcal{A}_{\alpha\beta}\right|^{2}
+    = \left|\mathcal{A}_{\alpha\beta}^{(Wt)}\right|^{2}
+    + 2\,\Re\left\{\mathcal{A}_{\alpha\beta}^{(Wt)}\mathcal{A}_{\alpha\beta}^{(t\bar{t})\star}\right\}
+    + \left|\mathcal{A}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
+    \label{eq:tW_amplitude_squared}
+\end{equation}
+where the three terms correspond to the pure $tW$ contribution, the $tW$--\ttbar
+interference, and the pure \ttbar contribution, respectively.
+ 
+The interference term in Eq.~(\ref{eq:tW_amplitude_squared}) cannot be neglected when the invariant mass of the $Wb$ system approaches the top quark mass, $m_{bW}\approx m_t$. The intermediate $t$ propagator goes on-shell, causing a large resonant
+enhancement of the cross section.
+Reference~\cite{Frixione:2008yi} proposes two schemes to obtain a
+usable definition of the $tW$ process.
+ 
+The \textbf{Diagram Removal (DR)} scheme removes all doubly-resonant diagrams from the
+$tW$ amplitude, eliminating the \ttbar interference entirely.
+This breaks QCD gauge invariance, but a detailed study in~\cite{Frixione:2008yi} shows
+the numerical impact to be negligible across the relevant phase space.
+ 
+The \textbf{Diagram Subtraction (DS)} scheme introduces a gauge-invariant local
+subtraction term that cancels the doubly-resonant \ttbar contribution to the differential
+cross section.
+The subtraction term is strongly peaked at $m_{bW}\approx m_t$ and falls steeply away
+from the resonance.
+Unlike DR, the $tW$--\ttbar interference is preserved, since the subtraction acts at the
+level of the squared amplitude.
+%To maintain gauge invariance, the $\bar{t}$ amplitude must be evaluated with
+%on-shell-reshuffled kinematics, which introduces an additional theoretical uncertainty.
+ 
+%The difference between DR and DS predictions directly measures the size of the
+%$tW$--\ttbar interference.
+Implementing both schemes in the same framework provides an estimate of the theoretical
+systematic uncertainty on the $tW$ signal extraction, which is propagated accordingly in
+the analysis.
+ 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -222,12 +250,15 @@ separate out W t and t¯t production, and recover a workable definition of the W
 		\label{fig:wbwb:feynman_tt_tchan}
 	\end{subfigure}
 	\caption{
-    Representative diagrams of \ttbar production modes at the LHC leading to the $WbWb$ final state. \ttbar production at the LHC is predominantly driven by gluon–gluon fusion \subref{fig:wbwb:feynman_tt_gg}, while quark–antiquark annihilation \subref{fig:wbwb:feynman_tt_qq} and the
-    $t$-channel process \subref{fig:wbwb:feynman_tt_tchan} occur at significantly lower rates.}
+    Representative diagrams of \ttbar production modes at the LHC leading to the $WbWb$
+    final state. \ttbar production is predominantly driven by gluon--gluon fusion
+    \subref{fig:wbwb:feynman_tt_gg}, while quark--antiquark annihilation
+    \subref{fig:wbwb:feynman_tt_qq} and the $t$-channel process
+    \subref{fig:wbwb:feynman_tt_tchan} occur at significantly lower rates.}
 	\label{fig:wbwb_tt:feynman}
 \end{figure}
-
-
+ 
+ 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -247,13 +278,14 @@ separate out W t and t¯t production, and recover a workable definition of the W
 	\end{subfigure}
 	\caption{
     Representative diagrams of $tW$ production with one resonant top quark.
-    An additional $b$ results in the 
-    $WbWb$ final state produced in \subref{fig:wbwb:feynman_tW_gg}~gluon–gluon fusion, \subref{fig:wbwb:feynman_tW_qq} quark–antiquark annihilation or \subref{fig:wbwb:feynman_tW_tchan} the
-    $t$-channel process.}
+    An additional $\bar{b}$ in the final state (four-flavour scheme) yields the $WbWb$
+    final state via \subref{fig:wbwb:feynman_tW_gg}~gluon--gluon fusion,
+    \subref{fig:wbwb:feynman_tW_qq}~quark--antiquark annihilation, or
+    \subref{fig:wbwb:feynman_tW_tchan}~the $t$-channel process.}
 	\label{fig:wbwb_tW:feynman}
 \end{figure}
-
-
+ 
+ 
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[t]{0.3\linewidth}
@@ -268,148 +300,132 @@ separate out W t and t¯t production, and recover a workable definition of the W
 	\end{subfigure}\hfill%
 	\begin{subfigure}[t]{0.3\linewidth}
 		\includegraphics[width=.9\linewidth, page=9]{figures/WbWb/feynman_WbWb.pdf}
-		\caption{Quark induced $WbWb$ process without intermediate top quark.}
+		\caption{Quark-induced $WbWb$ production without an intermediate top quark.}
 		\label{fig:wbwb:feynman_notop_qq}
 	\end{subfigure}
 	\caption{
-    Representative diagrams of the $WbWb$ process without resonant top quark, \subref{fig:wbwb:feynman_nonrestop}~with non-resonant (off-shell) top quark or \subref{fig:wbwb:feynman_notop_gg}, \subref{fig:wbwb:feynman_notop_qq} without any top quark involvement.}
+    Representative diagrams of the $WbWb$ process without a resonant top quark:
+    \subref{fig:wbwb:feynman_nonrestop}~with a non-resonant (off-shell) top quark, or
+    \subref{fig:wbwb:feynman_notop_gg},~\subref{fig:wbwb:feynman_notop_qq} without any
+    top quark involvement.}
 	\label{fig:wbwb_nonres:feynman}
 \end{figure}
 
 
+%\end{linenumbers}
+\clearpage
 
 
-The Born level $tW$ production is given by 
-\begin{equation}
-	b g \rightarrow t W^-
-\end{equation}
-However, a theoretical defintion of the channel is not straight-forward,
-as the $tW$ channel is not well defined beyond LO.
-Some Feynman diagram contributing to $tW$ beyond LO can be interpreted as 
-\ttbar production in LO. This can be interpreted as an interference between
-$tW$ and \ttbar production. The contribution from doubly-resonant diagrams
-can become large for $m_{bW}\approx m_t$, the interference must not be neglected.
-A possible approach to separate the two processes is presented in~\cite{tWpaper}.
-
-Two alternative schemes are proposed.
-The Diagram Removal (DR) removes doubly-resonant diagrams from the calculation of the
-$tW$ amplitude. It was shown that the gauge invariance violation does not cause
-problems in practical applications.
-
-The Diagram Subtraction (DS) scheme introduces a gauge invariant subtraction term,
-modifying the naive $tW$ cross section. Doubly-resonant contributions are removed locally.
-
-
-% Equation 4.1
-\begin{equation}
-|M_{\bar{b}W} - m_t| > \kappa \Gamma_t
-\tag{4.1}
-\end{equation}
-
-% Equation 4.2
-\begin{equation}
-p_{\mathrm{T}}^b < p_{\mathrm{T}}^{(\mathrm{veto})}
-\tag{4.2}
-\end{equation}
-
-% Equation 4.3
-\begin{equation}
-\alpha(p_1) + \beta(p_2) \longrightarrow t(k_1) + W(k_2) + \delta(k)
-\tag{4.3}
-\end{equation}
-
-% Equation 4.4
-\begin{equation}
-\mathcal{A}_{\alpha\beta} = \mathcal{A}_{\alpha\beta}^{(Wt)} + \mathcal{A}_{\alpha\beta}^{(t\bar{t})}
-\tag{4.4}
-\end{equation}
-
-% Equation 4.5
-\begin{equation}
-\left|\mathcal{A}_{\alpha\beta}\right|^{2}
-= \left|\mathcal{A}_{\alpha\beta}^{(Wt)}\right|^{2}
-+ 2\,\Re\left\{\mathcal{A}_{\alpha\beta}^{(Wt)}\mathcal{A}_{\alpha\beta}^{(t\bar{t})\star}\right\}
-+ \left|\mathcal{A}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
-\tag{4.5}
-\end{equation}
-
-% Equation 4.6
-\begin{equation}
-\equiv \mathcal{S}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}
-\tag{4.6}
-\end{equation}
-
-% Equation 4.7
-\begin{equation}
-d\hat{\sigma}_{\alpha\beta}
-= \frac{1}{2s}\left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
-\tag{4.7}
-\end{equation}
-
-% Equation 4.8
-\begin{equation}
-d\sigma
-= d\sigma^{(2)} + \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\hat{\sigma}_{\alpha\beta}
-= d\sigma^{(2)} + \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
-  \mathcal{L}_{\alpha\beta}
-  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
-\tag{4.8}
-\end{equation}
-
-% Equation 4.9
-\begin{equation}
-d\sigma^{(\mathrm{DR})}
-= d\sigma^{(2)}
-+ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
-  \mathcal{L}_{\alpha\beta}\,\hat{\mathcal{S}}_{\alpha\beta}\,d\phi_3
-\tag{4.9}
-\end{equation}
-
-% Equation 4.10
-\begin{equation}
-d\sigma^{(\mathrm{DS})} = d\sigma - d\sigma^{\mathrm{subt}}
-\tag{4.10}
-\end{equation}
-
-% Equation 4.11
-\begin{equation}
-d\sigma^{\mathrm{subt}}
-= \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\sigma^{\mathrm{subt}}_{\alpha\beta}
-\tag{4.11}
-\end{equation}
-
-% Equation 4.12
-\begin{equation}
-d\sigma_{\alpha\beta}^{\mathrm{subt}}
-= \frac{1}{2s}\,\widetilde{\mathcal{D}}_{\alpha\beta}\,d\phi_3
-\tag{4.12}
-\end{equation}
-
-% Equation 4.13
-\begin{equation}
-\mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}
-\tag{4.13}
-\end{equation}
-
-% Equation 4.14
-\begin{equation}
-d\sigma^{(\mathrm{DS})}
-= d\sigma^{(2)}
-+ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
-  \mathcal{L}_{\alpha\beta}
-  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta}
-        + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
-\tag{4.14}
-\end{equation}
-
-% Equation 4.15
-\begin{equation}
-d\sigma^{(\mathrm{DS})} - d\sigma^{(\mathrm{DR})}
-= \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
-  \mathcal{L}_{\alpha\beta}
-  \left(\mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
-\tag{4.15}
-\end{equation}
+%% Equation 4.1
+%\begin{equation}
+%|M_{\bar{b}W} - m_t| > \kappa \Gamma_t
+%\tag{4.1}
+%\end{equation}
+%
+%% Equation 4.2
+%\begin{equation}
+%p_{\mathrm{T}}^b < p_{\mathrm{T}}^{(\mathrm{veto})}
+%\tag{4.2}
+%\end{equation}
+%
+%% Equation 4.3
+%\begin{equation}
+%\alpha(p_1) + \beta(p_2) \longrightarrow t(k_1) + W(k_2) + \delta(k)
+%\tag{4.3}
+%\end{equation}
+%
+%% Equation 4.4
+%\begin{equation}
+%\mathcal{A}_{\alpha\beta} = \mathcal{A}_{\alpha\beta}^{(Wt)} + \mathcal{A}_{\alpha\beta}^{(t\bar{t})}
+%\tag{4.4}
+%\end{equation}
+%
+%% Equation 4.5
+%\begin{equation}
+%\left|\mathcal{A}_{\alpha\beta}\right|^{2}
+%= \left|\mathcal{A}_{\alpha\beta}^{(Wt)}\right|^{2}
+%+ 2\,\Re\left\{\mathcal{A}_{\alpha\beta}^{(Wt)}\mathcal{A}_{\alpha\beta}^{(t\bar{t})\star}\right\}
+%+ \left|\mathcal{A}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
+%\tag{4.5}
+%\end{equation}
+%
+%% Equation 4.6
+%\begin{equation}
+%\equiv \mathcal{S}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}
+%\tag{4.6}
+%\end{equation}
+%
+%% Equation 4.7
+%\begin{equation}
+%d\hat{\sigma}_{\alpha\beta}
+%= \frac{1}{2s}\left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
+%\tag{4.7}
+%\end{equation}
+%
+%% Equation 4.8
+%\begin{equation}
+%d\sigma
+%= d\sigma^{(2)} + \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\hat{\sigma}_{\alpha\beta}
+%= d\sigma^{(2)} + \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+%  \mathcal{L}_{\alpha\beta}
+%  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta}\right)d\phi_3
+%\tag{4.8}
+%\end{equation}
+%
+%% Equation 4.9
+%\begin{equation}
+%d\sigma^{(\mathrm{DR})}
+%= d\sigma^{(2)}
+%+ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+%  \mathcal{L}_{\alpha\beta}\,\hat{\mathcal{S}}_{\alpha\beta}\,d\phi_3
+%\tag{4.9}
+%\end{equation}
+%
+%% Equation 4.10
+%\begin{equation}
+%d\sigma^{(\mathrm{DS})} = d\sigma - d\sigma^{\mathrm{subt}}
+%\tag{4.10}
+%\end{equation}
+%
+%% Equation 4.11
+%\begin{equation}
+%d\sigma^{\mathrm{subt}}
+%= \sum_{\alpha\beta}\int dx_1\,dx_2\,\mathcal{L}_{\alpha\beta}\,d\sigma^{\mathrm{subt}}_{\alpha\beta}
+%\tag{4.11}
+%\end{equation}
+%
+%% Equation 4.12
+%\begin{equation}
+%d\sigma_{\alpha\beta}^{\mathrm{subt}}
+%= \frac{1}{2s}\,\widetilde{\mathcal{D}}_{\alpha\beta}\,d\phi_3
+%\tag{4.12}
+%\end{equation}
+%
+%% Equation 4.13
+%\begin{equation}
+%\mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}
+%\tag{4.13}
+%\end{equation}
+%
+%% Equation 4.14
+%\begin{equation}
+%d\sigma^{(\mathrm{DS})}
+%= d\sigma^{(2)}
+%+ \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+%  \mathcal{L}_{\alpha\beta}
+%  \left(\hat{\mathcal{S}}_{\alpha\beta} + \mathcal{I}_{\alpha\beta}
+%        + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
+%\tag{4.14}
+%\end{equation}
+%
+%% Equation 4.15
+%\begin{equation}
+%d\sigma^{(\mathrm{DS})} - d\sigma^{(\mathrm{DR})}
+%= \sum_{\alpha\beta}\int \frac{dx_1\,dx_2}{2x_1 x_2 S}\,
+%  \mathcal{L}_{\alpha\beta}
+%  \left(\mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
+%\tag{4.15}
+%\end{equation}
 
 
 \section{Monte Carlo Event Generators}
