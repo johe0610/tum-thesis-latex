@@ -57,7 +57,8 @@ In addition, the weak force was found to be maximally parity (P) violating.
 As a consequence it only couples to left handed particles (and right-handed antiparticles). The combined Charge - Parity (CP) symmetry is not conserved
 by the weak interaction. As a consequence, particles may behave slightly differently, when compared to their antiparticles.
 
-Putting the pieces together, the SM is a quantum field theory which can be based on the gauge group $SU(3)_C \times SU(2)_L \times U(1)_Y$, where the $L$ subscript denotes left handed. Each of the symmetries gives rise to a force via its gauge bosons.
+Putting the pieces together, the SM is a quantum field theory which can be based on the gauge group $SU(3)_C \times SU(2)_I \times U(1)_Y$.
+Each of the symmetries gives rise to a force via its gauge bosons.
 
 The last missing piece of the SM is the scalar Higgs boson with spin 0.
 The Higgs Mechanism was introduced by Higgs and Englert and 
@@ -95,9 +96,94 @@ Known limitations of the SM are:
 	which requires an extension of the SM, such as the inclusion of right-handed neutrinos or other mechanisms.
 \end{itemize}
 
+\subsection{Cross section definition}
+
+A cross section $\sigma$ is a measure of the probability of a particular interaction occurring between two colliding particles.
+It is given in units of area reflecting the effective interaction region.
+The hadronic production cross section of two initial state hadrons $h_1$ and $h_2$ producing a final state with $n$ partons plus additional radiation $X$ can be written as~\cite{black_book_qcd}
+\begin{equation}
+    \sigma = \frac{1}{2s}\sum_{a,b}\int_{0}^{1}\frac{\text{d}x_a}{x_a}\frac{\text{d}x_b}{x_b}\,f_{a/h_1}(x_a,\mu_F)\, f_{b/h_2}(x_b,\mu_F)\int d\Phi_n \,|\mathcal{M}_{ab\rightarrow n}|^2(\Phi_n;\mu_F,\mu_R)
+    \label{eq:xsec:theo}
+\end{equation}
+where $s$ denotes the hadronic center-of-mass energy squared. 
+%Partonic and hadronic center-of-mass energies are related by
+%\begin{equation}
+%    \hat{s} \equiv x_a x_b s.
+%\end{equation}
+The LHC collides protons, which are composite particles with partons as constituents.
+The parton distribution functions (PDFs) $f_{a/h}(x_a, \mu_F)$ give the probability of finding parton $a$ carrying momentum fraction $x_a$ of the parent hadron at factorization scale $\mu_F$.
+The underlying assumption is collinear factorization, stating that cross sections of processes involving initial state hadrons can be factorized 
+into process independent PDFs and the matrix element $\mathcal{M}$ with quasi-free partons in the initial state.
+%Factorization of the cross section is assumed in this notation.
+%Additionally, the transverse momenta of the initial-state partons are neglected.
+The PDFs are convoluted with the partonic cross section, which consists of the phase-space integral of the squared matrix element $|\mathcal{M}_{ab \to n}|^2$ over the $n$-particle final state $\text{d}\Phi_n$.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[t]{0.4\linewidth}
+		\includegraphics[width=.9\linewidth, page=16]{figures/WbWb/feynman_WbWb.pdf}
+		\caption{\ttbar production in LO.}
+		\label{fig:tt:feynman_LO}
+	\end{subfigure}%\hfill%
+	\begin{subfigure}[t]{0.4\linewidth}
+		\includegraphics[width=.9\linewidth, page=17]{figures/WbWb/feynman_WbWb.pdf}
+		\caption{\ttbar production in NLO with one real gluon emission.}
+		\label{fig:tt:feynman_NLO}
+	\end{subfigure}%\hfill% 
+    \\
+	\begin{subfigure}[t]{0.4\linewidth}
+		\includegraphics[width=.9\linewidth, page=18]{figures/WbWb/feynman_WbWb.pdf}
+		\caption{\ttbar production in NNLO with two real gluon emission.}
+		\label{fig:tt:feynman_NNLO_r}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.4\linewidth}
+		\includegraphics[width=.9\linewidth, page=19]{figures/WbWb/feynman_WbWb.pdf}
+		\caption{\ttbar production in NNLO with virtual corrections.}
+		\label{fig:tt:feynman_NNLO_v}
+	\end{subfigure}
+	\caption{
+    Representative Feynman diagrams of \ttbar production.
+    The expansion is in orders of the strong coupling constant $\alpha_S$
+    Higher order corrections can be categorized in real and virtual corrections.
+    Divergencies can occur in diagrams that cancel when the full order is calculated.}
+	\label{fig:tt:feynman}
+\end{figure}
+
+Matrix elements are calculated using the framework of perturbation theory.
+The transition amplitude $|\mathcal{M}|^2$ is expanded as a power series in the coupling constant.
+Each term in this expansion corresponds to a set of Feynman diagrams, which provide an intuitive 
+graphical representation of the underlying partonic interactions. 
+A factor is assigned for each propagator, vertex, and external particle, translating the
+diagram into a well-defined mathematical expression.
+Combining the expressions yields the amplitude for a given process.
+
+The perturbative expansion is organized by the number of vertices appearing in the diagrams,
+as illustrated in Figure~\ref{fig:tt:feynman}.
+The lowest-order for $gg\rightarrow \ttbar$ has two vertices and is of the order $\mathcal{O}(\alpha_s^2)$.
+It is referred to as leading order (LO), since it captures the dominant behavior of the process 
+and involves the minimal number of vertices required. 
+Every topologically distinct diagram of the same order contributes to the total amplitude.
+
+Higher-order corrections are systematically incorporated by including diagrams with additional 
+vertices. Two classes of corrections arise: real corrections, 
+in which an additional parton is radiated in the final state, and virtual corrections, 
+in which loop diagrams contribute.
+Representative diagrams for both are shown in Figure~\ref{fig:tt:feynman} for next-to-leading order (NLO) $\mathcal{O}(\alpha_s^3)$
+and next-to-next-to-leading order (NNLO) $\mathcal{O}(\alpha_s^4)$.
+The real and virtual contributions individually may contain infrared and ultraviolet divergences.
+When combined, they cancel, yielding finite, physically meaningful predictions. 
+The number of Feynman diagrams grows rapidly with perturbative order, making a brute-force evaluation of all contributions computationally impractical. https://arxiv.org/pdf/1111.5206
+
+Two unphysical scales are introduced in Equation~\eqref{eq:xsec:theo}: the renormalization scale $\mu_R$, at which the strong coupling $\alpha_s$ is evaluated, and the factorization scale $\mu_F$, at which the PDFs are determined. Both scales can be chosen to reflect the hard scale of the process.
+In top quark physics, for example, $\mu_R = \mu_F = m_t$ is a common choice, though dynamical scale definitions are also used.
+Since the scales are an artifact of the perturbative treatment, physical observables should in principle be independent of their choice.
+In practice, residual scale dependence remains due to the truncation of the perturbative series at fixed order.
+Each successive order in the perturbative expansion reduces the residual dependence on the scales, improving both the accuracy and the 
+precision of the theoretical prediction.
+The theoretical uncertainty from missing higher orders is typically estimated by
+varying $\mu_R$ and $\mu_F$ by a factor of two around the central value.
 
 \subsection{Top quark physics}
-
 
 In 1973, Kobayashi and Maskawa proposed the existence of a third generation of quarks to account for CP violation observed in kaon decays as a necessary component of the Standard Model's quark mixing structure~\cite{Kobayashi:1973fv}. 
 The third generation up-type quark, the top quark,
@@ -317,8 +403,7 @@ the analysis.
     \subref{fig:wbwb:feynman_tW_tchan}~the $t$-channel process.}
 	\label{fig:wbwb_tW:feynman}
 \end{figure}
- 
- 
+
 \begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[t]{0.3\linewidth}
@@ -459,41 +544,6 @@ the analysis.
 %  \left(\mathcal{I}_{\alpha\beta} + \mathcal{D}_{\alpha\beta} - \widetilde{\mathcal{D}}_{\alpha\beta}\right)d\phi_3
 %\tag{4.15}
 %\end{equation}
-
-\subsection{Cross section definition}
-
-What is a cross section?
-
-The hadronic production cross section of two initial state hadrons $h_1$ and $h_2$ going to an $n+X$ partonic final state can be written as~\cite{black book of qcd}
-\begin{equation}
-    \sigma = \frac{1}{2s}\sum_{a,b}\int_{0}^{1}\frac{\text{d}x_a}{x_a}\frac{\text{d}x_b}{x_b}f_{a/h_1}(x_a,\mu_F) f_{b/h_2}(x_b,\mu_F)\int d\Phi_n |\mathcal{M}_{ab\rightarrow n}|^2 (\Phi_n; \mu_F, \mu_R)
-\end{equation}
-where $s$ denotes the hadronic center of mass energy.
-The LHC collides bunches of protons, which are compound particles made of partons.
-The parton distribution functions (PDFs) $f$ can be interpreted as the probability to find
-a parton $a$ carrying the momentum fraction $x_a$ of the total hadron momentum.
-The partonic and hadronic center of mass energies are related via %maybe drop this
-\begin{equation}
-    E_\text{c.m.}^2(a,b) = x_a x_b s = x_a x_b E_\text{c.m.}^2(h_1, h_2).
-\end{equation}
-The PDFs are folded with the parton level cross section.
-The incoming partonic flux
-\begin{equation}
-    \frac{1}{2s x_a x_b}
-\end{equation}
-where parton masses were neglected
-and the integral of the squared transition amplitude $|\mathcal{M}|^2$
-over the $n$ parton phaes space element d$\Phi_n$.
-
-The notation above assumes collinear factorization, where momentum of the initial state particles perpendicular to their
-flight direction is neglected. 
-The non-physical factorization and renormalization scales $\mu_R$ and $\mu_F$ were introduced.
-The former signifies the scale at which the PDFs are determined, while the latter indicated at which scale the coupling constants are
-evaluated. They can be chosen according to the physics process. In top quark physics a popular choice is $\mu_R = \mu_F = m_t$, but
-dynamical scales are also possible.
-Since the scales were introduced to simplify the calculation, the scale choice should not impact the physics result.
-Biases from the scale choice may remain, since the perturbative calculation will be cut off after a fixed order.
-
 
 
 
