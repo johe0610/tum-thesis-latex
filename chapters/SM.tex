@@ -289,67 +289,7 @@ $b$ quark appears in the final state
 , yielding the same $WbWb$ final
 state, as illustrated in Figure~\ref{fig:wbwb_tW:feynman}.
 The presence of one on-shell top quark gives this \textit{singly-resonant} process its name.
- 
-Contributions from processes with no resonant top quark, or no top quark at all, are
-illustrated in Figure~\ref{fig:wbwb:feynman_nonrestop}.
-They are negligible in the studied
-phase space, as the non-resonant $WbWb$ production is not enhanced by the event selection.
-These contributions are not considered further.
- 
-%Compared to measurements requiring two light charged leptons, the single-lepton channel
-%allows the \Wboson boson kinematic properties to be measured directly, since the
-%hadronically decaying \Wboson boson can be fully reconstructed.
-%The larger branching ratio additionally gives access to phase-space regions with more
-%extreme momenta.
- 
-The interplay of doubly-resonant and singly-resonant diagrams in the $tW$ process can be $tW$ production where \ttbar contributions can be viewed as an NLO correction. The $tW$ channel is not well-defined
-beyond LO. Writing the process as
-\begin{equation}
-    \alpha + \beta \longrightarrow t + W + \delta
-    \label{eq:tW_process}
-\end{equation}
-where $\alpha$, $\beta$ are the initial-state partons and $\delta$ is a $b$ quark, the
-amplitude is written as the sum of the individual contributions
-\begin{equation}
-    \mathcal{A}_{\alpha\beta} = \mathcal{A}_{\alpha\beta}^{(Wt)} + \mathcal{A}_{\alpha\beta}^{(t\bar{t})}
-    \label{eq:tW_amplitude}
-\end{equation}
-The squared amplitude is then
-\begin{equation}
-    \left|\mathcal{A}_{\alpha\beta}\right|^{2}
-    = \left|\mathcal{A}_{\alpha\beta}^{(Wt)}\right|^{2}
-    + 2\,\Re\left\{\mathcal{A}_{\alpha\beta}^{(Wt)}\mathcal{A}_{\alpha\beta}^{(t\bar{t})\star}\right\}
-    + \left|\mathcal{A}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
-    \label{eq:tW_amplitude_squared}
-\end{equation}
-where the three terms correspond to the pure $tW$ contribution, the $tW$--\ttbar
-interference, and the pure \ttbar contribution, respectively.
- 
-The interference term in Eq.~(\ref{eq:tW_amplitude_squared}) cannot be neglected when the invariant mass of the $Wb$ system approaches the top quark mass, $m_{bW}\approx m_t$. The intermediate $t$ propagator goes on-shell, causing a large resonant
-enhancement of the cross section.
-Reference~\cite{Frixione:2008yi} proposes two schemes to obtain a
-usable definition of the $tW$ process.
- 
-The \textbf{Diagram Removal (DR)} scheme removes all doubly-resonant diagrams from the
-$tW$ amplitude, eliminating the \ttbar interference entirely.
-This breaks QCD gauge invariance, but a detailed study in~\cite{Frixione:2008yi} shows
-the numerical impact to be negligible across the relevant phase space.
- 
-The \textbf{Diagram Subtraction (DS)} scheme introduces a gauge-invariant local
-subtraction term that cancels the doubly-resonant \ttbar contribution to the differential
-cross section.
-The subtraction term is strongly peaked at $m_{bW}\approx m_t$ and falls steeply away
-from the resonance.
-Unlike DR, the $tW$--\ttbar interference is preserved, since the subtraction acts at the
-level of the squared amplitude.
-%To maintain gauge invariance, the $\bar{t}$ amplitude must be evaluated with
-%on-shell-reshuffled kinematics, which introduces an additional theoretical uncertainty.
- 
-%The difference between DR and DS predictions directly measures the size of the
-%$tW$--\ttbar interference.
-Implementing both schemes in the same framework provides an estimate of the theoretical
-systematic uncertainty on the $tW$ signal extraction, which is propagated accordingly in
-the analysis.
+
  
 \begin{figure}[ht!]
 	\centering
@@ -429,9 +369,105 @@ the analysis.
 	\label{fig:wbwb_nonres:feynman}
 \end{figure}
 
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[t]{0.3\linewidth}
+		\includegraphics[width=.9\linewidth, page=20]{figures/WbWb/feynman_WbWb.pdf}
+		%\caption{Non-factorizing diagram.}
+		%\label{fig:wbwb_nlo:feynman_1}
+	\end{subfigure}\hfill%
+	\begin{subfigure}[t]{0.3\linewidth}
+		\includegraphics[width=.9\linewidth, page=21]{figures/WbWb/feynman_WbWb.pdf}
+		%\caption{Non-factorizing diagram.}
+		%\label{fig:wbwb_nlo:feynman_2}
+	\end{subfigure}\hfill%
+	\begin{subfigure}[t]{0.3\linewidth}
+		\includegraphics[width=.9\linewidth, page=22]{figures/WbWb/feynman_WbWb.pdf}
+		%\caption{Hexagon diagram.}
+		%\label{fig:wbwb_nlo:feynman_3}
+	\end{subfigure}
+	\caption{
+    Representative diagrams of higher order virtual corrections contributing to the $WbWb$ 
+    final state that are not considered in separate $\ttbar$ or $tW$ calculations.}
+	\label{fig:wbwb_nlo:feynman}
+\end{figure}
+
+Contributions from processes with no resonant top quark, or no top quark at all, are
+illustrated in Figure~\ref{fig:wbwb:feynman_nonrestop}.
+They are negligible in the studied
+phase space, as the non-resonant $WbWb$ production is not enhanced by the event selection.
+These contributions are not considered further.
+
+It is important to realize that loop diagrams appear at higher orders in $\alpha_S$ which are not
+considered when modeling the \ttbar and $tW$ process independently and then merging the samples
+in retrospect. Examples for these
+non-factorizable pentagons and hexagons diagrams are presented in Figure~\ref{fig:wbwb_nlo:feynman}.
+These contributions are only taken into account in full NLO calculations of the $WbWb$ process~\cite{Denner:2010jp, Denner:2012nlo}.
+
+%Compared to measurements requiring two light charged leptons, the single-lepton channel
+%allows the \Wboson boson kinematic properties to be measured directly, since the
+%hadronically decaying \Wboson boson can be fully reconstructed.
+%The larger branching ratio additionally gives access to phase-space regions with more
+%extreme momenta.
+ 
+The interplay of doubly-resonant and singly-resonant diagrams in the $tW$ process can be $tW$ production where \ttbar contributions can be viewed as an NLO correction. The $tW$ channel is not well-defined
+beyond LO. Writing the process as
+\begin{equation}
+    \alpha + \beta \longrightarrow t + W + \delta
+    \label{eq:tW_process}
+\end{equation}
+where $\alpha$, $\beta$ are the initial-state partons and $\delta$ is a $b$ quark, the
+amplitude is written as the sum of the individual contributions
+\begin{equation}
+    \mathcal{M}_{\alpha\beta} = \mathcal{M}_{\alpha\beta}^{(Wt)} + \mathcal{M}_{\alpha\beta}^{(t\bar{t})}
+    \label{eq:tW_amplitude}
+\end{equation}
+The squared amplitude is then
+\begin{equation}
+    \left|\mathcal{M}_{\alpha\beta}\right|^{2}
+    = \left|\mathcal{M}_{\alpha\beta}^{(Wt)}\right|^{2}
+    + 2\,\Re\left\{\mathcal{M}_{\alpha\beta}^{(Wt)}\mathcal{M}_{\alpha\beta}^{(t\bar{t})\star}\right\}
+    + \left|\mathcal{M}_{\alpha\beta}^{(t\bar{t})}\right|^{2}
+    \label{eq:tW_amplitude_squared}
+\end{equation}
+where the three terms correspond to the pure $tW$ contribution, the $tW$--\ttbar
+interference, and the pure \ttbar contribution, respectively.
+ 
+The interference term in Eq.~(\ref{eq:tW_amplitude_squared}) cannot be neglected when the invariant mass of the $Wb$ system approaches the top quark mass, $m_{bW}\approx m_t$. The intermediate $t$ propagator goes on-shell, causing a large resonant
+enhancement of the cross section.
+Reference~\cite{Frixione:2008yi} proposes two schemes to obtain a
+usable definition of the $tW$ process.
+ 
+The \textbf{Diagram Removal (DR)} scheme removes all doubly-resonant diagrams from the
+$tW$ amplitude, eliminating the \ttbar interference entirely.
+This breaks QCD gauge invariance, but a detailed study in~\cite{Frixione:2008yi} shows
+the numerical impact to be negligible across the relevant phase space.
+ 
+The \textbf{Diagram Subtraction (DS)} scheme introduces a gauge-invariant local
+subtraction term that cancels the doubly-resonant \ttbar contribution to the differential
+cross section.
+The subtraction term is strongly peaked at $m_{bW}\approx m_t$ and falls steeply away
+from the resonance.
+Unlike DR, the $tW$--\ttbar interference is preserved, since the subtraction acts at the
+level of the squared amplitude.
+%To maintain gauge invariance, the $\bar{t}$ amplitude must be evaluated with
+%on-shell-reshuffled kinematics, which introduces an additional theoretical uncertainty.
+ 
+%The difference between DR and DS predictions directly measures the size of the
+%$tW$--\ttbar interference.
+Implementing both schemes in the same framework provides an estimate of the theoretical
+systematic uncertainty on the $tW$ signal extraction, which is propagated accordingly in
+the analysis.
+
+The $WbWb$ process has been widely studied from the theoretical point
+of view~\cite{White:2009yt,Frixione:2008yi,Hollik:2012rc,Demartin:2016axk,ATL-PHYS-PUB-2016-020}.
+The consistent calculation of the \WbWb final state was performed up to next-to-leading order in QCD~\cite{Denner:2010jp},
+including full top off-shell effects at NLO,
+and supplemented with parton showers~\cite{Jezo:2016ujg,Jezo:2023rht}.
+A calculation of the process \(pp\to\ell\nu b b j j\) was performed up to NLO in Ref.~\cite{Denner:2017kzu}.
+
 
 %\end{linenumbers}
-\clearpage
 
 
 %% Equation 4.1
@@ -545,11 +581,58 @@ the analysis.
 %\tag{4.15}
 %\end{equation}
 
+\subsection{The WbWb process at ATLAS}
 
+The ATLAS collaboration has measured the $WbWb$ process in the dilepton channel,
+$pp\rightarrow W^+bW^-\bar{b} \rightarrow \ell^+\nu \ell^-\bar{\nu} b\bar{b}$~\cite{TOPQ-2017-05, atlas:2026wbwb},
+combining \ttbar and $tWb$ contributions into a final state with two leptons and two $b$-jets.
+To maximize sensitivity to \ttbar$/tW$ interference effects, the analysis exploits the minimax observable
+\begin{equation}
+    m_{b\ell}^{\text{minimax}} \equiv \min\{\max(m_{b_1\ell_1}, m_{b_2\ell_2}), \max(m_{b_1\ell_2}, m_{b_2\ell_1})\}.
+\end{equation}
+It is constructed to satisfies the kinematic constraint $m_{b\ell}^{\text{minimax}} < \sqrt{m_t^2 - m_W^2}$ for leading-order doubly-resonant \ttbar events.
+The suppression of doubly-resonant contributions above this endpoint enhances the sensitivity to interference in the high-mass tail of the distribution.
+The measured differential cross section with two final state $b$ jets, one electron and one oppositely-charged muon is shown in Figure~\ref{fig:wbwb:atlas_dil:minimax} as a function of $m_{b\ell}^{\text{minimax}}$.
+\begin{figure}[ht!]
+	\centering
+    \includegraphics[width=0.5\textwidth]{figures/WbWb/minimax_wbwb_dilepton.pdf}
+    \caption{
+    Differential cross section as a function of the $m_{b\ell}^{\text{minimax}}$ observable measured by the ATLAS collaboration~\cite{atlas:2026wbwb}.
+    The data are shown as black markers and are compared to several generator predictions.
+    The ratio of predictions to the data is shown in the lower panels alongside the statistical
+    and systematical measurement uncertainties.
+    }
+	\label{fig:wbwb:atlas_dil:minimax}
+\end{figure}
+The data represented by the black points are compared to several theoretical predictions.
+The predictions are obtained by merging \ttbar and $tW$ simulation, employing either the DR or DS scheme in the
+$tW$ contribution. Discrepancies between the descriptions are visible in the high-mass tail, with the predictions bracketing the data.
+The \texttt{bb4l} generator, which computes the full $WbWb$ process at NLO, underestimates the data in that region. The present thesis extends this study to the single-lepton channel, where the inclusive $WbWb$ final state has not been studied yet.
 
-\section{Monte Carlo Event Generators}
+\section{Event generation and simulation}
 \label{sec:MC}
 
-Pythia, Herwig and Sherpa?
+The goal of this section is to build a bridge from the theoretical, mathematical definition of particle collisions and the cross section
+to the messy, experimentally observable process which incorporates perturbative and non-perturbative effects
+as well as a detail real-world simulation of the detector. Interaction of particles traversing the detector material.
+This is achieved with the tools of Monte Carlo event generators.
+The term Monte Carlo was introduced in reference to the gambling district of Monaco, named Monte Carlo,
+and refers to the underlying stochastic nature of physics.
+A variety of MC event generators is used in the high energy environment of LHC physics, such as Pythia, Herwig and Sherpa.
+This section goes through the step by step process on how to simulate an event.
+Starting from the evaluation of the matrix element, over parton shower and hadronization to the detector simulation.
 
+\subsection{Hard scattering}
+
+\subsection{Parton shower and hadronization}
+
+\subsection{Underlying event and pile-up}
+
+\subsection{Detector simulation}
+
+After the generation and showering of simulated events, the final-state stable particles are propagated through a full simulation of the ATLAS detector. 
+This GEANT4 software package~\cite{Agostinelli:2002hh} is used to 
+simulate the response of the ATLAS detector, 
+converting particle-level truth information into realistic detector-level signals.
+The full event reconstruction chain, described in Chapter~\ref{chap:ObjectReco}, is then applied using the same algorithms as for real collision data. This yields simulated events that additionally contain generator and truth-matching information not present in recorded data. The procedure is essential for estimating signal acceptance and efficiency, modeling backgrounds, and validating theoretical predictions against measurement.
 
