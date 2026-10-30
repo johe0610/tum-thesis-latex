@@ -624,7 +624,32 @@ Starting from the evaluation of the matrix element, over parton shower and hadro
 
 \subsection{Hard scattering}
 
-\subsection{Parton shower and hadronization}
+\subsection{Parton shower}
+
+\subsection{Hadronization}
+
+Once the radiated partons reach the hadronization scale, the shower is terminated.
+Phenomenological models have to be introduced to model the formation of observable color-neutral hadrons, as
+perturbative QCD calculations are no longer applicable.
+The two main models employed in MC generators are illustrated in Figure~\ref{fig:cluster_string}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/other/cluster_string_hadronization.png}
+    \caption{Illustration of cluster (left) and string (right) hadronization models~\cite{webber1999fragmentationhadronization}.}
+    \label{fig:cluster_string}
+\end{figure}
+
+In the Lund string model~\cite{ANDERSSON198331}, the color field between a $q\bar{q}$ pair is represented by a relativistic string and gluons give rise to ‘kinks’ on the string.
+As the pair moves apart, the string stretches and the potential energy stored in it increases.
+When sufficient energy has accumulated the string breaks, producing a new $q\bar{q}$ pair.
+The process repeats until the invariant mass of the remaining string segments is too small for further breaking to be kinematically possible.
+
+The cluster model~\cite{WEBBER1984492} is based on the color preconfinement property~\cite{AMATI197987} which
+states the tendency of partons
+generated in the branching process to be arranged in color-singlet clusters.
+These clusters are the basic units out of which hadrons arise non-perturbatively.
+Since local clusters are considered, this approach
+is independent of the hard process and the center-of-mass energy.
 
 \subsection{Underlying event and pile-up}
 
