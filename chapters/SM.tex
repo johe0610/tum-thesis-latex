@@ -661,6 +661,13 @@ simulate the response of the ATLAS detector,
 converting particle-level truth information into realistic detector-level signals.
 The full event reconstruction chain, described in Chapter~\ref{chap:ObjectReco}, is then applied using the same algorithms as for real collision data. This yields simulated events that additionally contain generator and truth-matching information not present in recorded data. The procedure is essential for estimating signal acceptance and efficiency, modeling backgrounds, and validating theoretical predictions against measurement.
 
+The detector response is simulated with \texttt{Geant4}~\cite{Agostinelli:2002hh}.
+As a full simulation of the detector response is computationally expensive for
+some of the estimates of modeling uncertainties, the fast-simulation package
+\textsc{AtlFast-II}~\cite{SOFT-2010-01} is used, which parametrizes hadronic
+showers in the electromagnetic and hadronic calorimeter to speed up the simulation.
+
+
 \section{Data and simulation samples}
 
 This section lists all data samples analyzed in the measurement.
@@ -696,35 +703,55 @@ A matching between the object firing the trigger and the offline reconstructed o
 \subsection{Monte Carlo simulated samples}%
 \label{sec:datamc:mc}
 
-The contribution of SM processes is evaluated from Monte Carlo (MC) simulated
-samples~\cite{SOFT-2010-01}.
-The effect of multiple interactions in the same and neighboring bunch
-crossings (\pileup) was modeled by overlaying the simulated hard-scattering event with
-inelastic proton--proton (\(pp\)) events generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}  using the \NNPDF[2.3lo] set of parton distribution functions (PDF)~\cite{Ball:2012cx} and the
-A3 set of tuned parameters~\cite{ATL-PHYS-PUB-2016-017}.
+Contributions from SM processes are modeled using Monte Carlo (MC) simulated samples~\cite{SOFT-2010-01}.
+Pileup effects are accounted for by overlaying each simulated hard-scatter event with additional inelastic $pp$ collisions generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}, using the \NNPDF[2.3lo] PDF set~\cite{Ball:2012cx} and the A3 tuned parameter set~\cite{ATL-PHYS-PUB-2016-017}.
+%To match the distribution of the average number of interactions per bunch crossing, $\langle\mu\rangle$ observed in data, the simulated events are reweighted.
+%The $\langle\mu\rangle$ value in data is rescaled by a factor of $1.03\pm0.04$ to improve agreement between data and simulation in the visible inelastic $pp$ cross-section~\cite{STDM-2015-05}.
+The signal contribution is defined as the sum of \ttbar and \tW samples, both simulated with the same combination of hard-process generator and parton shower.
 
-The detector response is simulated with \texttt{Geant4}~\cite{Agostinelli:2002hh}.
-As a full simulation of the detector response is computationally expensive for
-some of the estimates of modeling uncertainties, the fast-simulation package
-\textsc{AtlFast-II}~\cite{SOFT-2010-01} is used, which parametrizes hadronic
-showers in the electromagnetic and hadronic calorimeter to speed up the simulation.
 
-The Monte Carlo (MC) events were weighted to reproduce the
-distribution of the average number of interactions per bunch crossing
-(\(\left<\mu \right>\)) observed in the data. The \(\left<\mu \right>\)
-value in data was rescaled by a factor of \(1.03\pm 0.04\) to improve
-agreement between data and simulation in the visible inelastic
-proton--proton (\(pp\)) cross-section~\cite{STDM-2015-05}.
+\begin{sidewaystable}
+    \centering
+    \caption{Summary of Signal and Background Samples}
+    \label{tab:physics_samples}
+    \scriptsize
+    \begin{tabularx}{\textheight}{c c c c c c c}
+        \toprule
+        \multicolumn{7}{c}{\textbf{Nominal Signal Samples}} \\
+        \midrule
+        Physics Process & Legend Entry(s) & Generator & PDF & PS \& Hadronization & Tune & $\sigma$ Norm. [pb] \\
+        \midrule
+        $t\bar{t}$ & PH+PY8 & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $832^{+41}_{-51}$ \\
+        $tW$ (DR) & PH+PY8 (DR) & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA, \NNPDF[2.3lo] & A14 & $71.7 \pm 3.8$ \\
+        \midrule
+        \midrule
+        \multicolumn{7}{c}{\textbf{Alternative Signal Samples}} \\
+        \midrule
+        Physics Process & Legend Entry(s) & Generator & PDF & PS \& Hadronization & Tune & $\sigma$ Norm. [pb] \\
+        \midrule
+        $tW$ (DS) & PH+PY8 (DS) & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA, \NNPDF[2.3lo] & A14 & $71.7 \pm 3.8$ \\
+        \ttbar & PH+H7 & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \HERWIG[7.1.6], \MMHT[lo] & H7.1-Default & $832^{+41}_{-51}$ \\
+        $tW$ (DR) & PH+H7 (DR) & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \HERWIG[7.1.6], \MMHT[lo] & H7.1-Default & $71.7 \pm 3.8$ \\
+        \midrule
+        \midrule
+        \multicolumn{7}{c}{\textbf{Background Samples}} \\
+        \midrule
+        Physics Process & Legend Entry(s) & Generator & PDF & PS \& Hadronization & Tune & $\sigma$ Norm. [pb] \\
+        \midrule
+        \Wjets & \Wjets & \SHERPA[2.2.11] & \NNPDF[3.0nnlo] & \SHERPA & \SHERPA & $20100 \pm 1000$ \\
+        \Zjets & Other V & \SHERPA[2.2.11] & \NNPDF[3.0nnlo] & \SHERPA & \SHERPA & $1906 \pm 95$ \\
+        Diboson (VV) & Other V & \SHERPA[2.2.2] & \NNPDF[3.0nnlo] & \SHERPA & \SHERPA & $211 \pm 8$ \\
+        s-chan. single-$t$ (no $tW$) & Other $t$ & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $6.35^{+0.23}_{-0.20}$ \\
+        s-chan. single-anti-$t$ (no $tW$) & Other $t$ & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $3.97^{+0.17}_{-0.17}$ \\
+        t-chan. single-$t$ (no $tW$) & Other $t$ & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $134.2^{+2.6}_{-2.6}$ \\
+        t-channel single-anti-$t$ (no $tW$) & Other $t$ & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $80.0^{+1.8}_{-1.8}$ \\
+        $t\bar{t}V$ & Other $t$ & MadGraph 5\_aMC@NLO 2.3.3 & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $1.5 \pm 0.1$ \\
+        $t\bar{t}H$ & Other $t$ & \POWHEGBOX[v2] & \NNPDF[3.0nlo] & \PYTHIA[8.230], \NNPDF[2.3lo] & A14 & $0.51 \pm 0.05$ \\
+        \bottomrule
+    \end{tabularx}
+\end{sidewaystable}
 
-The signal samples are defined as the sum of the \ttbar and the \tW samples,
-simulated with the same combination of hard process generators and parton showers.
-The description of the MC samples is taken from the official PMG documentation.
 
-Only prompt leptons are taken from Monte Carlo. They originate from decays of
-\Zboson, \Wboson, and \Hboson bosons, or from prompt
-leptonic \( \tau \) decays. Fake lepton contributions come from processes such
-as in-flight decays of mesons, jets reconstructed as leptons, and electron
-photon conversions. More details on fake estimation are provided in ...%\cref{sec:bkg-estimation}.
 
 \subsection{Nominal signal sample}
 \label{sec:datamc:mc_nominal_signal}
@@ -854,10 +881,8 @@ for emissions from the parton shower up or down by a factor two.
 
 This sample is displayed on plots and in tables as PH+PY8 (DR) or \tW (DR).
 
-%-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-\subsection{Alternative signal samples}%                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+\subsection{Alternative signal samples}
 \label{sec:datamc:mc_alt_signal}
-%-------------------------------------------------------------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 Several additional \ttbar and \tW samples are considered for evaluating modeling systematics and for comparison with data.
 
@@ -888,13 +913,6 @@ Several additional \ttbar and \tW samples are considered for evaluating modeling
     The short name for this sample is PH+PY8 (\pthard).
         \item \ttbar and \tW PH+PY8 with varied top-quark mass:
     mass variations of \( \pm 0.5 \mtop \) for both \ttbar and \tW are used.
-        \item \ttbar PH+PY8+MadSpin: similar to the nominal PH+PY8 sample but with
-    \madspin~\cite{Artoisenet:2012st} program used to decay the top quarks.
-    The decays of the bottom and charm hadrons were simulated using the \EVTGEN[1.7.0]
-    program. This sample is combined with the nominal \tW sample and is named PH+PY8+MadSpin.
-    \item \ttbar with recoil to top-quark: similar to the nominal PH+PY8 sample
-    but the modelling of the parton shower employs the recoiling against top quarks instead of \bquarks.
-    \item \ttbar and \tW aMC@NLO+PY8: \MGNLO generator is used instead of \PYTHIA for the matrix element calculation.
 \end{itemize}
 
 All the alternative samples are normalized to the same total cross-section
