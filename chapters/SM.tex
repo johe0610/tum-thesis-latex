@@ -703,12 +703,75 @@ A matching between the object firing the trigger and the offline reconstructed o
 \subsection{Monte Carlo simulated samples}%
 \label{sec:datamc:mc}
 
-Contributions from SM processes are modeled using Monte Carlo (MC) simulated samples~\cite{SOFT-2010-01}.
-Pileup effects are accounted for by overlaying each simulated hard-scatter event with additional inelastic $pp$ collisions generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}, using the \NNPDF[2.3lo] PDF set~\cite{Ball:2012cx} and the A3 tuned parameter set~\cite{ATL-PHYS-PUB-2016-017}.
-%To match the distribution of the average number of interactions per bunch crossing, $\langle\mu\rangle$ observed in data, the simulated events are reweighted.
-%The $\langle\mu\rangle$ value in data is rescaled by a factor of $1.03\pm0.04$ to improve agreement between data and simulation in the visible inelastic $pp$ cross-section~\cite{STDM-2015-05}.
-The signal contribution is defined as the sum of \ttbar and \tW samples, both simulated with the same combination of hard-process generator and parton shower.
+Contributions to the \WbWb final state from SM processes are modeled using Monte Carlo (MC) simulated samples~\cite{SOFT-2010-01}. An overview on all simulated processes is given in 
+Table~\ref{tab:physics_samples}.
+Three sample categories are distinguished.
 
+The nominal signal is defined as the sum of \ttbar and \tW samples in the DR description.
+Both contributions are simulated with the same combination of hard-process generator and parton shower.
+All \ttbar and \tW events with at least one lepton in the final state are taken into account in the signal region. That includes dilepton events that pass the selection due to out-of-acceptance effect.
+
+Alternative signal samples are used for the comparison to the data.
+The nominal \ttbar signal sample is combined with a  DS scheme \tW sample to 
+investigate interference effects, as well as to models with alternative PS.
+Another key purpose of the alternative samples is the evaluation of modeling systematic uncertainties (see Sec.~\ref{sec:theory_modeling}).
+
+Events from processes other than $WbWb$ may enter the signal region 
+by mimicking the the characteristics of the signal process.
+Their contribution is mostly estimated from background samples.
+They will be evaluated on detector level and removed in the extraction of the
+cross sections (see Sec.~\ref{sec:unfolding}).
+The dominating background process are \Wjets events. 
+Other backgrounds are grouped in the categories ``\OtherV`` and ``\OtherT''.
+
+The columns of Table~\ref{tab:physics_samples} will be briefly explained in the following.
+The particular physics process that is modeled in the sample and the corresponding
+legend entries in the plots presented in Chapter~\ref{ch:regions} are listed in the first two columns.
+
+The matrix element of the hard interaction is modeled using the
+\POWHEGBOX[v2]~\cite{Frixione:2007nw,Nason:2004rx,Frixione:2007vw,Alioli:2010xd}
+generator. It provides matrix elements at NLO in \alphas, and uses the
+\NNPDF[3.0nlo]~\cite{Ball:2014uwa} PDF set as input.
+The functional form of the scales $\mu_R$ and $\mu_F$ was
+set to the default scale \(\sqrt{\mtop^{2} + p_\mathrm{T\ top}^2}\).
+The production of \(V+\)jets was simulated with the \SHERPA[2.2]~\cite{Bothmann:2019yzt}
+generator and the \NNPDF[3.0nnlo] PDF set~\cite{Ball:2014uwa,Carrazza:2015aoa}.
+%In this set-up, NLO-accurate matrix elements for up to two additional partons,
+%and LO-accurate matrix elements for up
+%to five additional partons were calculated with the Comix~\cite{Gleisberg:2008fv} and
+%\OPENLOOPS~\cite{Buccioni:2019sur,Cascioli:2011va,Denner:2016kdg} libraries.
+
+The events were interfaced with
+\PYTHIA[8.230]~\cite{Sjostrand:2014zea} for the parton shower and
+hadronization, using the A14 set of tuned
+parameters~\cite{ATL-PHYS-PUB-2014-021} and the \NNPDF[2.3lo]
+set of PDFs~\cite{Ball:2012cx}.
+The decays of bottom and charm hadrons were simulated using the
+\EVTGEN[1.6.0] program~\cite{Lange:2001uf}.
+
+The default \SHERPA parton showering algorithm~\cite{Schumann:2007mg} based on
+the Catani--Seymour dipole factorization and the cluster hadronization model~\cite{Winter:2003tt}
+was used. The dedicated set of tuned parameters developed by the
+\SHERPA authors and the Hessian \NNPDF[3.0nnlo] PDF set~\cite{Ball:2014uwa,Carrazza:2015aoa} were employed.
+
+
+
+
+The inclusive cross section of the individual processes is provided in the last column.
+
+The \ttbar sample was normalised to the cross-section prediction at
+next-to-next-to-leading order (NNLO) in QCD including the resummation of
+next-to-next-to-leading logarithmic (NNLL) soft-gluon terms calculated using
+\TOPpp[2.0]~\cite{Beneke:2011mq,Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa,Czakon:2011xx}.
+For proton--proton collisions at a centre-of-mass energy of
+\(\rts = \qty{13}{\TeV}\), this cross-section corresponds to
+\(\sigma{(\ttbar)}_{\mathrm{NNLO+NNLL}} = 832^{+41}_{-51}\,\unit{\pb}\) using
+a top-quark mass of \(\mtop = \qty{172.5}{\GeV}\).
+The uncertainties in the cross-section due to the PDF and \alphas were
+calculated using the \PDFforLHC[15] prescription~\cite{Butterworth:2015oua}
+with the \MMHT[nnlo]~\cite{Harland-Lang:2014zoa},
+\CT[14nnlo]~\cite{Dulat:2015mca} and \NNPDF[3.0lo]~\cite{Ball:2014uwa}
+PDF sets in the five-flavour scheme.
 
 \begin{sidewaystable}
     \centering
@@ -751,6 +814,11 @@ The signal contribution is defined as the sum of \ttbar and \tW samples, both si
     \end{tabularx}
 \end{sidewaystable}
 
+\subsection{MC reweighting}
+
+Pileup effects are accounted for by overlaying each simulated hard-scatter event with additional inelastic $pp$ collisions generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}, using the \NNPDF[2.3lo] PDF set~\cite{Ball:2012cx} and the A3 tuned parameter set~\cite{ATL-PHYS-PUB-2016-017}.
+%To match the distribution of the average number of interactions per bunch crossing, $\langle\mu\rangle$ observed in data, the simulated events are reweighted.
+%The $\langle\mu\rangle$ value in data is rescaled by a factor of $1.03\pm0.04$ to improve agreement between data and simulation in the visible inelastic $pp$ cross-section~\cite{STDM-2015-05}.
 
 
 \subsection{Nominal signal sample}
@@ -776,69 +844,6 @@ set of PDFs~\cite{Ball:2012cx}.
 The decays of bottom and charm hadrons were simulated using the
 \EVTGEN[1.6.0] program~\cite{Lange:2001uf}.
 
-The \ttbar sample was normalised to the cross-section prediction at
-next-to-next-to-leading order (NNLO) in QCD including the resummation of
-next-to-next-to-leading logarithmic (NNLL) soft-gluon terms calculated using
-\TOPpp[2.0]~\cite{Beneke:2011mq,Cacciari:2011hy,Baernreuther:2012ws,Czakon:2012zr,Czakon:2012pz,Czakon:2013goa,Czakon:2011xx}.
-For proton--proton collisions at a centre-of-mass energy of
-\(\rts = \qty{13}{\TeV}\), this cross-section corresponds to
-\(\sigma{(\ttbar)}_{\mathrm{NNLO+NNLL}} = 832^{+41}_{-51}\,\unit{\pb}\) using
-a top-quark mass of \(\mtop = \qty{172.5}{\GeV}\).
-The uncertainties in the cross-section due to the PDF and \alphas were
-calculated using the \PDFforLHC[15] prescription~\cite{Butterworth:2015oua}
-with the \MMHT[nnlo]~\cite{Harland-Lang:2014zoa},
-\CT[14nnlo]~\cite{Dulat:2015mca} and \NNPDF[3.0lo]~\cite{Ball:2014uwa}
-PDF sets in the five-flavour scheme.
-
-The uncertainty due to initial-state radiation (ISR) was estimated by
-comparing the nominal \ttbar sample with two additional
-variations. The \hdamp value was increased to 3.0\,\mtop and compared to the
-nominal value. Separately the Var3c parameter of the A14 parton shower tune was varied,
-largely corresponding to the variation of \alphas for ISR~\cite{ATL-PHYS-PUB-2014-021}.
-The impact of final-state radiation (FSR) was evaluated by
-varying the renormalization scale for emissions from the
-parton shower up and down by a factor of two.
-
-The statistically enhanced \ttbar sample, using slices in particle-level
- \MET (\( \MET > \qty{200}{\GeV} \)) and \HT
-(\( \HT > \qty{600}{\GeV} \& \MET < \qty{200}{\GeV} \)), is used in addition
-to the nominal sample (\(\MET < \qty{200}{\GeV} \& \HT < \qty{600}{\GeV}\)).
-Orthogonal cuts between the samples ensure no overlap.
-The samples are listed in \cref{app:samples}. When an additional sample is needed
-for systematics variation it is not statistically enhanced.
-
-Additionally, all \ttbar and \tW events with at least one lepton in the final state (including dilepton events that pass the selection due to out-of-acceptance effects) are taken into account in the signal
-region due to the use of fully inclusive \ttbar samples.
-
-Two additional \ttbar variations are used in the final
-comparison. One which is obtained by reweighting the nominal \ttbar sample
-to a NNLO QCD + NLO EW prediction~\cite{Czakon:2017wor} at parton-level,
-using the setting proposed in the reference. The reweighting is performed
-on the three kinematic variables \(p_T(t)\), \(m(t\bar{t})\) and \(p_T(t\bar{t})\)
-of the top quarks in the MC samples after initial- and final-state radiation.
-The predictions for \(p_T(t)\) and \(m(t\bar{t})\) are calculated at NNLO in
-QCD with NLO electroweak (EW) corrections with the NNPDF3.0qed PDF set using
-the dynamic renormalization and factorization scales \(m_T(t)/2\) for
-\(p_T(t)\) and \(H_T/4\) for \(m(t\bar{t})\) as proposed in Ref.~\cite{Czakon:2017wor}.
-The prediction for \(p_T(t\bar{t})\) is calculated at NNLO in QCD with the
-NNPDF3.0 PDF set and with \(\mu_r\) and \(\mu_f\) set to \(H_T/4\).
-The reweighting was performed iteratively, such that at the end of the procedure
-the reweighed MC sample agrees well with the higher-order prediction for each
-of the three variables. The re-weighted predictions themselves are not
-equivalent to complete NNLO+parton shower calculations and are only indicative
-of the NNLO contributions on the measured observables. The short name for this
-sample is marked as  (NNLO rew.).
-The second alternative MC sample  to model \ttbar processes at NNLO QCD
-incorporates all-order radiative corrections through parton-shower simulations
-as detailed in Ref.~\cite{Mazzitelli:2020jio}.
-The sample is normalized to the same NNLO+NNLL in pQCD calculated with
-the Top++ 2.0 program, as previously mentioned.
-Two  different
-configurations for the \(p_T,hard\) and \(p_T,def\) parameters were generated:
-one with \(p_T,hard = 0\) and \(p_T,def = 2\), and another with \(p_T,hard = 1\)
-and \(p_T,def = 1\). In all subsequent figures and tables, predictions based
-on these samples are referred to as `MiNNLO' and `MiNNLO (alt)', respectively.
-
 
 
 
@@ -862,7 +867,7 @@ The decays of bottom and charm hadrons were simulated using the
 
 The inclusive cross-section was corrected to the theory prediction
 calculated at NLO in QCD with NNLL soft-gluon
-corrections~\cite{Kidonakis:2021vob}.  For proton--proton  % chktex 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+corrections~\cite{Kidonakis:2021vob}.  For proton--proton
 collisions at a centre-of-mass energy of \(\rts = \qty{13}{\TeV}\), this
 cross-section corresponds to \(\sigma{(tW)}_{\mathrm{NLO+NNLL}} = 79.3 \pm 2.9\,\unit{\pb}\),
 using a top-quark mass of \(\mtop = \qty{172.5}{\GeV}\).
@@ -872,12 +877,6 @@ with the \MMHT[nnlo]~\cite{Harland-Lang:2014zoa},
 \CT[14nnlo]~\cite{Dulat:2015mca} and \NNPDF[3.0lo]~\cite{Ball:2014uwa}
 PDF sets in the five-flavour scheme.
 
-Like in the \ttbar sample uncertainty due to initial-state radiation (ISR)
-was estimated by separately varying the \hdamp parameter and
-the Var3c parameter of the A14 tune
-as described in Ref.~\cite{ATL-PHYS-PUB-2017-007}. The impact of
-final-state radiation (FSR) was evaluated by varying the renormalization scale
-for emissions from the parton shower up or down by a factor two.
 
 This sample is displayed on plots and in tables as PH+PY8 (DR) or \tW (DR).
 
@@ -895,9 +894,6 @@ Several additional \ttbar and \tW samples are considered for evaluating modeling
     factorization scales fixed to the default scale, \(\mtop = \qty{172.5}{\GeV}\).
     Combined with the nominal \ttbar sample, they are presented in legends
     and tables as PH+PY8 (DRF) and PH+PY8 (DSF) respectively. See Ref.~\cite{ATL-PHYS-PUB-2021-042} for detailed on improvements of using dynamic scales.
-        \item \ttbar and \tW PH+PY8 (\(\hdamp = 3 \mtop \)):
-    produced with the same settings as the nominal PH+PY8 sample but with the
-        \hdamp parameter set to \( 3 \mtop \). The short name used in the paper is PH+PY8 (\hdamp).
         \item \ttbar and \tW PH+H7: events were generated using the same \POWHEGBOX[v2] set-up
     using the \NNPDF[3.0nlo] PDF, interfaced to \HERWIG[7.1.3]~\cite{Bellm:2015jjp,Bahr:2008pv},
     which includes an angular-ordered parton-shower model with a different hadronisation model. This sample was generated using the \HERWIG[7.1]
@@ -922,25 +918,9 @@ to the corresponding higher-order cross-sections.
 \subsection{Background samples}
 \label{sec:datamc:mc_background}
 
-Below is the list of the background samples used in the analysis. The dominant
-background are the \Wjets events. Other backgrounds are grouped in categories.
-In the plots and tables ``\OtherT'' consists of \(s\)-channel and \(t\)
-channel single-top production and the \ttV / \ttH samples.
-``\OtherV''  consists of \Zjets and diboson samples.
-Treatment of misidentified and fake leptons, denoted also as ``Mis-ID lep.''
-is described in more detail in ...%\cref{sec:bkg-estimation}.
 
 \subsubsection*{\Wjets and \Zjets production}
 
-The production of \(V+\)jets was simulated with the \SHERPA[2.2.11]~\cite{Bothmann:2019yzt}
-generator. In this set-up, NLO-accurate matrix elements for up to two additional partons,
-and LO-accurate matrix elements for up
-to five additional partons were calculated with the Comix~\cite{Gleisberg:2008fv} and
-\OPENLOOPS~\cite{Buccioni:2019sur,Cascioli:2011va,Denner:2016kdg} libraries.
-The default \SHERPA parton showering algorithm~\cite{Schumann:2007mg} based on
-the Catani--Seymour dipole factorization and the cluster hadronization model~\cite{Winter:2003tt}
-was used. The dedicated set of tuned parameters developed by the
-\SHERPA authors and the Hessian \NNPDF[3.0nnlo] PDF set~\cite{Ball:2014uwa,Carrazza:2015aoa} were employed.
 
 The NLO matrix elements for a given jet multiplicity were matched to the parton
 shower (PS) using a color-exact variant of the MC@NLO
