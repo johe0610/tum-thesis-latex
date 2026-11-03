@@ -612,17 +612,34 @@ The \texttt{bb4l} generator, which computes the full $WbWb$ process at NLO, unde
 \section{Event generation and simulation}
 \label{sec:MC}
 
-The goal of this section is to build a bridge from the theoretical, mathematical definition of particle collisions and the cross section
+The goal of this section is to build a bridge from the mathematical definition of particle collisions and the cross section
 to the messy, experimentally observable process which incorporates perturbative and non-perturbative effects
-as well as a detail real-world simulation of the detector. Interaction of particles traversing the detector material.
+as well as a detail real-world simulation of the detector. 
+Interaction of particles traversing the detector material.
 This is achieved with the tools of Monte Carlo event generators.
-The term Monte Carlo was introduced in reference to the gambling district of Monaco, named Monte Carlo,
+The term Monte Carlo was introduced in reference to the gambling district of Monaco, Monte Carlo,
 and refers to the underlying stochastic nature of physics.
-A variety of MC event generators is used in the high energy environment of LHC physics, such as Pythia, Herwig and Sherpa.
-This section goes through the step by step process on how to simulate an event.
-Starting from the evaluation of the matrix element, over parton shower and hadronization to the detector simulation.
+
+%A variety of MC event generators is used in the high energy environment of LHC physics, such as Pythia, Herwig and Sherpa.
+%This section goes through the step by step process on how to simulate an event.
+%Starting from the evaluation of the matrix element, over parton shower and hadronization to the detector simulation.
+
+The steps to build the structure of a hadron hadron collision involve a hard primary process,
+parton showers associated with the incoming and outgoing participants, non-perturbative interactions that convert the showers into outgoing hadrons,
+secondary interactions that give rise to the underlying event,
+and the decays of unstable particles in the detector volume.
 
 \subsection{Hard scattering}
+
+he generation of hard-
+scattering matrix elements for processes of interest, at both leading and next-
+to-leading QCD perturbative order; their matching to approximate treat-
+ments of higher orders based on the showering approximation; the parton
+and dipole shower formulations; parton distribution functions for event gen-
+erators; non-perturbative aspects such as soft QCD collisions, the underly-
+ing event and diffractive processes; the string and cluster models for hadron
+formation; the treatment of hadron and tau decays; the inclusion of QED
+radiation and beyond-Standard-Model processe
 
 \subsection{Parton shower}
 
@@ -769,8 +786,9 @@ This sample was generated using the \HERWIG[7.1]
 default set of tuned parameters and the \MMHT[lo] PDF set~\cite{Harland-Lang:2014zoa}.
 
 The samples are normalized to the expected cross sections at $\sqrt{s}=13\TeV$,
-the center of mass energy of Run 2. The values are provided in the
-last column.
+the center of mass energy of Run 2. The values are extracted from Refs.~\cite{
+Glasman:2765035, Campbell2021, Ball_2022, Kidonakis:2021vob, PhysRevD.81.054028}
+and are provided in the last column.
 The \ttbar samples are normalized to the cross-section prediction at
 NNLO in QCD including the resummation of
 next-to-next-to-leading logarithmic (NNLL) soft-gluon terms calculated using
@@ -876,3 +894,9 @@ normalized to the NNLO+NNLL cross-section prediction.
 Filters may be applied to remove events that do not pass certain criteria or are
 otherwise uninteresting for further analysis. 
 This results in a filter efficiency $\epsilon$ that is less than 1.0.
+
+The statistical uncertainty of a sample in bin $i$ of a distribution 
+is computed as the square root of the squared sum over all $j$ event weights in that bin
+\begin{equation}
+    \sigma_i = \sqrt{\sum_j \mathcal{W}_j^2}.
+\end{equation}
