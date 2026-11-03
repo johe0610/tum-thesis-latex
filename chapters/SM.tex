@@ -97,7 +97,7 @@ Known limitations of the SM are:
 \end{itemize}
 
 \subsection{Cross section definition}
-
+\label{sec:xsec_definition}
 A cross section $\sigma$ is a measure of the probability of a particular interaction occurring between two colliding particles.
 It is given in units of area reflecting the effective interaction region.
 The hadronic production cross section of two initial state hadrons $h_1$ and $h_2$ producing a final state with $n$ partons plus additional radiation $X$ can be written as~\cite{black_book_qcd}
@@ -631,9 +631,23 @@ and the decays of unstable particles in the detector volume.
 
 \subsection{Hard scattering}
 
-he generation of hard-
-scattering matrix elements for processes of interest, at both leading and next-
-to-leading QCD perturbative order; their matching to approximate treat-
+The production of heavy particles or highly energetic jets at the LHC
+involves the transfer of large momenta. The QCD particles can be 
+assumed to be asymptotically free at these energies and the interaction
+can be treated perturbatively. 
+Features of the process can be computed with Feynman diagrams up
+to a fixed order in perturbation theory, as outlined in section~\ref{sec:xsec_definition}.
+The momentum of the ingoing particles is sampled from the PDFs,
+and the matrix element is then evaluated for the momentum configuration.
+The choice which PDF set is used may differ between event generators.
+The PDFs are constrained using measurements from many different
+physics processes including deep-inelastic scattering, Drell-Yan processes, or
+inclusive jet production.
+The color-carrying partons produced in the hard scattering
+initiate the next simulation step, parton showering.
+
+
+their matching to approximate treat-
 ments of higher orders based on the showering approximation; the parton
 and dipole shower formulations; parton distribution functions for event gen-
 erators; non-perturbative aspects such as soft QCD collisions, the underly-
@@ -668,20 +682,42 @@ These clusters are the basic units out of which hadrons arise non-perturbatively
 Since local clusters are considered, this approach
 is independent of the hard process and the center-of-mass energy.
 
-\subsection{Underlying event and pile-up}
+
+\subsection{Hadron decay}
+
+The hadrons produced in the previous stage can be unstable and decay
+before they reach the detector. Therefore, the decay into particles that
+can be considered stable on collider timescales is simulated in the last step.
+
+The Particle Data Group (PDG) provides an extensive collection of particle
+properties in its Review of Particle Physics .
+The provided information may not be sufficient,
+when considering excited states and hadrons with heavy quarks.
+Thus, a choice has to made which hadrons are included in the simulation.
+Closely related is the choice of which decay modes are included and how they are simulated.
+
+The specific settings are generator dependent and
+closely connected with the tuning of hadronization parameters.
+
+
+\subsection{Underlying event and pileup}
+
+Beyond the hard process, the incoming hadrons carry additional partons that can undergo softer secondary interactions, collectively referred to as the underlying event. 
+Furthermore, multiple proton-proton collisions occurring within the same bunch crossing contribute as pileup.
+Both effects are incorporated into the simulation through phenomenological models tuned to experimental data.
 
 \subsection{Detector simulation}
 
 After the generation and showering of simulated events, the final-state stable particles are propagated through a full simulation of the ATLAS detector. 
-This GEANT4 software package~\cite{Agostinelli:2002hh} is used to 
+This  \textsc{Geant}4 software package~\cite{Agostinelli:2002hh} is used to 
 simulate the response of the ATLAS detector, 
 converting particle-level truth information into realistic detector-level signals.
 The full event reconstruction chain, described in Chapter~\ref{chap:ObjectReco}, is then applied using the same algorithms as for real collision data. This yields simulated events that additionally contain generator and truth-matching information not present in recorded data. The procedure is essential for estimating signal acceptance and efficiency, modeling backgrounds, and validating theoretical predictions against measurement.
 
-The detector response is simulated with \texttt{Geant4}~\cite{Agostinelli:2002hh}.
-As a full simulation of the detector response is computationally expensive for
-some of the estimates of modeling uncertainties, the fast-simulation package
-\textsc{AtlFast-II}~\cite{SOFT-2010-01} is used, which parametrizes hadronic
+Some modeling uncertainties are estimated with the the fast-simulation package
+\textsc{AtlFast-II}~\cite{SOFT-2010-01}, since a
+full simulation of the detector response is computationally expensive.
+The package parametrizes hadronic
 showers in the electromagnetic and hadronic calorimeter to speed up the simulation.
 
 
