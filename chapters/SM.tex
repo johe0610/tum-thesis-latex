@@ -816,13 +816,56 @@ PDF sets in the five-flavour scheme.
 
 \subsection{MC reweighting}
 
-\begin{equation}
-    \mathcal{W}_\text{final} = \mathcal{W}_\text{gen} \times \mathcal{W}_\text{pileup} \times \mathcal{W_l} \times \mathcal{W}_\text{jvt} \times \mathcal{W}_\text{ftag}
-\end{equation}
-Pileup effects are accounted for by overlaying each simulated hard-scatter event with additional inelastic $pp$ collisions generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}, using the \NNPDF[2.3lo] PDF set~\cite{Ball:2012cx} and the A3 tuned parameter set~\cite{ATL-PHYS-PUB-2016-017}.
-%To match the distribution of the average number of interactions per bunch crossing, $\langle\mu\rangle$ observed in data, the simulated events are reweighted.
-%The $\langle\mu\rangle$ value in data is rescaled by a factor of $1.03\pm0.04$ to improve agreement between data and simulation in the visible inelastic $pp$ cross-section~\cite{STDM-2015-05}.
+When filling histograms every data event is filled with the weight 1.0.
 
+Every event comes with an associated weight $\mathcal{w}$.
+While this weight equals 1.0 for every data event, it can take differenent values for simulated events,
+even negative ones. 
+
+The event weight $\mathcal{w}_\text{gen}$ accounts for various generator effects,
+%including the removal of double-counted contributions 
+and ensures that the overall
+normalization of the simulated sample matches measured cross-sections.
+The weight distribution varies across MC programs and must always be accounted
+for when computing physical observables.
+Weights also enable variation of theory parameters without the need to regenerate events,
+makding the evaluation of systematic uncertainties more efficient.
+
+
+Several correction factors have to be applied to
+$\mathcal{w}_\text{gen}$ to account for generator, detector, and reconstruction effects.
+When all corrections are applied the simulation is expected to reproduce the data distributions.
+
+Pileup effects are accounted for by overlaying each simulated hard-scatter event with additional inelastic $pp$ collisions.
+The weight $\mathcal{w}_\text{pileup}$ is applied to correct for the difference in the distribution of the average
+number of interactions per bunch crossing $\langle\mu\rangle$ between data and simulation.
+%generated with \PYTHIA[8.186]~\cite{Sjostrand:2007gs}, using the \NNPDF[2.3lo] PDF set~\cite{Ball:2012cx} and the A3 tuned
+%parameter set~\cite{ATL-PHYS-PUB-2016-017}.
+%To match the distribution of the average number of interactions per bunch crossing, $\langle\mu\rangle$ observed in data,
+%the simulated events are reweighted.
+%The $\langle\mu\rangle$ value in data is rescaled by a factor of $1.03\pm0.04$ to improve agreement between data and simulation
+%in the visible inelastic $pp$ cross-section~\cite{STDM-2015-05}.
+The detector calibration described in Chapter~\ref{chap:ObjectReco} is applied to the simulated events.
+Scale factors are applied to account for different performance of lepton identification and reconstrucion,
+the jet vertex tagger, as well as $b$ tagging performance.
+The associated weights are denoted as $\mathcal{w}_l$, $\mathcal{w}_\text{jvt}$, and $\mathcal{w}_\text{ftag}$, respectively.
+The final simulation weight is obtained by multiplying all individual weights:
+ \begin{equation}
+    \mathcal{W}_\text{final} = \mathcal{W}_\text{gen} \times \mathcal{W}_\text{pileup} \times \mathcal{W_l}
+     \times \mathcal{W}_\text{jvt} \times \mathcal{W}_\text{ftag}.
+\end{equation}
+Finally, the simulated samples are normalized to the integrated luminosity of the data sample.
+The luminosity of the sample is calculated from the total sum of all weights in the sample, the cross-section of the process,
+the $k$-factor and the generator filter efficiency $\epsilon$
+\begin{equation}
+    \mathcal{L}_\text{MC} = \frac{\sum_i \mathcal{w}_i}{\sigma \cdot k \cdot \epsilon}.
+\end{equation}
+The $k$-factor provides a simple, global correction for higher-order QCD effects.
+An example is the nominal \ttbar sample, which is generated at NLO in QCD and
+normalized to the NNLO+NNLL cross-section prediction.
+Filters may be applied to remove events that do not pass certain criteria or are
+otherwise uninteresting for further analysis. 
+This results in a filter efficiency $\epsilon$ that is less than 1.0.
 
 \subsection{Nominal signal sample}
 \label{sec:datamc:mc_nominal_signal}
