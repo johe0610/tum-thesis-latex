@@ -629,6 +629,9 @@ parton showers associated with the incoming and outgoing participants, non-pertu
 secondary interactions that give rise to the underlying event,
 and the decays of unstable particles in the detector volume.
 
+Although the utility of parton showers comes from the fact that they are
+universal (process-independent)  building blocks
+
 \subsection{Hard scattering}
 
 The production of heavy particles or highly energetic jets at the LHC
@@ -646,7 +649,7 @@ inclusive jet production.
 The color-carrying partons produced in the hard scattering
 initiate the next simulation step, parton showering.
 
-
+% copied from paper, rephrase this
 their matching to approximate treat-
 ments of higher orders based on the showering approximation; the parton
 and dipole shower formulations; parton distribution functions for event gen-
@@ -656,6 +659,76 @@ formation; the treatment of hadron and tau decays; the inclusion of QED
 radiation and beyond-Standard-Model processe
 
 \subsection{Parton shower}
+
+The matrix element discussed in the previous section simulates the hard process and
+describes the momenta of outgoing jets well.
+However, no fixed order calculation is sufficient to give a complete picture of the
+process, such as the substructure of jets.
+
+Instead, the effect of higher orders is approximated through
+a \textit{parton shower} (PS) algorithm.
+Partons from the hard matrix element can radiate gluons.
+Gluons, carrying color charge themselves, give rise to further
+gluon radiation and parton multiplication.
+The purpose of the PS is to simulate an evolution in momentum transfer
+from the high scales associated with the hard process to the low scales, of order 1 \GeV.
+This scale is associated with confinement of partons into hadrons
+and perturbation theory is no longer applicable.
+
+The PS is assumed to be independent of the hard process.
+It can be illustrated with the example
+of $q\bar{q}$ production with an additional gluon from electron positron annihilation
+$e^- e^+ \rightarrow q\bar{q}g$.
+The cross section can be approximated as~\cite{MC paper}
+\begin{equation}
+    \frac{\text{d}\sigma_{q\bar{q}g}}{\text{d cos}\vartheta \text{ d}z} \approx
+    \sigma_{q\bar{q}}C_F \frac{\alpha_S}{2\pi}\frac{2}{\text{sin}^2\vartheta} \frac{1+(1-z)^2}{z},
+    \label{eq:threepartonxsec}
+\end{equation}
+where the three parton phase space was parametrized by the opening angle
+between the quark and the gluon $\vartheta$, and the energy fraction of the gluon $z$.
+The color factor $C_F = \frac{N_C^2 - 1}{2N_C}$ can be interpreted as the squared color charge of the quark with $N_C = 3$, the number of colors.
+
+Equation~\eqref{eq:threepartonxsec} shows that the cross section for 
+$q\bar{q}g$ production is proportional to that of
+$q\bar{q}$. The remaining expression can be
+interpreted as the probability for gluon emission, differential in the
+kinematics of the gluon.
+
+The expression in equation~\eqref{eq:threepartonxsec} can be transformed to~\cite{MC paper}
+\begin{equation}
+    \text{d}\sigma \approx \sigma_0 \sum_{\text{partons},i} 
+    \frac{\alpha_S}{2\pi}\frac{\text{d}\vartheta^2}{\vartheta^2}\text{d}z P_{ab}(z,\varphi)d\varphi
+    \label{eq:splitting}
+\end{equation}
+by introducing the splitting functions 
+$P_{ab}(z,\varphi)$.
+They are a set of universal, but flavor-dependent functions.
+Spin dependence is introduced through the azimuthal angle $\varphi$
+of $j$ with respect to parton $i$.
+The indices in $P_{ab}$ are chosen such that
+for the process $a\rightarrow bc$, parton $c$ is fixed by $a$ and $b$.
+
+Equation~\eqref{eq:splitting} is a completely general expression for any hard
+process with a collinear splitting.
+The splitting of a hard process is treated as the new hard process.
+By iterating this step, the parton shower simulates a succession of
+emissions from the incoming and outgoing partons.
+
+
+The differential cross section diverges at the edges of the phase space
+when the gluon becomes collinear with the quark
+($\vartheta \rightarrow 0$), or with the anti-quark ($\vartheta \rightarrow \pi$),
+or when the gluon energy goes to zero ($z \rightarrow 0$).
+
+A cutoff scale $Q_0$ is introduced, typically the minimum relative 
+transverse momentum between the partons.
+The partons can be resolved, only if $Q_0$ is exceeded.
+Thus, resolving the soft and collinear divergences,
+resulting in a finite total resolvable-emission probability.
+
+So far produced a bunch of partons.
+How is this connected to the PS ? -> Merging 
 
 \subsection{Hadronization}
 
@@ -915,7 +988,7 @@ the jet vertex tagger, as well as $b$ tagging performance.
 The associated weights are denoted as $\mathcal{W}_l$, $\mathcal{W}_\text{jvt}$, and $\mathcal{W}_\text{ftag}$, respectively.
 The final simulation weight is obtained by multiplying all individual weights:
  \begin{equation}
-    \mathcal{W}_\text{final} = \mathcal{W}_\text{gen} \times \mathcal{W}_\text{pileup} \times \mathcal{W_l}
+    \mathcal{W}_\text{final} = \mathcal{W}_\text{gen} \times \mathcal{W}_\text{pileup} \times \mathcal{W}_\ell
      \times \mathcal{W}_\text{jvt} \times \mathcal{W}_\text{ftag}.
 \end{equation}
 Finally, the simulated samples are normalized to the integrated luminosity of the data sample.
